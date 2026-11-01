@@ -4,7 +4,9 @@ React/Vite mobile web interface for the **same MITMARKET website**. This is not 
 
 ## Status
 
-Phase 1 scaffold and read-only market homepage. The remaining Google Stitch screens and exact desktop category filters are **not yet implemented**. All account, wallet and trading actions are disabled until secure backend integration and explicit approval.
+**Visual reference coverage: 56/56.** The original Stitch export is available via `/screens` and `/design/:slug` (52 source HTML screens plus four reference artworks). React routes in `/screen/:slug` contain early functional shells for markets, trading, accounts, wallets, settings, authentication and support. They are not yet production-ready, and the original Stitch HTML is a reference in a sandboxed iframe, not a fully converted React component.
+
+The homepage displays public Polymarket market catalog data and read-only price history. Exact desktop category selectors/priorities, authenticated account APIs, execution, balance retrieval and secure wallet flows remain unintegrated. Account, wallet and trading actions are disabled until server-side integration and explicit approval. Stitch previews may contain illustrative sample balances or activity; these are **not** real user data.
 
 ## Development
 
@@ -23,4 +25,4 @@ npm run build
 
 ## Reference
 
-The approved Google Stitch export contains 56 screen previews. This implementation begins with the homepage and routing. No fictitious live financial activity is presented.
+The original approved Google Stitch files are preserved under `public/design/`. `/design/:slug` is the pixel-oriented reference view, while `/screen/:slug` is the corresponding React route intended for API integration. Review and sign-off should use the integrated mobile web deployment after the React/API conversion is completed.
