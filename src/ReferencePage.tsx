@@ -29,7 +29,7 @@ for(const header of Array.from(parsed.querySelectorAll('header'))){
  const walker=parsed.createTreeWalker(header,NodeFilter.SHOW_TEXT);let text:Node|null;let brand:Node|null=null;
  while((text=walker.nextNode()))if(/^MITMARKET(?:\s+PRO)?(?:\s*[—–-].*)?$/i.test(text.textContent?.trim()||'')){brand=text;break;}
  if(!brand)continue;
- const label=parsed.createElement('span');label.className=(['SPAN','H1','H2','A','STRONG'].includes(brand.parentElement?.tagName||'')?brand.parentElement.className:'font-headline-sm text-headline-sm font-bold')+' header-brand-centered';label.textContent='MITMARKET';
+ const label=parsed.createElement('span');label.className=(['SPAN','H1','H2','A','STRONG'].includes(brand.parentElement?.tagName||'')?(brand.parentElement?.className||''):'font-headline-sm text-headline-sm font-bold')+' header-brand-centered';label.textContent='MITMARKET';
  const placeholder=parsed.createElement('span');placeholder.style.visibility='hidden';placeholder.setAttribute('aria-hidden','true');brand.parentNode!.replaceChild(placeholder,brand);placeholder.appendChild(brand);
  if(row!==header)row.classList.add('header-brand-row');row.appendChild(label);
 }
