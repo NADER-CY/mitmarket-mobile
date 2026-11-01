@@ -37,7 +37,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "mobile-${GITHUB_RUN_NUMBER}" mitmarket-mobile.tar.gz mitmarket-mobile.tar.gz.sha256 --target "$GITHUB_SHA" --title "Mobile build ${GITHUB_RUN_NUMBER}" --notes "Server package built from ${GITHUB_SHA}" --latest
+          gh release create "mobile-${GITHUB_RUN_NUMBER}-${GITHUB_RUN_ATTEMPT}" mitmarket-mobile.tar.gz mitmarket-mobile.tar.gz.sha256 --target "$GITHUB_SHA" --title "Mobile build ${GITHUB_RUN_NUMBER}" --notes "Server package built from ${GITHUB_SHA}" --latest
   deploy:
     needs: build
     runs-on: ubuntu-latest
