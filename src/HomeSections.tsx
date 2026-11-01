@@ -1,6 +1,7 @@
 import {Link} from 'react-router-dom';
 import {categories,homeLimits} from './categories';
 import type {Market} from './marketData';
+import {MiniHistory} from './HeroSlider';
 
 const patterns:Record<string,RegExp>={
   politics:/politic|congress|senate|presiden|trump|republican|democrat|government|parliament|legislation|election/i,
@@ -40,7 +41,7 @@ export function matchingMarkets(markets:Market[],id:string){const matcher=patter
   return markets.filter(m=>matcher.test(`${m.category} ${m.title}`));
 }
 function Thumb({market}:{market:Market}){return market.image?<img src={market.image} alt="" loading="lazy"/>:<span className="material-symbols-outlined">trending_up</span>}
-function Card({market,variant='compact'}:{market:Market;variant?:string}){return <Link to={`/market/${encodeURIComponent(market.id)}`} className={`showcase-card ${variant}`}><div className="showcase-top"><Thumb market={market}/><span>{market.category}</span>{variant==='lead'&&<div className="showcase-donut" style={{background:`conic-gradient(#0bba74 0 ${market.yes}%,#ff4761 ${market.yes}% 100%)`}}><span>{market.yes}%</span></div>}</div><h3>{market.title}</h3><div className="showcase-market"><div className="showcase-numbers"><span>YES <b>{market.yes}%</b></span><span>NO <b>{market.no}%</b></span></div><div className="showcase-meter"><i style={{width:`${market.yes}%`}}/></div><div className="showcase-prices"><span>Volume ${market.volume>=1e6?(market.volume/1e6).toFixed(1)+'M':(market.volume/1e3).toFixed(1)+'K'}</span><div><b>YES {market.yes}¢</b><b>NO {market.no}¢</b></div></div></div></Link>}
+function Card({market,variant='compact',chart=false}:{market:Market;variant?:string;chart?:boolean}){return <Link to={`/market/${encodeURIComponent(market.id)}`} className={`showcase-card ${variant}`}><div className="showcase-top"><Thumb market={market}/><span>{market.category}</span>{variant==='lead'&&<div className="showcase-donut" style={{background:`conic-gradient(#0bba74 0 ${market.yes}%,#ff4761 ${market.yes}% 100%)`}}><span>{market.yes}%</span></div>}</div><h3>{market.title}</h3>{chart&&<MiniHistory token={market.token}/>}<div className="showcase-market"><div className="showcase-numbers"><span>YES <b>{market.yes}%</b></span><span>NO <b>{market.no}%</b></span></div><div className="showcase-meter"><i style={{width:`${market.yes}%`}}/></div><div className="showcase-prices"><span>Volume ${market.volume>=1e6?(market.volume/1e6).toFixed(1)+'M':(market.volume/1e3).toFixed(1)+'K'}</span><div><b>YES {market.yes}¢</b><b>NO {market.no}¢</b></div></div></div></Link>}
 
 export function FeatureBanner({variant=0}:{variant?:number}){
   const banners=[
@@ -55,14 +56,14 @@ export function CategoryShowcases({markets}:{markets:Market[]}){
   return <div className="showcase-sections">{sections.map((c,index)=>{
     const matches=matchingMarkets(markets,c.id).slice(0,Math.min(homeLimits[c.id],5));
     const kind=layoutKinds[index%layoutKinds.length];const [headline,tagline,icon]=blurbs[c.id]||[c.name,'Explore the latest market probabilities.','explore'];
-    const hasBanner=[0,2,4,6,8,10,12].includes(index);
+    const hasBanner=false;
     return <div key={c.id}>
-      {index>0&&index%4===0&&<FeatureBanner variant={Math.floor(index/4)-1}/>}
+      {index===7&&<FeatureBanner variant={1}/>}
       <section className={`showcase-section showcase-${kind}`} aria-label={`${c.name} markets`}>
         {hasBanner&&<Link to={`/category/${c.id}`} className={`category-feature category-feature-${index%4}`}><span className="category-feature-icon material-symbols-outlined">{icon}</span><span className="category-feature-copy"><small>DISCOVER / {c.name.toUpperCase()}</small><strong>{headline}</strong><em>{tagline}</em></span><span className="material-symbols-outlined category-feature-arrow">north_east</span></Link>}
         <header className="showcase-heading"><h2><span className="material-symbols-outlined">{c.icon}</span>{c.name}</h2><Link to={`/category/${c.id}`}>View All <span className="material-symbols-outlined">arrow_forward</span></Link></header>
-        {matches.length?<div className={`showcase-layout layout-${kind}`}>{matches.map((m,i)=><Card key={m.id} market={m} variant={i===0&&['hero-split','spotlight','wide-row'].includes(kind)?'lead':'compact'}/>)}</div>:<Link className="showcase-empty" to={`/category/${c.id}`}><span className="material-symbols-outlined">explore</span><span>Browse {c.name} markets</span><span className="material-symbols-outlined">arrow_forward</span></Link>}
+        {matches.length?<div className={`showcase-layout layout-${kind} ${matches.length%2===1?'has-odd':''} ${matches.length===1?'single-market':''}`}>{matches.map((m,i)=><Card key={m.id} market={m} variant={(i===0&&['hero-split','spotlight','wide-row'].includes(kind))||matches.length===1?'lead':'compact'} chart={i===0&&[1,4,7,10].includes(index)}/>)}</div>:<Link className="showcase-empty" to={`/category/${c.id}`}><span className="material-symbols-outlined">explore</span><span>No live {c.name} markets in this feed</span><span className="material-symbols-outlined">arrow_forward</span></Link>}
       </section>
     </div>;
-  })}<FeatureBanner variant={2}/><div className="end-cap"><span className="material-symbols-outlined">public</span><p>THE WORLD NEVER STOPS MOVING</p><h2>Stay curious.<br/>Stay ahead.</h2><span>New markets, new questions, every day.</span><Link to="/explore">Discover More <span className="material-symbols-outlined">arrow_forward</span></Link><div className="end-cap-footer"><b>MITMARKET</b><span>Explore · Learn · Follow</span></div></div></div>;
+  })}<div className="end-cap"><span className="material-symbols-outlined">public</span><p>THE WORLD NEVER STOPS MOVING</p><h2>Stay curious.<br/>Stay ahead.</h2><span>New markets, new questions, every day.</span><Link to="/explore">Discover More <span className="material-symbols-outlined">arrow_forward</span></Link><div className="end-cap-footer"><b>MITMARKET</b><span>Explore · Learn · Follow</span></div></div></div>;
 }
