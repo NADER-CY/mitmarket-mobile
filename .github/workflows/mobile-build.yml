@@ -1,0 +1,40 @@
+name: Build mobile server package
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: mobile-build
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Package
+        run: |
+          mkdir -p package
+          cp -a dist package/dist
+          cp server/install-mobile.sh package/install-mobile.sh
+          printf '%s\n' "$GITHUB_SHA" > package/COMMIT
+          tar -czf mitmarket-mobile.tar.gz -C package .
+          sha256sum mitmarket-mobile.tar.gz > mitmarket-mobile.tar.gz.sha256
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mitmarket-mobile-server
+          path: |
+            mitmarket-mobile.tar.gz
+            mitmarket-mobile.tar.gz.sha256
+      - name: Publish server package
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "mobile-${GITHUB_RUN_NUMBER}" mitmarket-mobile.tar.gz mitmarket-mobile.tar.gz.sha256 --target "$GITHUB_SHA" --title "Mobile build ${GITHUB_RUN_NUMBER}" --notes "Server package built from ${GITHUB_SHA}" --latest
