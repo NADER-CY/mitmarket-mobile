@@ -8,7 +8,7 @@ import {useLiveMarkets} from './liveMarkets';
 export function DesignMarketSlider({category='trending',count=5,home=false}:{category?:string;count?:number;home?:boolean}){
  const feed=useMarkets(category);const crypto=useMarkets(home?'crypto':category);const sports=useMarkets(home?'sports':category);const finance=useMarkets(home?'finance':category);
  const selected=useMemo(()=>{const pools=home?[feed,crypto,sports,finance].map((f,i)=>selectHomeMarkets(f.markets,['trending','crypto','sports','finance'][i],3)):[];return home?[0,1,2].flatMap(i=>pools.flatMap(pool=>pool[i]?[pool[i]]:[])).filter((m,i,all)=>all.findIndex(x=>x.id===m.id)===i).slice(0,count):selectHomeMarkets(feed.markets,category,count);},[feed.markets,crypto.markets,sports.markets,finance.markets,home,category,count]);
- const live=useLiveMarkets(selected);const slides=live.markets;const approvedMarket=useLiveMarkets(crypto.markets.slice(0,1)).markets[0];
+ const live=useLiveMarkets(selected);const slides=live.markets;const approvedSelection=useMemo(()=>{const open=crypto.markets.filter(m=>!m.endDate||Date.parse(m.endDate)>Date.now());const eth=open.find(m=>/ethereum|\bether\b|\beth\b/i.test(m.title));return eth?[eth]:selectHomeMarkets(open,'crypto',1);},[crypto.markets]);const approvedMarket=useLiveMarkets(approvedSelection).markets[0];
  const [index,setIndex]=useState(0);const [paused,setPaused]=useState(false);const [start,setStart]=useState<number|null>(null);
  useEffect(()=>{if(paused||slides.length<2)return;const timer=window.setInterval(()=>setIndex(i=>(i+1)%slides.length),8000);return()=>window.clearInterval(timer);},[paused,slides.length]);
  const move=(delta:number)=>setIndex(i=>(i+delta+slides.length)%slides.length);const m=slides[index%Math.max(slides.length,1)];
