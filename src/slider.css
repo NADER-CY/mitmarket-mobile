@@ -37,3 +37,27 @@
 .slider-dots button{width:7px;height:7px;background:#4c5a6d;border:0;border-radius:99px;padding:0;cursor:pointer;transition:width .2s,background .2s}
 .slider-dots button.selected{width:25px;background:#1463ff}
 @media(max-width:360px){.slider-stats>strong{font-size:32px}.slider-stats>span:not(.slider-dot-live){font-size:15px}.slider-donut{width:48px;height:48px}.slider-chart svg{height:110px}}
+/* Compact carousel with invariant height across all eight slides. */
+.slider-wrap{height:397px;min-height:397px;max-height:397px;padding:11px 12px 9px}
+.slider-nav{height:27px;margin-bottom:7px}
+.slider-content{height:315px;display:flex;flex-direction:column}
+.slider-headline{flex-shrink:0}
+.slider-market-top{height:23px}
+.slider-market-top img{width:23px;height:23px}
+.slider-title{height:43px;min-height:43px;max-height:43px;font-size:16px;line-height:1.28;-webkit-line-clamp:2;margin:8px 0}
+.slider-stats{min-height:43px;height:43px;gap:6px}
+.slider-stats>strong{font-size:31px;letter-spacing:-1px}
+.slider-stats>span:not(.slider-dot-live){font-size:15px}
+.slider-donut{width:43px;height:43px}
+.slider-donut:before{inset:6px}
+.slider-donut b{font-size:10px}
+.slider-trade{margin:7px 0 5px;gap:7px}
+.slider-trade>a{padding:8px 10px;font-size:11px}
+.slider-meta{display:none}
+.slider-chart{margin-top:8px;padding:8px 8px 5px;flex:1;min-height:0}
+.slider-chart-header{margin-bottom:2px;font-size:8px}
+.slider-chart svg{height:84px}
+.slider-chart-pending{height:84px}
+.slider-chart-key{margin:4px 0 0;font-size:9px}
+.slider-dots{margin-top:5px;height:12px}
+@media(max-width:360px){.slider-wrap{height:383px;min-height:383px;max-height:383px}.slider-content{height:300px}.slider-title{font-size:14px}.slider-stats>strong{font-size:27px}.slider-donut{width:38px;height:38px}.slider-chart svg{height:74px}}
