@@ -1,28 +1,35 @@
 # MITMARKET Mobile Web
 
-React/Vite mobile web interface for the **same MITMARKET website**. This is not a native mobile application.
+React/Vite/TypeScript mobile web interface for MITMARKET, maintained separately from the desktop repository [NADER-CY/mitmarket](https://github.com/NADER-CY/mitmarket).
 
-## Status
+## Current implementation
 
-**Visual reference coverage: 56/56.** The original Stitch export is available via `/screens` and `/design/:slug` (52 source HTML screens plus four reference artworks). React routes in `/screen/:slug` contain early functional shells for markets, trading, accounts, wallets, settings, authentication and support. They are not yet production-ready, and the original Stitch HTML is a reference in a sandboxed iframe, not a fully converted React component.
+- 52 approved Stitch HTML screens rendered through React, plus four artwork references retained in `public/design/`.
+- Templates are bundled during build, avoiding an HTML download on each route change.
+- MITMARKET palette, Inter typography, horizontal category navigation, back navigation and a rounded desktop phone preview with working internal scroll.
+- Homepage category grids display up to 12 markets from distinct events/topics; dedicated market feeds show up to 24.
+- Eight homepage spotlight slides and three to five slides on market/category pages, with real historical probability charts where available.
+- Public Polymarket Gamma catalog plus a shared CLOB market WebSocket with heartbeat, reconnection, subscription cleanup and batched quote updates for connected cards and sliders.
+- Market cards open `/market/:id`: live probabilities, history, YES/NO selection, market/limit inputs and estimated shares/payout.
 
-The homepage displays public Polymarket market catalog data and read-only price history. Exact desktop category selectors/priorities, authenticated account APIs, execution, balance retrieval and secure wallet flows remain unintegrated. Account, wallet and trading actions are disabled until server-side integration and explicit approval. Stitch previews may contain illustrative sample balances or activity; these are **not** real user data.
+## Important scope
 
-## Development
+This remains a frontend preview. Authentication, real account balances, wallet operations and order execution are **not connected**. Some original reference sections still contain illustrative data. Reviewing an order does not submit a transaction.
+
+## Build
 
 ```bash
-npm install
-npm run dev
+npm ci
+npm run check
 npm run build
 ```
 
-## Integration contract
+`npm run dev` starts Vite. `scripts/compile-templates.mjs` regenerates `src/designTemplates.json` from the preserved HTML references before checks/builds; the generated file is intentionally ignored. Output is `dist/`.
 
-- Desktop remains at [`NADER-CY/mitmarket`](https://github.com/NADER-CY/mitmarket), untouched by this repository.
-- Mobile uses the same market data sources and must ultimately reuse desktop category filtering, order, and card priorities.
-- The mobile design follows the approved Google Stitch reference, with the desktop MITMARKET palette.
-- Deployment of the mobile route onto the common domain will be coordinated separately; this repository does not change DNS or production routing.
+## Server installation
 
-## Reference
+See [server/README_FA.md](server/README_FA.md). For the supplied installer, place the built `dist/` directory next to `install-mobile.sh`, then run it with a separate mobile subdomain. Existing desktop routing is not changed. Configure HTTPS before production use.
 
-The original approved Google Stitch files are preserved under `public/design/`. `/design/:slug` is the pixel-oriented reference view, while `/screen/:slug` is the corresponding React route intended for API integration. Review and sign-off should use the integrated mobile web deployment after the React/API conversion is completed.
+## Validation of this update
+
+Production build passed; all 52 reference routes were checked for rendering. Explore category expansion/navigation, card-to-trade navigation, back navigation, slider counts/fixed heights, scrolling and live WebSocket message reception were checked in the browser. This is not a full audit of every button or authenticated workflow.

@@ -8,3 +8,5 @@ import './showcase.css';
 import './slider.css';
 import './design.css';
 createRoot(document.getElementById('root')!).render(<React.StrictMode><BrowserRouter><App/></BrowserRouter></React.StrictMode>);
+
+import './carousel.css';

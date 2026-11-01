@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom';
 import {categories,homeLimits} from './categories';
-import type {Market} from './marketData';
+import {useMarkets,type Market} from './marketData';
 import {MiniHistory} from './HeroSlider';
 
 const patterns:Record<string,RegExp>={
@@ -37,7 +37,7 @@ const blurbs:Record<string,[string,string,string]>={
 };
 const layoutKinds=['hero-split','micro-grid','stacked','wide-row','mosaic-mini','spotlight'] as const;
 
-export function matchingMarkets(markets:Market[],id:string){const matcher=patterns[id];if(!matcher)return [];
+export function matchingMarkets(markets:Market[],id:string){const matcher=patterns[id];if(!matcher)return markets;
   return markets.filter(m=>matcher.test(`${m.category} ${m.title}`));
 }
 function Thumb({market}:{market:Market}){return market.image?<img src={market.image} alt="" loading="lazy"/>:<span className="material-symbols-outlined">trending_up</span>}
@@ -51,19 +51,14 @@ export function FeatureBanner({variant=0}:{variant?:number}){
   ];const b=banners[variant%banners.length];return <aside className={`feature-banner feature-${variant%3}`}><div className="banner-orbit orbit-one"/><div className="banner-orbit orbit-two"/><div className="feature-banner-content"><div className="feature-eyebrow"><span className="material-symbols-outlined">{b.icon}</span>{b.eyebrow}</div><h2>{b.title}</h2><p>{b.desc}</p><Link to={b.link}>{b.cta} <span className="material-symbols-outlined">arrow_forward</span></Link></div><span className="feature-watermark material-symbols-outlined">{b.icon}</span></aside>
 }
 
-export function CategoryShowcases({markets}:{markets:Market[]}){
-  const sections=categories.filter(c=>Object.prototype.hasOwnProperty.call(homeLimits,c.id));
-  return <div className="showcase-sections">{sections.map((c,index)=>{
-    const matches=matchingMarkets(markets,c.id).slice(0,Math.min(homeLimits[c.id],5));
-    const kind=layoutKinds[index%layoutKinds.length];const [headline,tagline,icon]=blurbs[c.id]||[c.name,'Explore the latest market probabilities.','explore'];
-    const hasBanner=false;
-    return <div key={c.id}>
-      {index===7&&<FeatureBanner variant={1}/>}
-      <section className={`showcase-section showcase-${kind}`} aria-label={`${c.name} markets`}>
-        {hasBanner&&<Link to={`/category/${c.id}`} className={`category-feature category-feature-${index%4}`}><span className="category-feature-icon material-symbols-outlined">{icon}</span><span className="category-feature-copy"><small>DISCOVER / {c.name.toUpperCase()}</small><strong>{headline}</strong><em>{tagline}</em></span><span className="material-symbols-outlined category-feature-arrow">north_east</span></Link>}
-        <header className="showcase-heading"><h2><span className="material-symbols-outlined">{c.icon}</span>{c.name}</h2><Link to={`/category/${c.id}`}>View All <span className="material-symbols-outlined">arrow_forward</span></Link></header>
-        {matches.length?<div className={`showcase-layout layout-${kind} ${matches.length%2===1?'has-odd':''} ${matches.length===1?'single-market':''}`}>{matches.map((m,i)=><Card key={m.id} market={m} variant={(i===0&&['hero-split','spotlight','wide-row'].includes(kind))||matches.length===1?'lead':'compact'} chart={i===0&&[1,4,7,10].includes(index)}/>)}</div>:<Link className="showcase-empty" to={`/category/${c.id}`}><span className="material-symbols-outlined">explore</span><span>No live {c.name} markets in this feed</span><span className="material-symbols-outlined">arrow_forward</span></Link>}
-      </section>
-    </div>;
-  })}<div className="end-cap"><span className="material-symbols-outlined">public</span><p>THE WORLD NEVER STOPS MOVING</p><h2>Stay curious.<br/>Stay ahead.</h2><span>New markets, new questions, every day.</span><Link to="/explore">Discover More <span className="material-symbols-outlined">arrow_forward</span></Link><div className="end-cap-footer"><b>MITMARKET</b><span>Explore · Learn · Follow</span></div></div></div>;
+function CategorySection({id,index}:{id:string;index:number}){
+  const c=categories.find(c=>c.id===id)!;const {markets,status,retry}=useMarkets(id);
+  const matches=markets.slice(0,homeLimits[id]);const kind=layoutKinds[index%layoutKinds.length];
+  return <section className={`showcase-section showcase-${kind}`} aria-label={`${c.name} markets`}>
+    <header className="showcase-heading"><h2><span className="material-symbols-outlined">{c.icon}</span>{c.name}</h2><Link to={`/category/${id}`}>View All →</Link></header>
+    {matches.length?<div className={`showcase-layout layout-${kind} ${matches.length%2?'has-odd':''}`}>{matches.map((m,i)=><Card key={m.id} market={m} variant={i===0&&['hero-split','spotlight','wide-row'].includes(kind)?'lead':'compact'} chart={i===0&&index%3===1}/>)}</div>:<div className="category-discovery"><span className="material-symbols-outlined">{c.icon}</span><h3>{blurbs[id]?.[0]||c.name}</h3><p>{status==='loading'?'Loading this category’s markets…':status==='error'?'This category’s live feed could not be reached. Retry to load current probabilities.':'No active markets are currently published in this category. Explore related topics below.'}</p><div><Link to={`/category/${id}`}>Explore {c.name} →</Link><button onClick={retry}>Refresh</button></div><div className="topic-links">{['politics','sports','crypto'].filter(x=>x!==id).map(x=><Link key={x} to={`/category/${x}`}>{x}</Link>)}</div></div>}
+  </section>;
+}
+export function CategoryShowcases({markets:_markets}:{markets:Market[]}){
+ return <div className="showcase-sections">{Object.keys(homeLimits).map((id,index)=><CategorySection key={id} id={id} index={index}/>)}</div>;
 }

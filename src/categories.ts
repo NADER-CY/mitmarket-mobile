@@ -25,4 +25,4 @@ export const categories = [
   {id:'dashboard',name:'Dashboard',icon:'space_dashboard'},
   {id:'rewards',name:'Rewards',icon:'redeem'}
 ] as const;
-export const homeLimits:Record<string,number>={crypto:6,sports:7,politics:8,elections:4,finance:5,economy:4,geopolitics:6,tech:5,culture:4,weather:4,esports:3,iran:1,mentions:3,art:2};
+export const homeLimits:Record<string,number>={crypto:6,sports:7,politics:8,elections:4,finance:5,economy:4,geopolitics:6,tech:5,culture:4,weather:4,esports:6,iran:6,mentions:6,art:6};

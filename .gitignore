@@ -1,6 +1,8 @@
-node_modules
-dist
+node_modules/
+dist/
+.openai/
+.sites-runtime/
+*.tsbuildinfo
+src/designTemplates.json
 .env
 .env.*
-*.local
-*.tsbuildinfo
