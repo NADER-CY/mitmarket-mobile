@@ -1,7 +1,7 @@
 import {useEffect,useState} from 'react';
 
-export type Market = {id:string;title:string;category:string;image:string;yes:number;no:number;volume:number;endDate:string;slug:string};
-type RawMarket = {id?:string;question?:string;outcomePrices?:string|string[];volumeNum?:number;volume?:number|string;endDate?:string;slug?:string;active?:boolean;closed?:boolean};
+export type Market = {id:string;title:string;category:string;image:string;yes:number;no:number;volume:number;endDate:string;slug:string;token:string};
+type RawMarket = {id?:string;question?:string;outcomePrices?:string|string[];clobTokenIds?:string|string[];volumeNum?:number;volume?:number|string;endDate?:string;slug?:string;active?:boolean;closed?:boolean};
 type RawEvent = {id?:string;title?:string;slug?:string;image?:string;icon?:string;volume?:number;volume24hr?:number;markets?:RawMarket[];tags?:{label?:string;slug?:string}[]};
 
 function parsePrices(prices:RawMarket['outcomePrices']):number[]{
@@ -12,7 +12,8 @@ function normalize(event:RawEvent):Market|null {
   if(!m)return null;
   const prices=parsePrices(m.outcomePrices);if(prices.length<2||!prices.every(Number.isFinite))return null;
   const title=m.question||event.title||'';if(!title)return null;
-  return {id:String(m.id||event.id||title),title,category:event.tags?.[0]?.label||'Markets',image:event.image||event.icon||'',yes:Math.round(prices[0]*100),no:Math.round(prices[1]*100),volume:Number(m.volumeNum||m.volume||event.volume||0),endDate:m.endDate||'',slug:event.slug||m.slug||''};
+  const rawTokens=m.clobTokenIds;let tokens:string[]=[];try{const parsed=typeof rawTokens==='string'?JSON.parse(rawTokens):rawTokens;tokens=Array.isArray(parsed)?parsed.map(String):[];}catch{/* no valid CLOB token */}
+  return {id:String(m.id||event.id||title),title,category:event.tags?.[0]?.label||'Markets',image:event.image||event.icon||'',yes:Math.round(prices[0]*100),no:Math.round(prices[1]*100),volume:Number(m.volumeNum||m.volume||event.volume||0),endDate:m.endDate||'',slug:event.slug||m.slug||'',token:tokens[0]||''};
 }
 const BASE='https://gamma-api.polymarket.com';
 const memory=new Map<string,{at:number;markets:Market[]}>();
