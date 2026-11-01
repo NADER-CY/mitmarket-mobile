@@ -16,3 +16,6 @@
 
 @media(min-width:700px){.mobile-app.reference-app{border-radius:28px;overflow:clip}.reference-app .reference-host{border-radius:28px}.mobile-app.reference-app:after{content:'';position:fixed;bottom:22px;left:50%;transform:translateX(-50%);width:430px;height:64px;border:1px solid #303a4a;border-top:0;border-radius:0 0 28px 28px;pointer-events:none;z-index:60}}
 @media(min-width:700px){.mobile-app.reference-app{height:calc(100dvh - 44px);min-height:0;overflow-y:auto;overflow-x:hidden;scrollbar-width:none;overscroll-behavior:contain}.mobile-app.reference-app::-webkit-scrollbar{display:none}}
+
+/* Hide scrollbar chrome while preserving touch and wheel scrolling. */
+html,body,.mobile-app{scrollbar-width:none}html::-webkit-scrollbar,body::-webkit-scrollbar,.mobile-app::-webkit-scrollbar{display:none}html,body{overflow-x:clip}
