@@ -4,7 +4,7 @@ import type {Market} from './marketData';
 
 type Point={t:number;p:number};
 const historyCache=new Map<string,Point[]>();
-function useHistory(token:string){
+export function useHistory(token:string){
   const [points,setPoints]=useState<Point[]>(()=>historyCache.get(token)||[]);
   const [status,setStatus]=useState('loading');
   useEffect(()=>{
