@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary": "#003920", "on-secondary-fixed": "#002110", "surface": "#071420", "outline": "#8d90a2", "inverse-on-surface": "#25323e", "primary": "#b4c5ff", "tertiary-container": "#d72747", "tertiary-fixed": "#ffdada", "surface-container-highest": "#293643", "tertiary-fixed-dim": "#ffb3b5", "on-background": "#d7e4f5", "surface-container-low": "#101d29", "outline-variant": "#424656", "on-primary-fixed-variant": "#003daa", "secondary-container": "#00b872", "on-secondary-fixed-variant": "#005230", "on-tertiary-fixed": "#40000c", "on-surface-variant": "#c3c5d8", "on-tertiary": "#680019", "surface-tint": "#b4c5ff", "on-tertiary-container": "#fff3f3", "on-primary": "#002979", "on-surface": "#d7e4f5", "inverse-surface": "#d7e4f5", "surface-container-lowest": "#030f1b", "background": "#071420", "on-primary-container": "#f5f5ff", "on-error-container": "#ffdad6", "secondary": "#4cdf95", "on-primary-fixed": "#00174c", "secondary-fixed-dim": "#4cdf95", "surface-dim": "#071420", "on-tertiary-fixed-variant": "#920027", "surface-container": "#14212d", "surface-container-high": "#1f2b38", "error-container": "#93000a", "primary-fixed": "#dbe1ff", "on-error": "#690005", "surface-bright": "#2e3a48", "surface-variant": "#293643", "on-secondary-container": "#004025", "inverse-primary": "#0052dd", "tertiary": "#ffb3b5", "secondary-fixed": "#6dfdaf", "primary-fixed-dim": "#b4c5ff", "error": "#ffb4ab", "primary-container": "#1463ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "space-xl": "1.5rem", "space-xs": "0.25rem", "gutter": "0.75rem", "margin": "1rem", "space-md": "0.75rem", "space-lg": "1rem" }, fontFamily: { "mono-price-lg": ["JetBrains Mono"], "headline-lg": ["Inter"], "headline-sm": ["Inter"], "label-meta": ["Inter"], "body-lg": ["Inter"], "mono-price-md": ["JetBrains Mono"], "body-md": ["Inter"], "display": ["Inter"], "body-sm": ["Inter"], "label-badge": ["JetBrains Mono"], "headline-md": ["Inter"] }, fontSize: { "mono-price-lg": ["22px", { lineHeight: "26px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-lg": ["22px", { lineHeight: "28px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-sm": ["15px", { lineHeight: "20px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-meta": ["11px", { lineHeight: "14px", letterSpacing: "0.02em", fontWeight: "500" }], "body-lg": ["15px", { lineHeight: "22px", letterSpacing: "-0.01em", fontWeight: "400" }], "mono-price-md": ["14px", { lineHeight: "18px", letterSpacing: "-0.01em", fontWeight: "500" }], "body-md": ["13px", { lineHeight: "18px", letterSpacing: "-0.005em", fontWeight: "400" }], "display": ["30px", { lineHeight: "36px", letterSpacing: "-0.03em", fontWeight: "700" }], "body-sm": ["11px", { lineHeight: "15px", letterSpacing: "0em", fontWeight: "400" }], "label-badge": ["10px", { lineHeight: "12px", letterSpacing: "0.04em", fontWeight: "600" }], "headline-md": ["18px", { lineHeight: "24px", letterSpacing: "-0.015em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#071420;color:#d7e4f5;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.12)] pt-safe"><div class="h-14 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go Back" class="w-11 h-11 -ml-2 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back_ios_new</span></button><div class="flex flex-col"><h1 class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface truncate max-w-[190px]">Design Specifications</h1><div class="flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-secondary"></span><span class="font-label-badge text-label-badge text-on-surface-variant font-mono">ARB L2</span></div></div></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_8px_rgba(180,197,255,0.15)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-14 bg-surface min-h-screen"><div class="flex flex-col w-full pb-safe">
+<!-- System Status Ticker & Scope Header -->
+<section class="px-margin pt-space-md pb-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex relative w-2 h-2 rounded-full bg-secondary">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant font-mono uppercase tracking-wider">L2 Sequencer Active • 14ms</span>
+</div>
+<span class="font-label-meta text-label-meta text-outline font-mono">NODE v4.19.2</span>
+</div>
+<div class="flex items-baseline justify-between mt-space-xs">
+<h2 class="font-headline-md text-headline-md font-semibold text-on-surface">System &amp; Edge States</h2>
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-mono">SPEC-DEMO</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Deterministic fallback matrices, latency edge states, and high-frequency settlement feedback.</p>
+</section>
+<!-- Interactive Category Filter Pill Matrix (Segment Switcher) -->
+<nav aria-label="State Sections Navigation" class="sticky top-14 z-40 bg-surface/95 backdrop-blur-md px-margin py-space-sm shadow-md">
+<div class="flex gap-space-xs overflow-x-auto no-scrollbar scroll-smooth">
+<button class="tab-pill whitespace-nowrap px-3 py-1.5 rounded-full font-label-badge text-label-badge transition-all duration-200 bg-primary-container text-on-primary-container font-mono" id="tab-btn-connectivity" onclick="switchTab('connectivity')">
+        1. CONNECTIVITY (5)
+      </button>
+<button class="tab-pill whitespace-nowrap px-3 py-1.5 rounded-full font-label-badge text-label-badge transition-all duration-200 bg-surface-container-high text-on-surface-variant font-mono" id="tab-btn-markets" onclick="switchTab('markets')">
+        2. MARKETS (6)
+      </button>
+<button class="tab-pill whitespace-nowrap px-3 py-1.5 rounded-full font-label-badge text-label-badge transition-all duration-200 bg-surface-container-high text-on-surface-variant font-mono" id="tab-btn-trading" onclick="switchTab('trading')">
+        3. TRADING (5)
+      </button>
+<button class="tab-pill whitespace-nowrap px-3 py-1.5 rounded-full font-label-badge text-label-badge transition-all duration-200 bg-surface-container-high text-on-surface-variant font-mono" id="tab-btn-wallet" onclick="switchTab('wallet')">
+        4. WALLET (4)
+      </button>
+<button class="tab-pill whitespace-nowrap px-3 py-1.5 rounded-full font-label-badge text-label-badge transition-all duration-200 bg-surface-container-high text-on-surface-variant font-mono" id="tab-btn-skeletons" onclick="switchTab('skeletons')">
+        5. SKELETONS (5)
+      </button>
+</div>
+</nav>
+<!-- TAB PANELS WRAPPER -->
+<div class="px-margin flex flex-col gap-space-lg pt-space-md">
+<!-- ==================== 1. CONNECTIVITY STATES ==================== -->
+<div class="tab-content flex flex-col gap-space-md" id="section-connectivity">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-outline uppercase font-mono tracking-wider">Feed &amp; Node Transport</span>
+<span class="font-label-badge text-label-badge text-secondary font-mono">WEBSOCKET / RPC</span>
+</div>
+<!-- State: No Internet Connection -->
+<article class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]">wifi_off</span>
+</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">No Internet Connection</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Client socket severed</p>
+</div>
+</div>
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-outline font-mono">OFFLINE CACHE</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="font-body-sm text-body-sm text-outline font-mono">Last synced block #194,821,042</span>
+</div>
+<span class="font-label-badge text-label-badge text-outline font-mono">42s ago</span>
+</div>
+<button class="w-full h-10 rounded-lg bg-surface-container-highest active:bg-surface-bright text-on-surface font-headline-sm text-headline-sm flex items-center justify-center gap-2 transition-transform active:scale-[0.98]">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+<span>Retry Connection</span>
+</button>
+</article>
+<!-- State: Reconnecting Pulse -->
+<article class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-tertiary"></span>
+</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Reconnecting to Engine...</h3>
+</div>
+<span class="font-label-badge text-label-badge text-tertiary font-mono px-2 py-0.5 rounded bg-tertiary-container/30">ATTEMPT 3/5</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Re-establishing WebSocket feed with orderbook matching cluster at <span class="text-on-surface font-mono">wss://feed.mitmarket.eth</span>.</p>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full w-3/5 transition-all duration-500"></div>
+</div>
+</article>
+<!-- State: Server Unavailable / 503 -->
+<article class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]">cloud_off</span>
+</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">503 Service Unavailable</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sequencer batch node under load</p>
+</div>
+</div>
+<span class="font-label-badge text-label-badge text-error font-mono px-2 py-0.5 rounded bg-error-container/40">HTTP 503</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Incident INC-9042-US</span>
+<a class="font-label-meta text-label-meta text-primary flex items-center gap-0.5" href="#">
+<span>Status Page</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+</div>
+</article>
+<!-- State: Request Timeout -->
+<article class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[20px]">timer_off</span>
+</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Request Timed Out</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">RPC did not respond within 8000ms</p>
+</div>
+</div>
+<span class="font-label-badge text-label-badge text-outline font-mono px-2 py-0.5 rounded bg-surface-container-high">ERR_TIMEOUT_408</span>
+</div>
+<button class="w-full h-10 rounded-lg bg-primary-container active:bg-primary text-on-primary-container font-headline-sm text-headline-sm flex items-center justify-center gap-1.5 transition-transform active:scale-[0.98]">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Resend Signed Payload</span>
+</button>
+</article>
+<!-- State: Connection Restored Banner -->
+<article class="bg-surface-container rounded-xl p-space-md flex items-center justify-between shadow-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</span>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Arbitrum L2 Synced</h3>
+<span class="font-body-sm text-body-sm text-secondary font-mono">Latency: 12ms • Zero packet drop</span>
+</div>
+</div>
+<span class="font-label-badge text-label-badge px-2 py-1 rounded-full bg-secondary/20 text-secondary font-mono">ONLINE</span>
+</article>
+</div>
+<!-- ==================== 2. MARKETS STATES ==================== -->
+<div class="tab-content hidden flex flex-col gap-space-md" id="section-markets">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-outline uppercase font-mono tracking-wider">Contract Lifecycle States</span>
+<span class="font-label-badge text-label-badge text-primary font-mono">POLYMARKET v2 ADAPTER</span>
+</div>
+<!-- State: No Markets Available (Clean Empty State) -->
+<article class="bg-surface-container rounded-xl p-space-xl flex flex-col items-center text-center gap-space-sm shadow-md">
+<div class="w-14 h-14 rounded-full bg-surface-container-highest flex items-center justify-center text-outline-variant">
+<span class="material-symbols-outlined text-[30px] text-outline">search_off</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-md text-headline-md text-on-surface">No Markets Found</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[280px]">No binary contracts match the active filter criteria or query string.</p>
+</div>
+<div class="flex gap-2 mt-space-xs">
+<button class="px-4 py-2 rounded-lg bg-surface-container-highest text-on-surface font-headline-sm text-headline-sm flex items-center gap-1 active:scale-[0.98]">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Reset Filters</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm active:scale-[0.98]">
+<span>Explore Trending</span>
+</button>
+</div>
+</article>
+<!-- State: Market Temporarily Paused (Circuit Breaker) -->
+<article class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-mono">CIRCUIT BREAKER TRIGGERED</span>
+<span class="font-label-meta text-label-meta text-outline font-mono">HALT_CODE: VOL_800%</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Fed Interest Rate Cut in Q3 2025?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Order book matching halted due to extreme short-window volatility (&gt;25% price deviation in 30 seconds). Unfilled limits remain resting.</p>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-outline">Automated Resumption:</span>
+<span class="font-label-badge text-label-badge text-tertiary font-mono">03m 42s</span>
+</div>
+</article>
+<!-- State: Market Suspended (Oracle Verification Lock) -->
+<article class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-highest text-primary font-mono flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>ORACLE DISPUTE WINDOW</span>
+</span>
+<span class="font-label-badge text-label-badge text-outline font-mono">UMA ORACLE v3</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">US CPI Exceeds 3.1% YoY for May?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Contract trading is frozen awaiting final assertion attestation from data providers. Payouts locked.</p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-body-sm text-outline">Proposed Outcome: <strong class="text-secondary">YES</strong></span>
+<span class="font-label-badge text-label-badge text-on-surface-variant font-mono">Challenge Bond: 500 USDC</span>
+</div>
+</article>
+<!-- State: Market Resolved (Payout & Claim CTA) -->
+<article class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-secondary/20 text-secondary font-mono">CONTRACT FINALIZED</span>
+<span class="font-mono-price-md text-mono-price-md text-secondary">YES 100¢</span>
+</div>
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Bitcoin reaches $100k prior to July?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Your Position: 1,450 YES Shares</p>
+</div>
+<div class="text-right">
+<span class="font-label-meta text-label-meta text-outline">CLAIMABLE</span>
+<div class="font-mono-price-md text-mono-price-md text-secondary font-semibold">$1,450.00</div>
+</div>
+</div>
+<button class="w-full h-11 rounded-lg bg-secondary text-on-secondary font-headline-sm text-headline-sm flex items-center justify-center gap-2 active:scale-[0.98] shadow-md">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+<span>Claim Winnings ($1,450.00 USDC)</span>
+</button>
+</article>
+<!-- State: Market Cancelled (Reimbursement) -->
+<article class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-highest text-outline font-mono">VOIDED / CANCELLED</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant font-mono">100% REFUND</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">SpaceX Starship orbital insertion on flight 4?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Condition ambiguity resolution triggered Section 4.2 cancellation. All principal collateral is immediately refundable at original strike values.</p>
+<button class="w-full h-10 rounded-lg bg-surface-container-highest text-on-surface font-headline-sm text-headline-sm active:scale-[0.98]">
+          Claim Collateral Refund ($240.00 USDC)
+        </button>
+</article>
+<!-- State: Live Data Delayed -->
+<article class="bg-surface-container rounded-xl p-space-md flex items-center justify-between shadow-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[20px]">history</span>
+</span>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Data Delayed (~18s)</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">RPC sequencer congestion</span>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-badge text-label-badge font-mono active:scale-[0.98]">
+          SYNC NOW
+        </button>
+</article>
+</div>
+<!-- ==================== 3. TRADING STATES ==================== -->
+<div class="tab-content hidden flex flex-col gap-space-md" id="section-trading">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-outline uppercase font-mono tracking-wider">Order Routing &amp; Execution</span>
+<span class="font-label-badge text-label-badge text-secondary font-mono">CLOB ENGINE</span>
+</div>
+<!-- State: Insufficient Balance -->
+<article class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-error-container/40 text-error font-mono flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span>INSUFFICIENT MARGIN</span>
+</span>
+<span class="font-label-badge text-label-badge text-outline font-mono">AVAIL: $4.18 USDC</span>
+</div>
+<div class="flex justify-between items-baseline">
+<span class="font-headline-sm text-headline-sm text-on-surface">Required Order Margin:</span>
+<span class="font-mono-price-md text-mono-price-md text-error">$250.00 USDC</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Collateral shortfall of $245.82 USDC to route 500 contracts at YES 50¢.</p>
+<button class="w-full h-11 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm flex items-center justify-center gap-2 active:scale-[0.98] shadow-md">
+<span class="material-symbols-outlined text-[18px]">add_card</span>
+<span>Instant Deposit USDC (Arbitrum)</span>
+</button>
+</article>
+<!-- State: Order Submitting / Processing -->
+<article class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<svg class="animate-spin h-5 w-5 text-primary" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+<path class="opacity-75" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" fill="currentColor"></path>
+</svg>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Submitting Order...</h3>
+</div>
+<span class="font-label-badge text-label-badge text-primary font-mono">SIGNING_EIP712</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Routing cryptographic limit order to Off-Chain Matching Engine. Waiting for sequencer receipt.</p>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex justify-between font-mono text-body-sm">
+<span class="text-outline">Non-blocking Batch ID</span>
+<span class="text-on-surface">0x89f...10ca</span>
+</div>
+</article>
+<!-- State: Partially Filled -->
+<article class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-highest text-primary font-mono">PARTIALLY FILLED (65%)</span>
+<span class="font-label-meta text-label-meta text-outline font-mono">ORDER #44018</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-headline-sm text-on-surface">Buy YES 1,000 @ 48¢</span>
+<span class="font-mono-price-md text-mono-price-md text-secondary">650 / 1,000</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full w-[65%]"></div>
+</div>
+<div class="flex justify-between text-body-sm text-outline">
+<span>Filled: 650 shares ($312.00)</span>
+<span>Open: 350 shares</span>
+</div>
+<div class="flex gap-2 pt-1">
+<button class="flex-1 h-9 rounded-lg bg-surface-container-highest text-error font-body-md text-body-md active:scale-[0.98]">
+            Cancel Remaining (350)
+          </button>
+<button class="flex-1 h-9 rounded-lg bg-surface-container-high text-on-surface font-body-md text-body-md active:scale-[0.98]">
+            Order Details
+          </button>
+</div>
+</article>
+<!-- State: Order Filled (Confirmation Toast Card) -->
+<article class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-secondary/15 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</span>
+<h3 class="font-headline-sm text-headline-sm text-secondary">Order Fully Executed</h3>
+</div>
+<span class="font-label-badge text-label-badge text-outline font-mono">MATCH_INSTANT</span>
+</div>
+<div class="grid grid-cols-2 gap-2 p-space-sm rounded-lg bg-surface-container-low font-mono">
+<div>
+<span class="font-label-meta text-label-meta text-outline block">Filled Quantity</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">500 YES Shares</span>
+</div>
+<div>
+<span class="font-label-meta text-label-meta text-outline block">Avg Execution Price</span>
+<span class="font-body-md text-body-md text-secondary font-semibold">47.8¢</span>
+</div>
+</div>
+<div class="flex justify-between items-center text-body-sm text-on-surface-variant">
+<span>L2 Tx Hash: <span class="font-mono text-primary">0x4a12...99bc</span></span>
+<button class="font-label-meta text-label-meta text-primary flex items-center gap-0.5">
+<span>Receipt</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</div>
+</article>
+<!-- State: Order Rejected (Slippage Rejection) -->
+<article class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-error-container/40 text-error font-mono">REJECTED BY CLOB</span>
+<span class="font-label-badge text-label-badge text-outline font-mono">ERR_SLIPPAGE_MAX</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Slippage Tolerance Exceeded</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Market moved from 52¢ to 58¢ while order was in flight. Configured tolerance threshold was 1.0%.</p>
+<div class="flex gap-2">
+<button class="flex-1 h-10 rounded-lg bg-surface-container-highest text-on-surface font-headline-sm text-headline-sm active:scale-[0.98]">
+            Adjust Slippage
+          </button>
+<button class="flex-1 h-10 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm active:scale-[0.98]">
+            Retry at Market
+          </button>
+</div>
+</article>
+</div>
+<!-- ==================== 4. WALLET STATES ==================== -->
+<div class="tab-content hidden flex flex-col gap-space-md" id="section-wallet">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-outline uppercase font-mono tracking-wider">Treasury &amp; On-Chain Bridge</span>
+<span class="font-label-badge text-label-badge text-primary font-mono">VAULT GATEWAY</span>
+</div>
+<!-- State: Deposit Pending / Confirmations -->
+<article class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Deposit Pending</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Incoming Tron USDT Bridge</p>
+</div>
+</div>
+<span class="font-mono-price-md text-mono-price-md text-on-surface font-semibold">+1,200.00 USDT</span>
+</div>
+<div class="flex flex-col gap-1.5 mt-1">
+<div class="flex justify-between font-mono text-body-sm">
+<span class="text-outline">Block Confirmations</span>
+<span class="text-primary font-semibold">14 of 20 Finalized</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full w-[70%] transition-all duration-300"></div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Funds are automatically converted to USDC upon block finality (~45 seconds remaining).</p>
+</article>
+<!-- State: Withdrawal Processing HSM Vault -->
+<article class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-highest text-tertiary font-mono">HSM MULTI-SIG QUEUE</span>
+<span class="font-mono-price-md text-mono-price-md text-outline">-5,000.00 USDC</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Withdrawal Dispatched to Vault</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cold vault co-signers verifying balance root. Policy threshold requires 2-of-3 hardware signers.</p>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-mono">Signer 1 (OK)</span>
+<span class="w-2 h-2 rounded-full bg-secondary ml-2"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-mono">Signer 2 (OK)</span>
+</div>
+<span class="font-label-badge text-label-badge text-secondary font-mono">BROADCASTING</span>
+</div>
+</article>
+<!-- State: Transfer Failed (Nonce / Gas Spike) -->
+<article class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]">error</span>
+</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Transfer Execution Failed</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">L2 base fee sudden spike</p>
+</div>
+</div>
+<span class="font-label-badge text-label-badge text-error font-mono px-2 py-0.5 rounded bg-error-container/40">NONCE_REVERT</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Max priority fee was lower than required block threshold (gas reached 48 gwei). No collateral was lost.</p>
+<div class="flex gap-2">
+<button class="flex-1 h-10 rounded-lg bg-surface-container-highest text-on-surface font-headline-sm text-headline-sm active:scale-[0.98]">
+            Dismiss
+          </button>
+<button class="flex-1 h-10 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm active:scale-[0.98]">
+            Retry With Boosted Gas
+          </button>
+</div>
+</article>
+<!-- State: Unsupported Network Mismatch -->
+<article class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-error-container/40 text-error font-mono">WRONG NETWORK</span>
+<span class="font-label-badge text-label-badge text-outline font-mono">CHAIN ID #1</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[24px] text-error mt-0.5">electrical_services</span>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Ethereum Mainnet Detected</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">MITMARKET settlement contracts operate strictly on Arbitrum One (Chain ID 42161).</p>
+</div>
+</div>
+<button class="w-full h-11 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm flex items-center justify-center gap-1.5 active:scale-[0.98]">
+<span class="material-symbols-outlined text-[18px]">sync_alt</span>
+<span>Switch Network to Arbitrum</span>
+</button>
+</article>
+</div>
+<!-- ==================== 5. REUSABLE SKELETON LOADERS ==================== -->
+<div class="tab-content hidden flex flex-col gap-space-md" id="section-skeletons">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-outline uppercase font-mono tracking-wider">Low-Latency Content Placeholders</span>
+<span class="font-label-badge text-label-badge text-outline font-mono">SHIMMER CSS ENGINE</span>
+</div>
+<!-- Skeleton 1: Market Card Skeleton -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-meta text-label-meta text-outline font-mono">SKELETON A • PREDICTION MARKET CARD</span>
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md animate-pulse">
+<div class="flex items-center justify-between">
+<div class="h-4 w-24 bg-surface-container-highest rounded"></div>
+<div class="h-4 w-16 bg-surface-container-highest rounded font-mono"></div>
+</div>
+<div class="h-5 w-4/5 bg-surface-container-highest rounded mt-1"></div>
+<div class="h-5 w-3/5 bg-surface-container-highest rounded"></div>
+<!-- Probability Bar Skeleton -->
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden mt-1">
+<div class="bg-surface-container-highest h-full rounded-full w-2/3"></div>
+</div>
+<!-- Binary outcome buttons skeleton -->
+<div class="grid grid-cols-2 gap-2 pt-space-xs">
+<div class="h-10 bg-surface-container-highest rounded-lg"></div>
+<div class="h-10 bg-surface-container-highest rounded-lg"></div>
+</div>
+</div>
+</div>
+<!-- Skeleton 2: Chart Loading Skeleton -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-meta text-label-meta text-outline font-mono">SKELETON B • CANDLESTICK / DEPTH CHART</span>
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md animate-pulse">
+<div class="flex justify-between items-center">
+<div class="h-6 w-28 bg-surface-container-highest rounded"></div>
+<div class="flex gap-1">
+<div class="h-6 w-8 bg-surface-container-highest rounded"></div>
+<div class="h-6 w-8 bg-surface-container-highest rounded"></div>
+<div class="h-6 w-8 bg-surface-container-highest rounded"></div>
+</div>
+</div>
+<!-- Simulated Candlestick Bars SVG Skeleton -->
+<div class="h-28 w-full bg-surface-container-low rounded-lg p-space-sm flex items-end justify-between gap-1">
+<div class="w-2 bg-surface-container-highest rounded-t h-1/4"></div>
+<div class="w-2 bg-surface-container-highest rounded-t h-1/2"></div>
+<div class="w-2 bg-surface-container-highest rounded-t h-3/4"></div>
+<div class="w-2 bg-surface-container-highest rounded-t h-2/3"></div>
+<div class="w-2 bg-surface-container-highest rounded-t h-4/5"></div>
+<div class="w-2 bg-surface-container-highest rounded-t h-1/3"></div>
+<div class="w-2 bg-surface-container-highest rounded-t h-1/2"></div>
+<div class="w-2 bg-surface-container-highest rounded-t h-3/5"></div>
+<div class="w-2 bg-surface-container-highest rounded-t h-2/5"></div>
+<div class="w-2 bg-surface-container-highest rounded-t h-4/5"></div>
+<div class="w-2 bg-surface-container-highest rounded-t h-3/4"></div>
+<div class="w-2 bg-surface-container-highest rounded-t h-5/6"></div>
+</div>
+<div class="flex justify-between">
+<div class="h-3 w-12 bg-surface-container-highest rounded"></div>
+<div class="h-3 w-12 bg-surface-container-highest rounded"></div>
+<div class="h-3 w-12 bg-surface-container-highest rounded"></div>
+</div>
+</div>
+</div>
+<!-- Skeleton 3: Portfolio Net Worth -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-meta text-label-meta text-outline font-mono">SKELETON C • PORTFOLIO NET WORTH</span>
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md animate-pulse">
+<div class="h-3 w-28 bg-surface-container-highest rounded"></div>
+<div class="h-8 w-44 bg-surface-container-highest rounded"></div>
+<div class="flex gap-3 mt-1">
+<div class="h-4 w-20 bg-surface-container-highest rounded"></div>
+<div class="h-4 w-20 bg-surface-container-highest rounded"></div>
+</div>
+</div>
+</div>
+<!-- Skeleton 4: Transaction List Skeleton -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-meta text-label-meta text-outline font-mono">SKELETON D • AUDIT LOG / TRANSACTIONS</span>
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col gap-3 shadow-md animate-pulse">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-surface-container-highest"></div>
+<div class="flex flex-col gap-1">
+<div class="h-4 w-28 bg-surface-container-highest rounded"></div>
+<div class="h-3 w-16 bg-surface-container-highest rounded"></div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<div class="h-4 w-16 bg-surface-container-highest rounded"></div>
+<div class="h-3 w-10 bg-surface-container-highest rounded"></div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-surface-container-highest"></div>
+<div class="flex flex-col gap-1">
+<div class="h-4 w-32 bg-surface-container-highest rounded"></div>
+<div class="h-3 w-20 bg-surface-container-highest rounded"></div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<div class="h-4 w-14 bg-surface-container-highest rounded"></div>
+<div class="h-3 w-10 bg-surface-container-highest rounded"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Skeleton 5: Button Loading State -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-meta text-label-meta text-outline font-mono">SKELETON E • INLINE BUTTON SPINNER STATE</span>
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md">
+<button class="w-full h-12 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm flex items-center justify-center gap-2 opacity-90 cursor-not-allowed" disabled="">
+<svg class="animate-spin h-5 w-5 text-on-primary-container" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+<path class="opacity-75" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" fill="currentColor"></path>
+</svg>
+<span>Broadcasting Transaction...</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Floating Execution Helper Note -->
+<footer class="mt-space-xl mb-space-lg px-margin flex flex-col items-center justify-center text-center">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-mono text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span>Deterministic State Matrix Validated</span>
+</div>
+<span class="font-label-badge text-label-badge text-outline mt-1 font-mono">MITMARKET MOBILE UI v2.4.0</span>
+</footer>
+</div>
+<script>
+  function switchTab(targetId) {
+    const tabs = ['connectivity', 'markets', 'trading', 'wallet', 'skeletons'];
+    
+    tabs.forEach(tab => {
+      const section = document.getElementById('section-' + tab);
+      const btn = document.getElementById('tab-btn-' + tab);
+      
+      if (tab === targetId) {
+        if (section) section.classList.remove('hidden');
+        if (btn) {
+          btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+          btn.classList.add('bg-primary-container', 'text-on-primary-container');
+        }
+      } else {
+        if (section) section.classList.add('hidden');
+        if (btn) {
+          btn.classList.remove('bg-primary-container', 'text-on-primary-container');
+          btn.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+        }
+      }
+    });
+  }
+</script></main></body></html>

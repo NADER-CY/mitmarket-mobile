@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#071420;color:#d7e4f5;font-family:'Inter',sans-serif;-webkit-tap-highlight-color:transparent;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "tertiary": "#ffb3b5", "on-primary-fixed": "#00174c", "error-container": "#93000a", "primary-fixed": "#dbe1ff", "surface-container-highest": "#293643", "tertiary-fixed": "#ffdada", "primary": "#b4c5ff", "surface-container-low": "#101d29", "on-secondary-container": "#004025", "primary-container": "#1463ff", "on-error": "#690005", "on-tertiary-fixed-variant": "#920027", "on-primary-fixed-variant": "#003daa", "outline": "#8d90a2", "error": "#ffb4ab", "on-secondary": "#003920", "on-secondary-fixed": "#002110", "primary-fixed-dim": "#b4c5ff", "surface-container-high": "#1f2b38", "on-surface-variant": "#c3c5d8", "secondary-fixed": "#6dfdaf", "secondary": "#4cdf95", "surface-dim": "#071420", "surface-container-lowest": "#030f1b", "surface-variant": "#293643", "inverse-on-surface": "#25323e", "on-primary": "#002979", "surface-bright": "#2e3a48", "on-primary-container": "#f5f5ff", "surface-container": "#14212d", "inverse-primary": "#0052dd", "secondary-fixed-dim": "#4cdf95", "on-background": "#d7e4f5", "secondary-container": "#00b872", "on-secondary-fixed-variant": "#005230", "inverse-surface": "#d7e4f5", "outline-variant": "#424656", "on-tertiary": "#680019", "on-tertiary-fixed": "#40000c", "surface-tint": "#b4c5ff", "on-surface": "#d7e4f5", "tertiary-container": "#d72747", "on-tertiary-container": "#fff3f3", "background": "#071420", "on-error-container": "#ffdad6", "tertiary-fixed-dim": "#ffb3b5", "surface": "#071420" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-md": "0.75rem", "space-xl": "1.5rem", "space-xs": "0.25rem", "gutter": "0.75rem", "space-lg": "1rem", "margin": "1rem", "space-sm": "0.5rem" }, fontFamily: { "headline-lg": ["Inter"], "display": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "mono-price-md": ["JetBrains Mono"], "label-meta": ["Inter"], "mono-price-lg": ["JetBrains Mono"], "headline-md": ["Inter"], "body-lg": ["Inter"], "label-badge": ["JetBrains Mono"] }, fontSize: { "headline-lg": ["22px", { lineHeight: "28px", letterSpacing: "-0.02em", fontWeight: "600" }], "display": ["30px", { lineHeight: "36px", letterSpacing: "-0.03em", fontWeight: "700" }], "body-md": ["13px", { lineHeight: "18px", letterSpacing: "-0.005em", fontWeight: "400" }], "body-sm": ["11px", { lineHeight: "15px", letterSpacing: "0em", fontWeight: "400" }], "headline-sm": ["15px", { lineHeight: "20px", letterSpacing: "-0.01em", fontWeight: "600" }], "mono-price-md": ["14px", { lineHeight: "18px", letterSpacing: "-0.01em", fontWeight: "500" }], "label-meta": ["11px", { lineHeight: "14px", letterSpacing: "0.02em", fontWeight: "500" }], "mono-price-lg": ["22px", { lineHeight: "26px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-md": ["18px", { lineHeight: "24px", letterSpacing: "-0.015em", fontWeight: "600" }], "body-lg": ["15px", { lineHeight: "22px", letterSpacing: "-0.01em", fontWeight: "400" }], "label-badge": ["10px", { lineHeight: "12px", letterSpacing: "0.04em", fontWeight: "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-low/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-14 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm flex-1 min-w-0"><div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">query_stats</span></div><h1 class="font-headline-md text-headline-md text-on-surface truncate tracking-tight">Global Search</h1></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface active:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-surface pt-14 pb-20 px-margin flex flex-col"><div class="flex flex-col w-full pb-10 space-y-space-md">
+<!-- Interactive Search Hub Container -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<!-- Search Bar with Micro-interactions -->
+<div class="flex items-center gap-space-xs">
+<div class="flex-1 relative flex items-center bg-surface-container-low rounded-xl px-space-sm py-2 shadow-sm transition-all focus-within:bg-surface-container-high focus-within:shadow-md">
+<span class="material-symbols-outlined text-primary text-[20px] mr-2 transition-transform duration-200" id="search-icon-indicator">search</span>
+<input autocomplete="off" class="bg-transparent text-on-surface font-body-md text-body-md w-full focus:outline-none placeholder:text-outline font-normal" id="global-search-input" placeholder="Search markets, events, crypto..." spellcheck="false" type="text" value="Fed"/>
+<button aria-label="Clear input" class="w-6 h-6 flex items-center justify-center rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface transition-transform active:scale-90" id="clear-search-btn">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+<!-- Quick Filter Trigger -->
+<button aria-label="Advanced Filters" class="w-10 h-10 flex items-center justify-center rounded-xl bg-surface-container-low text-on-surface-variant hover:text-primary active:scale-95 transition-all relative">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+<span class="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</button>
+</div>
+<!-- Category Filter Tabs -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-0.5" id="category-tabs">
+<button class="category-pill active flex items-center justify-center px-3 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-meta text-label-meta whitespace-nowrap shadow-sm transition-all">
+        All
+      </button>
+<button class="category-pill flex items-center justify-center px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-meta text-label-meta whitespace-nowrap transition-all">
+        Markets <span class="ml-1 text-[9px] opacity-70">12</span>
+</button>
+<button class="category-pill flex items-center justify-center px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-meta text-label-meta whitespace-nowrap transition-all">
+        Crypto <span class="ml-1 text-[9px] opacity-70">6</span>
+</button>
+<button class="category-pill flex items-center justify-center px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-meta text-label-meta whitespace-nowrap transition-all">
+        Sports <span class="ml-1 text-[9px] opacity-70">4</span>
+</button>
+<button class="category-pill flex items-center justify-center px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-meta text-label-meta whitespace-nowrap transition-all">
+        Politics
+      </button>
+<button class="category-pill flex items-center justify-center px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-meta text-label-meta whitespace-nowrap transition-all">
+        News
+      </button>
+<button class="category-pill flex items-center justify-center px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-meta text-label-meta whitespace-nowrap transition-all">
+        People
+      </button>
+</div>
+</div>
+<!-- Live Status & Latency Badge -->
+<div class="flex items-center justify-between px-1 text-on-surface-variant font-label-meta text-label-meta">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="truncate">14 results across 5 categories</span>
+</div>
+<span class="font-label-badge text-label-badge text-outline">L2 INDEX • 14ms</span>
+</div>
+<!-- Trending Suggestions Carousel (Micro-chips) -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between px-1">
+<span class="text-outline font-label-badge text-label-badge uppercase tracking-wider">High Velocity Topics</span>
+<span class="text-primary font-label-meta text-label-meta flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">bolt</span> Live
+      </span>
+</div>
+<div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
+<button class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface hover:bg-surface-container-high transition-colors text-left flex-shrink-0">
+<span class="text-tertiary-container text-[12px]">🔥</span>
+<span class="font-label-meta text-label-meta">Fed Rate Cut</span>
+<span class="font-label-badge text-label-badge text-secondary">+142%</span>
+</button>
+<button class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface hover:bg-surface-container-high transition-colors text-left flex-shrink-0">
+<span class="text-[12px]">⚽</span>
+<span class="font-label-meta text-label-meta">Champions League</span>
+</button>
+<button class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface hover:bg-surface-container-high transition-colors text-left flex-shrink-0">
+<span class="text-primary text-[12px]">⚡</span>
+<span class="font-label-meta text-label-meta">TSMC 2nm</span>
+</button>
+<button class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface hover:bg-surface-container-high transition-colors text-left flex-shrink-0">
+<span class="text-secondary text-[12px]">💎</span>
+<span class="font-label-meta text-label-meta">Solana ETF</span>
+</button>
+<button class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low rounded-lg text-on-surface hover:bg-surface-container-high transition-colors text-left flex-shrink-0">
+<span class="text-[12px]">🤖</span>
+<span class="font-label-meta text-label-meta">OpenAI Orion</span>
+</button>
+</div>
+</div>
+<!-- Recent Searches (Collapsible Micro-Stack) -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl p-space-sm gap-2 transition-all" id="recent-searches-box">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-meta text-label-meta">
+<span class="material-symbols-outlined text-[14px]">history</span>
+<span>Recent Searches</span>
+</div>
+<button class="text-outline hover:text-on-surface font-label-meta text-label-meta transition-colors" id="clear-all-recent">Clear</button>
+</div>
+<div class="flex flex-wrap gap-1.5" id="recent-tags-container">
+<div class="flex items-center gap-1.5 pl-2 pr-1 py-1 rounded-md bg-surface-container-low text-on-surface font-body-sm text-body-sm">
+<span class="truncate max-w-[100px]">Bitcoin 100k</span>
+<button class="w-4 h-4 flex items-center justify-center text-outline hover:text-on-surface" onclick="this.parentElement.remove()">
+<span class="material-symbols-outlined text-[12px]">close</span>
+</button>
+</div>
+<div class="flex items-center gap-1.5 pl-2 pr-1 py-1 rounded-md bg-surface-container-low text-on-surface font-body-sm text-body-sm">
+<span class="truncate max-w-[100px]">Federal Reserve</span>
+<button class="w-4 h-4 flex items-center justify-center text-outline hover:text-on-surface" onclick="this.parentElement.remove()">
+<span class="material-symbols-outlined text-[12px]">close</span>
+</button>
+</div>
+<div class="flex items-center gap-1.5 pl-2 pr-1 py-1 rounded-md bg-surface-container-low text-on-surface font-body-sm text-body-sm">
+<span class="truncate max-w-[100px]">US Elections</span>
+<button class="w-4 h-4 flex items-center justify-center text-outline hover:text-on-surface" onclick="this.parentElement.remove()">
+<span class="material-symbols-outlined text-[12px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- GROUP 1: PREDICTION MARKETS -->
+<section class="flex flex-col gap-2">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">query_stats</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Active Contracts</h2>
+</div>
+<span class="font-label-badge text-label-badge text-outline">TOP MATCHES</span>
+</div>
+<!-- Market Card 1 -->
+<div class="relative bg-surface-container rounded-xl p-space-sm shadow-md flex flex-col gap-space-sm overflow-hidden">
+<!-- Ambient Skew Glow Accent -->
+<div class="absolute -right-10 -top-10 w-24 h-24 rounded-full bg-secondary/10 blur-xl pointer-events-none"></div>
+<!-- Card Header -->
+<div class="flex items-start justify-between gap-space-sm relative z-10">
+<div class="flex flex-col gap-0.5 flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-label-badge text-label-badge">MACRO</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant">Closes in 4d</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-1 line-clamp-2 leading-snug">
+            US Fed to cut interest rates ≥50 bps before Dec 2025 FOMC
+          </p>
+</div>
+<!-- Editorial Micro-Thumbnail -->
+<div class="w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden flex-shrink-0 relative shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Modern close up of the Federal Reserve seal on architectural dark glass with moody blue lighting, institutional financial aesthetic, ultra clean cinematic sharp focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTlzVMFkbbBT-9Ece5B0pzefqCeKmNbs_ydNK4u-mQ0mO2j02ZNVVNpnvm1TP65gGFtpNRtDOSzE8Zpl5wtkRZ2z3Eo7qFhnvvM0HiE5E4gWBvLUwLG10BJQlllfRLyBp3fXpHVy2xo42BcreTXoQPYd2DkKQrntm_K1lpwb5jw6MFmJGaxEBHYNNIO7Yj9HSu1b06_zWcdJvsxJDfB7Bc4gl_sOBaeBj1EqHqsvqI"/>
+</div>
+</div>
+<!-- Live Consensus Split Bar -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-badge text-label-badge">
+<span class="text-secondary font-mono-price-md text-mono-price-md">68% YES</span>
+<span class="text-tertiary-container font-mono-price-md text-mono-price-md">32% NO</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-secondary rounded-l-full transition-all duration-500" style="width: 68%;"></div>
+<div class="h-full bg-tertiary-container rounded-r-full transition-all duration-500" style="width: 32%;"></div>
+</div>
+</div>
+<!-- Execution Micro-Pills & Volume Row -->
+<div class="flex items-center justify-between gap-space-sm pt-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-meta text-label-meta">
+<span class="material-symbols-outlined text-[15px] text-outline">equalizer</span>
+<span class="font-mono-price-md text-[12px] text-on-surface">$44.8M Vol</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-3 py-1.5 rounded-lg bg-secondary/15 hover:bg-secondary/25 active:bg-secondary active:text-on-secondary transition-all text-secondary font-mono-price-md text-mono-price-md flex items-center gap-1">
+<span>YES</span>
+<span class="font-bold">68¢</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-tertiary-container/15 hover:bg-tertiary-container/25 active:bg-tertiary-container active:text-on-tertiary-container transition-all text-tertiary-container font-mono-price-md text-mono-price-md flex items-center gap-1">
+<span>NO</span>
+<span class="font-bold">32¢</span>
+</button>
+<button aria-label="Save Market" class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Market Card 2 -->
+<div class="relative bg-surface-container rounded-xl p-space-sm shadow-md flex flex-col gap-space-sm overflow-hidden">
+<!-- Card Header -->
+<div class="flex items-start justify-between gap-space-sm relative z-10">
+<div class="flex flex-col gap-0.5 flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-label-badge text-label-badge">AI &amp; TECH</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant">Closes Nov 30</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-1 line-clamp-2 leading-snug">
+            OpenAI announces Orion frontier model before Nov 2024
+          </p>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden flex-shrink-0 relative shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Abstract luminous synthetic neural network structure with cyan and indigo pulsing light filaments, dark cybernetic room, hyper-detailed rendering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMHKMIf_Dz4eWOBWAZjtiewKQsXIaxA__tl0qUyCL1TNxEwWQz2sCJ-2b6UmcbVWdLP027hARd_W0SjjStlPgfv9G9njvf-DqQojO-Se7ZcFalqI4SEslcXu1v5HEDaIAuJNlg9HzBzJ49OiolXXHOF5ZBQF3e-ZvKWkEab6PmjEdfEUIxQj2hGB51Smx58g1h3mcoEv2FJwswQDE5CVfW9YgZXHaJ1Sv1usYb3aqR"/>
+</div>
+</div>
+<!-- Probability Bar -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-badge text-label-badge">
+<span class="text-secondary font-mono-price-md text-mono-price-md">41% YES</span>
+<span class="text-tertiary-container font-mono-price-md text-mono-price-md">59% NO</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-secondary rounded-l-full" style="width: 41%;"></div>
+<div class="h-full bg-tertiary-container rounded-r-full" style="width: 59%;"></div>
+</div>
+</div>
+<!-- Action Row -->
+<div class="flex items-center justify-between gap-space-sm pt-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-meta text-label-meta">
+<span class="material-symbols-outlined text-[15px] text-outline">equalizer</span>
+<span class="font-mono-price-md text-[12px] text-on-surface">$1.8M Vol</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-3 py-1.5 rounded-lg bg-secondary/15 hover:bg-secondary/25 active:bg-secondary active:text-on-secondary transition-all text-secondary font-mono-price-md text-mono-price-md flex items-center gap-1">
+<span>YES</span>
+<span class="font-bold">41¢</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-tertiary-container/15 hover:bg-tertiary-container/25 active:bg-tertiary-container active:text-on-tertiary-container transition-all text-tertiary-container font-mono-price-md text-mono-price-md flex items-center gap-1">
+<span>NO</span>
+<span class="font-bold">59¢</span>
+</button>
+<button aria-label="Save Market" class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- GROUP 2: LINKED CRYPTOCURRENCIES & ASSETS -->
+<section class="flex flex-col gap-2 pt-1">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">currency_bitcoin</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Underlying Cryptocurrencies</h2>
+</div>
+<span class="font-label-badge text-label-badge text-outline">INDEX FEEDS</span>
+</div>
+<div class="grid grid-cols-1 gap-2">
+<!-- ETH Asset Tile -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex items-center justify-between shadow-sm hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary flex-shrink-0 font-bold text-sm">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+<path d="M11.944 17.97L4.58 13.62 11.943 24l7.37-10.38-7.372 4.35h.003zM12.056 0L4.69 12.223l7.365 4.354 7.365-4.35L12.056 0z"></path>
+</svg>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Ethereum</span>
+<span class="text-outline font-label-badge text-label-badge">ETH</span>
+</div>
+<span class="font-label-meta text-label-meta text-on-surface-variant">18 Linked Prediction Markets</span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0">
+<span class="font-mono-price-md text-mono-price-md text-on-surface">$3,288.00</span>
+<div class="flex items-center gap-0.5 text-secondary font-label-badge text-label-badge">
+<span class="material-symbols-outlined text-[13px]">arrow_drop_up</span>
+<span>+4.2%</span>
+</div>
+</div>
+</div>
+<!-- SOL Asset Tile -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex items-center justify-between shadow-sm hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary flex-shrink-0 font-bold text-sm">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+<path d="M4 18h14l2-3H6l-2 3zm0-7h14l2-3H6l-2 3zm2-8l-2 3h14l2-3H6z"></path>
+</svg>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Solana</span>
+<span class="text-outline font-label-badge text-label-badge">SOL</span>
+</div>
+<span class="font-label-meta text-label-meta text-on-surface-variant">9 Linked Active Contracts</span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0">
+<span class="font-mono-price-md text-mono-price-md text-on-surface">$178.40</span>
+<div class="flex items-center gap-0.5 text-secondary font-label-badge text-label-badge">
+<span class="material-symbols-outlined text-[13px]">arrow_drop_up</span>
+<span>+8.6%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- GROUP 3: SPORTS & FIXTURES -->
+<section class="flex flex-col gap-2 pt-1">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">sports_soccer</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Teams &amp; Competitions</h2>
+</div>
+<span class="font-label-badge text-label-badge text-outline">UPCOMING</span>
+</div>
+<!-- Match Card -->
+<div class="bg-surface-container rounded-xl p-space-sm shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between text-on-surface-variant font-label-badge text-label-badge">
+<span class="text-primary font-semibold">UEFA CHAMPIONS LEAGUE</span>
+<span class="flex items-center gap-1 text-outline">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Live Odds in 2d
+        </span>
+</div>
+<div class="flex items-center justify-between gap-space-sm py-1">
+<!-- Team 1 -->
+<div class="flex items-center gap-2 flex-1 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-[12px] font-bold text-on-surface">
+            RMA
+          </div>
+<span class="font-body-md text-body-md text-on-surface truncate">Real Madrid</span>
+</div>
+<span class="font-mono-price-md text-mono-price-md text-outline px-1">VS</span>
+<!-- Team 2 -->
+<div class="flex items-center justify-end gap-2 flex-1 min-w-0 text-right">
+<span class="font-body-md text-body-md text-on-surface truncate">Man City</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-[12px] font-bold text-on-surface">
+            MCI
+          </div>
+</div>
+</div>
+<!-- Contracts Summary Pill -->
+<div class="flex items-center justify-between bg-surface-container-low px-space-sm py-1.5 rounded-lg text-on-surface-variant font-label-meta text-label-meta">
+<span class="text-on-surface">4 Prediction Contracts Available</span>
+<button class="text-primary font-semibold flex items-center gap-0.5 hover:underline">
+<span>Explore Book</span>
+<span class="material-symbols-outlined text-[15px]">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Interactive Search Client Micro-controller -->
+<script>
+    (function initGlobalSearch() {
+      const searchInput = document.getElementById('global-search-input');
+      const clearBtn = document.getElementById('clear-search-btn');
+      const icon = document.getElementById('search-icon-indicator');
+      const tabs = document.querySelectorAll('.category-pill');
+      const clearHistoryBtn = document.getElementById('clear-all-recent');
+      const recentTags = document.getElementById('recent-tags-container');
+
+      // Clear button behavior
+      if (clearBtn && searchInput) {
+        clearBtn.addEventListener('click', () => {
+          searchInput.value = '';
+          searchInput.focus();
+          clearBtn.classList.add('opacity-0', 'pointer-events-none');
+          if (icon) icon.textContent = 'search';
+        });
+
+        searchInput.addEventListener('input', (e) => {
+          if (e.target.value.length > 0) {
+            clearBtn.classList.remove('opacity-0', 'pointer-events-none');
+            if (icon) icon.textContent = 'tune';
+          } else {
+            clearBtn.classList.add('opacity-0', 'pointer-events-none');
+            if (icon) icon.textContent = 'search';
+          }
+        });
+      }
+
+      // Filter tabs switching
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => {
+            t.classList.remove('bg-primary-container', 'text-on-primary-container');
+            t.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+          });
+          tab.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+          tab.classList.add('bg-primary-container', 'text-on-primary-container');
+        });
+      });
+
+      // Clear recent searches
+      if (clearHistoryBtn && recentTags) {
+        clearHistoryBtn.addEventListener('click', () => {
+          const container = document.getElementById('recent-searches-box');
+          if (container) {
+            container.style.opacity = '0';
+            setTimeout(() => container.remove(), 200);
+          }
+        });
+      }
+    })();
+  </script>
+</div></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-low/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.5)]" data-active-classes="text-primary font-semibold"><div class="h-16 px-space-md flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="markets" href="#"><span class="material-symbols-outlined text-[22px]">candlestick_chart</span><span class="font-label-meta text-label-meta tracking-wide">Markets</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 transition-colors text-primary font-semibold" data-path="global-search" href="#"><span class="material-symbols-outlined text-[22px]">travel_explore</span><span class="font-label-meta text-label-meta tracking-wide">Explore</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="portfolio" href="#"><span class="material-symbols-outlined text-[22px]">pie_chart</span><span class="font-label-meta text-label-meta tracking-wide">Portfolio</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="saved-markets-&amp;-collections" href="#"><span class="material-symbols-outlined text-[22px]">bookmarks</span><span class="font-label-meta text-label-meta tracking-wide">Saved</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="profile" href="#"><span class="material-symbols-outlined text-[22px]">account_balance_wallet</span><span class="font-label-meta text-label-meta tracking-wide">Profile</span></a></div></nav></body></html>

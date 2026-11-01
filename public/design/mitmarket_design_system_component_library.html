@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary": "#003920", "on-secondary-fixed": "#002110", "surface": "#071420", "outline": "#8d90a2", "inverse-on-surface": "#25323e", "primary": "#b4c5ff", "tertiary-container": "#d72747", "tertiary-fixed": "#ffdada", "surface-container-highest": "#293643", "tertiary-fixed-dim": "#ffb3b5", "on-background": "#d7e4f5", "surface-container-low": "#101d29", "outline-variant": "#424656", "on-primary-fixed-variant": "#003daa", "secondary-container": "#00b872", "on-secondary-fixed-variant": "#005230", "on-tertiary-fixed": "#40000c", "on-surface-variant": "#c3c5d8", "on-tertiary": "#680019", "surface-tint": "#b4c5ff", "on-tertiary-container": "#fff3f3", "on-primary": "#002979", "on-surface": "#d7e4f5", "inverse-surface": "#d7e4f5", "surface-container-lowest": "#030f1b", "background": "#071420", "on-primary-container": "#f5f5ff", "on-error-container": "#ffdad6", "secondary": "#4cdf95", "on-primary-fixed": "#00174c", "secondary-fixed-dim": "#4cdf95", "surface-dim": "#071420", "on-tertiary-fixed-variant": "#920027", "surface-container": "#14212d", "surface-container-high": "#1f2b38", "error-container": "#93000a", "primary-fixed": "#dbe1ff", "on-error": "#690005", "surface-bright": "#2e3a48", "surface-variant": "#293643", "on-secondary-container": "#004025", "inverse-primary": "#0052dd", "tertiary": "#ffb3b5", "secondary-fixed": "#6dfdaf", "primary-fixed-dim": "#b4c5ff", "error": "#ffb4ab", "primary-container": "#1463ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "space-xl": "1.5rem", "space-xs": "0.25rem", "gutter": "0.75rem", "margin": "1rem", "space-md": "0.75rem", "space-lg": "1rem" }, fontFamily: { "mono-price-lg": ["JetBrains Mono"], "headline-lg": ["Inter"], "headline-sm": ["Inter"], "label-meta": ["Inter"], "body-lg": ["Inter"], "mono-price-md": ["JetBrains Mono"], "body-md": ["Inter"], "display": ["Inter"], "body-sm": ["Inter"], "label-badge": ["JetBrains Mono"], "headline-md": ["Inter"] }, fontSize: { "mono-price-lg": ["22px", { lineHeight: "26px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-lg": ["22px", { lineHeight: "28px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-sm": ["15px", { lineHeight: "20px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-meta": ["11px", { lineHeight: "14px", letterSpacing: "0.02em", fontWeight: "500" }], "body-lg": ["15px", { lineHeight: "22px", letterSpacing: "-0.01em", fontWeight: "400" }], "mono-price-md": ["14px", { lineHeight: "18px", letterSpacing: "-0.01em", fontWeight: "500" }], "body-md": ["13px", { lineHeight: "18px", letterSpacing: "-0.005em", fontWeight: "400" }], "display": ["30px", { lineHeight: "36px", letterSpacing: "-0.03em", fontWeight: "700" }], "body-sm": ["11px", { lineHeight: "15px", letterSpacing: "0em", fontWeight: "400" }], "label-badge": ["10px", { lineHeight: "12px", letterSpacing: "0.04em", fontWeight: "600" }], "headline-md": ["18px", { lineHeight: "24px", letterSpacing: "-0.015em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#071420;color:#d7e4f5;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.12)] pt-safe"><div class="h-14 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go Back" class="w-11 h-11 -ml-2 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back_ios_new</span></button><div class="flex flex-col"><h1 class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface truncate max-w-[190px]">Design Specifications</h1><div class="flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-secondary"></span><span class="font-label-badge text-label-badge text-on-surface-variant font-mono">ARB L2</span></div></div></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_8px_rgba(180,197,255,0.15)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-14 bg-surface min-h-screen"><div class="flex flex-col w-full pb-safe">
+<!-- System Architecture Spec Header Banner -->
+<div class="px-margin pt-space-md pb-space-sm flex flex-col gap-space-xs bg-surface-container-lowest">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(76,223,149,0.6)]"></span>
+<span class="font-label-badge text-label-badge text-primary uppercase tracking-wider">MITMARKET CORE SPEC</span>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant bg-surface-container px-space-xs py-0.5 rounded">v3.14 PROD</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">Design System &amp; Component Library</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Sovereign Market Terminal v3.14 • Mobile Spec handoff for high-liquidity prediction engines.</p>
+</div>
+<!-- Interactive Sandbox Quick Switcher -->
+<div class="sticky top-14 z-30 bg-surface/95 backdrop-blur-md px-margin py-space-sm flex items-center gap-space-xs overflow-x-auto shadow-sm">
+<button class="shrink-0 px-space-sm py-1 rounded-full bg-primary-container text-on-primary-container font-label-badge text-label-badge" onclick="scrollToSection('tokens')">01. Tokens</button>
+<button class="shrink-0 px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge" onclick="scrollToSection('typography')">02. Typography</button>
+<button class="shrink-0 px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge" onclick="scrollToSection('market-cards')">03. Market UI</button>
+<button class="shrink-0 px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge" onclick="scrollToSection('trading-engine')">04. Execution</button>
+<button class="shrink-0 px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge" onclick="scrollToSection('navigation-layout')">05. Nav &amp; Sheets</button>
+<button class="shrink-0 px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge" onclick="scrollToSection('i18n-rtl')">06. i18n &amp; RTL</button>
+</div>
+<!-- SECTION 1: OFFICIAL COLOR PALETTE TOKENS -->
+<section class="px-margin pt-space-lg flex flex-col gap-space-md" id="tokens">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-mono-price-md text-mono-price-md text-primary font-bold">01</span>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">Color Palette &amp; Contrast</h3>
+</div>
+<span class="font-label-badge text-label-badge text-secondary bg-surface-container px-space-xs py-0.5 rounded">WCAG 2.1 AAA</span>
+</div>
+<!-- Surface & Elevation Matrix -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-meta text-label-meta text-outline uppercase font-semibold">Base Surfaces &amp; Structure</span>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="p-space-sm rounded-lg bg-surface flex flex-col gap-1 shadow-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-badge text-label-badge text-on-surface font-mono">#101216</span>
+<span class="w-3 h-3 rounded-full bg-surface-dim"></span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Canvas Canvas</span>
+<span class="font-body-sm text-body-sm text-outline">Base canvas layer (0.00 contrast base)</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1 shadow-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-badge text-label-badge text-on-surface font-mono">#15191F</span>
+<span class="w-3 h-3 rounded-full bg-surface-container-low"></span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Sub-surface</span>
+<span class="font-body-sm text-body-sm text-outline">Header docks, sticky execution tiers</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1 shadow-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-badge text-label-badge text-on-surface font-mono">#1C2028</span>
+<span class="w-3 h-3 rounded-full bg-surface-container"></span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Card Container</span>
+<span class="font-body-sm text-body-sm text-outline">Market rows, order slip containers</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high flex flex-col gap-1 shadow-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-badge text-label-badge text-on-surface font-mono">#242B36</span>
+<span class="w-3 h-3 rounded-full bg-surface-container-high"></span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Surface High</span>
+<span class="font-body-sm text-body-sm text-outline">Active states, chip hover, modal elevated</span>
+</div>
+</div>
+</div>
+<!-- Semantic Binary & Brand Signals -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-meta text-label-meta text-outline uppercase font-semibold">Semantic Action &amp; Brand Spectrum</span>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="p-space-sm rounded-lg bg-primary-container text-on-primary-container flex flex-col gap-1 shadow-md">
+<div class="flex justify-between items-center">
+<span class="font-label-badge text-label-badge font-mono">#1463FF</span>
+<span class="font-label-badge text-label-badge font-bold bg-primary text-on-primary px-1 rounded">BRAND</span>
+</div>
+<span class="font-body-md text-body-md font-bold">Brand Primary</span>
+<span class="font-body-sm text-body-sm text-on-primary-container/80">Default global confirmation (6.8:1)</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high flex flex-col gap-1 shadow-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-badge text-label-badge text-primary-fixed-dim font-mono">#00D2FF</span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary-fixed-dim"></span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-bold">Accent Cyan</span>
+<span class="font-body-sm text-body-sm text-outline">Liquidity depth, oracle sync pulses</span>
+</div>
+<div class="p-space-sm rounded-lg bg-secondary-container text-on-secondary-container flex flex-col gap-1 shadow-md">
+<div class="flex justify-between items-center">
+<span class="font-label-badge text-label-badge font-mono">#0BBA74</span>
+<span class="font-label-badge text-label-badge font-bold bg-on-secondary text-secondary px-1 rounded">BULLISH</span>
+</div>
+<span class="font-body-md text-body-md font-bold">YES / Positive</span>
+<span class="font-body-sm text-body-sm text-on-secondary-container/90">Probability green, Bid side fill</span>
+</div>
+<div class="p-space-sm rounded-lg bg-tertiary-container text-on-tertiary-container flex flex-col gap-1 shadow-md">
+<div class="flex justify-between items-center">
+<span class="font-label-badge text-label-badge font-mono">#FF4761</span>
+<span class="font-label-badge text-label-badge font-bold bg-on-tertiary text-tertiary px-1 rounded">BEARISH</span>
+</div>
+<span class="font-body-md text-body-md font-bold">NO / Negative</span>
+<span class="font-body-sm text-body-sm text-on-tertiary-container/90">Probability red, Ask side fill</span>
+</div>
+</div>
+</div>
+<!-- Text Typography Contrast Tokens -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<span class="font-label-meta text-label-meta text-outline uppercase font-semibold">Type Luminance Tiers</span>
+<div class="flex items-center justify-between py-1">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Text Primary (#F4F6FA)</span>
+<span class="font-label-badge text-label-badge text-secondary font-mono">14.2:1 Ratio</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="font-body-md text-body-md text-on-surface-variant">Text Secondary (#98A5B5)</span>
+<span class="font-label-badge text-label-badge text-secondary font-mono">7.8:1 Ratio</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="font-body-md text-body-md text-outline">Text Muted / Meta (#5A6677)</span>
+<span class="font-label-badge text-label-badge text-primary font-mono">4.6:1 Accessible</span>
+</div>
+</div>
+</section>
+<!-- SECTION 2: TYPOGRAPHY SYSTEM SPEC -->
+<section class="px-margin pt-space-lg flex flex-col gap-space-md" id="typography">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-mono-price-md text-mono-price-md text-primary font-bold">02</span>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">Typography Scale</h3>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant font-mono">Inter + JetBrains</span>
+</div>
+<div class="flex flex-col gap-space-xs bg-surface-container rounded-lg p-space-sm">
+<div class="flex flex-col gap-1 pb-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-badge text-label-badge text-outline uppercase">Page Title • 22px Bold</span>
+<span class="font-label-badge text-label-badge text-primary-fixed-dim">Inter 700</span>
+</div>
+<p class="font-headline-lg text-headline-lg font-bold text-on-surface">Federal Reserve Decision</p>
+</div>
+<div class="flex flex-col gap-1 py-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-badge text-label-badge text-outline uppercase">Section Title • 16px SemiBold</span>
+<span class="font-label-badge text-label-badge text-primary-fixed-dim">Inter 600</span>
+</div>
+<p class="font-headline-md text-headline-md font-semibold text-on-surface">Order Depth &amp; Liquidity Profile</p>
+</div>
+<div class="flex flex-col gap-1 py-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-badge text-label-badge text-outline uppercase">Market Question • 15px Medium</span>
+<span class="font-label-badge text-label-badge text-primary-fixed-dim">Inter 500</span>
+</div>
+<p class="font-headline-sm text-headline-sm font-medium text-on-surface">Will Ethereum pass $4,500 by Q3 close?</p>
+</div>
+<div class="flex flex-col gap-1 py-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-badge text-label-badge text-outline uppercase">Financial Numerals • Mono 20px Bold</span>
+<span class="font-label-badge text-label-badge text-secondary font-mono">JetBrains 700</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-mono-price-lg text-mono-price-lg text-secondary font-bold">$124,592.40</span>
+<span class="font-mono-price-md text-mono-price-md text-secondary">+14.2%</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 py-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-badge text-label-badge text-outline uppercase">Probabilities / Cents • Mono 14px</span>
+<span class="font-label-badge text-label-badge text-tertiary font-mono">JetBrains 600</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-mono-price-md text-mono-price-md text-secondary font-semibold">YES 68¢ (68%)</span>
+<span class="font-mono-price-md text-mono-price-md text-error font-semibold">NO 32¢ (32%)</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 pt-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-badge text-label-badge text-outline uppercase">Captions &amp; Micro Badges • 10-11px</span>
+<span class="font-label-badge text-label-badge text-outline font-mono">Inter / Mono</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-meta text-label-meta text-on-surface-variant">Last fill 2s ago</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-badge text-label-badge text-primary bg-primary/10 px-1 py-0.5 rounded">EXEC-AUTO</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: LIVE REUSABLE MARKET COMPONENTS -->
+<section class="px-margin pt-space-lg flex flex-col gap-space-md" id="market-cards">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-mono-price-md text-mono-price-md text-primary font-bold">03</span>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">Market Components</h3>
+</div>
+<span class="font-label-badge text-label-badge text-primary bg-primary/10 px-space-xs py-0.5 rounded">4 PRODUCTION PREVIEWS</span>
+</div>
+<!-- Status Badges Showcase -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<div class="flex items-center gap-1 bg-surface-container px-space-sm py-1 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-badge text-label-badge text-secondary uppercase font-semibold">LIVE</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-space-sm py-1 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-label-badge text-label-badge text-tertiary-fixed-dim uppercase font-semibold">EXPIRING 2H</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-space-sm py-1 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-label-badge text-label-badge text-primary uppercase font-semibold">RESOLVED (YES)</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-space-sm py-1 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="font-label-badge text-label-badge text-outline uppercase font-semibold">SUSPENDED</span>
+</div>
+</div>
+<!-- Component A: Mosaic Market Card with live probability bar -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm shadow-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-badge text-label-badge text-primary font-mono bg-primary/10 px-1 py-0.5 rounded">GEOPOLITICS</span>
+<span class="font-label-meta text-label-meta text-outline">• $2.8M VOL 24H</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface line-clamp-2">Will US Senate pass sovereign digital asset reserve bill before November election?</h4>
+</div>
+<div class="relative w-12 h-12 shrink-0 rounded-lg overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="A cinematic night-time view of the United States Capitol building illuminated in cool blue lights with subtle green financial laser grids reflected in the glass dome, institutional finance style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMb6Dbqb6kvGkCaaqAVeehZzwFnEnllXuclroTf6T22MCP0EwFgKr_G3iJDIEWXUCiRIKm-XErLQAVeISQ536ssZmk2qdCs_sGY8nLT1jiLbGa12e259C90sW1tan-ZjcZPxtZ5OW1fDkrJ3Exy2P4am7MlIX0dLzNZcG_MD7yP9YRg2xb_5EhLyCvdjza6-Drn0yQn3N76iD4HCSrCbfjbeQ9IXTFJ4d-TGYahOV8"/>
+</div>
+</div>
+<!-- Live Probability Bar (Split Ratio) -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-badge text-label-badge">
+<span class="text-secondary font-mono">YES 74% (74¢)</span>
+<span class="text-tertiary font-mono">NO 26% (26¢)</span>
+</div>
+<div class="h-2 w-full rounded-full bg-surface-container-lowest flex overflow-hidden p-0.5">
+<div class="h-full rounded-full bg-secondary shadow-[0_0_8px_rgba(76,223,149,0.3)] transition-all duration-300" style="width: 74%;"></div>
+<div class="h-full rounded-full bg-tertiary-container shadow-[0_0_8px_rgba(215,39,71,0.3)] ml-0.5 transition-all duration-300" style="width: 26%;"></div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="h-10 rounded-lg bg-surface-container-high hover:bg-secondary/20 active:scale-98 flex items-center justify-between px-space-sm transition-all" onclick="toggleOutcomeBtn(this, 'yes')">
+<span class="font-headline-sm text-headline-sm font-semibold text-secondary">Buy YES</span>
+<span class="font-mono-price-md text-mono-price-md font-bold text-secondary">74¢</span>
+</button>
+<button class="h-10 rounded-lg bg-surface-container-high hover:bg-tertiary-container/20 active:scale-98 flex items-center justify-between px-space-sm transition-all" onclick="toggleOutcomeBtn(this, 'no')">
+<span class="font-headline-sm text-headline-sm font-semibold text-tertiary">Buy NO</span>
+<span class="font-mono-price-md text-mono-price-md font-bold text-tertiary">26¢</span>
+</button>
+</div>
+</div>
+<!-- Component B: Compact Market Card (YES 68¢ / NO 32¢) -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-badge text-label-badge text-outline">MACRO MAC-409</span>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant font-mono">$840K Pool</span>
+</div>
+<p class="font-headline-sm text-headline-sm font-semibold text-on-surface">ECB to lower deposit facility rate by 25bps in upcoming meeting?</p>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="h-10 rounded-lg bg-surface-container-high flex items-center justify-center gap-space-xs active:bg-secondary active:text-on-secondary transition-colors">
+<span class="font-label-badge text-label-badge font-bold text-secondary">YES</span>
+<span class="font-mono-price-md text-mono-price-md font-bold text-on-surface">68¢</span>
+</button>
+<button class="h-10 rounded-lg bg-surface-container-high flex items-center justify-center gap-space-xs active:bg-error active:text-on-error transition-colors">
+<span class="font-label-badge text-label-badge font-bold text-error">NO</span>
+<span class="font-mono-price-md text-mono-price-md font-bold text-on-surface">32¢</span>
+</button>
+</div>
+</div>
+<!-- Component C: Sports Matchup Card -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-primary uppercase font-bold tracking-wider">CHAMPIONS LEAGUE • QF</span>
+<div class="flex items-center gap-1 bg-surface-container-lowest px-2 py-0.5 rounded text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span class="font-label-badge text-label-badge font-mono">01:42:15</span>
+</div>
+</div>
+<div class="grid grid-cols-3 items-center gap-space-xs py-1">
+<div class="flex flex-col items-center text-center gap-1">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface font-bold text-headline-sm">RMA</div>
+<span class="font-body-md text-body-md font-semibold text-on-surface truncate w-full">Real Madrid</span>
+<span class="font-mono-price-md text-mono-price-md text-secondary font-bold">58¢</span>
+</div>
+<div class="flex flex-col items-center justify-center gap-1">
+<span class="font-label-badge text-label-badge text-outline uppercase font-mono">DRAW</span>
+<button class="px-space-sm py-1 rounded bg-surface-container-high text-on-surface font-mono text-label-badge font-bold hover:bg-surface-bright">22¢</button>
+</div>
+<div class="flex flex-col items-center text-center gap-1">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface font-bold text-headline-sm">MCI</div>
+<span class="font-body-md text-body-md font-semibold text-on-surface truncate w-full">Man City</span>
+<span class="font-mono-price-md text-mono-price-md text-tertiary font-bold">42¢</span>
+</div>
+</div>
+</div>
+<!-- Component D: Crypto Price Target Prediction Card with SVG Sparkline -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-primary-container flex items-center justify-center text-on-primary font-bold text-[10px]">₿</div>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">BTC Target $105,000</span>
+</div>
+<span class="font-label-badge text-label-badge text-secondary font-mono bg-secondary/10 px-1.5 py-0.5 rounded">+4.2% TODAY</span>
+</div>
+<!-- Inline Lightweight Sparkline SVG -->
+<div class="h-12 w-full flex items-end">
+<svg class="w-full h-10 overflow-visible text-secondary" fill="none" viewbox="0 0 300 40">
+<path d="M0,35 Q30,30 60,32 T120,24 T180,18 T240,10 T300,4" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M0,35 Q30,30 60,32 T120,24 T180,18 T240,10 T300,4 L300,40 L0,40 Z" fill="currentColor" fill-opacity="0.08"></path>
+</svg>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Current: $98,420</span>
+<span>Resolution Date: Fri, 23:59 UTC</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="h-10 rounded-lg bg-secondary/15 hover:bg-secondary/25 text-secondary flex items-center justify-center font-headline-sm text-headline-sm font-semibold">Touch YES (53¢)</button>
+<button class="h-10 rounded-lg bg-tertiary-container/15 hover:bg-tertiary-container/25 text-tertiary flex items-center justify-center font-headline-sm text-headline-sm font-semibold">Touch NO (47¢)</button>
+</div>
+</div>
+</section>
+<!-- SECTION 4: LIVE REUSABLE TRADING & WALLET COMPONENTS -->
+<section class="px-margin pt-space-lg flex flex-col gap-space-md" id="trading-engine">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-mono-price-md text-mono-price-md text-primary font-bold">04</span>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">Execution &amp; Wallet</h3>
+</div>
+<span class="font-label-badge text-label-badge text-secondary bg-surface-container px-space-xs py-0.5 rounded">SLIPPAGE &amp; BOOK</span>
+</div>
+<!-- Live Interactive Order Entry Panel -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm shadow-xl">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Order Execution</span>
+<div class="p-0.5 rounded-full bg-surface-container-lowest flex items-center">
+<button class="px-space-sm py-1 rounded-full bg-primary-container text-on-primary-container font-label-badge text-label-badge font-semibold transition-all" id="tab-market" onclick="switchOrderType('market')">Market</button>
+<button class="px-space-sm py-1 rounded-full text-on-surface-variant font-label-badge text-label-badge font-semibold hover:text-on-surface transition-all" id="tab-limit" onclick="switchOrderType('limit')">Limit</button>
+</div>
+</div>
+<!-- Quick Outcome Switcher Pill -->
+<div class="grid grid-cols-2 gap-space-xs p-1 rounded-lg bg-surface-container-lowest">
+<button class="h-9 rounded-md bg-secondary text-on-secondary font-headline-sm text-headline-sm font-bold transition-all flex items-center justify-center gap-1 shadow-sm" id="btn-exec-yes" onclick="setExecutionSide('yes')">
+<span>YES</span>
+<span class="font-mono text-label-meta">@ 74¢</span>
+</button>
+<button class="h-9 rounded-md text-tertiary hover:bg-surface-container font-headline-sm text-headline-sm font-bold transition-all flex items-center justify-center gap-1" id="btn-exec-no" onclick="setExecutionSide('no')">
+<span>NO</span>
+<span class="font-mono text-label-meta">@ 26¢</span>
+</button>
+</div>
+<!-- Input Amount Container -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<span class="font-label-meta text-label-meta text-outline">Order Capital</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant font-mono">Avail: 4,820.50 USDC</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-mono-price-lg text-mono-price-lg text-outline">$</span>
+<input class="bg-transparent font-mono-price-lg text-mono-price-lg text-on-surface font-bold outline-none w-36" id="trade-amount" oninput="calculateReturn(this.value)" type="number" value="250"/>
+</div>
+<span class="font-label-badge text-label-badge text-primary bg-primary/10 px-2 py-1 rounded font-bold font-mono">USDC</span>
+</div>
+</div>
+<!-- Quick Percent Chips -->
+<div class="grid grid-cols-4 gap-space-xs">
+<button class="h-8 rounded-full bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-badge text-label-badge font-mono font-semibold transition-all" onclick="setTradePercent(0.25)">25%</button>
+<button class="h-8 rounded-full bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-badge text-label-badge font-mono font-semibold transition-all" onclick="setTradePercent(0.50)">50%</button>
+<button class="h-8 rounded-full bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-badge text-label-badge font-mono font-semibold transition-all" onclick="setTradePercent(0.75)">75%</button>
+<button class="h-8 rounded-full bg-primary/20 text-primary font-label-badge text-label-badge font-mono font-bold hover:bg-primary/30 transition-all" onclick="setTradePercent(1.00)">MAX</button>
+</div>
+<!-- Slippage Tolerance Pills -->
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-meta text-label-meta text-outline">Max Slippage</span>
+<div class="flex items-center gap-1">
+<button class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-label-badge font-mono" onclick="setSlippage(this, '0.1%')">0.1%</button>
+<button class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container text-label-badge font-mono font-bold" onclick="setSlippage(this, '0.5%')">0.5%</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-label-badge font-mono" onclick="setSlippage(this, '1.0%')">1.0%</button>
+</div>
+</div>
+<!-- Estimated Payout Breakdown -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex flex-col gap-1 font-body-sm text-body-sm">
+<div class="flex justify-between items-center">
+<span class="text-outline">Estimated Shares</span>
+<span class="text-on-surface font-mono font-semibold" id="est-shares">337.83 YES</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-outline">Potential Win Return</span>
+<span class="text-secondary font-mono font-bold" id="est-return">+$87.83 (+35.1%)</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-outline">Protocol Settlement Fee</span>
+<span class="text-on-surface-variant font-mono">$0.00 (Gasless)</span>
+</div>
+</div>
+<!-- Execution Primary CTA -->
+<button class="h-12 w-full rounded-lg bg-primary-container hover:bg-inverse-primary active:scale-98 text-on-primary-container font-headline-sm text-headline-sm font-bold shadow-lg transition-all flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+<span>Submit Instant Order</span>
+</button>
+</div>
+<!-- Order Book Spread Row Component -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-xs shadow-md">
+<div class="flex items-center justify-between pb-1">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Order Depth Preview</span>
+<span class="font-label-badge text-label-badge text-outline font-mono">SPREAD: 0.8¢</span>
+</div>
+<div class="flex flex-col gap-1 font-mono text-label-badge">
+<!-- Bid Row 1 -->
+<div class="relative flex items-center justify-between py-1 px-2 rounded bg-surface-container-low overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 bg-secondary/15" style="width: 65%;"></div>
+<span class="relative text-secondary font-bold">74.2¢ BID</span>
+<span class="relative text-on-surface">14,200 Shares</span>
+</div>
+<!-- Bid Row 2 -->
+<div class="relative flex items-center justify-between py-1 px-2 rounded bg-surface-container-low overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 bg-secondary/15" style="width: 40%;"></div>
+<span class="relative text-secondary font-bold">74.0¢ BID</span>
+<span class="relative text-on-surface">8,950 Shares</span>
+</div>
+<!-- Ask Row 1 -->
+<div class="relative flex items-center justify-between py-1 px-2 rounded bg-surface-container-low overflow-hidden">
+<div class="absolute right-0 top-0 bottom-0 bg-tertiary-container/15" style="width: 55%;"></div>
+<span class="relative text-tertiary font-bold">75.0¢ ASK</span>
+<span class="relative text-on-surface">11,400 Shares</span>
+</div>
+</div>
+</div>
+<!-- Active Position Card with P&L Badge -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm shadow-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-secondary font-mono">ACTIVE POSITION</span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Fed Rate Hold in Q2</h4>
+</div>
+<div class="flex items-center gap-1 bg-secondary/10 text-secondary px-2 py-1 rounded font-mono font-bold text-label-badge">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span>+18.4%</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm p-space-sm rounded-lg bg-surface-container-low font-mono">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-outline font-sans">Current Value</span>
+<span class="font-mono-price-md text-mono-price-md text-on-surface font-bold">$9,140.00</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-body-sm text-body-sm text-outline font-sans">Unrealized P&amp;L</span>
+<span class="font-mono-price-md text-mono-price-md text-secondary font-bold">+$1,420.00</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="h-9 flex-1 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-body-md text-body-md font-semibold transition-all">Close Half</button>
+<button class="h-9 flex-1 rounded-lg bg-tertiary-container text-on-tertiary-container hover:bg-tertiary-container/80 font-body-md text-body-md font-semibold transition-all">Full Market Exit</button>
+</div>
+</div>
+<!-- Asset Balance Multi-Row Component -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-xs shadow-md">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface pb-1">Collateral Balances</span>
+<!-- USDC Row -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary text-label-badge font-mono">$</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">USDC</span>
+<span class="font-label-meta text-label-meta text-outline font-mono">Circle USD • Arbitrum</span>
+</div>
+</div>
+<div class="flex flex-col text-right font-mono">
+<span class="font-mono-price-md text-mono-price-md text-on-surface font-bold">12,482.10</span>
+<span class="font-label-badge text-label-badge text-outline">$12,482.10</span>
+</div>
+</div>
+<!-- ETH Row -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-on-surface text-label-badge font-mono">Ξ</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">ETH</span>
+<span class="font-label-meta text-label-meta text-outline font-mono">Native Ether</span>
+</div>
+</div>
+<div class="flex flex-col text-right font-mono">
+<span class="font-mono-price-md text-mono-price-md text-on-surface font-bold">4.8210 ETH</span>
+<span class="font-label-badge text-label-badge text-outline">$16,391.40</span>
+</div>
+</div>
+</div>
+<!-- Deposit QR Code & 256-bit Hash Container -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col items-center gap-space-sm text-center shadow-md">
+<div class="flex items-center justify-between w-full">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Deposit Liquidity (ARB)</span>
+<span class="font-label-badge text-label-badge text-secondary font-mono">EVM VALIDATED</span>
+</div>
+<!-- Stylized High-Tech QR Blueprint Frame -->
+<div class="p-3 rounded-xl bg-surface-container-lowest flex items-center justify-center shadow-inner">
+<svg class="w-36 h-36 text-primary" fill="currentColor" viewbox="0 0 100 100">
+<!-- Stylized QR Pattern Mockup -->
+<rect fill="none" height="28" rx="4" stroke="currentColor" stroke-width="4" width="28" x="5" y="5"></rect>
+<rect fill="currentColor" height="16" rx="2" width="16" x="11" y="11"></rect>
+<rect fill="none" height="28" rx="4" stroke="currentColor" stroke-width="4" width="28" x="67" y="5"></rect>
+<rect fill="currentColor" height="16" rx="2" width="16" x="73" y="11"></rect>
+<rect fill="none" height="28" rx="4" stroke="currentColor" stroke-width="4" width="28" x="5" y="67"></rect>
+<rect fill="currentColor" height="16" rx="2" width="16" x="11" y="73"></rect>
+<rect height="8" rx="1" width="16" x="42" y="12"></rect>
+<rect height="16" rx="1" width="8" x="42" y="28"></rect>
+<rect height="8" rx="1" width="16" x="12" y="42"></rect>
+<rect height="16" rx="1" width="8" x="28" y="42"></rect>
+<rect fill="#00D2FF" height="16" rx="2" width="16" x="42" y="42"></rect>
+<rect height="10" rx="1" width="12" x="66" y="42"></rect>
+<rect height="12" rx="1" width="10" x="84" y="42"></rect>
+<rect height="18" rx="1" width="10" x="42" y="66"></rect>
+<rect height="8" rx="1" width="16" x="62" y="66"></rect>
+<rect height="18" rx="1" width="14" x="80" y="76"></rect>
+</svg>
+</div>
+<!-- Copyable 256-bit Address Hash -->
+<div class="w-full flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex flex-col text-left overflow-hidden">
+<span class="font-label-meta text-label-meta text-outline">Ethereum Proxy Router</span>
+<span class="font-label-badge text-label-badge text-on-surface font-mono truncate" id="wallet-addr">0x742d35Cc6634C0532925a3b844Bc454e4438f44e</span>
+</div>
+<button class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-primary transition-colors" onclick="copyAddress()" title="Copy Address">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+<span class="hidden font-label-badge text-label-badge text-secondary font-mono" id="copy-toast">Copied to clipboard</span>
+</div>
+</section>
+<!-- SECTION 5: NAVIGATION & LAYOUT PATTERNS -->
+<section class="px-margin pt-space-lg flex flex-col gap-space-md" id="navigation-layout">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-mono-price-md text-mono-price-md text-primary font-bold">05</span>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">Navigation &amp; Shell Elements</h3>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant font-mono">PATTERNS</span>
+</div>
+<!-- Search Field with Shortcut Pill -->
+<div class="relative flex items-center w-full">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[20px]">search</span>
+<input class="w-full h-11 pl-10 pr-20 rounded-lg bg-surface-container text-on-surface placeholder:text-outline font-body-md text-body-md outline-none focus:bg-surface-container-high transition-colors" placeholder="Search politics, macro, crypto, tech..." type="text"/>
+<div class="absolute right-3 flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-outline font-mono text-[10px] font-bold">⌘K</span>
+</div>
+</div>
+<!-- Filter Chips Scrollable Matrix -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1">
+<button class="shrink-0 px-space-sm py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-badge text-label-badge font-bold">All Markets (1,248)</button>
+<button class="shrink-0 px-space-sm py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge">Elections</button>
+<button class="shrink-0 px-space-sm py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge">Fed &amp; Rates</button>
+<button class="shrink-0 px-space-sm py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge">Layer-1s</button>
+<button class="shrink-0 px-space-sm py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge">AI Benchmarks</button>
+<button class="shrink-0 px-space-sm py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge">Space &amp; Tech</button>
+</div>
+<!-- Bottom Sheet Spec Preview (Embedded Mock) -->
+<div class="p-space-md rounded-xl bg-surface-container-high flex flex-col gap-space-sm shadow-xl">
+<div class="flex flex-col items-center gap-1 pb-1">
+<div class="w-10 h-1 rounded-full bg-outline-variant"></div>
+<span class="font-label-badge text-label-badge text-outline uppercase font-mono">Modal Bottom Sheet Pattern</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Confirm Settlement Exit</span>
+<span class="font-body-sm text-body-sm text-outline">Smart Contract routing via Sovereign AMM</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex justify-between items-center font-mono">
+<span class="font-body-md text-body-md text-on-surface-variant font-sans">Refund To:</span>
+<span class="font-label-badge text-label-badge text-secondary font-bold">0x4a9...12c8</span>
+</div>
+<button class="h-11 w-full rounded-lg bg-secondary text-on-secondary font-headline-sm text-headline-sm font-bold active:scale-98 transition-all">Authorize Signature</button>
+</div>
+<!-- Standard 5-Item Navigation Bar Component Preview -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-meta text-label-meta text-outline uppercase font-semibold">Standard 5-Item Bottom Navigation Spec</span>
+<div class="h-16 rounded-xl bg-surface-container-low p-space-xs flex items-center justify-around shadow-md">
+<div class="flex flex-col items-center gap-0.5 text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">candlestick_chart</span>
+<span class="font-label-badge text-label-badge font-bold">Markets</span>
+</div>
+<div class="flex flex-col items-center gap-0.5 text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[20px]">equalizer</span>
+<span class="font-label-badge text-label-badge">Rankings</span>
+</div>
+<div class="flex flex-col items-center gap-0.5 text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[20px]">pie_chart</span>
+<span class="font-label-badge text-label-badge">Portfolio</span>
+</div>
+<div class="flex flex-col items-center gap-0.5 text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="font-label-badge text-label-badge">Activity</span>
+</div>
+<div class="flex flex-col items-center gap-0.5 text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+<span class="font-label-badge text-label-badge">Vault</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: MULTILINGUAL & INTERNATIONALIZATION (LTR / RTL) SPEC -->
+<section class="px-margin pt-space-lg pb-space-xl flex flex-col gap-space-md" id="i18n-rtl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-mono-price-md text-mono-price-md text-primary font-bold">06</span>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">Internationalization &amp; RTL</h3>
+</div>
+<span class="font-label-badge text-label-badge text-primary bg-primary/10 px-space-xs py-0.5 rounded">LTR + RTL</span>
+</div>
+<!-- Comparative Language Render -->
+<div class="flex flex-col gap-space-sm">
+<!-- English LTR -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<span class="font-label-badge text-label-badge text-primary font-mono">LTR • EN (English US)</span>
+<span class="font-label-badge text-label-badge text-outline">Default Flow</span>
+</div>
+<p class="font-headline-sm text-headline-sm font-semibold text-on-surface">US CPI inflation print below 2.9% in Q3 report?</p>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-outline pt-1">
+<span>Est. Probability: 71%</span>
+<span class="text-secondary font-mono">YES 71¢</span>
+</div>
+</div>
+<!-- Turkish LTR -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<span class="font-label-badge text-label-badge text-primary-fixed-dim font-mono">LTR • TR (Türkçe)</span>
+<span class="font-label-badge text-label-badge text-outline">Latin Flow</span>
+</div>
+<p class="font-headline-sm text-headline-sm font-semibold text-on-surface">TCMB politika faizini bu toplantıda sabit tutacak mı?</p>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-outline pt-1">
+<span>Tahmini Olasılık: 84%</span>
+<span class="text-secondary font-mono">EVET 84¢</span>
+</div>
+</div>
+<!-- Azerbaijani LTR -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<span class="font-label-badge text-label-badge text-primary-fixed-dim font-mono">LTR • AZ (Azərbaycan)</span>
+<span class="font-label-badge text-label-badge text-outline">Turkic Flow</span>
+</div>
+<p class="font-headline-sm text-headline-sm font-semibold text-on-surface">SOCAR-ın yaşıl enerji investisiyası bu il 500M$ keçəcəkmi?</p>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-outline pt-1">
+<span>Ehtimal səviyyəsi: 62%</span>
+<span class="text-secondary font-mono">BƏLİ 62¢</span>
+</div>
+</div>
+<!-- Persian (فارسی) RTL with Mirroring Specification -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1 text-right" dir="rtl">
+<div class="flex justify-between items-center flex-row-reverse">
+<span class="font-label-badge text-label-badge text-tertiary-fixed font-mono">RTL • FA (فارسی)</span>
+<span class="font-label-badge text-label-badge text-outline">Mirrored Layout</span>
+</div>
+<p class="font-headline-sm text-headline-sm font-semibold text-on-surface leading-relaxed">آیا نرخ بهره فدرال رزرو تا پایان تابستان کاهش می‌یابد؟</p>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-outline pt-1 flex-row-reverse">
+<span>احتمال تخمینی: ۶۴٪</span>
+<span class="text-secondary font-mono font-bold">بله ۶۴¢</span>
+</div>
+</div>
+</div>
+<!-- Safe Area Guidelines Diagnostic Card -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">devices</span>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Viewport Bar &amp; Notch Handling</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Strict compliance with mobile safe areas ensures thumb-reachability without collision:</p>
+<div class="grid grid-cols-2 gap-space-xs font-mono text-label-badge">
+<div class="p-2 rounded bg-surface-container flex flex-col gap-0.5">
+<span class="text-primary font-bold">iOS Safari</span>
+<span class="text-outline">env(safe-area-inset-bottom, 34px)</span>
+<span class="text-on-surface">Prevents URL bar overlay</span>
+</div>
+<div class="p-2 rounded bg-surface-container flex flex-col gap-0.5">
+<span class="text-secondary font-bold">Android Chrome</span>
+<span class="text-outline">viewport-fit=cover + 16px</span>
+<span class="text-on-surface">Gesture pill clearing</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  function scrollToSection(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function setExecutionSide(side) {
+    const btnYes = document.getElementById('btn-exec-yes');
+    const btnNo = document.getElementById('btn-exec-no');
+    if (!btnYes || !btnNo) return;
+
+    if (side === 'yes') {
+      btnYes.className = 'h-9 rounded-md bg-secondary text-on-secondary font-headline-sm text-headline-sm font-bold transition-all flex items-center justify-center gap-1 shadow-sm';
+      btnNo.className = 'h-9 rounded-md text-tertiary hover:bg-surface-container font-headline-sm text-headline-sm font-bold transition-all flex items-center justify-center gap-1';
+    } else {
+      btnNo.className = 'h-9 rounded-md bg-tertiary-container text-on-tertiary-container font-headline-sm text-headline-sm font-bold transition-all flex items-center justify-center gap-1 shadow-sm';
+      btnYes.className = 'h-9 rounded-md text-secondary hover:bg-surface-container font-headline-sm text-headline-sm font-bold transition-all flex items-center justify-center gap-1';
+    }
+  }
+
+  function switchOrderType(type) {
+    const tabM = document.getElementById('tab-market');
+    const tabL = document.getElementById('tab-limit');
+    if (!tabM || !tabL) return;
+
+    if (type === 'market') {
+      tabM.className = 'px-space-sm py-1 rounded-full bg-primary-container text-on-primary-container font-label-badge text-label-badge font-semibold transition-all';
+      tabL.className = 'px-space-sm py-1 rounded-full text-on-surface-variant font-label-badge text-label-badge font-semibold hover:text-on-surface transition-all';
+    } else {
+      tabL.className = 'px-space-sm py-1 rounded-full bg-primary-container text-on-primary-container font-label-badge text-label-badge font-semibold transition-all';
+      tabM.className = 'px-space-sm py-1 rounded-full text-on-surface-variant font-label-badge text-label-badge font-semibold hover:text-on-surface transition-all';
+    }
+  }
+
+  function setTradePercent(pct) {
+    const input = document.getElementById('trade-amount');
+    if (input) {
+      const calculated = Math.round(4820.50 * pct);
+      input.value = calculated;
+      calculateReturn(calculated);
+    }
+  }
+
+  function calculateReturn(val) {
+    const num = parseFloat(val) || 0;
+    const sharesEl = document.getElementById('est-shares');
+    const returnEl = document.getElementById('est-return');
+    if (!sharesEl || !returnEl) return;
+
+    const shares = (num / 0.74).toFixed(2);
+    const win = (shares - num).toFixed(2);
+    const pct = num > 0 ? ((win / num) * 100).toFixed(1) : '0';
+
+    sharesEl.textContent = `${shares} YES`;
+    returnEl.textContent = `+$${win} (+${pct}%)`;
+  }
+
+  function setSlippage(btn, val) {
+    const parent = btn.parentElement;
+    if (!parent) return;
+    const buttons = parent.querySelectorAll('button');
+    buttons.forEach(b => {
+      b.className = 'px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-label-badge font-mono';
+    });
+    btn.className = 'px-2 py-0.5 rounded bg-primary-container text-on-primary-container text-label-badge font-mono font-bold';
+  }
+
+  function toggleOutcomeBtn(btn, type) {
+    if (type === 'yes') {
+      btn.classList.toggle('bg-secondary');
+      btn.classList.toggle('text-on-secondary');
+    } else {
+      btn.classList.toggle('bg-tertiary-container');
+      btn.classList.toggle('text-on-tertiary-container');
+    }
+  }
+
+  function copyAddress() {
+    const addr = document.getElementById('wallet-addr')?.textContent;
+    if (addr && navigator.clipboard) {
+      navigator.clipboard.writeText(addr).then(() => {
+        const toast = document.getElementById('copy-toast');
+        if (toast) {
+          toast.classList.remove('hidden');
+          setTimeout(() => toast.classList.add('hidden'), 2000);
+        }
+      });
+    }
+  }
+</script></main></body></html>

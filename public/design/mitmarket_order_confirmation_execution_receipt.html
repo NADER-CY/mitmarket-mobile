@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary-fixed-variant": "#920027", "on-error-container": "#ffdad6", "on-tertiary": "#680019", "on-background": "#d7e4f5", "on-primary-fixed-variant": "#003daa", "surface-bright": "#2e3a48", "on-primary-fixed": "#00174c", "inverse-surface": "#d7e4f5", "on-primary": "#002979", "surface-container-high": "#1f2b38", "on-surface": "#d7e4f5", "background": "#071420", "on-secondary-container": "#004025", "secondary-fixed": "#6dfdaf", "surface-container-low": "#101d29", "primary-fixed-dim": "#b4c5ff", "primary-container": "#1463ff", "on-secondary-fixed-variant": "#005230", "secondary-fixed-dim": "#4cdf95", "surface-container": "#14212d", "inverse-primary": "#0052dd", "surface-variant": "#293643", "error-container": "#93000a", "surface": "#071420", "on-tertiary-container": "#fff3f3", "on-secondary-fixed": "#002110", "primary-fixed": "#dbe1ff", "secondary-container": "#00b872", "surface-container-highest": "#293643", "on-error": "#690005", "tertiary-container": "#d72747", "tertiary": "#ffb3b5", "surface-tint": "#b4c5ff", "inverse-on-surface": "#25323e", "error": "#ffb4ab", "outline": "#8d90a2", "primary": "#b4c5ff", "secondary": "#4cdf95", "on-tertiary-fixed": "#40000c", "tertiary-fixed": "#ffdada", "tertiary-fixed-dim": "#ffb3b5", "surface-container-lowest": "#030f1b", "surface-dim": "#071420", "on-secondary": "#003920", "outline-variant": "#424656", "on-surface-variant": "#c3c5d8", "on-primary-container": "#f5f5ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "space-xl": "1.5rem", "space-xs": "0.25rem", "gutter": "0.75rem", "margin": "1rem", "space-md": "0.75rem", "space-lg": "1rem" }, fontFamily: { "body-sm": ["Inter"], "headline-md": ["Inter"], "mono-price-lg": ["JetBrains Mono"], "label-badge": ["JetBrains Mono"], "body-md": ["Inter"], "display": ["Inter"], "body-lg": ["Inter"], "mono-price-md": ["JetBrains Mono"], "label-meta": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"] }, fontSize: { "body-sm": ["11px", { "lineHeight": "15px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "mono-price-lg": ["22px", { "lineHeight": "26px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-badge": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "600" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "display": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "mono-price-md": ["14px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "label-meta": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go Back" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><div class="flex flex-col"><span class="font-label-badge text-label-badge text-outline tracking-wider uppercase">MITMARKET PRO</span><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Execution Receipt</h1></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-label-badge text-label-badge text-on-surface-variant uppercase">ARB L2</span></div><button aria-label="Close" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" onclick="window.location.href='#'" type="button"><span class="material-symbols-outlined text-[20px]">close</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-14 pb-safe bg-surface flex-1"><div class="flex flex-col w-full px-margin pb-space-xl space-y-space-md">
+<!-- Top Real-Time Execution Status Banner -->
+<div class="w-full rounded-xl bg-surface-container-low p-space-sm shadow-md flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="relative flex h-2.5 w-2.5 items-center justify-center">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-secondary"></span>
+</span>
+<span class="font-label-badge text-label-badge text-secondary uppercase tracking-wider truncate">
+        Order Executed 100% • 12ms Fill
+      </span>
+</div>
+<div class="flex items-center gap-1 shrink-0 bg-surface-container px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[12px] text-outline">layers</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Blk #194,822,109</span>
+</div>
+</div>
+<!-- Hero Execution Summary Card -->
+<div class="relative w-full rounded-xl bg-surface-container p-space-md shadow-xl overflow-hidden flex flex-col space-y-space-md">
+<!-- Ambient Radial Underglow -->
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-48 h-32 bg-secondary/15 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Header Status & Outcome Hero -->
+<div class="relative flex items-start gap-space-md">
+<!-- Glow Emerald Icon -->
+<div class="relative flex items-center justify-center w-12 h-12 rounded-xl bg-surface-container-high shadow-sm shrink-0">
+<div class="absolute inset-0 rounded-xl bg-secondary/20 blur-[6px]"></div>
+<span class="material-symbols-outlined text-secondary text-[26px] relative" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-badge text-label-badge text-outline tracking-wider uppercase">Binary Outcome Fill</span>
+<span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded bg-secondary/15 text-secondary">PROB 68%</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-snug line-clamp-2">
+          US Fed to cut interest rates ≥50 bps before Dec 2025 FOMC
+        </h2>
+</div>
+</div>
+<!-- Position Side Micro-Pill -->
+<div class="flex items-center justify-between bg-surface-container-high p-space-xs px-space-sm rounded-lg">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-badge text-label-badge text-secondary font-semibold uppercase">YES (Bullish)</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="font-label-meta text-label-meta text-outline">Fill Price</span>
+<span class="font-mono-price-md text-mono-price-md text-on-surface font-semibold">68¢</span>
+</div>
+</div>
+<!-- Key Metrics Grid -->
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col justify-between">
+<span class="font-label-meta text-label-meta text-outline">Shares Acquired</span>
+<span class="font-mono-price-md text-mono-price-md text-on-surface font-semibold mt-1">500.00 YES</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col justify-between">
+<span class="font-label-meta text-label-meta text-outline">Capital Deployed</span>
+<span class="font-mono-price-md text-mono-price-md text-on-surface font-semibold mt-1">$340.00 USDC</span>
+</div>
+<div class="col-span-2 bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-meta text-label-meta text-outline">Max Potential Payout</span>
+<div class="flex items-baseline gap-1.5 mt-0.5">
+<span class="font-mono-price-lg text-mono-price-lg text-secondary font-semibold">$500.00</span>
+<span class="font-label-badge text-label-badge text-outline">USDC</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded-full bg-secondary/15 text-secondary font-semibold">
+            +$160.00 (+47.06%)
+          </span>
+<span class="font-label-meta text-label-meta text-outline mt-1">ROI at $1.00</span>
+</div>
+</div>
+</div>
+<!-- Micro Slippage Gauge -->
+<div class="flex items-center justify-between pt-1 px-1 text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-outline">speed</span>
+<span class="font-label-meta text-label-meta text-outline">Realized Slippage</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-badge text-label-badge text-secondary">0.02%</span>
+<span class="font-label-meta text-label-meta text-outline">(Limit: 0.50%)</span>
+</div>
+</div>
+</div>
+<!-- Cryptographic Execution Receipt Card -->
+<div class="w-full rounded-xl bg-surface-container p-space-md shadow-md flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span class="font-label-badge text-label-badge text-primary tracking-wider uppercase">L2 Sequencer Receipt</span>
+</div>
+<span class="font-label-badge text-label-badge text-outline">#ORD-984210-L2</span>
+</div>
+<div class="space-y-space-xs divide-y divide-surface-container-high/60">
+<!-- EIP-712 Hash -->
+<div class="flex items-center justify-between pt-1.5">
+<span class="font-label-meta text-label-meta text-outline">EIP-712 Hash</span>
+<button class="flex items-center gap-1 px-2 py-1 rounded bg-surface-container-high hover:bg-surface-container-highest transition-colors active:scale-95" id="copy-hash-btn" onclick="navigator.clipboard.writeText('0x7c9a924b1209e842cb911075d985a1ef4c213f81'); const el = document.getElementById('copy-feedback'); el.classList.remove('opacity-0'); setTimeout(() =&gt; el.classList.add('opacity-0'), 2000);" type="button">
+<span class="font-label-badge text-label-badge text-on-surface font-mono">0x7c9a...3f81</span>
+<span class="material-symbols-outlined text-[14px] text-outline">content_copy</span>
+</button>
+</div>
+<div class="text-right text-[10px] text-secondary transition-opacity opacity-0 pr-1" id="copy-feedback">Copied to clipboard</div>
+<!-- Timestamp -->
+<div class="flex items-center justify-between pt-1.5">
+<span class="font-label-meta text-label-meta text-outline">Timestamp</span>
+<span class="font-label-meta text-label-meta text-on-surface">Oct 24, 2025 • 15:42:09 UTC</span>
+</div>
+<!-- Gasless Sponsored Badge -->
+<div class="flex items-center justify-between pt-1.5">
+<span class="font-label-meta text-label-meta text-outline">Network Fee</span>
+<div class="flex items-center gap-1.5">
+<span class="font-mono-price-md text-mono-price-md text-secondary font-semibold">$0.00</span>
+<span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded bg-primary/15 text-primary">Sponsored</span>
+</div>
+</div>
+<!-- Settlement Vault -->
+<div class="flex items-center justify-between pt-1.5">
+<span class="font-label-meta text-label-meta text-outline">Settlement Pool</span>
+<span class="font-label-meta text-label-meta text-on-surface truncate max-w-[200px]">Arbitrum Collateral Pool #4</span>
+</div>
+</div>
+</div>
+<!-- Interactive Social P&L Card Preview -->
+<div class="w-full rounded-xl bg-surface-container p-space-md shadow-md flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-outline tracking-wider uppercase">Proof of Position Slip</span>
+<span class="font-label-badge text-label-badge text-outline">VIRAL CARD</span>
+</div>
+<!-- Mini Social Share Card -->
+<div class="relative w-full rounded-lg bg-surface-container-high p-space-sm overflow-hidden shadow-inner flex flex-col space-y-2">
+<!-- Gradient Decorative Ribbon -->
+<div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-primary/20 via-secondary/10 to-transparent rounded-bl-full pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[12px] text-on-primary font-bold">trending_up</span>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface font-bold tracking-wider">MITMARKET</span>
+</div>
+<span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded bg-secondary/15 text-secondary">
+          BULLISH @ 68¢
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium line-clamp-1">
+        US Fed to cut interest rates ≥50 bps before Dec 2025
+      </p>
+<div class="flex items-end justify-between pt-1">
+<div>
+<span class="font-label-meta text-label-meta text-outline block text-[9px]">PROJECTED RETURN</span>
+<span class="font-headline-md text-headline-md text-secondary font-bold leading-none">+47.1% ROI</span>
+</div>
+<!-- Inline SVG QR Stamp -->
+<div class="p-1 rounded bg-white shrink-0 flex items-center justify-center shadow-sm">
+<svg class="w-6 h-6 text-background" fill="currentColor" viewbox="0 0 24 24">
+<path d="M2 2h8v8H2V2zm2 2v4h4V4H4zm10-2h8v8h-8V2zm2 2v4h4V4h-4zM2 14h8v8H2v-8zm2 2v4h4v-4H4zm14 0h4v2h-4v-2zm-4 0h2v4h-2v-4zm4 4h4v2h-4v-2zm-2-2h2v2h-2v-2zm-2 2h2v2h-2v-2zM6 6h0v0h0V6zm12 0h0v0h0V6zM6 18h0v0h0v0z"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Share Execution Slip Trigger -->
+<button class="w-full h-10 rounded-lg bg-surface-container-high hover:bg-surface-container-highest transition-colors flex items-center justify-center gap-2 text-on-surface active:scale-[0.98]" onclick="if (navigator.share) { navigator.share({title: 'MITMARKET Fill', text: 'Secured 500 YES shares on Fed Rate Cuts at 68¢ (+47.1% Potential ROI)', url: window.location.href}); }" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">share</span>
+<span class="font-headline-sm text-headline-sm">Share Execution Slip</span>
+</button>
+</div>
+<!-- Primary Sticky Bottom Action Triggers -->
+<div class="sticky bottom-0 z-40 -mx-margin px-margin pt-2 pb-space-sm bg-surface/90 backdrop-blur-xl flex flex-col space-y-space-xs shadow-2xl">
+<button class="w-full h-12 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm flex items-center justify-center gap-2 shadow-md hover:bg-inverse-primary transition-all active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[18px]">account_balance_wallet</span>
+<span>View in Active Positions</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="h-10 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-headline-sm flex items-center justify-center gap-1.5 transition-colors active:scale-[0.98]" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">storefront</span>
+<span>Trade Markets</span>
+</button>
+<a class="h-10 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-headline-sm flex items-center justify-center gap-1.5 transition-colors active:scale-[0.98]" href="https://arbiscan.io" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px] text-outline">open_in_new</span>
+<span>Arbiscan</span>
+</a>
+</div>
+</div>
+</div></main></body></html>

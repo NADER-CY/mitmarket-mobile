@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#071420;color:#d7e4f5;font-family:'Inter',sans-serif;-webkit-tap-highlight-color:transparent;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "tertiary": "#ffb3b5", "on-primary-fixed": "#00174c", "error-container": "#93000a", "primary-fixed": "#dbe1ff", "surface-container-highest": "#293643", "tertiary-fixed": "#ffdada", "primary": "#b4c5ff", "surface-container-low": "#101d29", "on-secondary-container": "#004025", "primary-container": "#1463ff", "on-error": "#690005", "on-tertiary-fixed-variant": "#920027", "on-primary-fixed-variant": "#003daa", "outline": "#8d90a2", "error": "#ffb4ab", "on-secondary": "#003920", "on-secondary-fixed": "#002110", "primary-fixed-dim": "#b4c5ff", "surface-container-high": "#1f2b38", "on-surface-variant": "#c3c5d8", "secondary-fixed": "#6dfdaf", "secondary": "#4cdf95", "surface-dim": "#071420", "surface-container-lowest": "#030f1b", "surface-variant": "#293643", "inverse-on-surface": "#25323e", "on-primary": "#002979", "surface-bright": "#2e3a48", "on-primary-container": "#f5f5ff", "surface-container": "#14212d", "inverse-primary": "#0052dd", "secondary-fixed-dim": "#4cdf95", "on-background": "#d7e4f5", "secondary-container": "#00b872", "on-secondary-fixed-variant": "#005230", "inverse-surface": "#d7e4f5", "outline-variant": "#424656", "on-tertiary": "#680019", "on-tertiary-fixed": "#40000c", "surface-tint": "#b4c5ff", "on-surface": "#d7e4f5", "tertiary-container": "#d72747", "on-tertiary-container": "#fff3f3", "background": "#071420", "on-error-container": "#ffdad6", "tertiary-fixed-dim": "#ffb3b5", "surface": "#071420" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-md": "0.75rem", "space-xl": "1.5rem", "space-xs": "0.25rem", "gutter": "0.75rem", "space-lg": "1rem", "margin": "1rem", "space-sm": "0.5rem" }, fontFamily: { "headline-lg": ["Inter"], "display": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "mono-price-md": ["JetBrains Mono"], "label-meta": ["Inter"], "mono-price-lg": ["JetBrains Mono"], "headline-md": ["Inter"], "body-lg": ["Inter"], "label-badge": ["JetBrains Mono"] }, fontSize: { "headline-lg": ["22px", { lineHeight: "28px", letterSpacing: "-0.02em", fontWeight: "600" }], "display": ["30px", { lineHeight: "36px", letterSpacing: "-0.03em", fontWeight: "700" }], "body-md": ["13px", { lineHeight: "18px", letterSpacing: "-0.005em", fontWeight: "400" }], "body-sm": ["11px", { lineHeight: "15px", letterSpacing: "0em", fontWeight: "400" }], "headline-sm": ["15px", { lineHeight: "20px", letterSpacing: "-0.01em", fontWeight: "600" }], "mono-price-md": ["14px", { lineHeight: "18px", letterSpacing: "-0.01em", fontWeight: "500" }], "label-meta": ["11px", { lineHeight: "14px", letterSpacing: "0.02em", fontWeight: "500" }], "mono-price-lg": ["22px", { lineHeight: "26px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-md": ["18px", { lineHeight: "24px", letterSpacing: "-0.015em", fontWeight: "600" }], "body-lg": ["15px", { lineHeight: "22px", letterSpacing: "-0.01em", fontWeight: "400" }], "label-badge": ["10px", { lineHeight: "12px", letterSpacing: "0.04em", fontWeight: "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-low/90 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.5)]"><div class="h-14 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button aria-label="Close" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface active:bg-surface-container transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">close</span></button><h1 class="font-headline-md text-headline-md text-on-surface truncate">Advanced Filters</h1></div><div class="flex items-center gap-space-sm"><button class="h-11 px-space-sm flex items-center justify-center font-label-meta text-label-meta text-primary hover:text-primary-fixed transition-colors" type="button">Reset</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-surface pt-14 pb-safe px-margin flex flex-col"><div class="flex flex-col w-full pb-28">
+<!-- Live Filter Summary & Counter Banner -->
+<section class="mb-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-sm"></span>
+<span class="font-label-badge text-label-badge text-secondary uppercase tracking-wider">4 Conditions Applied</span>
+</div>
+<span class="font-mono-price-md text-mono-price-md text-primary">24 Active Pairs</span>
+</div>
+<!-- Active Removable Chips Container -->
+<div class="flex flex-wrap gap-space-xs">
+<button class="group flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors shadow-sm" type="button">
+<span class="font-label-meta text-label-meta text-on-surface-variant">Status:</span>
+<span class="font-label-meta text-label-meta text-primary-fixed">Open</span>
+<span class="material-symbols-outlined text-[14px] text-outline group-hover:text-tertiary transition-colors">close</span>
+</button>
+<button class="group flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors shadow-sm" type="button">
+<span class="font-label-meta text-label-meta text-on-surface-variant">Sector:</span>
+<span class="font-label-meta text-label-meta text-primary-fixed">Macro</span>
+<span class="material-symbols-outlined text-[14px] text-outline group-hover:text-tertiary transition-colors">close</span>
+</button>
+<button class="group flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors shadow-sm" type="button">
+<span class="font-label-meta text-label-meta text-on-surface-variant">Vol:</span>
+<span class="font-label-meta text-label-meta text-primary-fixed">&gt;$100K</span>
+<span class="material-symbols-outlined text-[14px] text-outline group-hover:text-tertiary transition-colors">close</span>
+</button>
+<button class="group flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors shadow-sm" type="button">
+<span class="font-label-meta text-label-meta text-on-surface-variant">Prob:</span>
+<span class="font-label-meta text-label-meta text-secondary">20% - 80%</span>
+<span class="material-symbols-outlined text-[14px] text-outline group-hover:text-tertiary transition-colors">close</span>
+</button>
+</div>
+</section>
+<!-- Market Status Segmented Control -->
+<section class="mb-space-lg p-space-md rounded-xl bg-surface-container shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">Market Status</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">ORDERBOOK STATE</span>
+</div>
+<div class="grid grid-cols-5 gap-1 p-1 rounded-lg bg-surface-container-lowest">
+<button class="py-1.5 rounded-md font-label-meta text-label-meta text-center text-on-surface-variant hover:text-on-surface transition-colors" type="button">All</button>
+<button class="py-1.5 rounded-md font-label-meta text-label-meta text-center bg-primary-container text-on-primary-container font-semibold shadow-sm" type="button">Open</button>
+<button class="py-1.5 rounded-md font-label-meta text-label-meta text-center text-on-surface-variant hover:text-on-surface transition-colors" type="button">Live</button>
+<button class="py-1.5 rounded-md font-label-meta text-label-meta text-center text-on-surface-variant hover:text-on-surface transition-colors" type="button">Ending</button>
+<button class="py-1.5 rounded-md font-label-meta text-label-meta text-center text-on-surface-variant hover:text-on-surface transition-colors" type="button">Resolved</button>
+</div>
+</section>
+<!-- Dual Probability Range Filter -->
+<section class="mb-space-lg p-space-md rounded-xl bg-surface-container shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">YES Probability Range</span>
+<span class="material-symbols-outlined text-[16px] text-outline">tune</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-lowest px-2 py-0.5 rounded-md">
+<span class="font-mono-price-md text-mono-price-md text-secondary" id="prob-min-label">20¢</span>
+<span class="text-outline text-xs">→</span>
+<span class="font-mono-price-md text-mono-price-md text-secondary" id="prob-max-label">80¢</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Screen contracts by active liquidity consensus price (20% – 80% likelihood).</p>
+<!-- Visual Dual Slider Simulation Track -->
+<div class="relative py-4 px-1">
+<div class="w-full h-2 rounded-full bg-surface-container-lowest relative">
+<!-- Filled Active Range Track -->
+<div class="absolute left-[20%] right-[20%] top-0 bottom-0 rounded-full bg-primary-container shadow-sm"></div>
+<!-- Left Thumb -->
+<div class="absolute left-[20%] top-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-surface-bright flex items-center justify-center shadow-md cursor-pointer hover:scale-110 active:scale-95 transition-transform">
+<div class="w-2 h-2 rounded-full bg-primary-container"></div>
+</div>
+<!-- Right Thumb -->
+<div class="absolute right-[20%] top-1/2 translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-surface-bright flex items-center justify-center shadow-md cursor-pointer hover:scale-110 active:scale-95 transition-transform">
+<div class="w-2 h-2 rounded-full bg-primary-container"></div>
+</div>
+</div>
+<!-- Track Calibration Marks -->
+<div class="flex justify-between items-center mt-3 font-label-badge text-label-badge text-outline">
+<span>0%</span>
+<span>25%</span>
+<span class="text-on-surface font-bold">50% EV</span>
+<span>75%</span>
+<span>100%</span>
+</div>
+</div>
+<!-- Quick Pill Input Readouts -->
+<div class="grid grid-cols-2 gap-space-sm mt-space-sm pt-space-sm bg-surface-container-low rounded-lg p-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-on-surface-variant">Floor Limit</span>
+<span class="font-mono-price-md text-mono-price-md text-on-surface bg-surface-container-lowest px-2 py-0.5 rounded">20.0% (20¢)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-on-surface-variant">Ceiling Limit</span>
+<span class="font-mono-price-md text-mono-price-md text-on-surface bg-surface-container-lowest px-2 py-0.5 rounded">80.0% (80¢)</span>
+</div>
+</div>
+</section>
+<!-- Categories Grid -->
+<section class="mb-space-lg p-space-md rounded-xl bg-surface-container shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">Market Categories</span>
+<span class="font-label-badge text-label-badge text-primary font-bold">2 SELECTED</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-meta text-label-meta hover:bg-surface-container-high transition-colors" type="button">
+        All Categories
+      </button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-meta text-label-meta font-medium shadow-sm" type="button">
+<span class="material-symbols-outlined text-[15px]">trending_up</span>
+        Macro &amp; Economics
+      </button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-meta text-label-meta font-medium shadow-sm" type="button">
+<span class="material-symbols-outlined text-[15px]">currency_bitcoin</span>
+        Crypto &amp; Digital Assets
+      </button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-meta text-label-meta hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-outline">how_to_vote</span>
+        Politics &amp; Elections
+      </button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-meta text-label-meta hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-outline">memory</span>
+        AI &amp; Technology
+      </button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-meta text-label-meta hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-outline">sports_esports</span>
+        Sports &amp; Esports
+      </button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-meta text-label-meta hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-outline">developer_board</span>
+        Semiconductors
+      </button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-meta text-label-meta hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-outline">movie</span>
+        Entertainment &amp; Media
+      </button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-meta text-label-meta hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-outline">eco</span>
+        Climate &amp; Science
+      </button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-meta text-label-meta hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-outline">swap_horiz</span>
+        Derivatives &amp; Perps
+      </button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-meta text-label-meta hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-outline">biotech</span>
+        Biotech &amp; Healthcare
+      </button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-meta text-label-meta hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-outline">attach_money</span>
+        Commodities &amp; FX
+      </button>
+</div>
+</section>
+<!-- Trading Volume Range Selector -->
+<section class="mb-space-lg p-space-md rounded-xl bg-surface-container shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">24H Trading Volume</span>
+<span class="font-mono-price-md text-mono-price-md text-secondary">≥ $100,000 USD</span>
+</div>
+<!-- Quick Presets -->
+<div class="grid grid-cols-5 gap-1 mb-space-md">
+<button class="py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-badge text-label-badge text-center hover:bg-surface-container-high transition-colors" type="button">Any</button>
+<button class="py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-badge text-label-badge text-center hover:bg-surface-container-high transition-colors" type="button">&gt;$10K</button>
+<button class="py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-badge text-label-badge text-center font-bold shadow-sm" type="button">&gt;$100K</button>
+<button class="py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-badge text-label-badge text-center hover:bg-surface-container-high transition-colors" type="button">&gt;$1M</button>
+<button class="py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-badge text-label-badge text-center hover:bg-surface-container-high transition-colors" type="button">&gt;$10M</button>
+</div>
+<!-- Custom Numeric Range Inputs -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1 p-2 rounded-lg bg-surface-container-lowest">
+<span class="font-label-meta text-label-meta text-on-surface-variant">Min Volume (USDC)</span>
+<div class="flex items-center gap-1">
+<span class="font-mono-price-md text-mono-price-md text-outline">$</span>
+<span class="font-mono-price-md text-mono-price-md text-on-surface font-semibold">100,000</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 p-2 rounded-lg bg-surface-container-lowest">
+<span class="font-label-meta text-label-meta text-on-surface-variant">Max Volume (USDC)</span>
+<div class="flex items-center gap-1">
+<span class="font-mono-price-md text-mono-price-md text-outline">$</span>
+<span class="font-mono-price-md text-mono-price-md text-on-surface-variant">No Upper Cap</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Contract Architecture / Type -->
+<section class="mb-space-lg p-space-md rounded-xl bg-surface-container shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">Contract Type</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">STRUCTURE</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 rounded bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[13px] text-on-primary-container font-bold">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface">Binary YES / NO</span>
+</div>
+<span class="font-label-badge text-label-badge text-secondary font-bold">YES/NO</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 rounded bg-surface-container-highest flex items-center justify-center"></div>
+<span class="font-body-md text-body-md text-on-surface-variant">Multi Outcome</span>
+</div>
+<span class="font-label-badge text-label-badge text-outline">PARI</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 rounded bg-surface-container-highest flex items-center justify-center"></div>
+<span class="font-body-md text-body-md text-on-surface-variant">Crypto Oracles</span>
+</div>
+<span class="font-label-badge text-label-badge text-outline">DATA</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 rounded bg-surface-container-highest flex items-center justify-center"></div>
+<span class="font-body-md text-body-md text-on-surface-variant">Handicap Spreads</span>
+</div>
+<span class="font-label-badge text-label-badge text-outline">ODDS</span>
+</div>
+</div>
+</section>
+<!-- Expiration Timeframe Selection -->
+<section class="mb-space-lg p-space-md rounded-xl bg-surface-container shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">Time Horizon &amp; Maturity</span>
+<span class="font-label-badge text-label-badge text-secondary">ACTIVE WINDOW</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-meta text-label-meta hover:bg-surface-container-high transition-colors" type="button">
+        All Timeframes
+      </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-meta text-label-meta hover:bg-surface-container-high transition-colors" type="button">
+        Ending Today
+      </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-meta text-label-meta hover:bg-surface-container-high transition-colors" type="button">
+        Next 24 Hours
+      </button>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-meta text-label-meta font-medium shadow-sm" type="button">
+        Next 7 Days
+      </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-meta text-label-meta hover:bg-surface-container-high transition-colors" type="button">
+        Next 30 Days
+      </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-meta text-label-meta hover:bg-surface-container-high transition-colors" type="button">
+        Custom Range
+      </button>
+</div>
+</section>
+<!-- Sorting Mechanism -->
+<section class="mb-space-lg p-space-md rounded-xl bg-surface-container shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">Sort Order</span>
+<span class="material-symbols-outlined text-[18px] text-outline">sort</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-meta text-label-meta hover:bg-surface-container-high transition-colors" type="button">
+        Most Popular
+      </button>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-meta text-label-meta font-medium shadow-sm" type="button">
+        Highest Volume
+      </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-meta text-label-meta hover:bg-surface-container-high transition-colors" type="button">
+        Newest
+      </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-meta text-label-meta hover:bg-surface-container-high transition-colors" type="button">
+        Ending Soon
+      </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-meta text-label-meta hover:bg-surface-container-high transition-colors" type="button">
+        Largest Surge
+      </button>
+</div>
+</section>
+<!-- Sticky Bottom High-Contrast Execution Bar -->
+<div class="fixed bottom-0 inset-x-0 z-40 bg-surface-container-low/95 backdrop-blur-xl p-space-md shadow-[0_-8px_24px_rgba(0,0,0,0.6)]">
+<div class="max-w-[420px] mx-auto flex items-center gap-space-sm">
+<button class="h-12 px-4 rounded-xl bg-surface-container-highest text-on-surface font-headline-sm text-headline-sm hover:bg-surface-bright transition-colors active:scale-95 flex items-center justify-center" type="button">
+        Reset
+      </button>
+<button class="flex-1 h-12 px-4 rounded-xl bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-semibold flex items-center justify-between hover:bg-inverse-primary transition-all active:scale-[0.98] shadow-lg" type="button">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">filter_alt</span>
+<span>Show Results</span>
+</span>
+<span class="px-2 py-0.5 rounded-md bg-on-primary-container/20 font-mono-price-md text-mono-price-md">24 Markets</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Simple interactive toggle for filter pills to provide tactile touch feedback
+  document.querySelectorAll('section button').forEach(button => {
+    button.addEventListener('click', function(e) {
+      // Toggle logic demonstration without page reload
+      if (!this.classList.contains('bg-primary-container') && !this.closest('.grid-cols-5')) {
+        this.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        this.classList.add('bg-primary-container', 'text-on-primary-container');
+      }
+    });
+  });
+</script></main></body></html>

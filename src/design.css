@@ -1,0 +1,12 @@
+.design-app{padding-bottom:0;display:flex;flex-direction:column}
+.design-view{display:flex;flex-direction:column;min-height:100dvh;flex:1;background:#071420}
+.design-toolbar{height:54px;min-height:54px;padding:6px 10px;display:flex;align-items:center;gap:8px;background:#101924;border-bottom:1px solid #2c3850;position:relative;z-index:10}
+.design-toolbar>a,.design-toolbar>button{display:grid;place-items:center;width:32px;height:32px;flex-shrink:0;border:1px solid #2b3950;border-radius:9px;color:#c3d3e7;background:#1b2636;cursor:pointer}
+.design-toolbar .material-symbols-outlined{font-size:18px}
+.design-toolbar-title{display:flex;flex-direction:column;gap:4px;flex:1;overflow:hidden;min-width:0}
+.design-toolbar-title strong{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:12px;color:#f4f6fa}
+.design-toolbar-title small{font-size:9px;color:#8da5c4}
+.design-stage{display:flex;flex:1;min-height:0;align-items:stretch;justify-content:center;overflow:hidden}
+.design-stage iframe{width:100%;height:calc(100dvh - 54px);border:0;background:#071420;display:block}
+.design-stage img{width:100%;height:auto;object-fit:contain;align-self:flex-start}
+@media(min-width:700px){.design-view{min-height:calc(100dvh - 98px)}.design-stage iframe{height:calc(100dvh - 98px)}.design-app{height:calc(100dvh - 44px);min-height:0}.design-app .design-view{height:100%;min-height:0}}

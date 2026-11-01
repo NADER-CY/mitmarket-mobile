@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#071420;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#030f1b", "on-secondary": "#003920", "on-primary-fixed": "#00174c", "secondary": "#4cdf95", "inverse-primary": "#0052dd", "outline": "#8d90a2", "surface-dim": "#071420", "primary-fixed": "#dbe1ff", "outline-variant": "#424656", "error-container": "#93000a", "primary-fixed-dim": "#b4c5ff", "on-primary-container": "#f5f5ff", "on-tertiary-container": "#fff3f3", "error": "#ffb4ab", "surface-container-low": "#101d29", "on-surface": "#d7e4f5", "on-error-container": "#ffdad6", "secondary-container": "#00b872", "on-secondary-container": "#004025", "tertiary-container": "#d72747", "on-secondary-fixed-variant": "#005230", "background": "#071420", "tertiary-fixed": "#ffdada", "surface-bright": "#2e3a48", "surface-container-highest": "#293643", "on-error": "#690005", "on-background": "#d7e4f5", "on-secondary-fixed": "#002110", "on-surface-variant": "#c3c5d8", "on-primary": "#002979", "secondary-fixed-dim": "#4cdf95", "tertiary-fixed-dim": "#ffb3b5", "inverse-on-surface": "#25323e", "surface-variant": "#293643", "on-tertiary-fixed-variant": "#920027", "tertiary": "#ffb3b5", "surface": "#071420", "surface-container-high": "#1f2b38", "surface-container": "#14212d", "on-primary-fixed-variant": "#003daa", "primary": "#b4c5ff", "primary-container": "#1463ff", "on-tertiary-fixed": "#40000c", "on-tertiary": "#680019", "secondary-fixed": "#6dfdaf", "surface-tint": "#b4c5ff", "inverse-surface": "#d7e4f5" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "0.75rem", "space-xs": "0.25rem", "gutter": "0.75rem", "space-lg": "1rem", "space-sm": "0.5rem", "space-xl": "1.5rem", "margin": "1rem" }, "fontFamily": { "body-lg": ["Inter"], "label-badge": ["JetBrains Mono"], "mono-price-md": ["JetBrains Mono"], "headline-md": ["Inter"], "display": ["Inter"], "body-md": ["Inter"], "mono-price-lg": ["JetBrains Mono"], "headline-lg": ["Inter"], "label-meta": ["Inter"], "headline-sm": ["Inter"], "body-sm": ["Inter"] }, "fontSize": { "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-badge": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "600" }], "mono-price-md": ["14px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "mono-price-lg": ["22px", { "lineHeight": "26px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-meta": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["11px", { "lineHeight": "15px", "letterSpacing": "0em", "fontWeight": "400" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.4)] pt-safe"><div class="h-14 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go Back" class="w-11 h-11 -ml-space-xs flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface truncate">Positions Management</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">tune</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-14 pb-safe bg-surface flex-1"><div class="flex flex-col w-full text-on-surface pb-12">
+<!-- Portfolio Summary Header Banner -->
+<div class="px-margin pt-space-md pb-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-on-surface-variant uppercase tracking-wider">Unrealized Net P&amp;L</span>
+<span class="font-label-badge text-label-badge bg-secondary/15 text-secondary px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span> LIVE ORACLE
+      </span>
+</div>
+<div class="flex items-baseline justify-between">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-mono-price-lg text-display text-secondary tracking-tight">+$1,572.50</span>
+<span class="font-mono-price-md text-mono-price-md text-secondary font-semibold">+18.42%</span>
+</div>
+<div class="text-right">
+<span class="font-label-meta text-label-meta text-on-surface-variant block">Total Exposure</span>
+<span class="font-mono-price-md text-mono-price-md text-on-surface font-semibold">$17,310.00</span>
+</div>
+</div>
+</div>
+<!-- 1. Position Tabs & Counter Badges -->
+<div class="w-full overflow-x-auto no-scrollbar px-margin py-space-xs">
+<div class="flex items-center gap-space-xs min-w-max" id="positionsTabs">
+<button class="h-8 px-3 rounded-full font-label-badge text-label-badge flex items-center gap-1.5 bg-surface-container-high text-on-surface-variant transition-colors" id="tab-all" onclick="switchTab('all')">
+<span>All</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface text-[9px]">9</span>
+</button>
+<button class="h-8 px-3 rounded-full font-label-badge text-label-badge flex items-center gap-1.5 bg-primary-container text-on-primary-container shadow-sm transition-colors" id="tab-open" onclick="switchTab('open')">
+<span class="font-bold">Open</span>
+<span class="px-1.5 py-0.2 rounded-full bg-white/20 text-on-primary-container text-[9px]">5</span>
+</button>
+<button class="h-8 px-3 rounded-full font-label-badge text-label-badge flex items-center gap-1.5 bg-surface-container-high text-on-surface-variant transition-colors" id="tab-closed" onclick="switchTab('closed')">
+<span>Closed</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface text-[9px]">18</span>
+</button>
+<button class="h-8 px-3 rounded-full font-label-badge text-label-badge flex items-center gap-1.5 bg-surface-container-high text-on-surface-variant transition-colors" id="tab-pending" onclick="switchTab('pending')">
+<span>Pending Orders</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface text-[9px]">2</span>
+</button>
+</div>
+</div>
+<!-- 2. Position Filters & Search Toolbar -->
+<div class="px-margin pt-space-sm pb-space-sm flex flex-col gap-space-xs">
+<div class="relative w-full flex items-center">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant absolute left-3 pointer-events-none">search</span>
+<input class="w-full h-9 pl-9 pr-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm placeholder:text-outline-variant focus:outline-none focus:bg-surface-container" placeholder="Filter positions by market or ticker..." type="text"/>
+</div>
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-0.5">
+<button class="h-6 px-2.5 rounded-full bg-surface-container font-label-badge text-[10px] text-primary flex items-center gap-1 shrink-0">
+<span>Newest</span>
+<span class="material-symbols-outlined text-[12px]">keyboard_arrow_down</span>
+</button>
+<button class="h-6 px-2.5 rounded-full bg-surface-container-low font-label-badge text-[10px] text-on-surface-variant shrink-0">Category</button>
+<button class="h-6 px-2.5 rounded-full bg-surface-container-low font-label-badge text-[10px] text-on-surface-variant shrink-0">Profit / Loss</button>
+<button class="h-6 px-2.5 rounded-full bg-surface-container-low font-label-badge text-[10px] text-on-surface-variant shrink-0">Largest Value</button>
+</div>
+</div>
+<!-- TAB PANELS -->
+<!-- OPEN POSITIONS PANEL -->
+<div class="flex flex-col px-margin gap-space-md mt-space-xs" id="panel-open">
+<!-- CARD 1: Fed Rate Cut (Prediction Market) -->
+<div class="rounded-xl bg-surface-container p-space-md flex flex-col gap-space-sm shadow-md transition-all">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col gap-0.5 flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">PREDICTION</span>
+<span class="text-outline-variant text-[10px]">•</span>
+<span class="font-label-badge text-label-badge text-secondary">ACTIVE RESOLUTION</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight line-clamp-2">
+            US Fed to cut rates ≥50 bps before Dec 2025 FOMC
+          </h2>
+</div>
+<div class="shrink-0 flex flex-col items-end">
+<span class="px-2 py-0.5 rounded font-label-badge text-label-badge font-bold bg-secondary/15 text-secondary flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> YES • 68¢
+          </span>
+</div>
+</div>
+<!-- Quick Metrics Grid -->
+<div class="grid grid-cols-3 gap-2 py-space-xs px-2.5 rounded-lg bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-meta text-[10px] text-on-surface-variant">Entry / Mark</span>
+<span class="font-mono-price-md text-[12px] text-on-surface font-semibold">58.0¢ / 68.0¢</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-meta text-[10px] text-on-surface-variant">Shares</span>
+<span class="font-mono-price-md text-[12px] text-on-surface font-semibold">12,000</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-meta text-[10px] text-on-surface-variant">Pos. Value</span>
+<span class="font-mono-price-md text-[12px] text-on-surface font-semibold">$8,160.00</span>
+</div>
+</div>
+<!-- PnL Bar & Expiry -->
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex flex-col">
+<span class="font-label-meta text-[10px] text-on-surface-variant">Unrealized P&amp;L</span>
+<span class="font-mono-price-md text-mono-price-md text-secondary font-bold">+$1,200.00 (+17.24%)</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-meta text-[10px]">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+<span>Closes Dec 17, 2025</span>
+</div>
+</div>
+<!-- Expandable Risk & Resolution Accordion Trigger -->
+<button class="flex items-center justify-between py-1 px-2 rounded bg-surface-container-highest text-on-surface-variant font-label-meta text-[11px] transition-colors" onclick="toggleDetails('details-card-1', 'icon-card-1')">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">verified</span>
+<span>Oracle Source: CME FedWatch &amp; FOMC Stmt</span>
+</span>
+<span class="material-symbols-outlined text-[16px] transition-transform duration-200" id="icon-card-1">expand_more</span>
+</button>
+<!-- Expandable Body Content -->
+<div class="hidden flex-col gap-2 p-2.5 rounded-lg bg-surface-container-lowest text-on-surface-variant font-body-sm text-[11px]" id="details-card-1">
+<div class="flex justify-between items-center">
+<span>Contract ID:</span>
+<span class="font-label-badge text-on-surface">FED-DEC25-50CUT</span>
+</div>
+<div class="flex justify-between items-center">
+<span>Trading Fee (Maker/Taker):</span>
+<span class="font-mono-price-md text-on-surface">0.05% ($4.08)</span>
+</div>
+<div class="flex justify-between items-center">
+<span>Estimated Resolution Date:</span>
+<span class="font-label-badge text-on-surface">Dec 17, 2025 19:00 UTC</span>
+</div>
+<div class="flex justify-between items-center">
+<span>Dispute Window:</span>
+<span class="text-secondary font-medium">2.5 hrs fast-consensus</span>
+</div>
+</div>
+<!-- Actions Toolbar -->
+<div class="flex items-center gap-2 pt-1">
+<button class="h-9 px-3 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-[12px] flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px]">candlestick_chart</span>
+<span>Market</span>
+</button>
+<button class="h-9 flex-1 rounded-lg bg-secondary-container hover:bg-secondary text-on-secondary font-headline-sm text-[12px] font-semibold flex items-center justify-center gap-1 shadow-sm transition-colors" onclick="openCloseModal('US Fed to cut rates &gt;=50 bps', 'YES', '$8,160.00', '+$1,200.00')">
+<span class="material-symbols-outlined text-[16px]">sell</span>
+<span>Close / Sell Position</span>
+</button>
+<button class="h-9 w-9 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[17px]">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- CARD 2: BTC Perp (Leveraged Future) -->
+<div class="rounded-xl bg-surface-container p-space-md flex flex-col gap-space-sm shadow-md transition-all">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col gap-0.5 flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">SYNTHETIC PERP</span>
+<span class="text-outline-variant text-[10px]">•</span>
+<span class="font-label-badge text-label-badge text-secondary font-bold">CROSS 10X</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight">
+            BTC/100K-PERP
+          </h2>
+</div>
+<div class="shrink-0 flex flex-col items-end">
+<span class="px-2 py-0.5 rounded font-label-badge text-label-badge font-bold bg-secondary/15 text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">trending_up</span> LONG 10x • Isolated
+          </span>
+</div>
+</div>
+<!-- Quick Metrics Grid -->
+<div class="grid grid-cols-3 gap-2 py-space-xs px-2.5 rounded-lg bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-meta text-[10px] text-on-surface-variant">Entry / Mark</span>
+<span class="font-mono-price-md text-[12px] text-on-surface font-semibold">$0.7800 / $0.8240</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-meta text-[10px] text-on-surface-variant">Notional Size</span>
+<span class="font-mono-price-md text-[12px] text-on-surface font-semibold">$5,000.00</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-meta text-[10px] text-on-surface-variant">Margin Held</span>
+<span class="font-mono-price-md text-[12px] text-on-surface font-semibold">$500.00</span>
+</div>
+</div>
+<!-- Margin Safety Buffer Bar -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-[11px]">
+<span class="font-label-meta text-on-surface-variant flex items-center gap-1">
+            Est. Liq: <span class="font-mono-price-md text-on-surface font-semibold">$0.7120</span>
+</span>
+<span class="font-label-badge text-secondary font-bold">14.8% Safe Buffer</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 85%"></div>
+</div>
+</div>
+<!-- PnL Bar -->
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex flex-col">
+<span class="font-label-meta text-[10px] text-on-surface-variant">Unrealized P&amp;L (ROE)</span>
+<span class="font-mono-price-md text-mono-price-md text-secondary font-bold">+$342.50 (+68.50% ROE)</span>
+</div>
+<div class="text-right">
+<span class="font-label-meta text-[10px] text-on-surface-variant block">Funding (1h)</span>
+<span class="font-mono-price-md text-[11px] text-on-surface-variant">-0.0014%</span>
+</div>
+</div>
+<!-- Perp Actions Toolbar -->
+<div class="grid grid-cols-3 gap-2 pt-1">
+<button class="h-9 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-[12px] flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px]">flag</span>
+<span>TP / SL</span>
+</button>
+<button class="h-9 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-[12px] flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px]">account_balance_wallet</span>
+<span>Margin</span>
+</button>
+<button class="h-9 rounded-lg bg-primary-container hover:bg-inverse-primary text-on-primary-container font-headline-sm text-[12px] font-semibold flex items-center justify-center gap-1 shadow-sm transition-colors" onclick="openCloseModal('BTC/100K-PERP', 'LONG 10x', '$5,000.00', '+$342.50')">
+<span>Close 100%</span>
+</button>
+</div>
+</div>
+<!-- CARD 3: Solana Spot ETF (Prediction Market - NO Outcome) -->
+<div class="rounded-xl bg-surface-container p-space-md flex flex-col gap-space-sm shadow-md transition-all">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col gap-0.5 flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">PREDICTION</span>
+<span class="text-outline-variant text-[10px]">•</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">CRYPTO POLICY</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight line-clamp-2">
+            Solana Spot ETF Staking Provision in Q3 2025
+          </h2>
+</div>
+<div class="shrink-0 flex flex-col items-end">
+<span class="px-2 py-0.5 rounded font-label-badge text-label-badge font-bold bg-error-container/30 text-error flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">cancel</span> NO • 55¢
+          </span>
+</div>
+</div>
+<!-- Quick Metrics Grid -->
+<div class="grid grid-cols-3 gap-2 py-space-xs px-2.5 rounded-lg bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-meta text-[10px] text-on-surface-variant">Entry / Mark</span>
+<span class="font-mono-price-md text-[12px] text-on-surface font-semibold">48.0¢ / 55.0¢</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-meta text-[10px] text-on-surface-variant">Shares</span>
+<span class="font-mono-price-md text-[12px] text-on-surface font-semibold">4,000</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-meta text-[10px] text-on-surface-variant">Pos. Value</span>
+<span class="font-mono-price-md text-[12px] text-on-surface font-semibold">$2,200.00</span>
+</div>
+</div>
+<!-- PnL Bar & Expiry -->
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex flex-col">
+<span class="font-label-meta text-[10px] text-on-surface-variant">Unrealized P&amp;L</span>
+<span class="font-mono-price-md text-mono-price-md text-secondary font-bold">+$280.00 (+14.58%)</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-meta text-[10px]">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+<span>Closes Sep 30, 2025</span>
+</div>
+</div>
+<!-- Actions Toolbar -->
+<div class="flex items-center gap-2 pt-1">
+<button class="h-9 px-3 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-[12px] flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px]">query_stats</span>
+<span>View Market</span>
+</button>
+<button class="h-9 flex-1 rounded-lg bg-secondary-container hover:bg-secondary text-on-secondary font-headline-sm text-[12px] font-semibold flex items-center justify-center gap-1 shadow-sm transition-colors" onclick="openCloseModal('Solana Spot ETF Staking Provision', 'NO', '$2,200.00', '+$280.00')">
+<span class="material-symbols-outlined text-[16px]">sell</span>
+<span>Close Position</span>
+</button>
+</div>
+</div>
+<!-- CARD 4: TSMC (Loss Position Example) -->
+<div class="rounded-xl bg-surface-container p-space-md flex flex-col gap-space-sm shadow-md transition-all">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col gap-0.5 flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">PREDICTION</span>
+<span class="text-outline-variant text-[10px]">•</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">TECH / SEMI</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight line-clamp-2">
+            TSMC 2nm commercial shipments ahead of schedule
+          </h2>
+</div>
+<div class="shrink-0 flex flex-col items-end">
+<span class="px-2 py-0.5 rounded font-label-badge text-label-badge font-bold bg-secondary/15 text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> YES • 39¢
+          </span>
+</div>
+</div>
+<!-- Quick Metrics Grid -->
+<div class="grid grid-cols-3 gap-2 py-space-xs px-2.5 rounded-lg bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-meta text-[10px] text-on-surface-variant">Entry / Mark</span>
+<span class="font-mono-price-md text-[12px] text-on-surface font-semibold">44.0¢ / 39.0¢</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-meta text-[10px] text-on-surface-variant">Shares</span>
+<span class="font-mono-price-md text-[12px] text-on-surface font-semibold">5,000</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-meta text-[10px] text-on-surface-variant">Pos. Value</span>
+<span class="font-mono-price-md text-[12px] text-on-surface font-semibold">$1,950.00</span>
+</div>
+</div>
+<!-- Loss PnL Bar & Expiry -->
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex flex-col">
+<span class="font-label-meta text-[10px] text-on-surface-variant">Unrealized P&amp;L</span>
+<span class="font-mono-price-md text-mono-price-md text-error font-bold">-$250.00 (-11.36%)</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-meta text-[10px]">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+<span>Closes Nov 15, 2025</span>
+</div>
+</div>
+<!-- Actions Toolbar -->
+<div class="flex items-center gap-2 pt-1">
+<button class="h-9 px-3 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-[12px] flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px]">query_stats</span>
+<span>View Market</span>
+</button>
+<button class="h-9 flex-1 rounded-lg bg-surface-container-highest hover:bg-surface-bright text-on-surface font-headline-sm text-[12px] font-semibold flex items-center justify-center gap-1 transition-colors" onclick="openCloseModal('TSMC 2nm commercial shipments', 'YES', '$1,950.00', '-$250.00')">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>Cut Loss / Close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 4. CLOSED POSITIONS SHOWCASE TAB / PANEL -->
+<div class="hidden flex-col px-margin gap-space-md mt-space-xs" id="panel-closed">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-meta text-label-meta text-on-surface-variant uppercase">Settled Contracts (Historical)</span>
+<span class="font-label-badge text-label-badge text-secondary font-bold">Net Realized: +$6,420.00</span>
+</div>
+<!-- Closed Card 1 -->
+<div class="rounded-xl bg-surface-container p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col gap-0.5 flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">RESOLVED • PAID OUT</span>
+<span class="text-outline-variant text-[10px]">•</span>
+<span class="font-label-badge text-label-badge text-secondary">FINAL SETTLEMENT</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight">
+            Emergency FOMC Interbank Rate Cut
+          </h2>
+</div>
+<div class="shrink-0 flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-highest font-label-badge text-[10px] text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Settled</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 p-2.5 rounded-lg bg-surface-container-low font-body-sm text-[12px]">
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-label-meta text-[10px]">Execution</span>
+<span class="text-on-surface font-semibold font-mono-price-md">Bought YES @ 34¢</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-on-surface-variant font-label-meta text-[10px]">Settled / Sold Price</span>
+<span class="text-secondary font-semibold font-mono-price-md">Sold @ 52¢</span>
+</div>
+<div class="flex flex-col pt-1">
+<span class="text-on-surface-variant font-label-meta text-[10px]">Platform Fee</span>
+<span class="text-on-surface font-mono-price-md">$1.20 USDC</span>
+</div>
+<div class="flex flex-col items-end pt-1">
+<span class="text-on-surface-variant font-label-meta text-[10px]">Timestamp</span>
+<span class="text-on-surface-variant font-label-badge text-[10px]">Yesterday 16:40 UTC</span>
+</div>
+</div>
+<!-- Realized Gain banner without close button -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-secondary/10">
+<span class="font-label-meta text-[11px] text-secondary font-medium">Realized Return</span>
+<span class="font-mono-price-md text-mono-price-md text-secondary font-bold">+$1,440.00 (+52.9%)</span>
+</div>
+<button class="h-8 w-full rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant font-label-meta text-[11px] flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">receipt_long</span>
+<span>Download Tax &amp; Settlement Receipt</span>
+</button>
+</div>
+<!-- Closed Card 2 -->
+<div class="rounded-xl bg-surface-container p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col gap-0.5 flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">RESOLVED</span>
+<span class="text-outline-variant text-[10px]">•</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">CRYPTO</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight">
+            Ethereum Gas Median &gt;50 Gwei on Nov 1
+          </h2>
+</div>
+<span class="shrink-0 px-2 py-0.5 rounded bg-surface-container-highest font-label-badge text-[10px] text-on-surface-variant">Expired</span>
+</div>
+<div class="grid grid-cols-2 gap-2 p-2.5 rounded-lg bg-surface-container-low font-body-sm text-[12px]">
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-label-meta text-[10px]">Execution</span>
+<span class="text-on-surface font-semibold font-mono-price-md">Bought NO @ 62¢</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-on-surface-variant font-label-meta text-[10px]">Settled / Sold Price</span>
+<span class="text-secondary font-semibold font-mono-price-md">Redeemed @ 100¢</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-secondary/10">
+<span class="font-label-meta text-[11px] text-secondary font-medium">Realized Return</span>
+<span class="font-mono-price-md text-mono-price-md text-secondary font-bold">+$950.00 (+61.3%)</span>
+</div>
+</div>
+</div>
+<!-- 5. PENDING ORDERS SECTION -->
+<div class="hidden flex-col px-margin gap-space-md mt-space-xs" id="panel-pending">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-meta text-label-meta text-on-surface-variant uppercase">Resting Limit Orders (2 Active)</span>
+<span class="font-label-badge text-label-badge text-primary">Uncommitted Pool: $2,500.00</span>
+</div>
+<!-- Order 1: Fed Rate Cut Limit -->
+<div class="rounded-xl bg-surface-container p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col gap-0.5 flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="font-label-badge text-label-badge text-primary uppercase font-bold">GTC LIMIT BUY</span>
+<span class="text-outline-variant text-[10px]">•</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">BOOK ORDER</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight">
+            US Fed ≥50 bps Cut
+          </h2>
+</div>
+<span class="px-2 py-0.5 rounded font-label-badge text-label-badge bg-secondary/15 text-secondary font-bold">
+          BUY YES @ 66¢
+        </span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between font-mono-price-md text-[12px]">
+<span class="text-on-surface-variant font-label-meta">Order Size / Commitment</span>
+<span class="text-on-surface font-semibold">$500.00 USDC (757 Shares)</span>
+</div>
+<div class="flex items-center justify-between font-mono-price-md text-[12px]">
+<span class="text-on-surface-variant font-label-meta">Current Spread / Best Ask</span>
+<span class="text-on-surface">68¢ (2¢ away)</span>
+</div>
+<div class="flex flex-col gap-1 pt-1">
+<div class="flex justify-between font-label-meta text-[10px] text-on-surface-variant">
+<span>Fill Progress</span>
+<span class="text-on-surface font-label-badge">0% Filled (0 / 757)</span>
+</div>
+<div class="w-full h-1 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 0%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="h-9 px-3 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-[12px] flex items-center justify-center gap-1 flex-1 transition-colors">
+<span class="material-symbols-outlined text-[15px]">edit</span>
+<span>Edit Price</span>
+</button>
+<button class="h-9 px-4 rounded-lg bg-error-container hover:bg-error text-on-error-container hover:text-on-error font-headline-sm text-[12px] font-semibold flex items-center justify-center gap-1 transition-colors" onclick="cancelPendingOrder(this)">
+<span class="material-symbols-outlined text-[15px]">cancel</span>
+<span>Cancel Order</span>
+</button>
+</div>
+</div>
+<!-- Order 2: BTC Perp Resting Trigger -->
+<div class="rounded-xl bg-surface-container p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col gap-0.5 flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="font-label-badge text-label-badge text-error uppercase font-bold">STOP LIMIT TRIGGER</span>
+<span class="text-outline-variant text-[10px]">•</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">DERIVATIVES</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight">
+            BTC/100K-PERP
+          </h2>
+</div>
+<span class="px-2 py-0.5 rounded font-label-badge text-label-badge bg-error-container/30 text-error font-bold">
+          SELL STOP @ $0.7200
+        </span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between font-mono-price-md text-[12px]">
+<span class="text-on-surface-variant font-label-meta">Trigger Condition</span>
+<span class="text-on-surface font-semibold">Mark Price ≤ $0.7200</span>
+</div>
+<div class="flex items-center justify-between font-mono-price-md text-[12px]">
+<span class="text-on-surface-variant font-label-meta">Protected Margin</span>
+<span class="text-on-surface">$500.00 USDC</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="h-9 w-full rounded-lg bg-error-container hover:bg-error text-on-error-container hover:text-on-error font-headline-sm text-[12px] font-semibold flex items-center justify-center gap-1 transition-colors" onclick="cancelPendingOrder(this)">
+<span class="material-symbols-outlined text-[15px]">cancel</span>
+<span>Cancel Stop Order</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ALL POSITIONS WRAPPER (Fallback container) -->
+<div class="hidden flex-col px-margin gap-space-md mt-space-xs" id="panel-all">
+<div class="p-3 rounded-lg bg-surface-container-high text-center">
+<span class="font-label-badge text-on-surface-variant text-[11px]">Aggregating all 9 active, pending &amp; past records</span>
+</div>
+<!-- Duplicates will render dynamically or switch directly to open view -->
+</div>
+<!-- 6. EXPANDABLE POSITION DETAILS / RISK INSPECTION DRAWER & MODAL -->
+<div class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden flex-col justify-end transition-opacity" id="closeModalBackdrop">
+<div class="w-full bg-surface-container-low rounded-t-2xl p-margin flex flex-col gap-space-md shadow-2xl animate-in slide-in-from-bottom duration-200">
+<!-- Modal Handle Bar -->
+<div class="w-12 h-1 rounded-full bg-surface-container-highest self-center"></div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">EXECUTE POSITION EXIT</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold" id="modalMarketTitle">Position Execution</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface" onclick="closeModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Execution Summary Box -->
+<div class="p-3 rounded-xl bg-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between text-[12px]">
+<span class="text-on-surface-variant font-label-meta">Outcome Contract</span>
+<span class="font-label-badge text-secondary font-bold" id="modalOutcome">YES</span>
+</div>
+<div class="flex items-center justify-between text-[12px]">
+<span class="text-on-surface-variant font-label-meta">Expected Realized P&amp;L</span>
+<span class="font-mono-price-md font-bold text-secondary" id="modalPnl">+$1,200.00</span>
+</div>
+<div class="flex items-center justify-between text-[12px]">
+<span class="text-on-surface-variant font-label-meta">Liquidity Slippage (Max 0.2%)</span>
+<span class="font-mono-price-md text-on-surface font-medium">∼0.04¢ ($4.80)</span>
+</div>
+<div class="flex items-center justify-between text-[12px] pt-1">
+<span class="text-on-surface-variant font-label-meta">Gross Proceeds to Wallet</span>
+<span class="font-mono-price-lg text-headline-sm font-bold text-on-surface" id="modalProceeds">$8,160.00 USDC</span>
+</div>
+</div>
+<!-- Order Percentage Slider Chips -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-meta text-[10px] text-on-surface-variant uppercase">Select Exit Ratio</span>
+<div class="grid grid-cols-4 gap-2">
+<button class="h-8 rounded-lg bg-surface-container-high text-on-surface font-label-badge text-label-badge hover:bg-surface-container-highest">25%</button>
+<button class="h-8 rounded-lg bg-surface-container-high text-on-surface font-label-badge text-label-badge hover:bg-surface-container-highest">50%</button>
+<button class="h-8 rounded-lg bg-surface-container-high text-on-surface font-label-badge text-label-badge hover:bg-surface-container-highest">75%</button>
+<button class="h-8 rounded-lg bg-primary-container text-on-primary-container font-label-badge text-label-badge font-bold">100% (MAX)</button>
+</div>
+</div>
+<!-- Confirm Button -->
+<div class="flex flex-col gap-2 pt-1">
+<button class="w-full h-12 rounded-xl bg-primary-container hover:bg-inverse-primary text-on-primary-container font-headline-md text-headline-sm font-bold flex items-center justify-center gap-2 shadow-lg transition-transform active:scale-95" onclick="confirmCloseExecution()">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+<span>Confirm Instant Exit</span>
+</button>
+<span class="text-center font-label-meta text-[10px] text-on-surface-variant">Zero fee rebate applied. Transactions settled via zkOracle relayer.</span>
+</div>
+</div>
+</div>
+<!-- Toast Notification -->
+<div class="fixed top-16 inset-x-4 z-50 hidden rounded-xl bg-secondary p-3 shadow-xl text-on-secondary flex items-center gap-2 transition-all" id="toastNotification">
+<span class="material-symbols-outlined text-[20px]">task_alt</span>
+<span class="font-headline-sm text-[12px] font-semibold" id="toastMessage">Action completed successfully.</span>
+</div>
+</div>
+<script>
+  function switchTab(tabId) {
+    const tabs = ['all', 'open', 'closed', 'pending'];
+    tabs.forEach(t => {
+      const btn = document.getElementById('tab-' + t);
+      const panel = document.getElementById('panel-' + t);
+      if (t === tabId) {
+        btn.className = 'h-8 px-3 rounded-full font-label-badge text-label-badge flex items-center gap-1.5 bg-primary-container text-on-primary-container shadow-sm transition-colors';
+        if (panel) {
+          panel.classList.remove('hidden');
+          panel.classList.add('flex');
+        }
+      } else {
+        btn.className = 'h-8 px-3 rounded-full font-label-badge text-label-badge flex items-center gap-1.5 bg-surface-container-high text-on-surface-variant transition-colors';
+        if (panel) {
+          panel.classList.add('hidden');
+          panel.classList.remove('flex');
+        }
+      }
+    });
+
+    if (tabId === 'all') {
+      // Show open panel as primary demo view for 'All'
+      document.getElementById('panel-open').classList.remove('hidden');
+      document.getElementById('panel-open').classList.add('flex');
+    }
+  }
+
+  function toggleDetails(contentId, iconId) {
+    const content = document.getElementById(contentId);
+    const icon = document.getElementById(iconId);
+    if (!content) return;
+    
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      content.classList.add('flex');
+      if (icon) icon.style.transform = 'rotate(180deg)';
+    } else {
+      content.classList.add('hidden');
+      content.classList.remove('flex');
+      if (icon) icon.style.transform = 'rotate(0deg)';
+    }
+  }
+
+  function openCloseModal(title, outcome, proceeds, pnl) {
+    document.getElementById('modalMarketTitle').innerText = title;
+    document.getElementById('modalOutcome').innerText = outcome;
+    document.getElementById('modalProceeds').innerText = proceeds;
+    document.getElementById('modalPnl').innerText = pnl;
+    
+    const modal = document.getElementById('closeModalBackdrop');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('closeModalBackdrop');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  function confirmCloseExecution() {
+    closeModal();
+    showToast('Market order routed: 100% position liquidating via zkOracle.');
+  }
+
+  function cancelPendingOrder(btn) {
+    const card = btn.closest('.rounded-xl');
+    if (card) {
+      card.style.opacity = '0.3';
+      card.style.pointerEvents = 'none';
+      setTimeout(() => {
+        card.remove();
+        showToast('Resting limit order cancelled & collateral returned.');
+      }, 350);
+    }
+  }
+
+  function showToast(msg) {
+    const toast = document.getElementById('toastNotification');
+    const msgEl = document.getElementById('toastMessage');
+    msgEl.innerText = msg;
+    toast.classList.remove('hidden');
+    toast.classList.add('flex');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+      toast.classList.remove('flex');
+    }, 3200);
+  }
+</script></main></body></html>

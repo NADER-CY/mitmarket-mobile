@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#071420;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#030f1b", "on-secondary": "#003920", "on-primary-fixed": "#00174c", "secondary": "#4cdf95", "inverse-primary": "#0052dd", "outline": "#8d90a2", "surface-dim": "#071420", "primary-fixed": "#dbe1ff", "outline-variant": "#424656", "error-container": "#93000a", "primary-fixed-dim": "#b4c5ff", "on-primary-container": "#f5f5ff", "on-tertiary-container": "#fff3f3", "error": "#ffb4ab", "surface-container-low": "#101d29", "on-surface": "#d7e4f5", "on-error-container": "#ffdad6", "secondary-container": "#00b872", "on-secondary-container": "#004025", "tertiary-container": "#d72747", "on-secondary-fixed-variant": "#005230", "background": "#071420", "tertiary-fixed": "#ffdada", "surface-bright": "#2e3a48", "surface-container-highest": "#293643", "on-error": "#690005", "on-background": "#d7e4f5", "on-secondary-fixed": "#002110", "on-surface-variant": "#c3c5d8", "on-primary": "#002979", "secondary-fixed-dim": "#4cdf95", "tertiary-fixed-dim": "#ffb3b5", "inverse-on-surface": "#25323e", "surface-variant": "#293643", "on-tertiary-fixed-variant": "#920027", "tertiary": "#ffb3b5", "surface": "#071420", "surface-container-high": "#1f2b38", "surface-container": "#14212d", "on-primary-fixed-variant": "#003daa", "primary": "#b4c5ff", "primary-container": "#1463ff", "on-tertiary-fixed": "#40000c", "on-tertiary": "#680019", "secondary-fixed": "#6dfdaf", "surface-tint": "#b4c5ff", "inverse-surface": "#d7e4f5" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "0.75rem", "space-xs": "0.25rem", "gutter": "0.75rem", "space-lg": "1rem", "space-sm": "0.5rem", "space-xl": "1.5rem", "margin": "1rem" }, "fontFamily": { "body-lg": ["Inter"], "label-badge": ["JetBrains Mono"], "mono-price-md": ["JetBrains Mono"], "headline-md": ["Inter"], "display": ["Inter"], "body-md": ["Inter"], "mono-price-lg": ["JetBrains Mono"], "headline-lg": ["Inter"], "label-meta": ["Inter"], "headline-sm": ["Inter"], "body-sm": ["Inter"] }, "fontSize": { "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-badge": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "600" }], "mono-price-md": ["14px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "mono-price-lg": ["22px", { "lineHeight": "26px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-meta": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["11px", { "lineHeight": "15px", "letterSpacing": "0em", "fontWeight": "400" }] } } } }</script><style>body { min-height: max(884px, 100dvh); }</style></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.4)] pt-safe"><div class="h-14 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary-container text-[20px]">query_stats</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm tracking-tight font-bold text-on-surface">MITMARKET</span><span class="font-label-badge text-label-badge text-secondary bg-on-secondary/30 px-1 py-0.5 rounded">PRO</span></div><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-label-badge text-label-badge text-outline tracking-wider uppercase">ARB L2 • 12ms</span></div></div></div><div class="flex items-center gap-space-xs"><button aria-label="Search Markets" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Support Hub" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">headset_mic</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs shrink-0 shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-14 pb-20 bg-surface flex-1"><div class="flex flex-col w-full text-on-surface">
+<!-- Interactive Visual Header & Quick Pulse -->
+<section class="px-margin pt-space-lg pb-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container-high">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-badge text-label-badge text-secondary tracking-wider uppercase">Knowledge Engine v2.4</span>
+</div>
+<div class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span class="font-label-badge text-label-badge">Avg Response: 94s</span>
+</div>
+</div>
+<div class="mt-space-xs flex flex-col gap-1">
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">Frequently Asked Questions</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Authoritative answers regarding prediction contract mechanics, execution rules, and security.
+      </p>
+</div>
+</section>
+<!-- Search & Filter Controls -->
+<section class="px-margin py-space-sm flex flex-col gap-space-sm">
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full h-11 pl-10 pr-24 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline-variant focus:outline-none focus:bg-surface-container transition-all" id="faq-search-input" placeholder="Search FAQ (e.g., resolution, settlement, fees)..." type="search"/>
+<div class="absolute inset-y-0 right-1.5 flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-badge text-label-badge uppercase tracking-wider">⌘K</span>
+<button aria-label="Clear search" class="hidden p-1 text-outline hover:text-on-surface transition-colors" id="clear-search-btn">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+<!-- Quick Stats Metric Pills -->
+<div class="grid grid-cols-3 gap-space-xs">
+<div class="flex flex-col p-space-xs rounded-lg bg-surface-container-low text-center">
+<span class="font-mono-price-md text-mono-price-md font-semibold text-primary">88</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant">Verified Articles</span>
+</div>
+<div class="flex flex-col p-space-xs rounded-lg bg-surface-container-low text-center">
+<span class="font-mono-price-md text-mono-price-md font-semibold text-secondary">99.8%</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant">Resolution Rate</span>
+</div>
+<div class="flex flex-col p-space-xs rounded-lg bg-surface-container-low text-center">
+<span class="font-mono-price-md text-mono-price-md font-semibold text-on-surface">UMA L2</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant">Oracle Standard</span>
+</div>
+</div>
+</section>
+<!-- Horizontally Scrolling Category Filter Tabs -->
+<section class="py-space-xs">
+<div class="flex gap-2 overflow-x-auto px-margin no-scrollbar scroll-smooth" id="category-scroll-container">
+<button class="faq-cat-btn shrink-0 px-3 py-1.5 rounded-full font-label-badge text-label-badge font-semibold transition-all bg-primary-container text-on-primary-container shadow-sm flex items-center gap-1" data-cat="all">
+<span>General</span>
+<span class="px-1 py-0.2 rounded-full bg-surface-container-lowest/40 font-mono-price-md text-[10px]">12</span>
+</button>
+<button class="faq-cat-btn shrink-0 px-3 py-1.5 rounded-full font-label-badge text-label-badge font-semibold transition-all bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center gap-1" data-cat="prediction">
+<span>Prediction Markets</span>
+<span class="px-1 py-0.2 rounded-full bg-surface-container-highest font-mono-price-md text-[10px]">18</span>
+</button>
+<button class="faq-cat-btn shrink-0 px-3 py-1.5 rounded-full font-label-badge text-label-badge font-semibold transition-all bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center gap-1" data-cat="trading">
+<span>Trading &amp; Orders</span>
+<span class="px-1 py-0.2 rounded-full bg-surface-container-highest font-mono-price-md text-[10px]">14</span>
+</button>
+<button class="faq-cat-btn shrink-0 px-3 py-1.5 rounded-full font-label-badge text-label-badge font-semibold transition-all bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center gap-1" data-cat="wallet">
+<span>Wallet &amp; Vaults</span>
+<span class="px-1 py-0.2 rounded-full bg-surface-container-highest font-mono-price-md text-[10px]">10</span>
+</button>
+<button class="faq-cat-btn shrink-0 px-3 py-1.5 rounded-full font-label-badge text-label-badge font-semibold transition-all bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center gap-1" data-cat="deposits">
+<span>Deposits &amp; Withdrawals</span>
+<span class="px-1 py-0.2 rounded-full bg-surface-container-highest font-mono-price-md text-[10px]">15</span>
+</button>
+<button class="faq-cat-btn shrink-0 px-3 py-1.5 rounded-full font-label-badge text-label-badge font-semibold transition-all bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center gap-1" data-cat="security">
+<span>Account &amp; Security</span>
+<span class="px-1 py-0.2 rounded-full bg-surface-container-highest font-mono-price-md text-[10px]">8</span>
+</button>
+<button class="faq-cat-btn shrink-0 px-3 py-1.5 rounded-full font-label-badge text-label-badge font-semibold transition-all bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center gap-1" data-cat="perps">
+<span>Perps &amp; Combos</span>
+<span class="px-1 py-0.2 rounded-full bg-surface-container-highest font-mono-price-md text-[10px]">9</span>
+</button>
+<button class="faq-cat-btn shrink-0 px-3 py-1.5 rounded-full font-label-badge text-label-badge font-semibold transition-all bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center gap-1" data-cat="rewards">
+<span>Rewards &amp; VIP</span>
+<span class="px-1 py-0.2 rounded-full bg-surface-container-highest font-mono-price-md text-[10px]">7</span>
+</button>
+</div>
+</section>
+<!-- Interactive Accordion List -->
+<section class="px-margin py-space-sm flex flex-col gap-space-sm" id="faq-accordion-group">
+<!-- Item 1 (EXPANDED by default) -->
+<div class="faq-item rounded-xl bg-surface-container transition-all overflow-hidden flex flex-col shadow-sm" data-category="general prediction">
+<button aria-expanded="true" class="faq-trigger w-full px-space-md py-space-md flex items-start justify-between gap-space-sm text-left select-none">
+<div class="flex items-start gap-2.5">
+<span class="w-6 h-6 rounded-md bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[15px]">candlestick_chart</span>
+</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-snug">
+            How do YES and NO prediction markets work on MITMARKET?
+          </span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 rotate-180 faq-chevron shrink-0 text-[20px] mt-0.5">expand_more</span>
+</button>
+<div class="faq-content flex flex-col px-space-md pb-space-md pt-0">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/60 text-on-surface-variant font-body-md text-body-md flex flex-col gap-space-sm">
+<p class="leading-relaxed text-on-surface">
+            Each prediction market represents an event outcome priced between <span class="font-mono-price-md text-secondary font-semibold">0¢ ($0.00)</span> and <span class="font-mono-price-md text-secondary font-semibold">100¢ ($1.00)</span>. The price reflects the current aggregate probability consensus (e.g., 68¢ indicates a 68% estimated probability).
+          </p>
+<div class="p-2 rounded bg-surface-container-high/60 flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-badge text-label-badge uppercase">Winning Payout</span>
+</div>
+<span class="font-mono-price-md text-mono-price-md text-secondary font-bold">$1.00 / share</span>
+</div>
+<p class="text-on-surface-variant">
+            When the event settles, the winning side resolves to 100¢ per share, while the losing side resolves to 0¢. You may trade in and out of your position at any time prior to market expiration.
+          </p>
+<!-- Tactical Infographic Vignette -->
+<div class="pt-1 flex items-center justify-between border-t border-surface-container-highest">
+<a class="inline-flex items-center gap-1 font-label-meta text-label-meta text-primary hover:text-primary-fixed transition-colors" href="#">
+<span>View Trading Guide</span>
+<span class="material-symbols-outlined text-[13px]">arrow_outward</span>
+</a>
+<div class="flex items-center gap-1.5 font-label-meta text-label-meta text-outline">
+<span class="text-on-surface-variant">Was this helpful?</span>
+<button class="feedback-btn flex items-center gap-1 px-2 py-1 rounded bg-surface-container hover:bg-surface-container-highest transition-colors text-on-surface" data-count="421">
+<span class="material-symbols-outlined text-[13px] text-secondary">thumb_up</span>
+<span class="font-label-badge text-[10px]">421</span>
+</button>
+<button class="feedback-btn flex items-center gap-1 px-2 py-1 rounded bg-surface-container hover:bg-surface-container-highest transition-colors text-on-surface" data-count="12">
+<span class="material-symbols-outlined text-[13px] text-error">thumb_down</span>
+<span class="font-label-badge text-[10px]">12</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2 (EXPANDED by default) -->
+<div class="faq-item rounded-xl bg-surface-container transition-all overflow-hidden flex flex-col shadow-sm" data-category="general prediction">
+<button aria-expanded="true" class="faq-trigger w-full px-space-md py-space-md flex items-start justify-between gap-space-sm text-left select-none">
+<div class="flex items-start gap-2.5">
+<span class="w-6 h-6 rounded-md bg-secondary/10 text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-snug">
+            How are markets resolved and verified?
+          </span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 rotate-180 faq-chevron shrink-0 text-[20px] mt-0.5">expand_more</span>
+</button>
+<div class="faq-content flex flex-col px-space-md pb-space-md pt-0">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/60 text-on-surface-variant font-body-md text-body-md flex flex-col gap-space-sm">
+<p class="leading-relaxed text-on-surface">
+            Markets settle according to deterministic resolution criteria defined in each contract specification. MITMARKET utilizes decentralized consensus oracles (such as UMA Protocol) and verified official primary data feeds (e.g., Federal Reserve releases, regulatory filings, official league results).
+          </p>
+<div class="grid grid-cols-2 gap-space-xs text-center">
+<div class="p-2 rounded bg-surface-container-high/60 flex flex-col">
+<span class="font-label-badge text-label-badge text-outline">PRIMARY ORACLE</span>
+<span class="font-mono-price-md text-mono-price-md text-on-surface font-semibold mt-0.5">UMA OO v3</span>
+</div>
+<div class="p-2 rounded bg-surface-container-high/60 flex flex-col">
+<span class="font-label-badge text-label-badge text-outline">DISPUTE WINDOW</span>
+<span class="font-mono-price-md text-mono-price-md text-on-surface font-semibold mt-0.5">2 Hours</span>
+</div>
+</div>
+<p class="text-on-surface-variant">
+            Once verified, settlement payouts are automatically disbursed to vault balances with instant liquidation availability.
+          </p>
+<div class="pt-1 flex items-center justify-between border-t border-surface-container-highest">
+<a class="inline-flex items-center gap-1 font-label-meta text-label-meta text-primary hover:text-primary-fixed transition-colors" href="#">
+<span>Oracle Whitepaper</span>
+<span class="material-symbols-outlined text-[13px]">arrow_outward</span>
+</a>
+<div class="flex items-center gap-1.5 font-label-meta text-label-meta text-outline">
+<span class="text-on-surface-variant">Was this helpful?</span>
+<button class="feedback-btn flex items-center gap-1 px-2 py-1 rounded bg-surface-container hover:bg-surface-container-highest transition-colors text-on-surface" data-count="389">
+<span class="material-symbols-outlined text-[13px] text-secondary">thumb_up</span>
+<span class="font-label-badge text-[10px]">389</span>
+</button>
+<button class="feedback-btn flex items-center gap-1 px-2 py-1 rounded bg-surface-container hover:bg-surface-container-highest transition-colors text-on-surface" data-count="8">
+<span class="material-symbols-outlined text-[13px] text-error">thumb_down</span>
+<span class="font-label-badge text-[10px]">8</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 3 (COLLAPSED) -->
+<div class="faq-item rounded-xl bg-surface-container transition-all overflow-hidden flex flex-col shadow-sm" data-category="general prediction">
+<button aria-expanded="false" class="faq-trigger w-full px-space-md py-space-md flex items-start justify-between gap-space-sm text-left select-none">
+<div class="flex items-start gap-2.5">
+<span class="w-6 h-6 rounded-md bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[15px]">event_busy</span>
+</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-snug">
+            What happens if an underlying event is cancelled or postponed?
+          </span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 faq-chevron shrink-0 text-[20px] mt-0.5">expand_more</span>
+</button>
+<div class="faq-content hidden flex-col px-space-md pb-space-md pt-0">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/60 text-on-surface-variant font-body-md text-body-md flex flex-col gap-space-sm">
+<p class="leading-relaxed">
+            If an event does not occur by the specified expiration deadline or is permanently cancelled with no rescheduled date within the stipulated resolution window (typically 30 days), the contract resolves according to rule clause 4.2. Shares are refunded at 50¢ each ($0.50 pari-passu) or voided back to original wager balances minus zero network gas fee.
+          </p>
+<div class="pt-1 flex items-center justify-between border-t border-surface-container-highest">
+<span class="font-label-meta text-label-meta text-outline">Clause Ref: 4.2 (Void Protocol)</span>
+<div class="flex items-center gap-1.5 font-label-meta text-label-meta text-outline">
+<span class="text-on-surface-variant">Helpful?</span>
+<button class="feedback-btn flex items-center gap-1 px-2 py-1 rounded bg-surface-container text-on-surface"><span class="material-symbols-outlined text-[13px] text-secondary">thumb_up</span><span class="font-label-badge text-[10px]">194</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 4 (COLLAPSED) -->
+<div class="faq-item rounded-xl bg-surface-container transition-all overflow-hidden flex flex-col shadow-sm" data-category="trading">
+<button aria-expanded="false" class="faq-trigger w-full px-space-md py-space-md flex items-start justify-between gap-space-sm text-left select-none">
+<div class="flex items-start gap-2.5">
+<span class="w-6 h-6 rounded-md bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[15px]">percent</span>
+</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-snug">
+            How are trading fees calculated on market orders versus limit orders?
+          </span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 faq-chevron shrink-0 text-[20px] mt-0.5">expand_more</span>
+</button>
+<div class="faq-content hidden flex-col px-space-md pb-space-md pt-0">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/60 text-on-surface-variant font-body-md text-body-md flex flex-col gap-space-sm">
+<p class="leading-relaxed">
+            MITMARKET incentivizes resting liquidity via a maker-taker model. Limit orders that add liquidity (Maker) receive a <span class="font-mono-price-md text-secondary font-semibold">0.00% base fee</span> plus eligible maker rebates. Market orders executing against the central limit order book (Taker) are assessed a dynamic fee of 0.20% calculated against the nominal share trade volume.
+          </p>
+<div class="pt-1 flex items-center justify-between border-t border-surface-container-highest">
+<span class="font-label-meta text-label-meta text-outline">Tier 1 Institutional Schedule</span>
+<div class="flex items-center gap-1.5 font-label-meta text-label-meta text-outline">
+<span class="text-on-surface-variant">Helpful?</span>
+<button class="feedback-btn flex items-center gap-1 px-2 py-1 rounded bg-surface-container text-on-surface"><span class="material-symbols-outlined text-[13px] text-secondary">thumb_up</span><span class="font-label-badge text-[10px]">312</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 5 (COLLAPSED) -->
+<div class="faq-item rounded-xl bg-surface-container transition-all overflow-hidden flex flex-col shadow-sm" data-category="deposits wallet">
+<button aria-expanded="false" class="faq-trigger w-full px-space-md py-space-md flex items-start justify-between gap-space-sm text-left select-none">
+<div class="flex items-start gap-2.5">
+<span class="w-6 h-6 rounded-md bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[15px]">account_balance_wallet</span>
+</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-snug">
+            Which blockchain networks are supported for crypto deposits and withdrawals?
+          </span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 faq-chevron shrink-0 text-[20px] mt-0.5">expand_more</span>
+</button>
+<div class="faq-content hidden flex-col px-space-md pb-space-md pt-0">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/60 text-on-surface-variant font-body-md text-body-md flex flex-col gap-space-sm">
+<p class="leading-relaxed">
+            We support native USDC deposits and instant redemptions across Arbitrum One (L2 default), Polygon PoS, Base, Ethereum Mainnet (ERC-20), and Solana. All deposits credit automatically following 3 network confirmations on Layer-2 rollups.
+          </p>
+<div class="pt-1 flex items-center justify-between border-t border-surface-container-highest">
+<span class="font-label-meta text-label-meta text-outline">Standard Min: $5.00 USDC</span>
+<div class="flex items-center gap-1.5 font-label-meta text-label-meta text-outline">
+<span class="text-on-surface-variant">Helpful?</span>
+<button class="feedback-btn flex items-center gap-1 px-2 py-1 rounded bg-surface-container text-on-surface"><span class="material-symbols-outlined text-[13px] text-secondary">thumb_up</span><span class="font-label-badge text-[10px]">175</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 6 (COLLAPSED) -->
+<div class="faq-item rounded-xl bg-surface-container transition-all overflow-hidden flex flex-col shadow-sm" data-category="security">
+<button aria-expanded="false" class="faq-trigger w-full px-space-md py-space-md flex items-start justify-between gap-space-sm text-left select-none">
+<div class="flex items-start gap-2.5">
+<span class="w-6 h-6 rounded-md bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[15px]">security</span>
+</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-snug">
+            What is the 24-hour security hold on newly added withdrawal addresses?
+          </span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 faq-chevron shrink-0 text-[20px] mt-0.5">expand_more</span>
+</button>
+<div class="faq-content hidden flex-col px-space-md pb-space-md pt-0">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/60 text-on-surface-variant font-body-md text-body-md flex flex-col gap-space-sm">
+<p class="leading-relaxed">
+            To prevent unauthorized drain attacks in case of session or email compromise, any newly whitelisted external wallet address enters a mandatory 24-hour verification cooling lock before large-scale outbound transfers are authorized. Passkey-signed hardware addresses may bypass this cooldown if biometrically verified.
+          </p>
+<div class="pt-1 flex items-center justify-between border-t border-surface-container-highest">
+<span class="font-label-meta text-label-meta text-outline">Security Policy #SEC-88</span>
+<div class="flex items-center gap-1.5 font-label-meta text-label-meta text-outline">
+<span class="text-on-surface-variant">Helpful?</span>
+<button class="feedback-btn flex items-center gap-1 px-2 py-1 rounded bg-surface-container text-on-surface"><span class="material-symbols-outlined text-[13px] text-secondary">thumb_up</span><span class="font-label-badge text-[10px]">264</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 7 (COLLAPSED) -->
+<div class="faq-item rounded-xl bg-surface-container transition-all overflow-hidden flex flex-col shadow-sm" data-category="trading">
+<button aria-expanded="false" class="faq-trigger w-full px-space-md py-space-md flex items-start justify-between gap-space-sm text-left select-none">
+<div class="flex items-start gap-2.5">
+<span class="w-6 h-6 rounded-md bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[15px]">cancel</span>
+</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-snug">
+            Can I cancel an active limit order without paying gas fees?
+          </span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 faq-chevron shrink-0 text-[20px] mt-0.5">expand_more</span>
+</button>
+<div class="faq-content hidden flex-col px-space-md pb-space-md pt-0">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/60 text-on-surface-variant font-body-md text-body-md flex flex-col gap-space-sm">
+<p class="leading-relaxed">
+            Yes. MITMARKET utilizes off-chain signed order books with on-chain settlement (EIP-712 cryptographic signatures). Cancelling an unfilled resting order is completely gasless and executes instantly across the distributed node network.
+          </p>
+<div class="pt-1 flex items-center justify-between border-t border-surface-container-highest">
+<span class="font-label-meta text-label-meta text-outline">Zero-Gas Off-Chain Engine</span>
+<div class="flex items-center gap-1.5 font-label-meta text-label-meta text-outline">
+<span class="text-on-surface-variant">Helpful?</span>
+<button class="feedback-btn flex items-center gap-1 px-2 py-1 rounded bg-surface-container text-on-surface"><span class="material-symbols-outlined text-[13px] text-secondary">thumb_up</span><span class="font-label-badge text-[10px]">402</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 8 (COLLAPSED) -->
+<div class="faq-item rounded-xl bg-surface-container transition-all overflow-hidden flex flex-col shadow-sm" data-category="rewards">
+<button aria-expanded="false" class="faq-trigger w-full px-space-md py-space-md flex items-start justify-between gap-space-sm text-left select-none">
+<div class="flex items-start gap-2.5">
+<span class="w-6 h-6 rounded-md bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[15px]">military_tech</span>
+</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-snug">
+            How do maker liquidity rebates and affiliate revenue shares work?
+          </span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 faq-chevron shrink-0 text-[20px] mt-0.5">expand_more</span>
+</button>
+<div class="faq-content hidden flex-col px-space-md pb-space-md pt-0">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/60 text-on-surface-variant font-body-md text-body-md flex flex-col gap-space-sm">
+<p class="leading-relaxed">
+            Market makers quoting inside the tightest 2% of the mid-spread earn daily volumetric USDC rebates directly from the protocol incentive pool. Referrers receive up to 25% of protocol taker fees generated by their direct network referrals, settled every Wednesday 00:00 UTC.
+          </p>
+<div class="pt-1 flex items-center justify-between border-t border-surface-container-highest">
+<span class="font-label-meta text-label-meta text-outline">Weekly Payout Cycle</span>
+<div class="flex items-center gap-1.5 font-label-meta text-label-meta text-outline">
+<span class="text-on-surface-variant">Helpful?</span>
+<button class="feedback-btn flex items-center gap-1 px-2 py-1 rounded bg-surface-container text-on-surface"><span class="material-symbols-outlined text-[13px] text-secondary">thumb_up</span><span class="font-label-badge text-[10px]">158</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Empty Search Results State (Hidden by default) -->
+<div class="hidden px-margin py-space-xl flex-col items-center justify-center text-center" id="faq-empty-state">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-outline mb-space-sm">
+<span class="material-symbols-outlined text-[28px]">search_off</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">No Answers Found</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[260px] mt-1">
+      We couldn't locate contracts matching that query. Contact institutional desk or rephrase keywords.
+    </p>
+<button class="mt-space-md px-space-md py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high font-label-badge text-label-badge text-primary uppercase" id="reset-search-btn">
+      Reset Filters
+    </button>
+</div>
+<!-- Institutional Support Card -->
+<section class="px-margin py-space-sm mt-space-xs">
+<div class="p-space-lg rounded-xl bg-surface-container-high relative overflow-hidden flex flex-col gap-space-md shadow-md">
+<!-- Ambient Backing Glow Accent -->
+<div class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-primary-container/10 blur-2xl pointer-events-none"></div>
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">headset_mic</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Can’t find what you’re looking for?</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Our 24/7 institutional support desk is standing by with an average response time of under 2 minutes.
+          </p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<button class="h-10 px-space-sm rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-body-md font-semibold flex items-center justify-center gap-1.5 active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Start Chat</span>
+</button>
+<button class="h-10 px-space-sm rounded-lg bg-surface-container text-on-surface font-headline-sm text-body-md font-medium flex items-center justify-center gap-1.5 hover:bg-surface-container-highest active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]">contact_support</span>
+<span>Submit Ticket</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Legal & Protocol Disclaimer Footer -->
+<section class="px-margin pt-space-md pb-space-lg flex flex-col gap-space-xs text-center">
+<div class="flex items-center justify-center gap-1.5 text-outline">
+<span class="material-symbols-outlined text-[14px]">gavel</span>
+<span class="font-label-badge text-label-badge uppercase tracking-wider">Protocol Disclosures</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline-variant leading-normal px-2">
+      All answers are illustrative operational summaries and do not constitute binding financial, legal, or investment guarantees. View Protocol Terms of Service for formal contract terms.
+    </p>
+<div class="flex items-center justify-center gap-space-md mt-1 font-label-meta text-label-meta text-outline">
+<a class="hover:text-on-surface transition-colors" href="#">Oracle Specs</a>
+<span>•</span>
+<a class="hover:text-on-surface transition-colors" href="#">Risk Disclosure</a>
+<span>•</span>
+<a class="hover:text-on-surface transition-colors" href="#">API SLA</a>
+</div>
+</section>
+<!-- Micro-interactions Controller Script -->
+<script>
+    (function initFaqPage() {
+      // 1. Accordion Toggle Logic
+      const triggers = document.querySelectorAll('.faq-trigger');
+      triggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          const item = trigger.closest('.faq-item');
+          const content = item.querySelector('.faq-content');
+          const chevron = trigger.querySelector('.faq-chevron');
+          const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+
+          if (isExpanded) {
+            trigger.setAttribute('aria-expanded', 'false');
+            content.classList.add('hidden');
+            chevron.classList.remove('rotate-180');
+          } else {
+            trigger.setAttribute('aria-expanded', 'true');
+            content.classList.remove('hidden');
+            chevron.classList.add('rotate-180');
+          }
+        });
+      });
+
+      // 2. Helpful Feedback Buttons
+      const feedbackBtns = document.querySelectorAll('.feedback-btn');
+      feedbackBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const countSpan = btn.querySelector('span:last-child');
+          if (countSpan && !btn.dataset.voted) {
+            let count = parseInt(countSpan.textContent, 10);
+            if (!isNaN(count)) {
+              countSpan.textContent = count + 1;
+              btn.dataset.voted = "true";
+              btn.classList.add('bg-primary-container', 'text-on-primary-container');
+              btn.classList.remove('bg-surface-container');
+            }
+          }
+        });
+      });
+
+      // 3. Category Filter Buttons
+      const catButtons = document.querySelectorAll('.faq-cat-btn');
+      const faqItems = document.querySelectorAll('.faq-item');
+      const emptyState = document.getElementById('faq-empty-state');
+      const searchInput = document.getElementById('faq-search-input');
+      const clearSearchBtn = document.getElementById('clear-search-btn');
+
+      catButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          catButtons.forEach(b => {
+            b.classList.remove('bg-primary-container', 'text-on-primary-container');
+            b.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+          });
+          btn.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+          btn.classList.add('bg-primary-container', 'text-on-primary-container');
+
+          const selectedCat = btn.getAttribute('data-cat');
+          applyFilter(selectedCat, searchInput.value.trim().toLowerCase());
+        });
+      });
+
+      // 4. Live Search Handler
+      function applyFilter(category, query) {
+        let visibleCount = 0;
+        faqItems.forEach(item => {
+          const itemCat = item.getAttribute('data-category') || '';
+          const textContent = item.textContent.toLowerCase();
+          
+          const matchesCategory = (category === 'all' || !category) || itemCat.includes(category);
+          const matchesSearch = !query || textContent.includes(query);
+
+          if (matchesCategory && matchesSearch) {
+            item.style.display = 'flex';
+            visibleCount++;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        if (visibleCount === 0) {
+          emptyState.classList.remove('hidden');
+          emptyState.classList.add('flex');
+        } else {
+          emptyState.classList.add('hidden');
+          emptyState.classList.remove('flex');
+        }
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const val = e.target.value.trim().toLowerCase();
+          if (val.length > 0) {
+            clearSearchBtn.classList.remove('hidden');
+          } else {
+            clearSearchBtn.classList.add('hidden');
+          }
+          const activeBtn = document.querySelector('.faq-cat-btn.bg-primary-container');
+          const activeCat = activeBtn ? activeBtn.getAttribute('data-cat') : 'all';
+          applyFilter(activeCat, val);
+        });
+      }
+
+      if (clearSearchBtn) {
+        clearSearchBtn.addEventListener('click', () => {
+          searchInput.value = '';
+          clearSearchBtn.classList.add('hidden');
+          const activeBtn = document.querySelector('.faq-cat-btn.bg-primary-container');
+          const activeCat = activeBtn ? activeBtn.getAttribute('data-cat') : 'all';
+          applyFilter(activeCat, '');
+          searchInput.focus();
+        });
+      }
+
+      const resetBtn = document.getElementById('reset-search-btn');
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          if (searchInput) searchInput.value = '';
+          if (clearSearchBtn) clearSearchBtn.classList.add('hidden');
+          catButtons[0].click();
+        });
+      }
+    })();
+  </script>
+</div></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-1px_16px_rgba(0,0,0,0.5)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-between items-center h-16 px-space-sm"><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="markets" href="#"><span class="material-symbols-outlined text-[22px]">candlestick_chart</span><span class="font-label-meta text-label-meta">Markets</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="explore" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span class="font-label-meta text-label-meta">Explore</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="portfolio" href="#"><span class="material-symbols-outlined text-[22px]">account_balance_wallet</span><span class="font-label-meta text-label-meta">Portfolio</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="saved" href="#"><span class="material-symbols-outlined text-[22px]">bookmarks</span><span class="font-label-meta text-label-meta">Saved</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="help-center" href="#"><span class="material-symbols-outlined text-[22px]">support_agent</span><span class="font-label-meta text-label-meta">Support</span></a></div></nav></body></html>

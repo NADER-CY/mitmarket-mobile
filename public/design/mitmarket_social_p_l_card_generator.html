@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-highest":"#293643","surface-container":"#14212d","secondary-fixed-dim":"#4cdf95","error-container":"#93000a","on-primary-fixed-variant":"#003daa","tertiary-fixed":"#ffdada","on-primary-fixed":"#00174c","on-secondary-fixed-variant":"#005230","primary-fixed":"#dbe1ff","on-secondary":"#003920","on-primary-container":"#f5f5ff","on-surface":"#d7e4f5","surface-dim":"#071420","on-tertiary-container":"#fff3f3","surface-variant":"#293643","secondary-container":"#00b872","on-error":"#690005","secondary":"#4cdf95","on-tertiary-fixed":"#40000c","inverse-on-surface":"#25323e","on-surface-variant":"#c3c5d8","on-background":"#d7e4f5","on-tertiary":"#680019","primary-fixed-dim":"#b4c5ff","on-secondary-fixed":"#002110","on-tertiary-fixed-variant":"#920027","tertiary":"#ffb3b5","tertiary-container":"#d72747","on-error-container":"#ffdad6","background":"#071420","on-secondary-container":"#004025","surface-container-high":"#1f2b38","primary-container":"#1463ff","primary":"#b4c5ff","surface":"#071420","surface-container-low":"#101d29","tertiary-fixed-dim":"#ffb3b5","surface-tint":"#b4c5ff","inverse-primary":"#0052dd","error":"#ffb4ab","inverse-surface":"#d7e4f5","surface-bright":"#2e3a48","outline":"#8d90a2","surface-container-lowest":"#030f1b","outline-variant":"#424656","on-primary":"#002979","secondary-fixed":"#6dfdaf"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1rem","space-xs":"0.25rem","gutter":"0.75rem","space-xl":"1.5rem","space-md":"0.75rem","space-sm":"0.5rem","margin":"1rem"},"fontFamily":{"headline-lg":["Inter"],"body-lg":["Inter"],"mono-price-md":["JetBrains Mono"],"label-badge":["JetBrains Mono"],"label-meta":["Inter"],"display":["Inter"],"body-sm":["Inter"],"body-md":["Inter"],"headline-md":["Inter"],"headline-sm":["Inter"],"mono-price-lg":["JetBrains Mono"]},"fontSize":{"headline-lg":["22px",{"lineHeight":"28px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"-0.01em","fontWeight":"400"}],"mono-price-md":["14px",{"lineHeight":"18px","letterSpacing":"-0.01em","fontWeight":"500"}],"label-badge":["10px",{"lineHeight":"12px","letterSpacing":"0.04em","fontWeight":"600"}],"label-meta":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"500"}],"display":["30px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"700"}],"body-sm":["11px",{"lineHeight":"15px","letterSpacing":"0em","fontWeight":"400"}],"body-md":["13px",{"lineHeight":"18px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-sm":["15px",{"lineHeight":"20px","letterSpacing":"-0.01em","fontWeight":"600"}],"mono-price-lg":["22px",{"lineHeight":"26px","letterSpacing":"-0.02em","fontWeight":"600"}]}}}};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-low/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="h-14 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Back" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><div class="flex items-center gap-space-sm pl-1"><div class="w-6 h-6 rounded bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary-container text-[14px]">ssid_chart</span></div><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-on-surface leading-none">MITMARKET</span><span class="font-label-badge text-label-badge text-primary-container font-bold">PRO</span></div><span class="font-label-meta text-label-meta text-on-surface-variant truncate max-w-[150px] leading-tight">Mitmarket — Social P&amp;L Card Generator</span></div></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1 px-2 py-1 rounded bg-surface-container-highest"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-label-badge text-label-badge uppercase tracking-wider text-secondary">ARB L2</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-14 bg-surface min-h-screen"><div class="flex flex-col w-full pb-safe">
+<!-- Top Ambient Banner -->
+<div class="px-gutter pt-space-md pb-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">P&amp;L Card Studio</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-badge text-label-badge text-secondary uppercase">PRO SOCIAL ENGINE</span>
+</div>
+</div>
+<!-- Position Preset Tabs -->
+<div class="px-gutter pb-space-sm">
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-1">
+<button class="pos-tab shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-highest text-on-surface shadow-sm transition-all" id="pos-fed" onclick="switchPosition('fed')">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-meta text-label-meta font-semibold">Fed Cut ≥50bps</span>
+<span class="font-label-badge text-label-badge text-secondary font-bold">+342.5%</span>
+</button>
+<button class="pos-tab shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant shadow-sm transition-all hover:text-on-surface" id="pos-btc" onclick="switchPosition('btc')">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-meta text-label-meta">BTC $110k Q3</span>
+<span class="font-label-badge text-label-badge text-secondary">+41.2%</span>
+</button>
+<button class="pos-tab shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant shadow-sm transition-all hover:text-on-surface" id="pos-ecb" onclick="switchPosition('ecb')">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-meta text-label-meta">ECB Rate &lt;2.5%</span>
+<span class="font-label-badge text-label-badge text-tertiary">-18.4%</span>
+</button>
+</div>
+</div>
+<!-- Interactive Card Preview Canvas Area -->
+<div class="px-gutter my-space-xs">
+<div class="relative w-full rounded-xl bg-surface-container-lowest p-space-sm flex flex-col items-center justify-center overflow-hidden shadow-xl">
+<!-- Glow ambient behind card -->
+<div class="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-secondary/15 blur-3xl pointer-events-none transition-all duration-500" id="card-ambient"></div>
+<div class="absolute -bottom-10 -left-10 w-44 h-44 rounded-full bg-primary-container/15 blur-3xl pointer-events-none"></div>
+<!-- Preview Canvas Card (Square Default) -->
+<div class="relative w-full max-w-[358px] aspect-square rounded-xl bg-surface-container-high p-4 flex flex-col justify-between overflow-hidden shadow-2xl transition-all duration-300" id="pnl-canvas-card">
+<!-- Subtle Top Glow Gradient Line -->
+<div class="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-secondary to-transparent opacity-80" id="card-top-glow"></div>
+<!-- Watermark / Micro background graphic -->
+<div class="absolute right-3 top-16 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[130px] text-on-surface">ssid_chart</span>
+</div>
+<!-- Card Header: Branding, Arbitrum Tag, Live P&L Watermark -->
+<div class="relative z-10 flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded bg-primary-container flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-on-primary-container text-[16px]">ssid_chart</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface leading-none">MITMARKET</span>
+<span class="font-label-badge text-label-badge text-primary font-bold">PRO</span>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">VERIFIED ORACLE P&amp;L</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-highest shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-badge text-label-badge text-secondary font-bold tracking-wider">ARB L2</span>
+</div>
+</div>
+<!-- Card Body: Position & ROI Hero Callout -->
+<div class="relative z-10 my-auto py-2">
+<!-- Prediction Title & Side Pill -->
+<div class="flex items-center gap-2 mb-1.5">
+<span class="px-2 py-0.5 rounded font-label-badge text-label-badge font-bold bg-secondary/15 text-secondary shadow-sm" id="card-badge">
+              YES • 68¢ ENTRY
+            </span>
+<span class="font-label-badge text-label-badge text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">schedule</span> 14D HOLD
+            </span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface line-clamp-2 leading-snug tracking-tight mb-3" id="card-title">
+            US Fed to cut interest rates ≥50 bps before Dec 2025
+          </div>
+<!-- Hero P&L Numbers -->
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline gap-2">
+<span class="font-display text-display font-black text-secondary leading-none tracking-tight drop-shadow-[0_0_16px_rgba(11,186,116,0.35)]" id="card-roi">
+                +342.5%
+              </span>
+<span class="font-label-badge text-label-badge text-secondary uppercase font-bold tracking-widest">ROI</span>
+</div>
+<!-- Net profit & masked state toggle -->
+<div class="flex items-center gap-2 mt-1">
+<span class="font-label-meta text-label-meta text-on-surface-variant">Net Yield:</span>
+<span class="font-mono-price-md text-mono-price-md font-semibold text-on-surface" id="card-net-val">
+                +$4,850.00 USDC
+              </span>
+<button aria-label="Toggle Net Balance Mask" class="text-on-surface-variant hover:text-on-surface transition-colors p-0.5" onclick="toggleBalanceMask()">
+<span class="material-symbols-outlined text-[16px]" id="mask-icon">visibility</span>
+</button>
+</div>
+<!-- Position Entry Stats Subrow (Collapsible via toggle) -->
+<div class="flex items-center gap-3 mt-1.5 pt-1.5" id="card-sub-stats">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-on-surface-variant">SHARES</span>
+<span class="font-mono-price-md text-mono-price-md text-on-surface">7,132 CONTRACTS</span>
+</div>
+<div class="w-1 h-3 rounded-full bg-surface-container-highest"></div>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge text-on-surface-variant">SETTLEMENT CONSENSUS</span>
+<span class="font-mono-price-md text-mono-price-md text-secondary">92¢ (+35.2%)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card Footer: Trader Info & On-chain Verification Stamp -->
+<div class="relative z-10 pt-2 flex items-end justify-between">
+<div class="flex items-center gap-2">
+<!-- Trader Avatar -->
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-highest relative flex items-center justify-center shadow-md">
+<img class="w-full h-full object-cover" data-alt="High-resolution digital avatar portrait of a crypto hedge fund quantitative trader with subtle cyan holographic visor reflection in a dark modern trading office setting with ambient display glows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiAYE0pVaT_WtHqrZXHpmjruzAEtw3Kfh4yFTQjFyn_rUMheVybfYeUd3u5K4UWKvbJggzwivI5RWHq273OJQw_b9RMtPO7bNAdJZgcNwcolVk46yCXuIjDj5bMQCTQuXWjLsrervoSUm7TrSBSkshYMdN2jAC2DNvz_c7SpTmZ7Pn-f6DXjzAsQdtuXOJ-8YKAez0r9axj5GimoUdiIc0o_FAs_yrQ9KVv1uD2E_i"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface leading-tight">@alex_quant</span>
+<span class="material-symbols-outlined text-secondary text-[14px]">check_circle</span>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Top 1% Arbitrum Sovereign Desk</span>
+</div>
+</div>
+<!-- Proof QR Code module -->
+<div class="flex flex-col items-center" id="card-qr-block">
+<div class="p-1 rounded bg-on-surface text-surface flex items-center justify-center shadow-md">
+<!-- Inline micro QR SVG representation -->
+<svg class="w-7 h-7" fill="currentColor" viewbox="0 0 24 24">
+<path d="M2 2h8v8H2V2zm2 2v4h4V4H4zm10-2h8v8h-8V2zm2 2v4h4V4h-4zM2 14h8v8H2v-8zm2 2v4h4v-4H4zm14 0h4v4h-4v-4zm-4-2h2v2h-2v-2zm-4 4h2v4h-2v-4zm4 2h2v4h-2v-4zm2-4h2v2h-2v-2zm2-2h2v2h-2v-2zM6 6h0v0H6zm12 0h0v0h0zM6 18h0v0H6z"></path>
+</svg>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant mt-0.5 tracking-tighter">PROOF 0x9f..2b</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Customization Controls Section -->
+<div class="px-gutter flex flex-col gap-space-md mt-space-sm">
+<!-- Ratio Format Selector -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-on-surface-variant uppercase tracking-wider font-semibold">Aspect Ratio</span>
+<span class="font-label-badge text-label-badge text-primary">OPTIMIZED FOR EXPORT</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<button class="ratio-btn py-2 px-2.5 rounded-lg bg-surface-container flex flex-col items-center justify-center gap-1 transition-all text-on-surface-variant hover:text-on-surface" id="btn-ratio-story" onclick="setRatio('story')">
+<span class="material-symbols-outlined text-[18px]">stay_current_portrait</span>
+<span class="font-label-meta text-label-meta">Story (9:16)</span>
+</button>
+<button class="ratio-btn py-2 px-2.5 rounded-lg bg-surface-container-highest text-on-surface flex flex-col items-center justify-center gap-1 transition-all shadow-sm" id="btn-ratio-square" onclick="setRatio('square')">
+<span class="material-symbols-outlined text-[18px] text-primary">crop_square</span>
+<span class="font-label-meta text-label-meta font-semibold text-primary">Square (1:1)</span>
+</button>
+<button class="ratio-btn py-2 px-2.5 rounded-lg bg-surface-container flex flex-col items-center justify-center gap-1 transition-all text-on-surface-variant hover:text-on-surface" id="btn-ratio-banner" onclick="setRatio('banner')">
+<span class="material-symbols-outlined text-[18px]">crop_16_9</span>
+<span class="font-label-meta text-label-meta">Banner (16:9)</span>
+</button>
+</div>
+</div>
+<!-- Theme Palette Selector -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-meta text-label-meta text-on-surface-variant uppercase tracking-wider font-semibold">Terminal Theme</span>
+<div class="grid grid-cols-2 gap-2">
+<button class="theme-btn p-2 rounded-lg bg-surface-container-highest flex items-center justify-between shadow-sm transition-all" id="theme-emerald" onclick="setTheme('emerald')">
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded-full bg-secondary ring-2 ring-secondary/30"></span>
+<span class="font-label-meta text-label-meta text-on-surface font-semibold">Cyber Emerald</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+</button>
+<button class="theme-btn p-2 rounded-lg bg-surface-container flex items-center justify-between shadow-sm transition-all hover:bg-surface-container-high" id="theme-sovereign" onclick="setTheme('sovereign')">
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded-full bg-primary-container"></span>
+<span class="font-label-meta text-label-meta text-on-surface">Sovereign Blue</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[16px] opacity-0">check_circle</span>
+</button>
+<button class="theme-btn p-2 rounded-lg bg-surface-container flex items-center justify-between shadow-sm transition-all hover:bg-surface-container-high" id="theme-stealth" onclick="setTheme('stealth')">
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded-full bg-on-surface-variant"></span>
+<span class="font-label-meta text-label-meta text-on-surface">Monochrome</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[16px] opacity-0">check_circle</span>
+</button>
+<button class="theme-btn p-2 rounded-lg bg-surface-container flex items-center justify-between shadow-sm transition-all hover:bg-surface-container-high" id="theme-gold" onclick="setTheme('gold')">
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded-full bg-secondary-fixed"></span>
+<span class="font-label-meta text-label-meta text-on-surface">Gold Bullion</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[16px] opacity-0">check_circle</span>
+</button>
+</div>
+</div>
+<!-- Privacy & Verification Toggles -->
+<div class="flex flex-col gap-2 rounded-xl bg-surface-container p-3 shadow-md">
+<span class="font-label-meta text-label-meta text-on-surface-variant uppercase tracking-wider font-semibold">Data Privacy &amp; Proof Controls</span>
+<!-- Toggle 1: Absolute USD Value -->
+<div class="flex items-center justify-between py-1">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Display Absolute USD Balance</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Reveal exact +$4,850.00 USDC profit</span>
+</div>
+<button aria-label="Toggle USD Visibility" class="w-11 h-6 rounded-full bg-surface-container-highest transition-colors relative flex items-center p-0.5" id="toggle-usd-btn" onclick="toggleUsdSwitch()">
+<span class="w-5 h-5 rounded-full bg-outline transition-transform translate-x-0" id="toggle-usd-knob"></span>
+</button>
+</div>
+<div class="w-full h-px bg-surface-container-high"></div>
+<!-- Toggle 2: Show Entry Price & Share Count -->
+<div class="flex items-center justify-between py-1">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Entry Price &amp; Share Size</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Includes contract quantities in card</span>
+</div>
+<button aria-label="Toggle Entry Stats" class="w-11 h-6 rounded-full bg-primary-container transition-colors relative flex items-center p-0.5" id="toggle-entry-btn" onclick="toggleEntryStats()">
+<span class="w-5 h-5 rounded-full bg-on-primary-container transition-transform translate-x-5" id="toggle-entry-knob"></span>
+</button>
+</div>
+<div class="w-full h-px bg-surface-container-high"></div>
+<!-- Toggle 3: Include On-Chain QR -->
+<div class="flex items-center justify-between py-1">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">On-Chain Verification QR</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Direct link to Arbiscan contract settlement</span>
+</div>
+<button aria-label="Toggle QR Code" class="w-11 h-6 rounded-full bg-primary-container transition-colors relative flex items-center p-0.5" id="toggle-qr-btn" onclick="toggleQrCode()">
+<span class="w-5 h-5 rounded-full bg-on-primary-container transition-transform translate-x-5" id="toggle-qr-knob"></span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Action Bar & Sharing Matrix -->
+<div class="px-gutter mt-space-lg mb-space-xl flex flex-col gap-3">
+<!-- Primary Download Button -->
+<button class="w-full h-12 rounded-xl bg-primary-container hover:bg-inverse-primary text-on-primary-container flex items-center justify-center gap-2 shadow-lg transition-transform active:scale-[0.98]" onclick="triggerDownload()">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span class="font-headline-sm text-headline-sm font-semibold tracking-wide">Download HD Card (.PNG)</span>
+<span class="font-label-badge text-label-badge bg-on-primary-container/20 px-1.5 py-0.5 rounded text-on-primary-container">4K HDR</span>
+</button>
+<!-- Social Broadcast Buttons -->
+<div class="grid grid-cols-3 gap-2">
+<button class="h-10 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center gap-1.5 transition-colors shadow-sm" onclick="shareAction('x')">
+<span class="material-symbols-outlined text-[16px] text-primary">send</span>
+<span class="font-label-meta text-label-meta font-semibold">Post to X</span>
+</button>
+<button class="h-10 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center gap-1.5 transition-colors shadow-sm" onclick="shareAction('telegram')">
+<span class="material-symbols-outlined text-[16px] text-secondary">forum</span>
+<span class="font-label-meta text-label-meta font-semibold">Telegram</span>
+</button>
+<button class="h-10 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center gap-1.5 transition-colors shadow-sm" onclick="shareAction('copy')">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">content_copy</span>
+<span class="font-label-meta text-label-meta font-semibold">Copy Proof</span>
+</button>
+</div>
+<!-- Notification Toast Bar -->
+<div class="hidden opacity-0 transition-opacity duration-300 mx-auto px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container flex items-center gap-2 shadow-md" id="toast-pill">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span class="font-label-meta text-label-meta font-bold" id="toast-text">Export complete</span>
+</div>
+<!-- Terminal Footnote -->
+<div class="pt-2 text-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Watermarked with cryptographic Arbitrum L2 settlement hash. MITMARKET does not provide financial or investment advice.
+      </p>
+</div>
+</div>
+</div>
+<script>
+  let isMasked = false;
+  let showUsdToggle = false;
+  let showStats = true;
+  let showQr = true;
+  let currentPos = 'fed';
+  let currentTheme = 'emerald';
+
+  const positions = {
+    fed: {
+      title: "US Fed to cut interest rates ≥50 bps before Dec 2025",
+      badge: "YES • 68¢ ENTRY",
+      roi: "+342.5%",
+      net: "+$4,850.00 USDC",
+      shares: "7,132 CONTRACTS",
+      consensus: "92¢ (+35.2%)",
+      isProfit: true
+    },
+    btc: {
+      title: "Bitcoin to cross $110,000 USD before end of Q3 2025",
+      badge: "YES • 71¢ ENTRY",
+      roi: "+41.2%",
+      net: "+$1,240.50 USDC",
+      shares: "3,000 CONTRACTS",
+      consensus: "82¢ (+15.5%)",
+      isProfit: true
+    },
+    ecb: {
+      title: "ECB Deposit Facility Rate reduced below 2.50% by July",
+      badge: "NO • 45¢ ENTRY",
+      roi: "-18.4%",
+      net: "-$620.00 USDC",
+      shares: "2,200 CONTRACTS",
+      consensus: "37¢ (-17.8%)",
+      isProfit: false
+    }
+  };
+
+  function switchPosition(posKey) {
+    currentPos = posKey;
+    const data = positions[posKey];
+
+    // Update active tab styles
+    ['fed', 'btc', 'ecb'].forEach(key => {
+      const tab = document.getElementById('pos-' + key);
+      if (key === posKey) {
+        tab.className = "pos-tab shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-highest text-on-surface shadow-sm transition-all";
+      } else {
+        tab.className = "pos-tab shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant shadow-sm transition-all hover:text-on-surface";
+      }
+    });
+
+    document.getElementById('card-title').innerText = data.title;
+    document.getElementById('card-badge').innerText = data.badge;
+    document.getElementById('card-roi').innerText = data.roi;
+    
+    if (data.isProfit) {
+      document.getElementById('card-roi').className = "font-display text-display font-black text-secondary leading-none tracking-tight drop-shadow-[0_0_16px_rgba(11,186,116,0.35)]";
+      document.getElementById('card-badge').className = "px-2 py-0.5 rounded font-label-badge text-label-badge font-bold bg-secondary/15 text-secondary shadow-sm";
+    } else {
+      document.getElementById('card-roi').className = "font-display text-display font-black text-tertiary leading-none tracking-tight drop-shadow-[0_0_16px_rgba(255,179,181,0.35)]";
+      document.getElementById('card-badge').className = "px-2 py-0.5 rounded font-label-badge text-label-badge font-bold bg-tertiary/15 text-tertiary shadow-sm";
+    }
+
+    updateBalanceDisplay();
+    showToast("Loaded position: " + data.title.substring(0, 24) + "...");
+  }
+
+  function toggleBalanceMask() {
+    isMasked = !isMasked;
+    const icon = document.getElementById('mask-icon');
+    icon.innerText = isMasked ? 'visibility_off' : 'visibility';
+    updateBalanceDisplay();
+  }
+
+  function toggleUsdSwitch() {
+    showUsdToggle = !showUsdToggle;
+    const btn = document.getElementById('toggle-usd-btn');
+    const knob = document.getElementById('toggle-usd-knob');
+    if (showUsdToggle) {
+      btn.className = "w-11 h-6 rounded-full bg-primary-container transition-colors relative flex items-center p-0.5";
+      knob.className = "w-5 h-5 rounded-full bg-on-primary-container transition-transform translate-x-5";
+    } else {
+      btn.className = "w-11 h-6 rounded-full bg-surface-container-highest transition-colors relative flex items-center p-0.5";
+      knob.className = "w-5 h-5 rounded-full bg-outline transition-transform translate-x-0";
+    }
+    updateBalanceDisplay();
+  }
+
+  function updateBalanceDisplay() {
+    const el = document.getElementById('card-net-val');
+    const data = positions[currentPos];
+    if (isMasked || !showUsdToggle) {
+      el.innerText = "+•••••••• USDC";
+    } else {
+      el.innerText = data.net;
+    }
+  }
+
+  function toggleEntryStats() {
+    showStats = !showStats;
+    const statsRow = document.getElementById('card-sub-stats');
+    const btn = document.getElementById('toggle-entry-btn');
+    const knob = document.getElementById('toggle-entry-knob');
+    if (showStats) {
+      statsRow.classList.remove('hidden');
+      btn.className = "w-11 h-6 rounded-full bg-primary-container transition-colors relative flex items-center p-0.5";
+      knob.className = "w-5 h-5 rounded-full bg-on-primary-container transition-transform translate-x-5";
+    } else {
+      statsRow.classList.add('hidden');
+      btn.className = "w-11 h-6 rounded-full bg-surface-container-highest transition-colors relative flex items-center p-0.5";
+      knob.className = "w-5 h-5 rounded-full bg-outline transition-transform translate-x-0";
+    }
+  }
+
+  function toggleQrCode() {
+    showQr = !showQr;
+    const qrBlock = document.getElementById('card-qr-block');
+    const btn = document.getElementById('toggle-qr-btn');
+    const knob = document.getElementById('toggle-qr-knob');
+    if (showQr) {
+      qrBlock.classList.remove('hidden');
+      btn.className = "w-11 h-6 rounded-full bg-primary-container transition-colors relative flex items-center p-0.5";
+      knob.className = "w-5 h-5 rounded-full bg-on-primary-container transition-transform translate-x-5";
+    } else {
+      qrBlock.classList.add('hidden');
+      btn.className = "w-11 h-6 rounded-full bg-surface-container-highest transition-colors relative flex items-center p-0.5";
+      knob.className = "w-5 h-5 rounded-full bg-outline transition-transform translate-x-0";
+    }
+  }
+
+  function setRatio(ratio) {
+    const card = document.getElementById('pnl-canvas-card');
+    const bStory = document.getElementById('btn-ratio-story');
+    const bSquare = document.getElementById('btn-ratio-square');
+    const bBanner = document.getElementById('btn-ratio-banner');
+
+    [bStory, bSquare, bBanner].forEach(b => {
+      b.className = "ratio-btn py-2 px-2.5 rounded-lg bg-surface-container flex flex-col items-center justify-center gap-1 transition-all text-on-surface-variant hover:text-on-surface";
+    });
+
+    card.classList.remove('aspect-[9/16]', 'aspect-square', 'aspect-[16/9]');
+
+    if (ratio === 'story') {
+      card.classList.add('aspect-[9/16]');
+      bStory.className = "ratio-btn py-2 px-2.5 rounded-lg bg-surface-container-highest text-on-surface flex flex-col items-center justify-center gap-1 transition-all shadow-sm font-semibold";
+    } else if (ratio === 'square') {
+      card.classList.add('aspect-square');
+      bSquare.className = "ratio-btn py-2 px-2.5 rounded-lg bg-surface-container-highest text-on-surface flex flex-col items-center justify-center gap-1 transition-all shadow-sm font-semibold";
+    } else {
+      card.classList.add('aspect-[16/9]');
+      bBanner.className = "ratio-btn py-2 px-2.5 rounded-lg bg-surface-container-highest text-on-surface flex flex-col items-center justify-center gap-1 transition-all shadow-sm font-semibold";
+    }
+    showToast("Canvas set to " + ratio.toUpperCase());
+  }
+
+  function setTheme(theme) {
+    currentTheme = theme;
+    const card = document.getElementById('pnl-canvas-card');
+    const glow = document.getElementById('card-ambient');
+    const topGlow = document.getElementById('card-top-glow');
+
+    ['emerald', 'sovereign', 'stealth', 'gold'].forEach(t => {
+      const btn = document.getElementById('theme-' + t);
+      const icon = btn.querySelector('.material-symbols-outlined');
+      if (t === theme) {
+        btn.className = "theme-btn p-2 rounded-lg bg-surface-container-highest flex items-center justify-between shadow-sm transition-all";
+        icon.classList.remove('opacity-0');
+        icon.classList.add('text-secondary');
+      } else {
+        btn.className = "theme-btn p-2 rounded-lg bg-surface-container flex items-center justify-between shadow-sm transition-all hover:bg-surface-container-high";
+        icon.classList.add('opacity-0');
+        icon.classList.remove('text-secondary');
+      }
+    });
+
+    if (theme === 'emerald') {
+      glow.className = "absolute -top-12 -right-12 w-48 h-48 rounded-full bg-secondary/15 blur-3xl pointer-events-none transition-all duration-500";
+      topGlow.className = "absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-secondary to-transparent opacity-80";
+    } else if (theme === 'sovereign') {
+      glow.className = "absolute -top-12 -right-12 w-48 h-48 rounded-full bg-primary-container/20 blur-3xl pointer-events-none transition-all duration-500";
+      topGlow.className = "absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-primary-container to-transparent opacity-80";
+    } else if (theme === 'stealth') {
+      glow.className = "absolute -top-12 -right-12 w-48 h-48 rounded-full bg-outline/10 blur-3xl pointer-events-none transition-all duration-500";
+      topGlow.className = "absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-outline-variant to-transparent opacity-50";
+    } else if (theme === 'gold') {
+      glow.className = "absolute -top-12 -right-12 w-48 h-48 rounded-full bg-secondary-fixed/20 blur-3xl pointer-events-none transition-all duration-500";
+      topGlow.className = "absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-secondary-fixed to-transparent opacity-90";
+    }
+    showToast("Theme applied: " + theme);
+  }
+
+  function triggerDownload() {
+    showToast("Rendering 4K HDR Card PNG...");
+    setTimeout(() => {
+      showToast("Card saved to Camera Roll!");
+    }, 1200);
+  }
+
+  function shareAction(channel) {
+    if (channel === 'x') {
+      showToast("Composing tweet draft on X...");
+    } else if (channel === 'telegram') {
+      showToast("Opening Telegram channel link...");
+    } else {
+      showToast("Oracle verification link copied!");
+    }
+  }
+
+  function showToast(msg) {
+    const toast = document.getElementById('toast-pill');
+    const toastTxt = document.getElementById('toast-text');
+    toastTxt.innerText = msg;
+    toast.classList.remove('hidden');
+    setTimeout(() => {
+      toast.classList.remove('opacity-0');
+    }, 10);
+    setTimeout(() => {
+      toast.classList.add('opacity-0');
+      setTimeout(() => toast.classList.add('hidden'), 300);
+    }, 2500);
+  }
+</script></main></body></html>

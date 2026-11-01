@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-container": "#f5f5ff", "surface-dim": "#071420", "secondary-container": "#00b872", "on-surface": "#d7e4f5", "inverse-on-surface": "#25323e", "on-background": "#d7e4f5", "on-surface-variant": "#c3c5d8", "surface-tint": "#b4c5ff", "surface-container-lowest": "#030f1b", "surface-variant": "#293643", "on-primary-fixed-variant": "#003daa", "on-secondary-fixed": "#002110", "primary": "#b4c5ff", "surface-bright": "#2e3a48", "on-tertiary-fixed-variant": "#920027", "on-primary-fixed": "#00174c", "error": "#ffb4ab", "on-error-container": "#ffdad6", "on-tertiary": "#680019", "on-tertiary-fixed": "#40000c", "surface-container": "#14212d", "surface-container-highest": "#293643", "inverse-surface": "#d7e4f5", "tertiary-fixed": "#ffdada", "tertiary": "#ffb3b5", "outline-variant": "#424656", "secondary": "#4cdf95", "on-error": "#690005", "surface": "#071420", "on-secondary-fixed-variant": "#005230", "surface-container-high": "#1f2b38", "secondary-fixed": "#6dfdaf", "tertiary-container": "#d72747", "outline": "#8d90a2", "primary-container": "#1463ff", "tertiary-fixed-dim": "#ffb3b5", "surface-container-low": "#101d29", "on-tertiary-container": "#fff3f3", "secondary-fixed-dim": "#4cdf95", "error-container": "#93000a", "inverse-primary": "#0052dd", "background": "#071420", "on-secondary": "#003920", "primary-fixed-dim": "#b4c5ff", "on-secondary-container": "#004025", "on-primary": "#002979", "primary-fixed": "#dbe1ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "1.5rem", "space-lg": "1rem", "space-md": "0.75rem", "gutter": "0.75rem", "space-xs": "0.25rem", "margin": "1rem", "space-sm": "0.5rem" }, fontFamily: { "label-meta": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"], "mono-price-lg": ["JetBrains Mono"], "body-lg": ["Inter"], "display": ["Inter"], "body-md": ["Inter"], "headline-md": ["Inter"], "mono-price-md": ["JetBrains Mono"], "body-sm": ["Inter"], "label-badge": ["JetBrains Mono"] }, fontSize: { "label-meta": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "mono-price-lg": ["22px", { "lineHeight": "26px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "display": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "mono-price-md": ["14px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-sm": ["11px", { "lineHeight": "15px", "letterSpacing": "0em", "fontWeight": "400" }], "label-badge": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } }</script><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; background-color: #071420; } body { overscroll-behavior: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go Back" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><div class="flex flex-col ml-space-xs"><div class="flex items-center gap-space-xs"><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Crypto Deposit</h1><div class="flex items-center gap-0.5 px-1.5 py-0.5 rounded-full bg-secondary/10"><span class="material-symbols-outlined text-secondary text-[12px]">verified_user</span><span class="font-label-badge text-label-badge text-secondary uppercase">256-Bit</span></div></div><div class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-label-meta text-label-meta text-on-surface-variant">MIT Secure Enclave</span></div></div></div><div class="flex items-center gap-space-xs"><button aria-label="Close Operation" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">close</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full pb-8">
+<!-- Sub-Header Status Band -->
+<div class="px-margin pt-2 pb-3 flex items-center justify-between bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-meta text-label-meta text-on-surface uppercase tracking-wider">Multi-Chain Routing Engine</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-highest px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-secondary text-[13px]" style="font-variation-settings: 'FILL' 1;">shield</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">VAULT SAFE • MULTI-CHAIN</span>
+</div>
+</div>
+<div class="px-margin flex flex-col gap-space-md mt-space-md">
+<!-- 1. Asset Selection Section -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-on-surface-variant uppercase">Select Asset to Receive</span>
+<span class="font-label-badge text-label-badge text-primary cursor-pointer flex items-center gap-0.5">
+<span>Search 84+ Tokens</span>
+<span class="material-symbols-outlined text-[12px]">chevron_right</span>
+</span>
+</div>
+<!-- Active Selected Token Highlight Card -->
+<div class="bg-surface-container rounded-xl p-space-md flex items-center justify-between shadow-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-11 h-11 rounded-full bg-surface-container-highest flex items-center justify-center shadow-inner">
+<svg class="w-7 h-7" fill="none" viewbox="0 0 32 32">
+<circle cx="16" cy="16" fill="#26A17B" r="16"></circle>
+<path d="M17.65 17.68c-.14.01-.72.04-1.65.04-.77 0-1.39-.03-1.63-.04-3.53-.16-6.17-.84-6.17-1.66 0-.82 2.64-1.5 6.17-1.66v2.54c.25.02.87.05 1.66.05.9 0 1.48-.03 1.62-.05v-2.54c3.52.16 6.15.84 6.15 1.66 0 .82-2.63 1.5-6.15 1.66zm0-3.69v-2.12h4.86v-2.61h-13v2.61h4.86v2.12c-4.04.19-7.07 1.07-7.07 2.13 0 1.06 3.03 1.94 7.07 2.13v7.49h3.28v-7.49c4.03-.19 7.05-1.07 7.05-2.13 0-1.06-3.02-1.94-7.05-2.13z" fill="#FFFFFF"></path>
+</svg>
+<div class="absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full bg-surface-container-lowest flex items-center justify-center">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">USDT</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant bg-surface-container-highest px-1.5 py-0.5 rounded">Tether USD</span>
+</div>
+<span class="font-mono-price-md text-mono-price-md text-on-surface-variant">Available: 24,150.00 USDT</span>
+</div>
+</div>
+<button class="flex items-center gap-1 bg-surface-container-highest hover:bg-surface-bright text-primary px-3 py-1.5 rounded-lg transition-colors" type="button">
+<span class="font-label-meta text-label-meta">Change</span>
+<span class="material-symbols-outlined text-[14px]">unfold_more</span>
+</button>
+</div>
+<!-- Quick Selector Horizontal Chips -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5">
+<button class="flex items-center gap-1.5 bg-primary-container text-on-primary-container px-3 py-1.5 rounded-full shadow-sm flex-shrink-0" type="button">
+<span class="w-2 h-2 rounded-full bg-on-primary-container"></span>
+<span class="font-label-badge text-label-badge">USDT</span>
+</button>
+<button class="flex items-center gap-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface px-3 py-1.5 rounded-full transition-colors flex-shrink-0" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="font-label-badge text-label-badge">USDC</span>
+</button>
+<button class="flex items-center gap-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface px-3 py-1.5 rounded-full transition-colors flex-shrink-0" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="font-label-badge text-label-badge">BTC</span>
+</button>
+<button class="flex items-center gap-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface px-3 py-1.5 rounded-full transition-colors flex-shrink-0" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="font-label-badge text-label-badge">ETH</span>
+</button>
+<button class="flex items-center gap-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface px-3 py-1.5 rounded-full transition-colors flex-shrink-0" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="font-label-badge text-label-badge">SOL</span>
+</button>
+</div>
+</div>
+<!-- 2. Network Selection Architecture -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-on-surface-variant uppercase">Compatible Network (Transfer Rails)</span>
+<span class="font-label-badge text-label-badge text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">bolt</span>
+<span>Fastest: Tron TRC20</span>
+</span>
+</div>
+<!-- Network Cards Stack -->
+<div class="flex flex-col gap-1.5">
+<!-- Selected Tron Card -->
+<div class="bg-surface-container-high rounded-xl p-3 flex items-center justify-between shadow-sm cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">alt_route</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Tron (TRC20)</span>
+<span class="font-label-badge text-label-badge bg-primary-container text-on-primary-container px-1.5 py-0.2 rounded">Recommended</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Fast (~1 min) • 0 Gas Protocol Route</span>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+<!-- Ethereum ERC20 -->
+<div class="bg-surface-container rounded-xl p-3 flex items-center justify-between shadow-sm opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">grid_goldenratio</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Ethereum (ERC20)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">12 Confirmations • ~3 min</span>
+</div>
+</div>
+<div class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center"></div>
+</div>
+<!-- Solana SPL -->
+<div class="bg-surface-container rounded-xl p-3 flex items-center justify-between shadow-sm opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">flash_on</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Solana (SPL)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ultra Fast • ~30 sec</span>
+</div>
+</div>
+<div class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center"></div>
+</div>
+<!-- Collapsed / Secondary Options (BNB, Arbitrum) -->
+<div class="grid grid-cols-2 gap-2 mt-0.5">
+<div class="bg-surface-container rounded-lg p-2.5 flex items-center justify-between cursor-pointer">
+<div class="flex flex-col">
+<span class="font-label-meta text-label-meta text-on-surface font-semibold">BNB Chain (BEP20)</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Low Fee • ~2 min</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[16px]">chevron_right</span>
+</div>
+<div class="bg-surface-container rounded-lg p-2.5 flex items-center justify-between cursor-pointer">
+<div class="flex flex-col">
+<span class="font-label-meta text-label-meta text-on-surface font-semibold">Arbitrum One</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">L2 Speed • Instant</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[16px]">chevron_right</span>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant px-1">Only networks compatible with USDT smart contracts are displayed.</p>
+</div>
+<!-- 3. Receive Address Central Stage Card -->
+<div class="bg-surface-container rounded-2xl p- space-md flex flex-col items-center gap-space-md shadow-xl relative overflow-hidden">
+<!-- High Visibility Caution Banner -->
+<div class="w-full bg-tertiary-container/20 text-tertiary px-3 py-2 rounded-lg flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+<span class="font-label-badge text-label-badge uppercase tracking-wider font-semibold">Tron Network (TRC20) Only</span>
+</div>
+<!-- Scannable Visual QR Block -->
+<div class="relative bg-on-primary-container p-4 rounded-xl shadow-inner flex items-center justify-center">
+<!-- SVG QR Matrix Render with Embedded Tether Insignia -->
+<svg class="w-48 h-48" fill="none" viewbox="0 0 160 160">
+<!-- Background -->
+<rect fill="#FFFFFF" height="160" rx="4" width="160"></rect>
+<!-- Top Left Finder Pattern -->
+<rect fill="#071420" height="40" rx="3" width="40" x="12" y="12"></rect>
+<rect fill="#FFFFFF" height="28" width="28" x="18" y="18"></rect>
+<rect fill="#071420" height="16" width="16" x="24" y="24"></rect>
+<!-- Top Right Finder Pattern -->
+<rect fill="#071420" height="40" rx="3" width="40" x="108" y="12"></rect>
+<rect fill="#FFFFFF" height="28" width="28" x="114" y="18"></rect>
+<rect fill="#071420" height="16" width="16" x="120" y="24"></rect>
+<!-- Bottom Left Finder Pattern -->
+<rect fill="#071420" height="40" rx="3" width="40" x="12" y="108"></rect>
+<rect fill="#FFFFFF" height="28" width="28" x="18" y="114"></rect>
+<rect fill="#071420" height="16" width="16" x="24" y="120"></rect>
+<!-- Stylized Data Dot Grid -->
+<g fill="#071420">
+<!-- Col 1 -->
+<rect height="6" rx="1" width="6" x="58" y="14"></rect>
+<rect height="6" rx="1" width="6" x="70" y="14"></rect>
+<rect height="6" rx="1" width="6" x="82" y="14"></rect>
+<rect height="6" rx="1" width="6" x="94" y="14"></rect>
+<!-- Col 2 -->
+<rect height="6" rx="1" width="6" x="58" y="26"></rect>
+<rect height="6" rx="1" width="6" x="82" y="26"></rect>
+<rect height="6" rx="1" width="6" x="94" y="26"></rect>
+<!-- Col 3 -->
+<rect height="6" rx="1" width="6" x="58" y="38"></rect>
+<rect height="6" rx="1" width="6" x="70" y="38"></rect>
+<!-- Center row alignments -->
+<rect height="6" rx="1" width="6" x="14" y="58"></rect>
+<rect height="6" rx="1" width="6" x="26" y="58"></rect>
+<rect height="6" rx="1" width="6" x="38" y="58"></rect>
+<rect height="6" rx="1" width="6" x="50" y="58"></rect>
+<rect height="6" rx="1" width="6" x="62" y="58"></rect>
+<rect height="6" rx="1" width="6" x="92" y="58"></rect>
+<rect height="6" rx="1" width="6" x="104" y="58"></rect>
+<rect height="6" rx="1" width="6" x="116" y="58"></rect>
+<rect height="6" rx="1" width="6" x="128" y="58"></rect>
+<rect height="6" rx="1" width="6" x="140" y="58"></rect>
+<rect height="6" rx="1" width="6" x="14" y="70"></rect>
+<rect height="6" rx="1" width="6" x="38" y="70"></rect>
+<rect height="6" rx="1" width="6" x="50" y="70"></rect>
+<rect height="6" rx="1" width="6" x="104" y="70"></rect>
+<rect height="6" rx="1" width="6" x="128" y="70"></rect>
+<rect height="6" rx="1" width="6" x="14" y="82"></rect>
+<rect height="6" rx="1" width="6" x="26" y="82"></rect>
+<rect height="6" rx="1" width="6" x="50" y="82"></rect>
+<rect height="6" rx="1" width="6" x="104" y="82"></rect>
+<rect height="6" rx="1" width="6" x="116" y="82"></rect>
+<rect height="6" rx="1" width="6" x="140" y="82"></rect>
+<rect height="6" rx="1" width="6" x="14" y="94"></rect>
+<rect height="6" rx="1" width="6" x="38" y="94"></rect>
+<rect height="6" rx="1" width="6" x="50" y="94"></rect>
+<rect height="6" rx="1" width="6" x="62" y="94"></rect>
+<rect height="6" rx="1" width="6" x="92" y="94"></rect>
+<rect height="6" rx="1" width="6" x="116" y="94"></rect>
+<rect height="6" rx="1" width="6" x="140" y="94"></rect>
+<!-- Bottom Data Matrix Bits -->
+<rect height="6" rx="1" width="6" x="58" y="106"></rect>
+<rect height="6" rx="1" width="6" x="70" y="106"></rect>
+<rect height="6" rx="1" width="6" x="82" y="106"></rect>
+<rect height="6" rx="1" width="6" x="106" y="106"></rect>
+<rect height="6" rx="1" width="6" x="118" y="106"></rect>
+<rect height="6" rx="1" width="6" x="130" y="106"></rect>
+<rect height="6" rx="1" width="6" x="58" y="118"></rect>
+<rect height="6" rx="1" width="6" x="82" y="118"></rect>
+<rect height="6" rx="1" width="6" x="94" y="118"></rect>
+<rect height="6" rx="1" width="6" x="106" y="118"></rect>
+<rect height="6" rx="1" width="6" x="130" y="118"></rect>
+<rect height="6" rx="1" width="6" x="58" y="130"></rect>
+<rect height="6" rx="1" width="6" x="70" y="130"></rect>
+<rect height="6" rx="1" width="6" x="94" y="130"></rect>
+<rect height="6" rx="1" width="6" x="118" y="130"></rect>
+<rect height="6" rx="1" width="6" x="142" y="130"></rect>
+<rect height="6" rx="1" width="6" x="58" y="142"></rect>
+<rect height="6" rx="1" width="6" x="82" y="142"></rect>
+<rect height="6" rx="1" width="6" x="106" y="142"></rect>
+<rect height="6" rx="1" width="6" x="130" y="142"></rect>
+</g>
+<!-- Centered Tether Logo Shield -->
+<circle cx="80" cy="80" fill="#FFFFFF" r="16"></circle>
+<circle cx="80" cy="80" fill="#26A17B" r="14"></circle>
+<path d="M81.5 81.5c-.1.01-.5.03-1.5.03-.7 0-1.2-.02-1.5-.03-3.1-.14-5.4-.73-5.4-1.45 0-.72 2.3-1.32 5.4-1.45v2.22c.2.02.7.04 1.5.04.8 0 1.3-.02 1.5-.04v-2.22c3.1.13 5.4.73 5.4 1.45 0 .72-2.3 1.31-5.4 1.45zm0-3.23v-1.85h4.2v-2.28h-11.4v2.28h4.2v1.85c-3.5.17-6.2.94-6.2 1.86 0 .93 2.7 1.7 6.2 1.86v6.55h2.8v-6.55c3.5-.16 6.2-.93 6.2-1.86 0-.92-2.7-1.69-6.2-1.86z" fill="#FFFFFF"></path>
+</svg>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-center">Point sender camera or wallet app to scan address</span>
+<!-- Monospace Address Shell with Micro Interaction -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-3 flex items-center justify-between">
+<div class="flex flex-col min-w-0 pr-2">
+<span class="font-label-meta text-label-meta text-on-surface-variant">USDT Deposit Address</span>
+<span class="font-mono-price-md text-mono-price-md text-on-surface truncate select-all" id="crypto-addr-str">TYsN8jK9P5qFvM3xL2dZ8vB7qR4tX1mA9w</span>
+</div>
+<button aria-label="Copy Address" class="w-9 h-9 rounded-lg bg-surface-container-high hover:bg-surface-bright flex items-center justify-center text-primary transition-colors flex-shrink-0" id="quick-copy-icon-btn" type="button">
+<span class="material-symbols-outlined text-[18px]" id="copy-icon">content_copy</span>
+</button>
+</div>
+<!-- Action Button Row -->
+<div class="grid grid-cols-3 gap-2 w-full">
+<!-- Copy Address Primary -->
+<button class="col-span-1 bg-primary-container hover:bg-inverse-primary text-on-primary-container py-2.5 px-2 rounded-xl flex items-center justify-center gap-1.5 transition-all active:scale-95 shadow-md" id="main-copy-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span class="font-headline-sm text-headline-sm font-medium">Copy</span>
+</button>
+<!-- Share Button -->
+<button class="col-span-1 bg-surface-container-high hover:bg-surface-bright text-on-surface py-2.5 px-2 rounded-xl flex items-center justify-center gap-1.5 transition-all active:scale-95" id="share-action-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">share</span>
+<span class="font-headline-sm text-headline-sm font-medium">Share</span>
+</button>
+<!-- Save QR -->
+<button class="col-span-1 bg-surface-container-high hover:bg-surface-bright text-on-surface py-2.5 px-2 rounded-xl flex items-center justify-center gap-1.5 transition-all active:scale-95" id="save-qr-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span class="font-headline-sm text-headline-sm font-medium">Save QR</span>
+</button>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px]">info</span>
+<span class="font-label-badge text-label-badge">Illustrative preview address &amp; QR code for design mockup</span>
+</div>
+</div>
+<!-- 4. Important Receive Information & Protocol Specs -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col gap-3 shadow-md">
+<div class="flex items-center justify-between pb-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Protocol Specs &amp; Rules</span>
+<span class="font-label-badge text-label-badge bg-surface-container-highest px-2 py-0.5 rounded text-on-surface-variant">L1 TRON PROTOCOL</span>
+</div>
+<div class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant">Supported Network</span>
+<span class="font-label-badge text-label-badge text-on-surface font-semibold">Tron (TRC20)</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="font-body-md text-body-md text-on-surface-variant">Minimum Receive</span>
+<span class="material-symbols-outlined text-outline text-[13px]">help_outline</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-mono-price-md text-mono-price-md text-on-surface">10.00 USDT</span>
+<span class="font-label-badge text-label-badge text-tertiary">Under minimum will be forfeit</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant">Block Confirmations</span>
+<span class="font-label-badge text-label-badge text-on-surface">1 Confirmation</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant">Estimated Crediting Time</span>
+<span class="font-label-badge text-label-badge text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">timer</span>
+<span>~1-2 minutes</span>
+</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant">Contract Hash</span>
+<div class="flex items-center gap-1 bg-surface-container-highest px-2 py-0.5 rounded">
+<span class="font-mono-price-md text-[12px] text-on-surface-variant">TR7NHq...jLj6t</span>
+<span class="material-symbols-outlined text-secondary text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+</div>
+<!-- Security Callout Warning Box -->
+<div class="mt-2 bg-error-container/20 p-3 rounded-lg flex items-start gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5 flex-shrink-0" style="font-variation-settings: 'FILL' 1;">report_problem</span>
+<div class="flex flex-col">
+<span class="font-label-meta text-label-meta text-tertiary font-semibold uppercase">Permanent Loss Warning</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mt-0.5">
+            Send only USDT to this TRC20 address. Sending any other digital token, cross-chain wrapped asset, or unsupported contract will result in permanent loss of funds.
+          </p>
+</div>
+</div>
+</div>
+<!-- 5. Recent Incoming Transfers / Receipts -->
+<div class="flex flex-col gap-space-sm mt-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">call_received</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Recent Incoming Transfers</span>
+</div>
+<button class="font-label-badge text-label-badge text-primary hover:underline" type="button">Full Ledger</button>
+</div>
+<!-- Feed Stream -->
+<div class="flex flex-col gap-2">
+<!-- Item 1: USDT TRC20 Completed -->
+<div class="bg-surface-container rounded-xl p-3 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">south_west</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">USDT</span>
+<span class="font-label-badge text-label-badge bg-surface-container-highest px-1.5 py-0.2 rounded text-on-surface-variant">TRC20</span>
+</div>
+<span class="font-mono-price-md text-[11px] text-on-surface-variant">TxID: 0x8f2...e4b • 14:22</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-mono-price-md text-mono-price-md text-secondary font-semibold">+5,000.00 USDT</span>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-badge text-label-badge text-secondary">Completed</span>
+</div>
+</div>
+</div>
+<!-- Item 2: USDC Solana Completed -->
+<div class="bg-surface-container rounded-xl p-3 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">south_west</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">USDC</span>
+<span class="font-label-badge text-label-badge bg-surface-container-highest px-1.5 py-0.2 rounded text-on-surface-variant">Solana</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Yesterday • 19:40</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-mono-price-md text-mono-price-md text-secondary font-semibold">+2,500.00 USDC</span>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-badge text-label-badge text-secondary">Completed</span>
+</div>
+</div>
+</div>
+<!-- Item 3: BTC Confirming In Flight -->
+<div class="bg-surface-container rounded-xl p-3 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest text-primary flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">BTC</span>
+<span class="font-label-badge text-label-badge bg-surface-container-highest px-1.5 py-0.2 rounded text-on-surface-variant">Native</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">2h ago</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-mono-price-md text-mono-price-md text-on-surface font-semibold">+0.1500 BTC</span>
+<div class="flex items-center gap-1 bg-surface-container-highest px-1.5 py-0.5 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-badge text-label-badge text-primary">Confirming (2/3)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Security & Settlement Footer Footnote -->
+<div class="p-3 bg-surface-container-lowest rounded-xl flex items-center justify-between mt-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">lock</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">COLD STORAGE SETTLEMENT • FIPS 140-2 LEVEL 3</span>
+</div>
+<span class="font-label-meta text-label-meta text-primary font-medium cursor-pointer">Audit Proofs</span>
+</div>
+</div>
+<!-- Interactive Toast Floating Alert for Copy Action -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-surface-container-highest text-on-surface px-4 py-2.5 rounded-full shadow-2xl flex items-center gap-2 transition-all duration-300 opacity-0 pointer-events-none translate-y-3 z-50" id="copy-toast">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span class="font-headline-sm text-headline-sm">Deposit address copied to clipboard</span>
+</div>
+</div>
+<script>
+  (function initReceiveCryptoPage() {
+    const copyAddrStr = "TYsN8jK9P5qFvM3xL2dZ8vB7qR4tX1mA9w";
+    const mainBtn = document.getElementById("main-copy-btn");
+    const iconBtn = document.getElementById("quick-copy-icon-btn");
+    const shareBtn = document.getElementById("share-action-btn");
+    const saveQrBtn = document.getElementById("save-qr-btn");
+    const toast = document.getElementById("copy-toast");
+    const copyIcon = document.getElementById("copy-icon");
+
+    function triggerToast(message) {
+      if (!toast) return;
+      if (message) {
+        toast.querySelector("span:last-child").textContent = message;
+      }
+      toast.classList.remove("opacity-0", "translate-y-3", "pointer-events-none");
+      toast.classList.add("opacity-100", "translate-y-0");
+
+      setTimeout(() => {
+        toast.classList.remove("opacity-100", "translate-y-0");
+        toast.classList.add("opacity-0", "translate-y-3", "pointer-events-none");
+      }, 2400);
+    }
+
+    function copyAction() {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(copyAddrStr).catch(() => {});
+      }
+      if (copyIcon) {
+        copyIcon.textContent = "done";
+        setTimeout(() => { copyIcon.textContent = "content_copy"; }, 1800);
+      }
+      triggerToast("Deposit address copied to clipboard");
+    }
+
+    if (mainBtn) mainBtn.addEventListener("click", copyAction);
+    if (iconBtn) iconBtn.addEventListener("click", copyAction);
+
+    if (shareBtn) {
+      shareBtn.addEventListener("click", () => {
+        if (navigator.share) {
+          navigator.share({
+            title: 'Mitmarket Deposit Address',
+            text: copyAddrStr
+          }).catch(() => {});
+        } else {
+          copyAction();
+          triggerToast("Address copied (Share fallback)");
+        }
+      });
+    }
+
+    if (saveQrBtn) {
+      saveQrBtn.addEventListener("click", () => {
+        triggerToast("QR Voucher saved to gallery");
+      });
+    }
+  })();
+</script></main></body></html>

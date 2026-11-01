@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#071420;color:#d7e4f5;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-surface": "#d7e4f5", "on-secondary-fixed": "#002110", "surface-container-lowest": "#030f1b", "primary-fixed": "#dbe1ff", "surface-dim": "#071420", "surface-tint": "#b4c5ff", "inverse-on-surface": "#25323e", "secondary-fixed-dim": "#4cdf95", "tertiary-container": "#d72747", "surface": "#071420", "tertiary-fixed-dim": "#ffb3b5", "inverse-primary": "#0052dd", "tertiary-fixed": "#ffdada", "on-tertiary-container": "#fff3f3", "surface-variant": "#293643", "on-primary-container": "#f5f5ff", "error-container": "#93000a", "on-secondary": "#003920", "secondary-fixed": "#6dfdaf", "on-tertiary-fixed": "#40000c", "secondary": "#4cdf95", "on-surface-variant": "#c3c5d8", "surface-container-highest": "#293643", "outline": "#8d90a2", "primary": "#b4c5ff", "background": "#071420", "on-background": "#d7e4f5", "on-secondary-fixed-variant": "#005230", "on-primary": "#002979", "surface-container-low": "#101d29", "on-error-container": "#ffdad6", "on-surface": "#d7e4f5", "surface-container-high": "#1f2b38", "on-secondary-container": "#004025", "surface-bright": "#2e3a48", "on-primary-fixed": "#00174c", "surface-container": "#14212d", "outline-variant": "#424656", "tertiary": "#ffb3b5", "on-tertiary": "#680019", "on-primary-fixed-variant": "#003daa", "secondary-container": "#00b872", "error": "#ffb4ab", "on-tertiary-fixed-variant": "#920027", "primary-fixed-dim": "#b4c5ff", "primary-container": "#1463ff", "on-error": "#690005" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1rem", "space-md": "0.75rem", "gutter": "0.75rem", "margin": "1rem", "space-sm": "0.5rem", "space-xl": "1.5rem", "space-xs": "0.25rem" }, "fontFamily": { "headline-md": ["Inter"], "label-badge": ["JetBrains Mono"], "label-meta": ["Inter"], "display": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"], "mono-price-md": ["JetBrains Mono"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "headline-sm": ["Inter"], "mono-price-lg": ["JetBrains Mono"] }, "fontSize": { "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-badge": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-meta": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }], "display": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "body-sm": ["11px", { "lineHeight": "15px", "letterSpacing": "0em", "fontWeight": "400" }], "mono-price-md": ["14px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "mono-price-lg": ["22px", { "lineHeight": "26px", "letterSpacing": "-0.02em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen antialiased select-none"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.12)]"><div class="h-14 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go back" class="min-w-[44px] min-h-[44px] -ml-space-xs flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-bold uppercase">MITMARKET</span><span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded bg-surface-container-high text-primary tracking-widest font-bold">PRO</span></div></div><div class="flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-surface-container-low shadow-[0_0_8px_rgba(76,223,149,0.1)]"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-label-badge text-label-badge text-secondary font-mono tracking-tight">ENCLAVE 256-BIT</span></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 pb-safe bg-surface px-margin"><div class="flex flex-col w-full pb-10 space-y-space-lg">
+<!-- Top Visual Icon & Title Badge -->
+<div class="flex flex-col items-center text-center pt-space-xs space-y-space-sm">
+<div class="relative flex items-center justify-center w-16 h-16 rounded-full bg-surface-container-high shadow-[0_0_24px_rgba(20,99,255,0.28)]">
+<div class="absolute inset-0 rounded-full bg-gradient-to-tr from-primary-container/20 to-transparent"></div>
+<span class="material-symbols-outlined text-primary text-[32px]" style="font-variation-settings: 'FILL' 1;">enhanced_encryption</span>
+<span class="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-surface-container text-secondary text-[14px] shadow-sm">
+<span class="material-symbols-outlined text-[14px]">key</span>
+</span>
+</div>
+<div class="space-y-1">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">Recover Your Account</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[320px] mx-auto">
+        Restore access to your trading terminal using verified security credentials.
+      </p>
+</div>
+</div>
+<!-- Channel Selector Tabs -->
+<div class="p-1 rounded-xl bg-surface-container-low flex items-center gap-1 shadow-inner">
+<button class="flex-1 py-2 px-3 rounded-lg text-center font-headline-sm text-headline-sm transition-all bg-surface-container-high text-on-surface shadow-sm font-semibold flex items-center justify-center gap-1.5" id="tab-magic-link" onclick="switchChannel('magic')" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">mark_email_read</span>
+<span>Magic Link</span>
+</button>
+<button class="flex-1 py-2 px-3 rounded-lg text-center font-headline-sm text-headline-sm transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5" id="tab-passcode" onclick="switchChannel('passcode')" type="button">
+<span class="material-symbols-outlined text-[18px]">key_vertical</span>
+<span>Recovery Key</span>
+</button>
+</div>
+<!-- Mode 1: Email Magic Link Workflow -->
+<div class="flex flex-col space-y-space-md" id="flow-magic-link">
+<!-- Step 1: Request Module -->
+<div class="p-space-lg rounded-xl bg-surface-container flex flex-col space-y-space-md shadow-md">
+<div class="space-y-1">
+<span class="font-label-badge text-label-badge text-primary font-mono uppercase tracking-wider">Step 01 / Identity Verification</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Enter your registered institutional email. If an account is associated with this address, you will receive a 256-bit encrypted single-use recovery link.
+        </p>
+</div>
+<div class="space-y-1.5">
+<label class="block font-label-meta text-label-meta text-on-surface-variant uppercase tracking-wider font-semibold" for="recovery-email">Registered Email Address</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">mail</span>
+<input class="w-full bg-surface-container-lowest text-on-surface font-mono-price-md text-mono-price-md pl-10 pr-4 py-2.5 rounded-lg outline-none focus:bg-surface-container-high transition-colors" id="recovery-email" placeholder="user@domain.com" type="email" value="alex.vance@mit-quant.eth"/>
+</div>
+</div>
+<button class="w-full h-11 flex items-center justify-center gap-2 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-semibold active:scale-[0.98] transition-all shadow-[0_2px_12px_rgba(20,99,255,0.35)]" onclick="simulateDispatch()" type="button">
+<span>Send Recovery Link</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+<!-- Step 1.5: Privacy-Preserving Confirmation Banner (Active Demo State) -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col space-y-space-xs shadow-sm" id="confirmation-banner">
+<div class="flex items-start gap-2.5">
+<div class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-secondary-container/20 text-secondary">
+<span class="material-symbols-outlined text-[16px] font-bold">check_circle</span>
+</div>
+<div class="flex-1 space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-secondary font-semibold">Dispatch Confirmed</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant font-mono">TLS 1.3 SECURE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+            If an account matches this identity, authenticated instructions have been dispatched. Check your inbox or allow up to 2 minutes for route delivery.
+          </p>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-outline">timer</span>
+          Cooldown Active
+        </span>
+<button class="font-mono-price-md text-mono-price-md text-primary font-medium hover:underline disabled:opacity-50" id="resend-btn" type="button">
+          Resend in <span class="font-bold" id="countdown">54s</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Mode 2: Offline Emergency Passcode (Hidden by default, toggleable) -->
+<div class="hidden flex-col space-y-space-md" id="flow-passcode">
+<div class="p-space-lg rounded-xl bg-surface-container flex flex-col space-y-space-md shadow-md">
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-tertiary font-mono uppercase tracking-wider">Air-Gapped Key</span>
+<span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">BIP-39 VAULT</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Input your 16-character alphanumeric offline emergency key printed during vault initialisation.
+        </p>
+</div>
+<div class="space-y-1.5">
+<label class="block font-label-meta text-label-meta text-on-surface-variant uppercase tracking-wider font-semibold" for="emergency-code">16-Character Emergency Key</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">vpn_key</span>
+<input class="w-full bg-surface-container-lowest text-on-surface font-mono-price-md text-mono-price-md pl-10 pr-4 py-2.5 rounded-lg outline-none tracking-widest uppercase focus:bg-surface-container-high transition-colors" id="emergency-code" maxlength="19" placeholder="MIT-4892-XK91-8841" type="text"/>
+</div>
+</div>
+<button class="w-full h-11 flex items-center justify-center gap-2 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-semibold active:scale-[0.98] transition-all" type="button">
+<span>Verify Offline Key</span>
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</button>
+</div>
+</div>
+<!-- Interactive Terminal: Reset Master Password Module -->
+<div class="p-space-lg rounded-xl bg-surface-container flex flex-col space-y-space-md shadow-md">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">lock_reset</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Set New Master Password</h2>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary-fixed-dim leading-snug">
+          Resetting password triggers an automated 24-hour security cooldown on outbound capital withdrawals.
+        </p>
+</div>
+</div>
+<!-- Password Input Field 1 -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-meta text-label-meta text-on-surface-variant uppercase tracking-wider font-semibold" for="new-password">New Master Password</label>
+<span class="font-label-badge text-label-badge text-secondary font-mono" id="strength-label">STRONG (92%)</span>
+</div>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container-lowest text-on-surface font-mono-price-md text-mono-price-md pl-3.5 pr-11 py-2.5 rounded-lg outline-none focus:bg-surface-container-high transition-colors" id="new-password" oninput="updateStrength(this.value)" type="password" value="K9#mQ!982aP#zL0"/>
+<button class="absolute right-3 text-on-surface-variant hover:text-on-surface" onclick="togglePassVisibility('new-password', 'toggle-icon-1')" type="button">
+<span class="material-symbols-outlined text-[20px]" id="toggle-icon-1">visibility</span>
+</button>
+</div>
+<!-- Segmented Strength Meter -->
+<div class="grid grid-cols-4 gap-1.5 pt-1">
+<div class="h-1 rounded-full bg-secondary"></div>
+<div class="h-1 rounded-full bg-secondary"></div>
+<div class="h-1 rounded-full bg-secondary"></div>
+<div class="h-1 rounded-full bg-secondary"></div>
+</div>
+</div>
+<!-- Password Input Field 2 -->
+<div class="space-y-1.5">
+<label class="block font-label-meta text-label-meta text-on-surface-variant uppercase tracking-wider font-semibold" for="confirm-password">Confirm New Password</label>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container-lowest text-on-surface font-mono-price-md text-mono-price-md pl-3.5 pr-11 py-2.5 rounded-lg outline-none focus:bg-surface-container-high transition-colors" id="confirm-password" type="password" value="K9#mQ!982aP#zL0"/>
+<button class="absolute right-3 text-on-surface-variant hover:text-on-surface" onclick="togglePassVisibility('confirm-password', 'toggle-icon-2')" type="button">
+<span class="material-symbols-outlined text-[20px]" id="toggle-icon-2">visibility</span>
+</button>
+</div>
+</div>
+<!-- Password Rules Micro-Checklist -->
+<div class="grid grid-cols-2 gap-2 p-2.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-meta text-label-meta">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Min. 12 Characters</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Symbol &amp; Number</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Mixed Case Letters</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Zero Historical Reuse</span>
+</div>
+</div>
+<!-- Action Execution Bar -->
+<button class="w-full h-12 flex items-center justify-center gap-2 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-semibold active:scale-[0.98] transition-all shadow-[0_0_16px_rgba(20,99,255,0.3)]" type="button">
+<span class="material-symbols-outlined text-[20px]">sync_lock</span>
+<span>Update Password &amp; Re-Authenticate</span>
+</button>
+</div>
+<!-- Alternative Recovery & Hardware Protection Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col space-y-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">lock_open</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Lost email access?</span>
+</div>
+<button class="font-label-meta text-label-meta text-primary font-semibold hover:underline flex items-center gap-0.5" onclick="switchChannel('passcode')" type="button">
+<span>Use Recovery Code</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+<!-- Security Advisory Box -->
+<div class="p-3 rounded-lg bg-surface-container-high flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed shrink-0 mt-0.5">policy</span>
+<div class="space-y-0.5">
+<span class="font-label-badge text-label-badge text-tertiary-fixed font-bold uppercase tracking-wider">Institutional Protocol Rule</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          MITMARKET staff will never request your passwords, seed phrases, or WebAuthn credentials. Always confirm the URL enclave matches verified domain hash before transmitting credentials.
+        </p>
+</div>
+</div>
+</div>
+<!-- Navigation & Assistance Footers -->
+<div class="flex flex-col items-center space-y-space-md pt-space-xs">
+<button class="flex items-center gap-1.5 text-on-surface hover:text-primary font-headline-sm text-headline-sm font-medium transition-colors" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Back to Sign In</span>
+</button>
+<div class="flex items-center gap-1.5 text-center">
+<span class="material-symbols-outlined text-[16px] text-outline">support_agent</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Need assistance?</span>
+<button class="font-body-sm text-body-sm text-primary font-semibold hover:underline" type="button">
+        Contact 24/7 Priority Support Desk
+      </button>
+</div>
+</div>
+</div>
+<script>
+  function switchChannel(channel) {
+    const magicTab = document.getElementById('tab-magic-link');
+    const passcodeTab = document.getElementById('tab-passcode');
+    const magicFlow = document.getElementById('flow-magic-link');
+    const passcodeFlow = document.getElementById('flow-passcode');
+
+    if (channel === 'magic') {
+      magicTab.className = "flex-1 py-2 px-3 rounded-lg text-center font-headline-sm text-headline-sm transition-all bg-surface-container-high text-on-surface shadow-sm font-semibold flex items-center justify-center gap-1.5";
+      passcodeTab.className = "flex-1 py-2 px-3 rounded-lg text-center font-headline-sm text-headline-sm transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5";
+      magicFlow.classList.remove('hidden');
+      magicFlow.classList.add('flex');
+      passcodeFlow.classList.add('hidden');
+      passcodeFlow.classList.remove('flex');
+    } else {
+      passcodeTab.className = "flex-1 py-2 px-3 rounded-lg text-center font-headline-sm text-headline-sm transition-all bg-surface-container-high text-on-surface shadow-sm font-semibold flex items-center justify-center gap-1.5";
+      magicTab.className = "flex-1 py-2 px-3 rounded-lg text-center font-headline-sm text-headline-sm transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5";
+      passcodeFlow.classList.remove('hidden');
+      passcodeFlow.classList.add('flex');
+      magicFlow.classList.add('hidden');
+      magicFlow.classList.remove('flex');
+    }
+  }
+
+  function togglePassVisibility(inputId, iconId) {
+    const input = document.getElementById(inputId);
+    const icon = document.getElementById(iconId);
+    if (input.type === 'password') {
+      input.type = 'text';
+      icon.innerText = 'visibility_off';
+    } else {
+      input.type = 'password';
+      icon.innerText = 'visibility';
+    }
+  }
+
+  function simulateDispatch() {
+    const banner = document.getElementById('confirmation-banner');
+    banner.classList.add('animate-pulse');
+    setTimeout(() => {
+      banner.classList.remove('animate-pulse');
+    }, 600);
+  }
+
+  let timeLeft = 54;
+  const countdownEl = document.getElementById('countdown');
+  const resendBtn = document.getElementById('resend-btn');
+
+  const timer = setInterval(() => {
+    if (timeLeft > 0) {
+      timeLeft--;
+      if (countdownEl) countdownEl.innerText = timeLeft + 's';
+    } else {
+      clearInterval(timer);
+      if (resendBtn) {
+        resendBtn.innerHTML = 'Resend Code Now';
+        resendBtn.removeAttribute('disabled');
+      }
+    }
+  }, 1000);
+
+  function updateStrength(val) {
+    const label = document.getElementById('strength-label');
+    if (!label) return;
+    if (val.length < 8) {
+      label.innerText = 'WEAK (34%)';
+      label.className = 'font-label-badge text-label-badge text-error font-mono';
+    } else if (val.length < 12) {
+      label.innerText = 'MEDIUM (68%)';
+      label.className = 'font-label-badge text-label-badge text-primary font-mono';
+    } else {
+      label.innerText = 'STRONG (95%)';
+      label.className = 'font-label-badge text-label-badge text-secondary font-mono';
+    }
+  }
+</script></main></body></html>

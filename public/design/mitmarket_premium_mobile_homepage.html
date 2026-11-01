@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary": "#4cdf95", "primary": "#b4c5ff", "primary-fixed-dim": "#b4c5ff", "error": "#ffb4ab", "secondary-fixed": "#6dfdaf", "on-tertiary": "#680019", "surface-bright": "#2e3a48", "on-surface-variant": "#c3c5d8", "on-secondary-fixed-variant": "#005230", "primary-fixed": "#dbe1ff", "primary-container": "#1463ff", "on-secondary-fixed": "#002110", "surface-container-low": "#101d29", "on-primary-fixed-variant": "#003daa", "error-container": "#93000a", "outline": "#8d90a2", "surface-tint": "#b4c5ff", "on-background": "#d7e4f5", "on-primary": "#002979", "on-tertiary-container": "#fff3f3", "surface-container-lowest": "#030f1b", "on-secondary-container": "#004025", "secondary-fixed-dim": "#4cdf95", "surface-dim": "#071420", "on-tertiary-fixed": "#40000c", "outline-variant": "#424656", "tertiary-fixed-dim": "#ffb3b5", "inverse-surface": "#d7e4f5", "surface-container-highest": "#293643", "tertiary-fixed": "#ffdada", "on-error": "#690005", "on-error-container": "#ffdad6", "tertiary-container": "#d72747", "surface-container-high": "#1f2b38", "on-secondary": "#003920", "surface": "#071420", "on-surface": "#d7e4f5", "inverse-on-surface": "#25323e", "surface-container": "#14212d", "on-primary-container": "#f5f5ff", "background": "#071420", "surface-variant": "#293643", "on-primary-fixed": "#00174c", "secondary-container": "#00b872", "tertiary": "#ffb3b5", "inverse-primary": "#0052dd", "on-tertiary-fixed-variant": "#920027" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1rem", "space-xs": "0.25rem", "space-xl": "1.5rem", "space-sm": "0.5rem", "space-md": "0.75rem", "gutter": "0.75rem", "margin": "1rem" }, fontFamily: { "headline-sm": ["Inter"], "label-badge": ["JetBrains Mono"], "body-md": ["Inter"], "display": ["Inter"], "headline-md": ["Inter"], "mono-price-lg": ["JetBrains Mono"], "body-sm": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "mono-price-md": ["JetBrains Mono"], "label-meta": ["Inter"] }, fontSize: { "headline-sm": ["15px", { lineHeight: "20px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-badge": ["10px", { lineHeight: "12px", letterSpacing: "0.04em", fontWeight: "600" }], "body-md": ["13px", { lineHeight: "18px", letterSpacing: "-0.005em", fontWeight: "400" }], "display": ["30px", { lineHeight: "36px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-md": ["18px", { lineHeight: "24px", letterSpacing: "-0.015em", fontWeight: "600" }], "mono-price-lg": ["22px", { lineHeight: "26px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-sm": ["11px", { lineHeight: "15px", letterSpacing: "0em", fontWeight: "400" }], "headline-lg": ["22px", { lineHeight: "28px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-lg": ["15px", { lineHeight: "22px", letterSpacing: "-0.01em", fontWeight: "400" }], "mono-price-md": ["14px", { lineHeight: "18px", letterSpacing: "-0.01em", fontWeight: "500" }], "label-meta": ["11px", { lineHeight: "14px", letterSpacing: "0.02em", fontWeight: "500" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="h-14 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="MITMARKET Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xfjei28JUFyqIJqo4ChKBF9CmExMLhlxFa1jwSlgLkcz_WPiniHp2gzcEjStY_z4i4NKuZHHdqXXACcAUDK56rYyII3PUlffyrTzYyMYUYrd8z_UimcPvHiiyT-WaUM5D7Xegy7-LrbRFHcuWQZOyMx5Kt9Yj1cP1mQ2EBS_d5Dk_YzQNNMdFN5ra0Si4FuvSfMjR3Qe1Q-hpd3k5mr3_dXAtl5Lvl-ZF2rNQnuKX9bg"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate">MITMARKET</span><span class="hidden">Home</span></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">search</span></button><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-14 pb-20 bg-surface flex-1"><div class="flex flex-col w-full text-on-surface select-none pb-24">
+<!-- 1. CATEGORY NAVIGATION BAR (23 Official categories horizontal scroll) -->
+<section class="w-full bg-surface-container-low py-2.5 overflow-x-auto no-scrollbar shadow-[inset_0_-1px_0_rgba(255,255,255,0.06)]">
+<div class="flex items-center gap-space-xs px-margin min-w-max">
+<!-- 1. Trending (Active) -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary-container text-on-primary-container shadow-[0_0_12px_rgba(20,99,255,0.35)] transition-transform active:scale-95">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-headline-sm text-label-badge uppercase tracking-wider">Trending</span>
+</button>
+<!-- 2. Combos -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-transform active:scale-95 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
+<span class="material-symbols-outlined text-[15px]">layers</span>
+<span class="font-body-sm text-body-sm font-medium">Combos</span>
+</button>
+<!-- 3. Perps -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-transform active:scale-95 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
+<span class="material-symbols-outlined text-[15px]">candlestick_chart</span>
+<span class="font-body-sm text-body-sm font-medium">Perps</span>
+</button>
+<!-- 4. Breaking -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-tertiary hover:text-on-surface transition-transform active:scale-95 shadow-[inset_0_0_0_1px_rgba(255,71,97,0.2)]">
+<span class="material-symbols-outlined text-[15px]">bolt</span>
+<span class="font-body-sm text-body-sm font-medium">Breaking</span>
+</button>
+<!-- 5. New -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-transform active:scale-95 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
+<span class="material-symbols-outlined text-[15px]">auto_awesome</span>
+<span class="font-body-sm text-body-sm font-medium">New</span>
+</button>
+<!-- 6. Politics -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-transform active:scale-95 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
+<span class="material-symbols-outlined text-[15px]">how_to_vote</span>
+<span class="font-body-sm text-body-sm font-medium">Politics</span>
+</button>
+<!-- 7. Sports -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-transform active:scale-95 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
+<span class="material-symbols-outlined text-[15px]">sports_soccer</span>
+<span class="font-body-sm text-body-sm font-medium">Sports</span>
+</button>
+<!-- 8. Crypto -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-transform active:scale-95 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
+<span class="material-symbols-outlined text-[15px]">currency_bitcoin</span>
+<span class="font-body-sm text-body-sm font-medium">Crypto</span>
+</button>
+<!-- 9. Esports -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-transform active:scale-95 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
+<span class="material-symbols-outlined text-[15px]">sports_esports</span>
+<span class="font-body-sm text-body-sm font-medium">Esports</span>
+</button>
+<!-- 10. Iran -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-transform active:scale-95 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
+<span class="material-symbols-outlined text-[15px]">public</span>
+<span class="font-body-sm text-body-sm font-medium">Iran</span>
+</button>
+<!-- 11. Finance -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-transform active:scale-95 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
+<span class="material-symbols-outlined text-[15px]">account_balance</span>
+<span class="font-body-sm text-body-sm font-medium">Finance</span>
+</button>
+<!-- 12. Geopolitics -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-transform active:scale-95 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
+<span class="material-symbols-outlined text-[15px]">flag</span>
+<span class="font-body-sm text-body-sm font-medium">Geopolitics</span>
+</button>
+<!-- 13. Tech -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-transform active:scale-95 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
+<span class="material-symbols-outlined text-[15px]">memory</span>
+<span class="font-body-sm text-body-sm font-medium">Tech</span>
+</button>
+<!-- 14. Elections -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-transform active:scale-95 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
+<span class="material-symbols-outlined text-[15px]">ballot</span>
+<span class="font-body-sm text-body-sm font-medium">Elections</span>
+</button>
+<!-- 15. Culture -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-transform active:scale-95 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
+<span class="material-symbols-outlined text-[15px]">theater_comedy</span>
+<span class="font-body-sm text-body-sm font-medium">Culture</span>
+</button>
+<!-- 16. Economy -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-transform active:scale-95 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
+<span class="material-symbols-outlined text-[15px]">trending_up</span>
+<span class="font-body-sm text-body-sm font-medium">Economy</span>
+</button>
+<!-- 17. Weather -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-transform active:scale-95 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
+<span class="material-symbols-outlined text-[15px]">cyclone</span>
+<span class="font-body-sm text-body-sm font-medium">Weather</span>
+</button>
+<!-- 18. Mentions -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-transform active:scale-95 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
+<span class="material-symbols-outlined text-[15px]">alternate_email</span>
+<span class="font-body-sm text-body-sm font-medium">Mentions</span>
+</button>
+<!-- 19. Art -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-transform active:scale-95 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
+<span class="material-symbols-outlined text-[15px]">palette</span>
+<span class="font-body-sm text-body-sm font-medium">Art</span>
+</button>
+<!-- 20. Activity -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-transform active:scale-95 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
+<span class="material-symbols-outlined text-[15px]">sensors</span>
+<span class="font-body-sm text-body-sm font-medium">Activity</span>
+</button>
+<!-- 21. Leaderboard -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-transform active:scale-95 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
+<span class="material-symbols-outlined text-[15px]">military_tech</span>
+<span class="font-body-sm text-body-sm font-medium">Leaderboard</span>
+</button>
+<!-- 22. Dashboard -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-transform active:scale-95 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
+<span class="material-symbols-outlined text-[15px]">grid_view</span>
+<span class="font-body-sm text-body-sm font-medium">Dashboard</span>
+</button>
+<!-- 23. Rewards -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-transform active:scale-95 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
+<span class="material-symbols-outlined text-[15px]">stars</span>
+<span class="font-body-sm text-body-sm font-medium">Rewards</span>
+</button>
+</div>
+</section>
+<!-- 2. CINEMATIC FEATURED HERO CAROUSEL -->
+<section class="w-full pt-space-md pb-space-sm px-margin">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-headline-sm text-label-badge text-on-surface uppercase tracking-wider">Spotlight Market</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-4 h-1.5 rounded-full bg-primary-container"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-surface-bright"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-surface-bright"></span>
+</div>
+</div>
+<!-- Featured Card 1 -->
+<div class="w-full rounded-xl bg-surface-container-high relative overflow-hidden shadow-2xl shadow-black/80 flex flex-col justify-between p-space-md min-h-[300px]">
+<!-- Background Editorial Mood Image -->
+<div class="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-luminosity pointer-events-none" data-alt="A grand dark neoclassical boardroom with towering mahogany arches, dramatic cinematic amber spotlights, and institutional architectural scale conveying immense financial authority and high central banking power, volumetric dust particles, photorealistic 8k render." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCWbShWXmiD7OvmGN9wYCtaR39XYhbGV-NukDfloNrJbsQl3FK13hw_hRFQw6xHYs7sexQxogliu670Rl_SN9yPIH3YSQY6vdPmaKAgeqpCSFaTGgJHvZyCqwfIV8wnBsVe7y6NJON_JcEyQ7v4PZy9UoJ0Mgyu4FRhCZ5DVU6rChrADLAVj_-dZZ0vSFjndFsoWmmA4OsSPXVuSUNfgU5puMe_BVO4HA5tS5domckX')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-high/85 to-transparent pointer-events-none"></div>
+<!-- Top Meta Badges -->
+<div class="relative z-10 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-badge text-label-badge font-semibold tracking-wider uppercase">FEATURED</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/80 text-on-surface-variant font-label-badge text-label-badge backdrop-blur-md">FOMC SPECIAL</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-badge text-label-badge">
+<span class="material-symbols-outlined text-[13px] text-secondary">show_chart</span>
+<span>Vol $14.2M</span>
+</div>
+</div>
+<!-- Headline & Content -->
+<div class="relative z-10 my-space-md">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold leading-tight tracking-tight drop-shadow-md">
+          US Federal Reserve to cut benchmark rates by ≥50 bps at next FOMC?
+        </h2>
+<!-- Probability Meter Bar -->
+<div class="mt-space-md bg-surface-container-lowest/90 rounded-lg p-2.5 backdrop-blur-md">
+<div class="flex items-baseline justify-between mb-1.5">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-body-sm text-secondary uppercase font-semibold">Yes</span>
+<span class="font-mono-price-lg text-mono-price-lg text-secondary font-bold">68%</span>
+</div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-mono-price-lg text-mono-price-lg text-tertiary-container font-bold">32%</span>
+<span class="font-headline-sm text-body-sm text-tertiary uppercase font-semibold">No</span>
+</div>
+</div>
+<!-- Split Progress Bar -->
+<div class="w-full h-2 rounded-full bg-surface-container-low flex overflow-hidden">
+<div class="h-full bg-secondary-container transition-all duration-500 shadow-[0_0_8px_rgba(76,223,149,0.5)]" style="width: 68%"></div>
+<div class="h-full bg-tertiary-container transition-all duration-500 shadow-[0_0_8px_rgba(215,39,71,0.5)]" style="width: 32%"></div>
+</div>
+</div>
+</div>
+<!-- Tactical Split Action Buttons & Meta -->
+<div class="relative z-10 flex flex-col gap-2">
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="h-10 rounded-lg bg-secondary/15 hover:bg-secondary/25 active:scale-98 transition-all flex items-center justify-between px-3 text-secondary font-headline-sm text-headline-sm shadow-[inset_0_0_0_1px_rgba(76,223,149,0.35)]">
+<span>Buy YES</span>
+<span class="font-mono-price-md text-mono-price-md font-semibold">68¢</span>
+</button>
+<button class="h-10 rounded-lg bg-tertiary-container/20 hover:bg-tertiary-container/30 active:scale-98 transition-all flex items-center justify-between px-3 text-tertiary font-headline-sm text-headline-sm shadow-[inset_0_0_0_1px_rgba(215,39,71,0.4)]">
+<span>Buy NO</span>
+<span class="font-mono-price-md text-mono-price-md font-semibold">32¢</span>
+</button>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-meta text-label-meta px-0.5 pt-0.5">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+            Closes in 4d 14h
+          </span>
+<span class="font-mono-price-md text-body-sm text-on-surface-variant">Liquidity $3.8M</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. BREAKING TICKER STRIP -->
+<section class="w-full py-2.5 px-margin bg-surface-container-low flex items-center gap-2.5 overflow-hidden">
+<div class="flex items-center gap-1.5 shrink-0 px-2 py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container animate-ping"></span>
+<span class="font-headline-sm text-label-badge font-bold tracking-wider uppercase">BREAKING</span>
+</div>
+<!-- Scrolling news item preview -->
+<div class="flex items-center gap-space-sm overflow-x-auto no-scrollbar py-0.5">
+<div class="flex items-center gap-2 whitespace-nowrap bg-surface-container px-2.5 py-1 rounded-md text-on-surface">
+<span class="font-body-sm text-body-sm truncate">Bitcoin reaches new ATH before end of Q2?</span>
+<span class="font-label-badge text-label-badge text-secondary font-semibold bg-secondary/15 px-1.5 py-0.5 rounded">74% YES</span>
+<span class="text-on-surface-variant font-label-meta text-body-sm">$8.9M Vol</span>
+</div>
+<div class="flex items-center gap-2 whitespace-nowrap bg-surface-container px-2.5 py-1 rounded-md text-on-surface">
+<span class="font-body-sm text-body-sm truncate">OpenAI reveals next model milestone?</span>
+<span class="font-label-badge text-label-badge text-tertiary font-semibold bg-tertiary/15 px-1.5 py-0.5 rounded">41% YES</span>
+<span class="text-on-surface-variant font-label-meta text-body-sm">$3.2M Vol</span>
+</div>
+</div>
+</section>
+<!-- 4. ADVANCED MOSAIC MARKET GRID (SIGNATURE ASYMMETRIC SECTION) -->
+<section class="w-full px-margin pt-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">dashboard_customize</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">Market Intelligence Mosaic</h3>
+</div>
+<button class="font-label-meta text-label-meta text-primary hover:underline flex items-center">
+        Deep Book <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+<!-- Row 1: Asymmetric split (Tall Card 58% + Stacked Cards 40%) -->
+<div class="grid grid-cols-12 gap-space-sm">
+<!-- Left Tall Card (Col 7 / ~58%) -->
+<div class="col-span-7 rounded-xl bg-surface-container p-3 flex flex-col justify-between relative overflow-hidden shadow-lg">
+<div class="w-full h-24 rounded-lg bg-cover bg-center mb-2 relative" data-alt="Futuristic cybernetic crystalline neural network processor chip glowing with deep electric blue fiber-optic synaptic conduits in high dark contrast, hyper-detailed technological singularity, cinematic macro render." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuClcRxjvWXaMp-urGrioR1lMrFR7GggcTcfpLrPEcUwNIpHVOds5zxRTUQLf20I87rKa69ALvkAMiNi-1u1XO2a_yPzP99hg_svQa72r-A_bMcGiU6ocU_Eesfh8CZZQ5h0p_d-u7zvuqG5BWtltXJUdh-sW09y8eroslIRIuebonM_oKSBXngrnHEnMdLtfpQ8MrW7ZLE4XwgcX7Iu_S4NaV_W9P_KQeVy7YD2NwdU')">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent"></div>
+<span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 text-primary font-label-badge text-label-badge font-semibold">TECH &amp; AI</span>
+</div>
+<div class="mb-2">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-snug line-clamp-2">
+            AGI milestone benchmark verified by Dec 2025?
+          </h4>
+<span class="font-label-meta text-label-meta text-on-surface-variant mt-0.5 block">Vol $5.6M • 21h ago</span>
+</div>
+<div>
+<div class="flex items-center justify-between font-mono-price-md text-body-sm mb-1">
+<span class="text-tertiary">44% YES</span>
+<span class="text-tertiary-container font-bold">56% NO</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-low flex overflow-hidden mb-2">
+<div class="h-full bg-tertiary-fixed-dim" style="width: 44%"></div>
+<div class="h-full bg-tertiary-container" style="width: 56%"></div>
+</div>
+<div class="grid grid-cols-2 gap-1.5">
+<button class="py-1 rounded bg-secondary/15 text-secondary text-center font-mono-price-md text-label-badge font-bold active:scale-95 transition-transform">
+              44¢
+            </button>
+<button class="py-1 rounded bg-tertiary-container/20 text-tertiary text-center font-mono-price-md text-label-badge font-bold active:scale-95 transition-transform">
+              56¢
+            </button>
+</div>
+</div>
+</div>
+<!-- Right Stacked Column (Col 5 / ~40%) -->
+<div class="col-span-5 flex flex-col gap-space-sm justify-between">
+<!-- Card A -->
+<div class="rounded-xl bg-surface-container p-2.5 flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-badge text-label-badge text-secondary-fixed">CRYPTO</span>
+<span class="font-mono-price-md text-label-badge text-secondary font-bold">82%</span>
+</div>
+<h5 class="font-body-md text-body-sm text-on-surface font-medium leading-tight line-clamp-2">
+              Ethereum ETF net inflow &gt;$1B week 1?
+            </h5>
+</div>
+<div class="mt-2 pt-1.5 border-t border-white/5 flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-on-surface-variant">$1.1M</span>
+<button class="px-2 py-0.5 rounded bg-secondary-container/20 text-secondary font-mono-price-md text-label-badge font-bold">
+              82¢
+            </button>
+</div>
+</div>
+<!-- Card B -->
+<div class="rounded-xl bg-surface-container p-2.5 flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-badge text-label-badge text-primary-fixed">AEROSPACE</span>
+<span class="font-mono-price-md text-label-badge text-secondary font-bold">91%</span>
+</div>
+<h5 class="font-body-md text-body-sm text-on-surface font-medium leading-tight line-clamp-2">
+              Starship booster catch success on pad?
+            </h5>
+</div>
+<div class="mt-2 pt-1.5 border-t border-white/5 flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-on-surface-variant">$740k</span>
+<button class="px-2 py-0.5 rounded bg-secondary-container/20 text-secondary font-mono-price-md text-label-badge font-bold">
+              91¢
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Row 2: Full-Width Cinematic Banner Card -->
+<div class="w-full rounded-xl bg-surface-container p-space-md relative overflow-hidden shadow-xl">
+<div class="absolute inset-0 bg-cover bg-center opacity-20 pointer-events-none" data-alt="High tech semiconductor fabrication cleanroom laboratory with amber monochromatic safety lighting, robotic automated wafer transfer systems, pristine reflective silicon discs in hyper-sharp cinematic focus." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXt9mC_ixhMR_FxGmB4_1LvySHLdd7cp1w9BC142487ZIpLp9vxbJTxkPKK1JkEq9tyZwXmrKqaxNDok39wl_Y9LRVAR-9Dj6zFDfkEGJeWnMCZVUp8QwoLGRbWP_phwdWpgxUkLC7PW9ndbWEwceL-Ku-npqKzwe1wx-aFiMoWAghfj7ebtamds4fYmK1JN-DxM0yx7lD2cqeWLQPJW9cUKMVKZh9iiX8K3PyciYL')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container via-surface-container/90 to-surface-container-high/60 pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-primary/15 text-primary font-label-badge text-label-badge font-semibold">GLOBAL SEMIS • 2nm FAB</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Vol $18.4M</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold leading-tight">
+          Will TSMC 2nm begin volume commercial production ahead of schedule?
+        </h4>
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<button class="h-9 rounded-lg bg-secondary/10 hover:bg-secondary/20 flex items-center justify-between px-3 text-secondary shadow-[inset_0_0_0_1px_rgba(76,223,149,0.3)] transition-all">
+<span class="font-headline-sm text-body-md">YES</span>
+<span class="font-mono-price-md text-mono-price-md font-bold">39¢</span>
+</button>
+<button class="h-9 rounded-lg bg-tertiary-container/15 hover:bg-tertiary-container/25 flex items-center justify-between px-3 text-tertiary shadow-[inset_0_0_0_1px_rgba(215,39,71,0.3)] transition-all">
+<span class="font-headline-sm text-body-md">NO</span>
+<span class="font-mono-price-md text-mono-price-md font-bold">61¢</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Row 3: Two Balanced Compact Square Cards -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Left Square Card -->
+<div class="rounded-xl bg-surface-container p-3 flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">EPL Clash</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</div>
+<h5 class="font-headline-sm text-body-md text-on-surface font-semibold leading-tight mb-2">
+            Man City vs Arsenal title clash victory
+          </h5>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-meta text-body-sm">
+<span class="material-symbols-outlined text-[14px]">stadium</span>
+<span>Etihad Live</span>
+</div>
+</div>
+<div class="pt-2">
+<div class="flex justify-between font-mono-price-md text-label-badge mb-1">
+<span class="text-secondary">MC 54%</span>
+<span class="text-tertiary">ARS 46%</span>
+</div>
+<button class="w-full py-1.5 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface font-headline-sm text-body-sm transition-colors">
+            Trade Match
+          </button>
+</div>
+</div>
+<!-- Right Square Card -->
+<div class="rounded-xl bg-surface-container p-3 flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-badge text-label-badge text-secondary-fixed uppercase">Token Flip</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">$4.1M</span>
+</div>
+<h5 class="font-headline-sm text-body-md text-on-surface font-semibold leading-tight mb-2">
+            Solana flips BNB market cap permanently in 2025?
+          </h5>
+<div class="flex items-center gap-1 text-secondary font-mono-price-md text-body-sm">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span>53% YES (53¢)</span>
+</div>
+</div>
+<div class="pt-2">
+<button class="w-full py-1.5 rounded bg-secondary-container/20 text-secondary font-headline-sm text-body-sm hover:bg-secondary-container/30 transition-colors">
+            Position YES
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. TRENDING MARKETS LEADER SECTION -->
+<section class="w-full px-margin pt-space-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="text-tertiary font-bold text-headline-sm">🔥</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">Top Ranked Markets</h3>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant">24h Volume</span>
+</div>
+<!-- Ranked Cards Stack -->
+<div class="flex flex-col gap-2">
+<!-- #1 -->
+<div class="w-full p-2.5 rounded-xl bg-surface-container flex items-center justify-between gap-space-sm hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="font-mono-price-lg text-body-lg font-bold text-primary shrink-0 w-5">#1</span>
+<div class="min-w-0">
+<p class="font-headline-sm text-body-md text-on-surface font-semibold truncate">Fed Funds rate cut by December 2025?</p>
+<p class="font-label-meta text-body-sm text-on-surface-variant flex items-center gap-1.5">
+<span>$22.4M</span>
+<span class="text-secondary font-medium">+14.2% today</span>
+</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<button class="px-2.5 py-1.5 rounded bg-secondary/15 text-secondary font-mono-price-md text-label-badge font-bold">
+            YES 84¢
+          </button>
+<button class="px-2.5 py-1.5 rounded bg-tertiary/15 text-tertiary font-mono-price-md text-label-badge font-bold">
+            NO 16¢
+          </button>
+</div>
+</div>
+<!-- #2 -->
+<div class="w-full p-2.5 rounded-xl bg-surface-container flex items-center justify-between gap-space-sm hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="font-mono-price-lg text-body-lg font-bold text-on-surface-variant shrink-0 w-5">#2</span>
+<div class="min-w-0">
+<p class="font-headline-sm text-body-md text-on-surface font-semibold truncate">TikTok forced divestiture resolved Q3?</p>
+<p class="font-label-meta text-body-sm text-on-surface-variant flex items-center gap-1.5">
+<span>$11.8M</span>
+<span class="text-tertiary font-medium">-3.8% today</span>
+</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<button class="px-2.5 py-1.5 rounded bg-secondary/15 text-secondary font-mono-price-md text-label-badge font-bold">
+            YES 42¢
+          </button>
+<button class="px-2.5 py-1.5 rounded bg-tertiary/15 text-tertiary font-mono-price-md text-label-badge font-bold">
+            NO 58¢
+          </button>
+</div>
+</div>
+<!-- #3 -->
+<div class="w-full p-2.5 rounded-xl bg-surface-container flex items-center justify-between gap-space-sm hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="font-mono-price-lg text-body-lg font-bold text-on-surface-variant shrink-0 w-5">#3</span>
+<div class="min-w-0">
+<p class="font-headline-sm text-body-md text-on-surface font-semibold truncate">SpaceX valuation crosses $250B secondary?</p>
+<p class="font-label-meta text-body-sm text-on-surface-variant flex items-center gap-1.5">
+<span>$8.6M</span>
+<span class="text-secondary font-medium">+8.1% today</span>
+</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<button class="px-2.5 py-1.5 rounded bg-secondary/15 text-secondary font-mono-price-md text-label-badge font-bold">
+            YES 71¢
+          </button>
+<button class="px-2.5 py-1.5 rounded bg-tertiary/15 text-tertiary font-mono-price-md text-label-badge font-bold">
+            NO 29¢
+          </button>
+</div>
+</div>
+<!-- #4 -->
+<div class="w-full p-2.5 rounded-xl bg-surface-container flex items-center justify-between gap-space-sm hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="font-mono-price-lg text-body-lg font-bold text-on-surface-variant shrink-0 w-5">#4</span>
+<div class="min-w-0">
+<p class="font-headline-sm text-body-md text-on-surface font-semibold truncate">Ethereum gas fee baseline &lt;10 gwei avg?</p>
+<p class="font-label-meta text-body-sm text-on-surface-variant flex items-center gap-1.5">
+<span>$5.3M</span>
+<span class="text-secondary font-medium">+2.4% today</span>
+</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<button class="px-2.5 py-1.5 rounded bg-secondary/15 text-secondary font-mono-price-md text-label-badge font-bold">
+            YES 89¢
+          </button>
+<button class="px-2.5 py-1.5 rounded bg-tertiary/15 text-tertiary font-mono-price-md text-label-badge font-bold">
+            NO 11¢
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. COMBOS & PARLAYS BOOST SECTION -->
+<section class="w-full px-margin pt-space-xl">
+<div class="w-full rounded-2xl bg-gradient-to-br from-surface-container-high via-surface-container to-surface-container-low p-space-md shadow-xl relative overflow-hidden">
+<!-- Glow ambient light -->
+<div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-primary-container/20 blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">bolt</span>
+<span class="font-headline-sm text-label-badge text-primary-fixed uppercase tracking-wider">Multi-Market Parlay</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary/15 text-secondary font-label-badge text-label-badge font-bold">
+          4.8x RETURN BOOST
+        </span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold mb-3">
+        Silicon Valley Triple Consensus
+      </h4>
+<div class="space-y-1.5 mb-3.5">
+<div class="flex items-center justify-between text-body-sm bg-surface-container-lowest/60 p-2 rounded-lg">
+<span class="text-on-surface font-medium truncate">1. Apple announces M5 Ultra chip before Nov</span>
+<span class="text-secondary font-mono-price-md text-label-badge font-semibold">YES</span>
+</div>
+<div class="flex items-center justify-between text-body-sm bg-surface-container-lowest/60 p-2 rounded-lg">
+<span class="text-on-surface font-medium truncate">2. Tesla FSD unsupervised clearance Texas</span>
+<span class="text-secondary font-mono-price-md text-label-badge font-semibold">YES</span>
+</div>
+<div class="flex items-center justify-between text-body-sm bg-surface-container-lowest/60 p-2 rounded-lg">
+<span class="text-on-surface font-medium truncate">3. Meta Quest 4 specs leaked prior to Connect</span>
+<span class="text-secondary font-mono-price-md text-label-badge font-semibold">YES</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div>
+<span class="font-label-meta text-body-sm text-on-surface-variant block">Payout on $50 bet</span>
+<span class="font-mono-price-lg text-mono-price-lg text-secondary font-bold">$240.00 USDC</span>
+</div>
+<button class="px-4 py-2.5 rounded-lg bg-primary-container hover:bg-primary-container/90 active:scale-95 text-on-primary-container font-headline-sm text-body-md font-bold transition-all shadow-[0_4px_16px_rgba(20,99,255,0.4)]">
+          Place Combo Bet
+        </button>
+</div>
+</div>
+</section>
+<!-- 7. PERPS & PREDICTION FUTURES (DERIVATIVES STRIP) -->
+<section class="w-full px-margin pt-space-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">trending_up</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">Prediction Perps</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-badge text-label-badge">Up to 20x Leverage</span>
+</div>
+<!-- Derivatives Compact Tickers Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-3 rounded-xl bg-surface-container flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">BTC/100K-PERP</span>
+<span class="text-secondary font-label-badge text-label-badge font-bold">+12.4%</span>
+</div>
+<div class="my-2">
+<span class="font-mono-price-lg text-mono-price-lg text-on-surface font-bold">0.824</span>
+<span class="text-on-surface-variant font-label-meta text-body-sm ml-1">Index</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant pt-1 border-t border-white/5">
+<span>Funding 0.01%</span>
+<span class="text-secondary font-semibold">Long 5x</span>
+</div>
+</div>
+<div class="p-3 rounded-xl bg-surface-container flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">FED/CUT-PERP</span>
+<span class="text-tertiary font-label-badge text-label-badge font-bold">-4.1%</span>
+</div>
+<div class="my-2">
+<span class="font-mono-price-lg text-mono-price-lg text-on-surface font-bold">0.341</span>
+<span class="text-on-surface-variant font-label-meta text-body-sm ml-1">Index</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant pt-1 border-t border-white/5">
+<span>Funding -0.02%</span>
+<span class="text-tertiary font-semibold">Short 10x</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. CLUSTER: GEOPOLITICS & IRAN RISK SECTION -->
+<section class="w-full px-margin pt-space-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">security</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">Geopolitics &amp; Strategic Risk</h3>
+</div>
+<span class="text-on-surface-variant font-label-badge text-label-badge flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Verified Reuters/AP
+      </span>
+</div>
+<!-- Editorial High Stakes Geopolitics Card -->
+<div class="w-full rounded-xl bg-surface-container p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<span class="px-2 py-0.5 rounded bg-tertiary-container/20 text-tertiary font-label-badge text-label-badge font-semibold">IRAN DIPLOMACY</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1.5 leading-snug">
+            Strait of Hormuz formal shipping transit agreement signed in 2025?
+          </h4>
+</div>
+<div class="w-14 h-14 rounded-lg bg-cover bg-center shrink-0" data-alt="An expansive dramatic aerial surveillance photograph of massive oil supertankers crossing through a narrow maritime strait under deep twilight atmospheric fog with military radar overlays." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB5By3wDMYh0_SC6KHhpOMmwaXnYc6Sgg_pTaNao4Dvn0uEDmIz8xJ9HKYOFfAC2F500bKVpSa6WWYJ1xArnmAlnHrKAE9XmhV8SEwI8O4nLDr-xI6U216G_oK-TQDxIqpmkwprmzQ6gIiUnuns_RQalrHCRORO3hnxne8ank_olPRbJCrVtF0bvk1UQhNrY31GUx5M9zpy-rYp5Dx0oNX4fbcKsnb0M7_VQTPGWVWW')"></div>
+</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>Resolution: Formal UN/IMO Treaty</span>
+<span class="font-mono-price-md text-body-sm text-on-surface">Vol $7.9M</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<button class="py-2 rounded-lg bg-secondary/10 text-secondary font-mono-price-md text-body-md font-bold flex items-center justify-between px-3">
+<span>YES</span>
+<span>27¢</span>
+</button>
+<button class="py-2 rounded-lg bg-tertiary-container/15 text-tertiary font-mono-price-md text-body-md font-bold flex items-center justify-between px-3">
+<span>NO</span>
+<span>73¢</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 9. SPORTS & ESPORTS MATCH CARD -->
+<section class="w-full px-margin pt-space-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">sports_basketball</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">Sports &amp; Live Arenas</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-badge text-label-badge animate-pulse">LIVE Q4 02:44</span>
+</div>
+<!-- Live Match Card -->
+<div class="w-full rounded-xl bg-surface-container p-space-md flex flex-col gap-3 shadow-md">
+<div class="flex items-center justify-between pb-2 border-b border-white/5">
+<!-- Team 1 -->
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-primary font-headline-sm">
+            BOS
+          </div>
+<div>
+<p class="font-headline-sm text-body-md text-on-surface font-bold">Boston</p>
+<p class="font-mono-price-lg text-headline-sm font-bold text-secondary">108</p>
+</div>
+</div>
+<div class="text-center font-label-badge text-label-badge text-on-surface-variant">
+<span>VS</span>
+</div>
+<!-- Team 2 -->
+<div class="flex items-center gap-2 flex-row-reverse text-right">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-tertiary font-headline-sm">
+            DAL
+          </div>
+<div>
+<p class="font-headline-sm text-body-md text-on-surface font-bold">Dallas</p>
+<p class="font-mono-price-lg text-headline-sm font-bold text-on-surface">104</p>
+</div>
+</div>
+</div>
+<!-- Win probability gauge -->
+<div>
+<div class="flex justify-between text-body-sm font-mono-price-md mb-1">
+<span class="text-secondary font-bold">Boston 76% Win</span>
+<span class="text-on-surface-variant font-medium">Dallas 24%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-low flex overflow-hidden">
+<div class="h-full bg-secondary-container" style="width: 76%"></div>
+<div class="h-full bg-surface-variant" style="width: 24%"></div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<button class="py-1.5 rounded bg-secondary/15 text-secondary font-headline-sm text-body-sm font-bold active:scale-95 transition-transform">
+          Boston Win (76¢)
+        </button>
+<button class="py-1.5 rounded bg-surface-container-high text-on-surface font-headline-sm text-body-sm font-bold active:scale-95 transition-transform">
+          Dallas Win (24¢)
+        </button>
+</div>
+</div>
+</section>
+<!-- 10. WEATHER & MACRO ECONOMY STRIP -->
+<section class="w-full px-margin pt-space-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">cloud</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">Weather &amp; Macro Climate</h3>
+</div>
+<span class="font-label-meta text-label-meta text-on-surface-variant">NOAA Feeds</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-3 rounded-xl bg-surface-container flex flex-col justify-between">
+<div>
+<span class="font-label-badge text-label-badge text-primary-fixed">ATLANTIC 2025</span>
+<h5 class="font-body-md text-body-sm text-on-surface font-medium mt-1 leading-tight">
+            &gt;5 Category 4+ Hurricanes recorded?
+          </h5>
+</div>
+<div class="mt-3 flex items-center justify-between">
+<span class="font-mono-price-md text-body-md text-secondary font-bold">62% YES</span>
+<button class="px-2 py-0.5 rounded bg-secondary/15 text-secondary font-mono-price-md text-label-badge font-bold">
+            62¢
+          </button>
+</div>
+</div>
+<div class="p-3 rounded-xl bg-surface-container flex flex-col justify-between">
+<div>
+<span class="font-label-badge text-label-badge text-tertiary-fixed">INFLATION PRINT</span>
+<h5 class="font-body-md text-body-sm text-on-surface font-medium mt-1 leading-tight">
+            Next US Core CPI Year-over-Year &lt;2.8%?
+          </h5>
+</div>
+<div class="mt-3 flex items-center justify-between">
+<span class="font-mono-price-md text-body-md text-tertiary font-bold">34% YES</span>
+<button class="px-2 py-0.5 rounded bg-tertiary/15 text-tertiary font-mono-price-md text-label-badge font-bold">
+            34¢
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- 11. LEADERBOARD & REWARDS SHOWCASE -->
+<section class="w-full px-margin pt-space-xl">
+<div class="w-full rounded-2xl bg-surface-container-high p-space-md shadow-xl flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">emoji_events</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Weekly Leaderboard</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container/20 text-secondary font-label-badge text-label-badge font-bold">
+          $100,000 USDC POOL
+        </span>
+</div>
+<!-- Top Trader Spotlight -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-full bg-gradient-to-tr from-primary-container to-secondary flex items-center justify-center font-bold text-surface-container-lowest font-headline-sm shadow-md">
+            👑
+          </div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-body-md text-on-surface font-bold">0xHyperion</span>
+<span class="px-1.5 py-0.2 rounded bg-primary-container text-on-primary-container font-label-badge text-[9px]">RANK 1</span>
+</div>
+<span class="font-label-meta text-body-sm text-on-surface-variant">Win Rate 88.4% • 142 Trades</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-mono-price-md text-body-md text-secondary font-bold block">+$342,190</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant">7d PnL</span>
+</div>
+</div>
+<!-- Quick Action: Join Weekly Sprint -->
+<div class="flex items-center justify-between pt-1">
+<span class="text-body-sm text-on-surface-variant">Your current position: <strong>#482</strong></span>
+<button class="font-headline-sm text-body-sm text-primary hover:underline flex items-center">
+          View All Ranks <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple micro-interaction for tactical outcome taps
+  document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      // Light tactile scale feedback
+      btn.style.transform = 'scale(0.96)';
+      setTimeout(() => {
+        btn.style.transform = '';
+      }, 120);
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container/95 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,0,0,0.5)]" data-active-classes="text-primary-container font-semibold"><div class="h-16 px-space-xs flex items-center justify-around"><a aria-current="page" class="flex flex-col items-center justify-center w-14 h-12 transition-colors text-primary-container font-semibold" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-meta text-label-meta mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="explore" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span class="font-label-meta text-label-meta mt-0.5">Explore</span></a><a class="flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="markets" href="#"><span class="material-symbols-outlined text-[22px]">candlestick_chart</span><span class="font-label-meta text-label-meta mt-0.5">Markets</span></a><a class="flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="portfolio" href="#"><span class="material-symbols-outlined text-[22px]">pie_chart</span><span class="font-label-meta text-label-meta mt-0.5">Portfolio</span></a><a class="flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="profile" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-meta text-label-meta mt-0.5">Profile</span></a></div></nav></body></html>

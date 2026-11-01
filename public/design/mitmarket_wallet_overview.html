@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#071420;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#030f1b", "on-secondary": "#003920", "on-primary-fixed": "#00174c", "secondary": "#4cdf95", "inverse-primary": "#0052dd", "outline": "#8d90a2", "surface-dim": "#071420", "primary-fixed": "#dbe1ff", "outline-variant": "#424656", "error-container": "#93000a", "primary-fixed-dim": "#b4c5ff", "on-primary-container": "#f5f5ff", "on-tertiary-container": "#fff3f3", "error": "#ffb4ab", "surface-container-low": "#101d29", "on-surface": "#d7e4f5", "on-error-container": "#ffdad6", "secondary-container": "#00b872", "on-secondary-container": "#004025", "tertiary-container": "#d72747", "on-secondary-fixed-variant": "#005230", "background": "#071420", "tertiary-fixed": "#ffdada", "surface-bright": "#2e3a48", "surface-container-highest": "#293643", "on-error": "#690005", "on-background": "#d7e4f5", "on-secondary-fixed": "#002110", "on-surface-variant": "#c3c5d8", "on-primary": "#002979", "secondary-fixed-dim": "#4cdf95", "tertiary-fixed-dim": "#ffb3b5", "inverse-on-surface": "#25323e", "surface-variant": "#293643", "on-tertiary-fixed-variant": "#920027", "tertiary": "#ffb3b5", "surface": "#071420", "surface-container-high": "#1f2b38", "surface-container": "#14212d", "on-primary-fixed-variant": "#003daa", "primary": "#b4c5ff", "primary-container": "#1463ff", "on-tertiary-fixed": "#40000c", "on-tertiary": "#680019", "secondary-fixed": "#6dfdaf", "surface-tint": "#b4c5ff", "inverse-surface": "#d7e4f5" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "0.75rem", "space-xs": "0.25rem", "gutter": "0.75rem", "space-lg": "1rem", "space-sm": "0.5rem", "space-xl": "1.5rem", "margin": "1rem" }, "fontFamily": { "body-lg": ["Inter"], "label-badge": ["JetBrains Mono"], "mono-price-md": ["JetBrains Mono"], "headline-md": ["Inter"], "display": ["Inter"], "body-md": ["Inter"], "mono-price-lg": ["JetBrains Mono"], "headline-lg": ["Inter"], "label-meta": ["Inter"], "headline-sm": ["Inter"], "body-sm": ["Inter"] }, "fontSize": { "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-badge": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "600" }], "mono-price-md": ["14px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "mono-price-lg": ["22px", { "lineHeight": "26px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-meta": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["11px", { "lineHeight": "15px", "letterSpacing": "0em", "fontWeight": "400" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.4)] pt-safe"><div class="h-14 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary-container text-[20px]">query_stats</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm tracking-tight font-bold text-on-surface">MITMARKET</span><span class="font-label-badge text-label-badge text-secondary bg-on-secondary/30 px-1 py-0.5 rounded">PRO</span></div><span class="font-label-meta text-label-meta text-outline truncate max-w-[120px]">Mitmarket — Wallet Overview</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-14 pb-20 bg-surface flex-1"><div class="flex flex-col w-full pb-10">
+<!-- System Ledger Sub-Banner -->
+<div class="px-margin pt-space-xs pb-space-sm flex items-center justify-between bg-surface-container-lowest/60">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse shrink-0"></span>
+<span class="font-label-badge text-label-badge text-outline tracking-wider truncate uppercase">
+        Multi-Chain Custodial Ledger • Zero Gas Sweeps
+      </span>
+</div>
+<div class="flex items-center gap-1 shrink-0 bg-surface-container-high px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px] text-secondary">verified_user</span>
+<span class="font-label-badge text-label-badge text-on-surface">SOC2 TYPE II</span>
+</div>
+</div>
+<div class="px-margin flex flex-col gap-space-md pt-space-sm">
+<!-- SECTION 1: Total Wallet Balance Card -->
+<div class="relative bg-surface-container rounded-xl p-space-md overflow-hidden shadow-lg shadow-surface-container-lowest/40">
+<div class="absolute -right-12 -top-12 w-44 h-44 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Top Row: Balance Label & Controls -->
+<div class="flex items-center justify-between relative z-10">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-meta text-label-meta text-outline uppercase tracking-wider">Total Vault Value</span>
+<button aria-label="Toggle Balance Visibility" class="w-6 h-6 rounded flex items-center justify-center text-outline hover:text-on-surface transition-colors" id="toggle-balance-btn">
+<span class="material-symbols-outlined text-[16px]" id="eye-icon">visibility</span>
+</button>
+</div>
+<button class="flex items-center gap-1 bg-surface-container-high px-2 py-1 rounded text-on-surface hover:bg-surface-container-highest transition-colors">
+<span class="font-mono-price-md text-[11px] font-semibold text-primary">USD</span>
+<span class="material-symbols-outlined text-[14px] text-outline">expand_more</span>
+</button>
+</div>
+<!-- Main Balance Display -->
+<div class="mt-space-xs relative z-10 flex items-baseline gap-space-xs">
+<div class="flex items-baseline" id="balance-value-container">
+<span class="font-display text-display font-bold text-on-surface tracking-tight" id="balance-raw">$52,480.90</span>
+<span class="font-label-meta text-label-meta text-outline ml-1.5">USD</span>
+</div>
+<div class="ml-auto flex items-center gap-1 px-1.5 py-0.5 rounded bg-secondary/10">
+<span class="material-symbols-outlined text-[13px] text-secondary">arrow_drop_up</span>
+<span class="font-label-badge text-label-badge text-secondary font-mono">+$1,840.20 (+3.63%)</span>
+</div>
+</div>
+<!-- Sub-Balances Row -->
+<div class="mt-space-md pt-space-sm grid grid-cols-2 gap-space-sm bg-surface-container-low/70 rounded-lg p-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-meta text-label-meta text-outline">Available Free</span>
+</div>
+<span class="font-mono-price-md text-mono-price-md font-semibold text-on-surface mt-0.5 masked-balance" data-raw="$38,240.50">$38,240.50</span>
+<span class="font-label-badge text-label-badge text-outline mt-0.5">72.8% of portfolio</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="font-label-meta text-label-meta text-outline">Locked Collateral</span>
+</div>
+<span class="font-mono-price-md text-mono-price-md font-semibold text-on-surface mt-0.5 masked-balance" data-raw="$14,240.40">$14,240.40</span>
+<span class="font-label-badge text-label-badge text-outline mt-0.5">Prediction Margin</span>
+</div>
+</div>
+<!-- Visual Distribution Micro-Bar -->
+<div class="mt-space-md flex flex-col gap-1.5">
+<div class="w-full h-1.5 bg-surface-container-lowest rounded-full overflow-hidden flex">
+<div class="h-full bg-secondary" style="width: 45%" title="USDT 45%"></div>
+<div class="h-full bg-primary" style="width: 25%" title="BTC 25%"></div>
+<div class="h-full bg-primary-container" style="width: 18%" title="ETH 18%"></div>
+<div class="h-full bg-secondary-fixed" style="width: 8%" title="SOL 8%"></div>
+<div class="h-full bg-outline-variant" style="width: 4%" title="Others 4%"></div>
+</div>
+<div class="flex items-center justify-between text-outline font-label-badge text-label-badge pt-0.5">
+<div class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>USDT 45%</div>
+<div class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>BTC 25%</div>
+<div class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>ETH 18%</div>
+<div class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed"></span>SOL 8%</div>
+<div class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>OTH 4%</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Quick Action Buttons -->
+<div class="grid grid-cols-4 gap-space-xs">
+<!-- Deposit (Primary Accent) -->
+<button class="flex flex-col items-center justify-center p-2.5 rounded-xl bg-primary-container hover:bg-primary-container/90 transition-all text-on-primary-container group active:scale-[0.97] shadow-md shadow-primary-container/20">
+<div class="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px] text-white">south_west</span>
+</div>
+<span class="font-headline-sm text-[12px] font-semibold tracking-tight text-white">Deposit</span>
+</button>
+<!-- Withdraw -->
+<button class="flex flex-col items-center justify-center p-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all text-on-surface group active:scale-[0.97]">
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px] text-primary">north_east</span>
+</div>
+<span class="font-headline-sm text-[12px] font-semibold tracking-tight">Withdraw</span>
+</button>
+<!-- Send -->
+<button class="flex flex-col items-center justify-center p-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all text-on-surface group active:scale-[0.97]">
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">send</span>
+</div>
+<span class="font-headline-sm text-[12px] font-semibold tracking-tight">Send</span>
+</button>
+<!-- Receive -->
+<button class="flex flex-col items-center justify-center p-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all text-on-surface group active:scale-[0.97]">
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px] text-secondary">qr_code_2</span>
+</div>
+<span class="font-headline-sm text-[12px] font-semibold tracking-tight">Receive</span>
+</button>
+</div>
+<!-- SECTION 3: Wallet Tabs & Filters -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<!-- Tabs Segment Control -->
+<div class="flex items-center gap-1 p-1 bg-surface-container-low rounded-lg overflow-x-auto scrollbar-none">
+<button class="asset-tab px-3 py-1.5 rounded-md bg-surface-container text-primary font-headline-sm text-[12px] font-semibold whitespace-nowrap shadow-sm" data-tab="all">
+          All Assets (10)
+        </button>
+<button class="asset-tab px-3 py-1.5 rounded-md text-outline hover:text-on-surface font-headline-sm text-[12px] whitespace-nowrap transition-colors" data-tab="available">
+          Available
+        </button>
+<button class="asset-tab px-3 py-1.5 rounded-md text-outline hover:text-on-surface font-headline-sm text-[12px] whitespace-nowrap transition-colors" data-tab="locked">
+          Locked (2)
+        </button>
+<button class="asset-tab px-3 py-1.5 rounded-md text-outline hover:text-on-surface font-headline-sm text-[12px] whitespace-nowrap transition-colors" data-tab="history">
+          History
+        </button>
+</div>
+<!-- Search & Zero Balances Toggle -->
+<div class="flex items-center justify-between gap-space-sm">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[16px]">search</span>
+<input class="w-full bg-surface-container rounded-lg pl-8 pr-3 py-1.5 text-on-surface placeholder:text-outline font-body-md text-[12px] focus:outline-none focus:bg-surface-container-high transition-colors" id="asset-search-input" placeholder="Search 10+ supported assets..." type="text"/>
+</div>
+<label class="flex items-center gap-1.5 cursor-pointer shrink-0 select-none">
+<input checked="" class="sr-only peer" id="hide-zero-toggle" type="checkbox"/>
+<div class="w-7 h-4 bg-surface-container-high peer-checked:bg-secondary rounded-full relative transition-colors">
+<div class="w-3 h-3 bg-on-secondary rounded-full absolute top-0.5 left-0.5 peer-checked:left-3.5 transition-all"></div>
+</div>
+<span class="font-label-meta text-label-meta text-outline whitespace-nowrap">Hide 0</span>
+</label>
+</div>
+</div>
+<!-- SECTION 4: Asset List (Expandable Rich Cards) -->
+<div class="flex flex-col gap-space-xs" id="asset-list-container">
+<!-- 1. USDT -->
+<div class="asset-item bg-surface-container rounded-xl p-space-sm transition-all" data-asset="usdt" data-balance="24150.00">
+<div class="flex items-center justify-between cursor-pointer asset-trigger" onclick="toggleAssetAccordion('usdt-content', this)">
+<div class="flex items-center gap-2.5 min-w-0">
+<!-- Icon Badge -->
+<div class="w-9 h-9 rounded-full bg-[#26A17B]/20 flex items-center justify-center shrink-0">
+<svg class="w-5 h-5" fill="none" viewbox="0 0 32 32">
+<circle cx="16" cy="16" fill="#26A17B" r="16"></circle>
+<path d="M17.9 17.5c-.2 0-1.2.1-1.9.1s-1.6 0-1.9-.1c-4.4-.2-7.7-1.1-7.7-2.1s3.3-1.9 7.7-2.1v3.2c.3 0 1.2.1 1.9.1s1.6 0 1.9-.1v-3.2c4.4.2 7.7 1.1 7.7 2.1s-3.3 1.9-7.7 2.1zm0-4.6v-2.3h5.6V7.4H8.5v3.2h5.6v2.3C9.3 13.1 5.5 14.5 5.5 16.2c0 1.9 4.7 3.4 10.5 3.4s10.5-1.5 10.5-3.4c0-1.7-3.8-3.1-8.6-3.3zm0 6.6v5.1h-3.8v-5.1c-4.2-.2-7.3-1.1-7.6-2v3.3c0 1.9 4.7 3.4 10.5 3.4s10.5-1.5 10.5-3.4v-3.3c-.3.9-3.4 1.8-7.6 2z" fill="#FFFFFF"></path>
+</svg>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">USDT</span>
+<span class="font-label-badge text-label-badge px-1 py-0.2 rounded bg-surface-container-high text-outline">MULTI-CHAIN</span>
+</div>
+<span class="font-label-meta text-label-meta text-outline truncate">Tether USD • $1.0000</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 ml-2">
+<span class="font-mono-price-md text-mono-price-md font-semibold text-on-surface masked-balance" data-raw="24,150.00 USDT">24,150.00 USDT</span>
+<span class="font-label-meta text-label-meta text-outline masked-balance" data-raw="$24,150.00">$24,150.00</span>
+</div>
+</div>
+<!-- Expanded Drawer Content -->
+<div class="mt-space-sm pt-space-sm border-t border-white/5 flex flex-col gap-2" id="usdt-content">
+<div class="grid grid-cols-2 gap-2 text-[11px] bg-surface-container-lowest/50 p-2 rounded-lg">
+<div class="flex flex-col">
+<span class="text-outline font-label-meta">Available:</span>
+<span class="font-mono text-secondary font-semibold">20,000.00 USDT</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline font-label-meta">In Prediction Escrow:</span>
+<span class="font-mono text-tertiary font-semibold">4,150.00 USDT</span>
+</div>
+</div>
+<!-- Multi-chain pill chips -->
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-label-badge text-[9px] px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface">ERC-20</span>
+<span class="font-label-badge text-[9px] px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface">TRC-20 (Instant)</span>
+<span class="font-label-badge text-[9px] px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface">Solana SPL</span>
+<span class="font-label-badge text-[9px] px-1.5 py-0.5 rounded bg-secondary/10 text-secondary">Free Sweeps</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<button class="flex-1 py-1 rounded bg-primary text-on-primary font-headline-sm text-[11px] font-semibold flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[13px]">arrow_downward</span> Deposit USDT
+            </button>
+<button class="flex-1 py-1 rounded bg-surface-container-high text-on-surface font-headline-sm text-[11px] font-semibold flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[13px]">arrow_upward</span> Withdraw
+            </button>
+</div>
+</div>
+</div>
+<!-- 2. BTC -->
+<div class="asset-item bg-surface-container rounded-xl p-space-sm transition-all" data-asset="btc" data-balance="27425.80">
+<div class="flex items-center justify-between cursor-pointer asset-trigger" onclick="toggleAssetAccordion('btc-content', this)">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-9 h-9 rounded-full bg-[#F7931A]/20 flex items-center justify-center shrink-0">
+<svg class="w-5 h-5" fill="none" viewbox="0 0 32 32">
+<circle cx="16" cy="16" fill="#F7931A" r="16"></circle>
+<path d="M22.5 13.7c.3-2.1-1.3-3.2-3.5-4l.7-2.9-1.8-.4-.7 2.8c-.5-.1-1-.2-1.5-.3l.7-2.9-1.8-.4-.7 2.9c-.4-.1-.8-.2-1.2-.2l-2.4-.6-.5 1.9s1.3.3 1.3.3c.7.2.8.7.8 1.1l-.8 3.3c0 .1.1.1.1.2l-.1-.1-1.1 4.6c-.1.3-.4.6-.9.5 0 0-1.3-.3-1.3-.3l-.8 2 2.3.6c.4.1.8.2 1.3.3l-.7 3 1.8.4.7-2.9c.5.1 1 .2 1.5.3l-.7 2.9 1.8.4.7-2.9c3.1.6 5.4.3 6.4-2.4.8-2.2 0-3.5-1.6-4.3 1.1-.3 2-1 2.2-2.5zm-3.9 5.4c-.6 2.3-4.5 1.1-5.7.8l1-4.1c1.2.3 5.3.9 4.7 3.3zm.6-5.6c-.5 2.1-3.8 1-4.8.8l.9-3.7c1.1.3 4.4.8 3.9 2.9z" fill="#FFFFFF"></path>
+</svg>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">BTC</span>
+<span class="font-label-badge text-label-badge px-1 py-0.2 rounded bg-surface-container-high text-outline">SEGWIT</span>
+</div>
+<span class="font-label-meta text-label-meta text-secondary truncate">$96,400.00 (+4.2%)</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 ml-2">
+<span class="font-mono-price-md text-mono-price-md font-semibold text-on-surface masked-balance" data-raw="0.2845 BTC">0.2845 BTC</span>
+<span class="font-label-meta text-label-meta text-outline masked-balance" data-raw="$27,425.80">$27,425.80</span>
+</div>
+</div>
+<div class="hidden mt-space-sm pt-space-sm border-t border-white/5 flex flex-col gap-2" id="btc-content">
+<div class="grid grid-cols-2 gap-2 text-[11px] bg-surface-container-lowest/50 p-2 rounded-lg">
+<div class="flex flex-col">
+<span class="text-outline font-label-meta">Available:</span>
+<span class="font-mono text-secondary font-semibold">0.2000 BTC</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline font-label-meta">In Contracts:</span>
+<span class="font-mono text-tertiary font-semibold">0.0845 BTC</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex-1 py-1 rounded bg-primary text-on-primary font-headline-sm text-[11px] font-semibold">Deposit BTC</button>
+<button class="flex-1 py-1 rounded bg-surface-container-high text-on-surface font-headline-sm text-[11px] font-semibold">Transfer</button>
+</div>
+</div>
+</div>
+<!-- 3. ETH -->
+<div class="asset-item bg-surface-container rounded-xl p-space-sm transition-all" data-asset="eth" data-balance="8631.00">
+<div class="flex items-center justify-between cursor-pointer asset-trigger" onclick="toggleAssetAccordion('eth-content', this)">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-9 h-9 rounded-full bg-[#627EEA]/20 flex items-center justify-center shrink-0">
+<svg class="w-5 h-5" fill="none" viewbox="0 0 32 32">
+<circle cx="16" cy="16" fill="#627EEA" r="16"></circle>
+<path d="M16 4l-7.5 12.4L16 20.8l7.5-4.4L16 4z" fill="#FFFFFF" fill-opacity="0.6"></path>
+<path d="M16 4v16.8l7.5-4.4L16 4z" fill="#FFFFFF"></path>
+<path d="M16 22.3L8.5 17.9 16 28l7.5-10.1-7.5 4.4z" fill="#FFFFFF" fill-opacity="0.6"></path>
+<path d="M16 28v-5.7l7.5-4.4L16 28z" fill="#FFFFFF"></path>
+</svg>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">ETH</span>
+<span class="font-label-badge text-label-badge px-1 py-0.2 rounded bg-surface-container-high text-outline">L1/L2</span>
+</div>
+<span class="font-label-meta text-label-meta text-secondary truncate">$2,740.00 (+6.1%)</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 ml-2">
+<span class="font-mono-price-md text-mono-price-md font-semibold text-on-surface masked-balance" data-raw="3.1500 ETH">3.1500 ETH</span>
+<span class="font-label-meta text-label-meta text-outline masked-balance" data-raw="$8,631.00">$8,631.00</span>
+</div>
+</div>
+<div class="hidden mt-space-sm pt-space-sm border-t border-white/5 flex flex-col gap-2" id="eth-content">
+<div class="grid grid-cols-2 gap-2 text-[11px] bg-surface-container-lowest/50 p-2 rounded-lg">
+<div class="flex flex-col">
+<span class="text-outline font-label-meta">Available:</span>
+<span class="font-mono text-secondary font-semibold">2.5000 ETH</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline font-label-meta">Locked Collateral:</span>
+<span class="font-mono text-tertiary font-semibold">0.6500 ETH</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. SOL -->
+<div class="asset-item bg-surface-container rounded-xl p-space-sm transition-all" data-asset="sol" data-balance="3959.00">
+<div class="flex items-center justify-between cursor-pointer asset-trigger" onclick="toggleAssetAccordion('sol-content', this)">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-9 h-9 rounded-full bg-[#14F195]/20 flex items-center justify-center shrink-0">
+<svg class="w-5 h-5" fill="none" viewbox="0 0 32 32">
+<circle cx="16" cy="16" fill="#000000" r="16"></circle>
+<path d="M8 21.6h12.8l3.2-3.2H11.2L8 21.6zm3.2-8.8H24l-3.2-3.2H8l3.2 3.2zm9.6 4.4H8l3.2-3.2H24l-3.2 3.2z" fill="#14F195"></path>
+</svg>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">SOL</span>
+<span class="font-label-badge text-label-badge px-1 py-0.2 rounded bg-surface-container-high text-outline">SPL</span>
+</div>
+<span class="font-label-meta text-label-meta text-secondary truncate">$214.00 (+11.8%)</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 ml-2">
+<span class="font-mono-price-md text-mono-price-md font-semibold text-on-surface masked-balance" data-raw="18.50 SOL">18.50 SOL</span>
+<span class="font-label-meta text-label-meta text-outline masked-balance" data-raw="$3,959.00">$3,959.00</span>
+</div>
+</div>
+<div class="hidden mt-space-sm pt-space-sm border-t border-white/5 flex flex-col gap-2" id="sol-content">
+<div class="grid grid-cols-2 gap-2 text-[11px] bg-surface-container-lowest/50 p-2 rounded-lg">
+<div class="flex flex-col">
+<span class="text-outline font-label-meta">Available:</span>
+<span class="font-mono text-secondary font-semibold">18.50 SOL</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline font-label-meta">Locked:</span>
+<span class="font-mono text-outline font-semibold">0.00 SOL</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 5. USDC -->
+<div class="asset-item bg-surface-container rounded-xl p-space-sm transition-all" data-asset="usdc" data-balance="9784.90">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-9 h-9 rounded-full bg-[#2775CA]/20 flex items-center justify-center shrink-0">
+<svg class="w-5 h-5" fill="none" viewbox="0 0 32 32">
+<circle cx="16" cy="16" fill="#2775CA" r="16"></circle>
+<path d="M16 6.5C10.8 6.5 6.5 10.8 6.5 16S10.8 25.5 16 25.5 25.5 21.2 25.5 16 21.2 6.5 16 6.5zm0 17.2c-4.5 0-8.2-3.7-8.2-8.2S11.5 7.3 16 7.3s8.2 3.7 8.2 8.2-3.7 8.2-8.2 8.2zm1.6-9.6c-.2-.4-.6-.7-1.1-.9v3.1c.5-.2.9-.5 1.1-.8.2-.3.4-.8.4-1.4 0-.6-.1-1-.4-1.4zm-3.2 0c.2.3.4.6.4 1.1 0 .6-.2.9-.5 1.2v-2.3zm3.2 4.4c-.6.4-1.3.7-2.1.8v1.6h-1v-1.6c-1.3-.1-2.2-.6-2.7-1.4l1.3-1c.4.6 1 .9 1.9 1v-2.7c-.8-.2-1.4-.5-1.9-.9-.5-.4-.7-1-.7-1.8 0-1.1.7-2 2-2.3V9.5h1v1.5c1.1.1 1.9.5 2.4 1.2l-1.3 1c-.3-.5-.8-.8-1.5-.9v2.5c.9.2 1.6.6 2.1 1 .5.4.8 1.1.8 1.9 0 1.2-.7 2.1-2.1 2.5z" fill="#FFFFFF"></path>
+</svg>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">USDC</span>
+<span class="font-label-badge text-label-badge px-1 py-0.2 rounded bg-surface-container-high text-outline">NATIVE</span>
+</div>
+<span class="font-label-meta text-label-meta text-outline truncate">Circle USD • $1.0000</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 ml-2">
+<span class="font-mono-price-md text-mono-price-md font-semibold text-on-surface masked-balance" data-raw="9,784.90 USDC">9,784.90 USDC</span>
+<span class="font-label-meta text-label-meta text-outline masked-balance" data-raw="$9,784.90">$9,784.90</span>
+</div>
+</div>
+</div>
+<!-- 6. BNB -->
+<div class="asset-item bg-surface-container rounded-xl p-space-sm transition-all" data-asset="bnb" data-balance="2646.00">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-9 h-9 rounded-full bg-[#F3BA2F]/20 flex items-center justify-center shrink-0">
+<svg class="w-5 h-5" fill="none" viewbox="0 0 32 32">
+<circle cx="16" cy="16" fill="#F3BA2F" r="16"></circle>
+<path d="M16 6.5l3.2 3.2-6.4 6.4-3.2-3.2L16 6.5zm6.4 6.4l3.2 3.2-3.2 3.2-3.2-3.2 3.2-3.2zm-12.8 0l3.2 3.2-3.2 3.2-3.2-3.2 3.2-3.2zM16 19.3l6.4-6.4 3.2 3.2L16 25.7l-9.6-9.6 3.2-3.2 6.4 6.4zm0-3.3l-1.6-1.6 1.6-1.6 1.6 1.6-1.6 1.6z" fill="#FFFFFF"></path>
+</svg>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">BNB</span>
+<span class="font-label-badge text-label-badge px-1 py-0.2 rounded bg-surface-container-high text-outline">BEP-20</span>
+</div>
+<span class="font-label-meta text-label-meta text-secondary truncate">$630.00 (+1.4%)</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 ml-2">
+<span class="font-mono-price-md text-mono-price-md font-semibold text-on-surface masked-balance" data-raw="4.20 BNB">4.20 BNB</span>
+<span class="font-label-meta text-label-meta text-outline masked-balance" data-raw="$2,646.00">$2,646.00</span>
+</div>
+</div>
+</div>
+<!-- 7. Micro listings (XRP, DOGE, TON, TRX) -->
+<div class="grid grid-cols-2 gap-space-xs mt-space-xs">
+<!-- XRP -->
+<div class="asset-item bg-surface-container/70 rounded-lg p-2 flex items-center justify-between" data-asset="xrp" data-balance="620.00">
+<div class="flex items-center gap-1.5 min-w-0">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-[10px] text-on-surface">X</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[12px] font-bold text-on-surface leading-tight">XRP</span>
+<span class="font-label-meta text-[10px] text-secondary">+2.1%</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-mono text-[11px] font-semibold text-on-surface masked-balance" data-raw="250.0">250.0</span>
+<span class="font-label-badge text-[9px] text-outline masked-balance" data-raw="$620.00">$620</span>
+</div>
+</div>
+<!-- DOGE -->
+<div class="asset-item bg-surface-container/70 rounded-lg p-2 flex items-center justify-between" data-asset="doge" data-balance="410.00">
+<div class="flex items-center gap-1.5 min-w-0">
+<div class="w-6 h-6 rounded-full bg-[#C2A633]/20 flex items-center justify-center font-bold text-[10px] text-[#C2A633]">D</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[12px] font-bold text-on-surface leading-tight">DOGE</span>
+<span class="font-label-meta text-[10px] text-tertiary">-1.8%</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-mono text-[11px] font-semibold text-on-surface masked-balance" data-raw="1,200.0">1.2K</span>
+<span class="font-label-badge text-[9px] text-outline masked-balance" data-raw="$410.00">$410</span>
+</div>
+</div>
+<!-- TON -->
+<div class="asset-item bg-surface-container/70 rounded-lg p-2 flex items-center justify-between" data-asset="ton" data-balance="280.00">
+<div class="flex items-center gap-1.5 min-w-0">
+<div class="w-6 h-6 rounded-full bg-[#0088CC]/20 flex items-center justify-center font-bold text-[10px] text-[#0088CC]">T</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[12px] font-bold text-on-surface leading-tight">TON</span>
+<span class="font-label-meta text-[10px] text-secondary">+8.4%</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-mono text-[11px] font-semibold text-on-surface masked-balance" data-raw="50.0">50.0</span>
+<span class="font-label-badge text-[9px] text-outline masked-balance" data-raw="$280.00">$280</span>
+</div>
+</div>
+<!-- TRX -->
+<div class="asset-item bg-surface-container/70 rounded-lg p-2 flex items-center justify-between" data-asset="trx" data-balance="155.00">
+<div class="flex items-center gap-1.5 min-w-0">
+<div class="w-6 h-6 rounded-full bg-[#EF0027]/20 flex items-center justify-center font-bold text-[10px] text-[#EF0027]">R</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[12px] font-bold text-on-surface leading-tight">TRX</span>
+<span class="font-label-meta text-[10px] text-secondary">+0.6%</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-mono text-[11px] font-semibold text-on-surface masked-balance" data-raw="750.0">750.0</span>
+<span class="font-label-badge text-[9px] text-outline masked-balance" data-raw="$155.00">$155</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 5: Recent Transactions Ledger -->
+<div class="flex flex-col gap-space-sm pt-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">history</span>
+<span class="font-headline-md text-headline-sm font-bold text-on-surface">Recent Ledger Activity</span>
+</div>
+<button class="font-label-badge text-label-badge text-primary hover:underline uppercase">View All (48)</button>
+</div>
+<!-- Activity Items Stream -->
+<div class="flex flex-col gap-1.5 bg-surface-container-low p-1.5 rounded-xl">
+<!-- Activity 1: Incoming Deposit -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-full bg-secondary/15 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[18px]">south_west</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-[13px] font-semibold text-on-surface">Deposit USDT</span>
+<span class="font-label-badge text-[9px] px-1 py-0.2 rounded bg-secondary/10 text-secondary">TRC20</span>
+</div>
+<span class="font-label-meta text-label-meta text-outline truncate">Confirmed • Today 14:22</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 ml-2">
+<span class="font-mono text-[13px] font-bold text-secondary">+5,000.00 USDT</span>
+<span class="font-label-badge text-[9px] text-secondary">FINALIZED</span>
+</div>
+</div>
+<!-- Activity 2: Withdrawal -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-outline shrink-0">
+<span class="material-symbols-outlined text-[18px]">north_east</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-[13px] font-semibold text-on-surface">Withdrawal BTC</span>
+<span class="font-label-badge text-[9px] px-1 py-0.2 rounded bg-surface-container-high text-outline">External</span>
+</div>
+<span class="font-label-meta text-label-meta text-outline truncate">bc1q49...a9f • Yesterday 18:10</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 ml-2">
+<span class="font-mono text-[13px] font-bold text-on-surface">-0.0500 BTC</span>
+<span class="font-label-badge text-[9px] text-outline">COMPLETED</span>
+</div>
+</div>
+<!-- Activity 3: Staking / Yield Sweep -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary-container/20 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">savings</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-[13px] font-semibold text-on-surface">Maker Rebate Sweep</span>
+<span class="font-label-badge text-[9px] px-1 py-0.2 rounded bg-primary-container/20 text-primary">Yield</span>
+</div>
+<span class="font-label-meta text-label-meta text-outline truncate">Auto-credited • 2 days ago</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 ml-2">
+<span class="font-mono text-[13px] font-bold text-secondary">+184.50 USDC</span>
+<span class="font-label-badge text-[9px] text-secondary">0% FEE</span>
+</div>
+</div>
+<!-- Activity 4: Prediction Market Payout -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-full bg-secondary/15 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-[13px] font-semibold text-on-surface">Market Settlement</span>
+<span class="font-label-badge text-[9px] px-1 py-0.2 rounded bg-secondary/20 text-secondary">YES WON</span>
+</div>
+<span class="font-label-meta text-label-meta text-outline truncate">US Fed Rate Cut • 3 days ago</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 ml-2">
+<span class="font-mono text-[13px] font-bold text-secondary">+1,200.00 USDC</span>
+<span class="font-label-badge text-[9px] text-secondary">RESOLVED</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Balances Obfuscation Logic
+  let balancesHidden = false;
+  const toggleBtn = document.getElementById('toggle-balance-btn');
+  const eyeIcon = document.getElementById('eye-icon');
+  const balanceRaw = document.getElementById('balance-raw');
+  const maskedItems = document.querySelectorAll('.masked-balance');
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      balancesHidden = !balancesHidden;
+      if (balancesHidden) {
+        eyeIcon.textContent = 'visibility_off';
+        balanceRaw.textContent = '••••••••';
+        maskedItems.forEach(el => {
+          el.dataset.stored = el.textContent;
+          el.textContent = '••••••';
+        });
+      } else {
+        eyeIcon.textContent = 'visibility';
+        balanceRaw.textContent = '$52,480.90';
+        maskedItems.forEach(el => {
+          el.textContent = el.dataset.raw || el.dataset.stored || el.textContent;
+        });
+      }
+    });
+  }
+
+  // Accordion drawer toggle
+  function toggleAssetAccordion(contentId, triggerEl) {
+    const target = document.getElementById(contentId);
+    if (!target) return;
+    target.classList.toggle('hidden');
+  }
+
+  // Filter & Search Logic
+  const searchInput = document.getElementById('asset-search-input');
+  const assetItems = document.querySelectorAll('.asset-item');
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      assetItems.forEach(item => {
+        const assetName = item.dataset.asset || '';
+        if (assetName.includes(q) || item.textContent.toLowerCase().includes(q)) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    });
+  }
+
+  // Tabs highlight interaction
+  const tabs = document.querySelectorAll('.asset-tab');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => {
+        t.classList.remove('bg-surface-container', 'text-primary', 'shadow-sm');
+        t.classList.add('text-outline');
+      });
+      tab.classList.add('bg-surface-container', 'text-primary', 'shadow-sm');
+      tab.classList.remove('text-outline');
+    });
+  });
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-1px_16px_rgba(0,0,0,0.5)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-between items-center h-16 px-space-sm"><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">trending_up</span><span class="font-label-meta text-label-meta">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="explore" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span class="font-label-meta text-label-meta">Explore</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="markets" href="#"><span class="material-symbols-outlined text-[22px]">candlestick_chart</span><span class="font-label-meta text-label-meta">Markets</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="wallet" href="#"><span class="material-symbols-outlined text-[22px]">account_balance_wallet</span><span class="font-label-meta text-label-meta">Wallet</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="profile" href="#"><span class="material-symbols-outlined text-[22px]">manage_accounts</span><span class="font-label-meta text-label-meta">Profile</span></a></div></nav></body></html>

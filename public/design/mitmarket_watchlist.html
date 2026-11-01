@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary": "#4cdf95", "primary": "#b4c5ff", "primary-fixed-dim": "#b4c5ff", "error": "#ffb4ab", "secondary-fixed": "#6dfdaf", "on-tertiary": "#680019", "surface-bright": "#2e3a48", "on-surface-variant": "#c3c5d8", "on-secondary-fixed-variant": "#005230", "primary-fixed": "#dbe1ff", "primary-container": "#1463ff", "on-secondary-fixed": "#002110", "surface-container-low": "#101d29", "on-primary-fixed-variant": "#003daa", "error-container": "#93000a", "outline": "#8d90a2", "surface-tint": "#b4c5ff", "on-background": "#d7e4f5", "on-primary": "#002979", "on-tertiary-container": "#fff3f3", "surface-container-lowest": "#030f1b", "on-secondary-container": "#004025", "secondary-fixed-dim": "#4cdf95", "surface-dim": "#071420", "on-tertiary-fixed": "#40000c", "outline-variant": "#424656", "tertiary-fixed-dim": "#ffb3b5", "inverse-surface": "#d7e4f5", "surface-container-highest": "#293643", "tertiary-fixed": "#ffdada", "on-error": "#690005", "on-error-container": "#ffdad6", "tertiary-container": "#d72747", "surface-container-high": "#1f2b38", "on-secondary": "#003920", "surface": "#071420", "on-surface": "#d7e4f5", "inverse-on-surface": "#25323e", "surface-container": "#14212d", "on-primary-container": "#f5f5ff", "background": "#071420", "surface-variant": "#293643", "on-primary-fixed": "#00174c", "secondary-container": "#00b872", "tertiary": "#ffb3b5", "inverse-primary": "#0052dd", "on-tertiary-fixed-variant": "#920027" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1rem", "space-xs": "0.25rem", "space-xl": "1.5rem", "space-sm": "0.5rem", "space-md": "0.75rem", "gutter": "0.75rem", "margin": "1rem" }, fontFamily: { "headline-sm": ["Inter"], "label-badge": ["JetBrains Mono"], "body-md": ["Inter"], "display": ["Inter"], "headline-md": ["Inter"], "mono-price-lg": ["JetBrains Mono"], "body-sm": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "mono-price-md": ["JetBrains Mono"], "label-meta": ["Inter"] }, fontSize: { "headline-sm": ["15px", { lineHeight: "20px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-badge": ["10px", { lineHeight: "12px", letterSpacing: "0.04em", fontWeight: "600" }], "body-md": ["13px", { lineHeight: "18px", letterSpacing: "-0.005em", fontWeight: "400" }], "display": ["30px", { lineHeight: "36px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-md": ["18px", { lineHeight: "24px", letterSpacing: "-0.015em", fontWeight: "600" }], "mono-price-lg": ["22px", { lineHeight: "26px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-sm": ["11px", { lineHeight: "15px", letterSpacing: "0em", fontWeight: "400" }], "headline-lg": ["22px", { lineHeight: "28px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-lg": ["15px", { lineHeight: "22px", letterSpacing: "-0.01em", fontWeight: "400" }], "mono-price-md": ["14px", { lineHeight: "18px", letterSpacing: "-0.01em", fontWeight: "500" }], "label-meta": ["11px", { lineHeight: "14px", letterSpacing: "0.02em", fontWeight: "500" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;min-height:max(884px,100dvh);}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="h-14 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="MITMARKET Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xfjei28JUFyqIJqo4ChKBF9CmExMLhlxFa1jwSlgLkcz_WPiniHp2gzcEjStY_z4i4NKuZHHdqXXACcAUDK56rYyII3PUlffyrTzYyMYUYrd8z_UimcPvHiiyT-WaUM5D7Xegy7-LrbRFHcuWQZOyMx5Kt9Yj1cP1mQ2EBS_d5Dk_YzQNNMdFN5ra0Si4FuvSfMjR3Qe1Q-hpd3k5mr3_dXAtl5Lvl-ZF2rNQnuKX9bg"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate">MITMARKET</span><span class="hidden">Mitmarket — Watchlist</span></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">search</span></button><a aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="mitmarket--notifications--alerts" href="#"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-14 pb-20 bg-surface flex-1"><div class="flex flex-col w-full text-on-surface">
+<!-- Top Watchlist Bar & Live Meta Status -->
+<section class="px-margin pt-space-md pb-space-sm bg-surface-container-low shadow-[0_2px_12px_rgba(0,0,0,0.4)]">
+<div class="flex items-center justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<h1 class="font-headline-lg text-headline-lg tracking-tight text-on-surface truncate">Watchlist</h1>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-full bg-secondary/10 text-secondary font-label-badge text-label-badge whitespace-nowrap">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse mr-1"></span>
+          8 TRACKED
+        </span>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button aria-label="Reorganize watchlist" class="h-8 px-2.5 rounded-lg bg-surface-variant hover:bg-surface-bright text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm flex items-center gap-1 transition-all active:scale-95" id="btn-edit-mode">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Edit</span>
+</button>
+<button class="h-8 px-3 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm flex items-center gap-1 shadow-[0_0_12px_rgba(20,99,255,0.35)] active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Market</span>
+</button>
+</div>
+</div>
+<!-- Active Watchlist Group Dropdown Pill -->
+<div class="flex items-center justify-between gap-space-sm py-1">
+<div class="relative inline-flex items-center min-w-0">
+<button class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high hover:bg-surface-bright text-on-surface font-headline-sm text-headline-sm max-w-[260px] truncate shadow-sm" id="group-dropdown-trigger">
+<span class="material-symbols-outlined text-[16px] text-primary">folder_special</span>
+<span class="truncate">Macro &amp; Fed Hedges</span>
+<span class="px-1.5 py-0.2 bg-primary/20 text-primary font-mono-price-md text-[10px] rounded-full">4</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">expand_more</span>
+</button>
+</div>
+<span class="font-mono-price-md text-mono-price-md text-secondary text-right shrink-0">
+        +$4,180.40 <span class="font-body-sm text-body-sm text-secondary">(+6.8%)</span>
+</span>
+</div>
+<!-- Category Filter Tabs -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar pt-2.5 -mx-margin px-margin">
+<button class="shrink-0 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-headline-sm text-body-sm flex items-center gap-1 shadow-sm">
+<span>All</span>
+<span class="font-label-badge text-label-badge opacity-80">(8)</span>
+</button>
+<button class="shrink-0 px-3 py-1 rounded-full bg-surface-container hover:bg-surface-variant text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm flex items-center gap-1 transition-colors">
+<span>Predictions</span>
+<span class="font-label-badge text-label-badge opacity-70">(5)</span>
+</button>
+<button class="shrink-0 px-3 py-1 rounded-full bg-surface-container hover:bg-surface-variant text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm flex items-center gap-1 transition-colors">
+<span>Crypto</span>
+<span class="font-label-badge text-label-badge opacity-70">(2)</span>
+</button>
+<button class="shrink-0 px-3 py-1 rounded-full bg-surface-container hover:bg-surface-variant text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm flex items-center gap-1 transition-colors">
+<span>Sports</span>
+<span class="font-label-badge text-label-badge opacity-70">(1)</span>
+</button>
+<button class="shrink-0 px-3 py-1 rounded-full bg-surface-container hover:bg-surface-variant text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors">
+<span>Perps</span>
+</button>
+</div>
+<!-- Sub-Sorting Chips -->
+<div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-2">
+<span class="font-label-meta text-[10px] text-outline uppercase tracking-wider mr-1 shrink-0">Sort:</span>
+<button class="shrink-0 px-2 py-0.5 rounded bg-surface-bright text-on-surface font-body-sm text-[11px] flex items-center gap-0.5">
+<span>Top Movers</span>
+<span class="material-symbols-outlined text-[12px]">arrow_drop_down</span>
+</button>
+<button class="shrink-0 px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-body-sm text-[11px]">Ending Soon</button>
+<button class="shrink-0 px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-body-sm text-[11px]">Recent Added</button>
+<button class="shrink-0 px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-body-sm text-[11px]">Volume (24h)</button>
+</div>
+</section>
+<div class="px-margin flex flex-col gap-space-md pt-space-md pb-space-xl">
+<!-- Featured Watchlist Mosaic (Top Highlight Market) -->
+<section class="relative rounded-xl bg-surface-container-high p-space-md shadow-xl overflow-hidden">
+<div class="absolute -right-12 -top-12 w-44 h-44 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+<!-- Top Row Header -->
+<div class="flex items-start justify-between gap-space-xs relative z-10">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-primary/15 text-primary font-label-badge text-label-badge tracking-wider uppercase font-semibold">
+            PINNED • MACRO #1
+          </span>
+<span class="flex items-center gap-1 text-on-surface-variant font-label-meta text-label-meta">
+<span class="material-symbols-outlined text-[13px] text-outline">schedule</span>
+            Closes in 4d 12h
+          </span>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button aria-label="Toggle alert" class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-primary transition-transform active:scale-90">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">notifications_active</span>
+</button>
+<button aria-label="Remove bookmark" class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-primary-container transition-transform active:scale-90">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+</div>
+</div>
+<!-- Market Prompt Title -->
+<div class="mt-2.5 relative z-10">
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight leading-snug">
+          US Fed to cut interest rates ≥50 bps before Dec 2025 FOMC
+        </h2>
+<div class="flex items-center gap-2 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span>Vol: <strong class="text-on-surface font-mono-price-md font-medium">$44.8M</strong></span>
+<span class="text-outline">•</span>
+<span>Open Interest: <strong class="text-on-surface font-mono-price-md font-medium">$12.1M</strong></span>
+</div>
+</div>
+<!-- Probability Momentum Display & Micro Sparkline -->
+<div class="mt-3.5 p-space-sm rounded-lg bg-surface-container-lowest/80 relative z-10">
+<div class="flex items-center justify-between mb-2">
+<div>
+<div class="font-label-meta text-label-meta text-on-surface-variant uppercase">Current Consensus</div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-mono-price-lg text-[26px] text-secondary font-bold">68%</span>
+<span class="font-mono-price-md text-secondary font-medium flex items-center text-[12px]">
+<span class="material-symbols-outlined text-[14px]">arrow_drop_up</span>+14.2% (24h)
+              </span>
+</div>
+</div>
+<!-- Micro Sparkline SVG -->
+<div class="w-28 h-10 flex items-center justify-end">
+<svg class="w-full h-full overflow-visible" fill="none" viewbox="0 0 110 36">
+<defs>
+<lineargradient id="grad-spark-fed" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#4cdf95" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#4cdf95" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,28 Q15,30 25,24 T50,22 T75,12 T95,14 L110,4" fill="none" stroke="#4cdf95" stroke-linecap="round" stroke-width="2"></path>
+<path d="M0,28 Q15,30 25,24 T50,22 T75,12 T95,14 L110,4 L110,36 L0,36 Z" fill="url(#grad-spark-fed)"></path>
+<circle cx="110" cy="4" fill="#4cdf95" r="3"></circle>
+</svg>
+</div>
+</div>
+<!-- Binary Instant Action Split Button -->
+<div class="grid grid-cols-2 gap-space-xs mt-2">
+<button class="h-10 px-space-sm rounded bg-secondary/15 hover:bg-secondary/25 active:bg-secondary active:text-on-secondary text-secondary font-mono-price-md text-mono-price-md flex items-center justify-between transition-all shadow-[0_0_12px_rgba(76,223,149,0.15)]">
+<span class="font-headline-sm text-body-md font-semibold">BUY YES</span>
+<span class="font-bold">68¢</span>
+</button>
+<button class="h-10 px-space-sm rounded bg-tertiary-container/15 hover:bg-tertiary-container/25 active:bg-tertiary-container active:text-on-tertiary text-tertiary font-mono-price-md text-mono-price-md flex items-center justify-between transition-all">
+<span class="font-headline-sm text-body-md font-semibold">BUY NO</span>
+<span class="font-bold">32¢</span>
+</button>
+</div>
+</div>
+<!-- Quick Action Underbar -->
+<div class="flex items-center justify-between pt-2.5 mt-2.5 text-on-surface-variant font-label-meta text-label-meta">
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[14px]">alarm_on</span>
+          Alert Trigger: YES &gt; 75¢
+        </span>
+<button class="text-on-surface hover:text-primary transition-colors flex items-center gap-0.5">
+<span>Order Depth</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Watchlist Markets Blotter -->
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-meta text-label-meta uppercase tracking-wider text-outline">
+        Active Tracking List
+      </span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Tap card to expand order slip</span>
+</div>
+<!-- Market 2: OpenAI Orion Model -->
+<article class="p-space-sm rounded-xl bg-surface-container shadow-md transition-all hover:bg-surface-container-high">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="px-1.5 py-0.2 rounded bg-surface-variant text-on-surface-variant font-label-badge text-[9px] uppercase font-semibold">
+              AI &amp; Tech
+            </span>
+<span class="text-on-surface-variant font-label-meta text-label-meta flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">bar_chart</span>
+              $1.8M Vol
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-2 leading-snug">
+            OpenAI announces Orion frontier model before Nov 2024
+          </h3>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button class="w-7 h-7 rounded-full bg-surface-variant flex items-center justify-center text-primary" title="Alert enabled">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">notifications_active</span>
+</button>
+<button class="w-7 h-7 rounded-full bg-surface-variant flex items-center justify-center text-primary-container" title="Favorited">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-3">
+<button class="h-9 px-2 rounded bg-secondary/10 hover:bg-secondary/20 text-secondary font-mono-price-md text-mono-price-md flex items-center justify-between transition-colors">
+<span class="text-body-sm font-semibold">YES</span>
+<div class="text-right">
+<span class="font-bold">41¢</span>
+<span class="text-[10px] text-tertiary ml-1">-3.4%</span>
+</div>
+</button>
+<button class="h-9 px-2 rounded bg-tertiary-container/10 hover:bg-tertiary-container/20 text-tertiary font-mono-price-md text-mono-price-md flex items-center justify-between transition-colors">
+<span class="text-body-sm font-semibold">NO</span>
+<div class="text-right">
+<span class="font-bold">59¢</span>
+<span class="text-[10px] text-secondary ml-1">+3.4%</span>
+</div>
+</button>
+</div>
+</article>
+<!-- Market 3: BTC Perpetual Futures Hedge -->
+<article class="p-space-sm rounded-xl bg-surface-container shadow-md hover:bg-surface-container-high transition-all">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="px-1.5 py-0.2 rounded bg-primary/10 text-primary font-label-badge text-[9px] uppercase font-semibold">
+              Crypto Perp
+            </span>
+<span class="text-secondary font-label-badge text-[10px] font-mono-price-md font-semibold">
+              INDEX 100K-STRIKE
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold">
+            BTC/100K-PERP Binary Contract
+          </h3>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button class="w-7 h-7 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[15px]">notifications</span>
+</button>
+<button class="w-7 h-7 rounded-full bg-surface-variant flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+</div>
+</div>
+<!-- Depth and Price Info -->
+<div class="flex items-center justify-between mt-2.5 pt-2 bg-surface-container-low p-2 rounded-lg">
+<div>
+<span class="font-label-meta text-[10px] text-on-surface-variant block">Mark Price</span>
+<span class="font-mono-price-lg text-[18px] text-secondary font-bold">0.8240</span>
+<span class="font-mono-price-md text-[11px] text-secondary ml-1">+12.4%</span>
+</div>
+<div class="text-right">
+<span class="font-label-meta text-[10px] text-on-surface-variant block">24h High</span>
+<span class="font-mono-price-md text-mono-price-md text-on-surface">0.8900</span>
+<div class="w-20 h-1.5 bg-surface-bright rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 82%;"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 mt-2.5">
+<button class="flex-1 h-9 rounded bg-primary-container hover:bg-inverse-primary text-on-primary-container font-headline-sm text-body-sm flex items-center justify-center gap-1 font-semibold transition-all">
+<span class="material-symbols-outlined text-[15px]">bolt</span>
+<span>Quick Long (0.82)</span>
+</button>
+<button class="h-9 px-3 rounded bg-surface-variant hover:bg-surface-bright text-on-surface font-body-sm text-body-sm transition-colors">
+          Book
+        </button>
+</div>
+</article>
+<!-- Market 4: TSMC 2nm Commercial Shipments -->
+<article class="p-space-sm rounded-xl bg-surface-container shadow-md transition-all hover:bg-surface-container-high">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="px-1.5 py-0.2 rounded bg-surface-variant text-on-surface-variant font-label-badge text-[9px] uppercase font-semibold">
+              Semis
+            </span>
+<span class="text-outline font-label-meta text-label-meta">Ends Nov 15</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-2 leading-snug">
+            TSMC 2nm commercial shipments ahead of schedule
+          </h3>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button class="w-7 h-7 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">notifications</span>
+</button>
+<button class="w-7 h-7 rounded-full bg-surface-variant flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-3">
+<button class="h-9 px-2 rounded bg-secondary/10 hover:bg-secondary/20 text-secondary font-mono-price-md text-mono-price-md flex items-center justify-between transition-colors">
+<span class="text-body-sm font-semibold">YES</span>
+<div class="text-right">
+<span class="font-bold">69¢</span>
+<span class="text-[10px] text-secondary ml-1">+13.1%</span>
+</div>
+</button>
+<button class="h-9 px-2 rounded bg-tertiary-container/10 hover:bg-tertiary-container/20 text-tertiary font-mono-price-md text-mono-price-md flex items-center justify-between transition-colors">
+<span class="text-body-sm font-semibold">NO</span>
+<div class="text-right">
+<span class="font-bold">31¢</span>
+<span class="text-[10px] text-tertiary ml-1">-13.1%</span>
+</div>
+</button>
+</div>
+</article>
+<!-- Market 5: Champions League: Real Madrid vs Man City -->
+<article class="p-space-sm rounded-xl bg-surface-container shadow-md transition-all hover:bg-surface-container-high">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="px-1.5 py-0.2 rounded bg-surface-variant text-on-surface-variant font-label-badge text-[9px] uppercase font-semibold">
+              UEFA CL
+            </span>
+<span class="text-on-surface-variant font-label-meta text-label-meta">Matchday 4</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-2 leading-snug">
+            Real Madrid qualifies over Manchester City
+          </h3>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button class="w-7 h-7 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">notifications</span>
+</button>
+<button class="w-7 h-7 rounded-full bg-surface-variant flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-3">
+<button class="h-9 px-2 rounded bg-secondary/10 hover:bg-secondary/20 text-secondary font-mono-price-md text-mono-price-md flex items-center justify-between transition-colors">
+<span class="text-body-sm font-semibold">YES</span>
+<div class="text-right">
+<span class="font-bold">72¢</span>
+<span class="text-[10px] text-secondary ml-1">+4.0%</span>
+</div>
+</button>
+<button class="h-9 px-2 rounded bg-tertiary-container/10 hover:bg-tertiary-container/20 text-tertiary font-mono-price-md text-mono-price-md flex items-center justify-between transition-colors">
+<span class="text-body-sm font-semibold">NO</span>
+<div class="text-right">
+<span class="font-bold">28¢</span>
+<span class="text-[10px] text-tertiary ml-1">-4.0%</span>
+</div>
+</button>
+</div>
+</article>
+<!-- Market 6: Solana Spot ETF Staking Provision -->
+<article class="p-space-sm rounded-xl bg-surface-container shadow-md transition-all hover:bg-surface-container-high">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="px-1.5 py-0.2 rounded bg-surface-variant text-on-surface-variant font-label-badge text-[9px] uppercase font-semibold">
+              Regulation
+            </span>
+<span class="text-on-surface-variant font-label-meta text-label-meta">SEC Decision</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-2 leading-snug">
+            Solana Spot ETF approval includes live staking yield provision
+          </h3>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button class="w-7 h-7 rounded-full bg-surface-variant flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">notifications_active</span>
+</button>
+<button class="w-7 h-7 rounded-full bg-surface-variant flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-3">
+<button class="h-9 px-2 rounded bg-secondary/10 hover:bg-secondary/20 text-secondary font-mono-price-md text-mono-price-md flex items-center justify-between transition-colors">
+<span class="text-body-sm font-semibold">YES</span>
+<div class="text-right">
+<span class="font-bold">45¢</span>
+<span class="text-[10px] text-tertiary ml-1">-13.4%</span>
+</div>
+</button>
+<button class="h-9 px-2 rounded bg-tertiary-container/10 hover:bg-tertiary-container/20 text-tertiary font-mono-price-md text-mono-price-md flex items-center justify-between transition-colors">
+<span class="text-body-sm font-semibold">NO</span>
+<div class="text-right">
+<span class="font-bold">55¢</span>
+<span class="text-[10px] text-secondary ml-1">+13.4%</span>
+</div>
+</button>
+</div>
+</article>
+<!-- Create Custom Watchlist / Discovery Teaser -->
+<section class="mt-space-xs rounded-xl bg-surface-container-low p-space-md text-center">
+<div class="w-10 h-10 mx-auto rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[20px]">add_to_photos</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Curate a Custom Portfolio List</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-[280px] mx-auto">
+        Track synchronized hedges, thematic baskets, or target events with customized price movement alerts.
+      </p>
+<div class="flex items-center justify-center gap-space-xs mt-3.5">
+<button class="h-9 px-4 rounded-lg bg-surface-variant hover:bg-surface-bright text-on-surface font-headline-sm text-body-sm flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-primary">add</span>
+<span>New Watchlist Group</span>
+</button>
+<button class="h-9 px-3 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-body-sm flex items-center gap-1 shadow-sm">
+<span>Explore Trends</span>
+</button>
+</div>
+</section>
+<!-- Institutional Safety / Liquidity Guarantee Footnote -->
+<div class="flex items-center justify-center gap-1.5 text-outline font-label-meta text-[10px] text-center pt-1 pb-2">
+<span class="material-symbols-outlined text-[12px] text-secondary">verified_user</span>
+<span>Oracle Feeds: Chainlink &amp; Pyth Network • Sub-millisecond order updates</span>
+</div>
+</div>
+<!-- Interactive Slide-Up Quick Price Alert Modal Sheet (Conditional / Interactive via JS) -->
+<aside class="fixed inset-x-0 bottom-0 z-50 transform translate-y-full transition-transform duration-300 ease-out bg-surface-container-high/95 backdrop-blur-2xl rounded-t-2xl shadow-[0_-12px_40px_rgba(0,0,0,0.8)] pb-safe" id="alert-sheet">
+<div class="w-12 h-1.5 rounded-full bg-outline-variant mx-auto my-2.5"></div>
+<div class="px-margin pt-1 pb-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-primary/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">add_alert</span>
+</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Set Target Probability Alert</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant" id="close-alert-sheet">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container text-body-sm text-on-surface-variant">
+        Target: <strong class="text-on-surface">Fed cuts rates ≥50 bps before Dec 2025</strong>
+</div>
+<div class="flex items-center justify-between gap-space-sm pt-1">
+<div class="flex-1">
+<span class="font-label-meta text-label-meta text-on-surface-variant block mb-1">Trigger Condition</span>
+<div class="flex rounded bg-surface p-0.5">
+<button class="flex-1 py-1 rounded bg-secondary/20 text-secondary font-headline-sm text-body-sm text-center">YES rises to</button>
+<button class="flex-1 py-1 rounded text-on-surface-variant font-headline-sm text-body-sm text-center">NO falls to</button>
+</div>
+</div>
+<div class="w-28">
+<span class="font-label-meta text-label-meta text-on-surface-variant block mb-1">Target Price</span>
+<div class="flex items-center bg-surface px-2.5 py-1 rounded font-mono-price-md text-on-surface font-semibold">
+<span>75</span>
+<span class="text-outline ml-0.5">¢</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2">
+<button class="w-full h-11 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-headline-sm flex items-center justify-center gap-1 shadow-lg active:scale-95 transition-all" id="btn-save-alert">
+<span class="material-symbols-outlined text-[18px]">notifications_active</span>
+<span>Activate Push &amp; In-App Alert</span>
+</button>
+</div>
+</div>
+</aside>
+</div>
+<script>
+  (function initWatchlistInteractions() {
+    const sheet = document.getElementById('alert-sheet');
+    const closeBtn = document.getElementById('close-alert-sheet');
+    const saveBtn = document.getElementById('save-alert-btn') || document.getElementById('btn-save-alert');
+    const alertTriggers = document.querySelectorAll('button[aria-label="Toggle alert"], button[title="Alert enabled"]');
+
+    function openSheet() {
+      if (sheet) sheet.classList.remove('translate-y-full');
+    }
+
+    function closeSheet() {
+      if (sheet) sheet.classList.add('translate-y-full');
+    }
+
+    alertTriggers.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openSheet();
+      });
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeSheet);
+    if (saveBtn) {
+      saveBtn.addEventListener('click', () => {
+        closeSheet();
+      });
+    }
+
+    // Toggle star favorite icons
+    const starButtons = document.querySelectorAll('button[aria-label="Remove bookmark"], button[title="Favorited"]');
+    starButtons.forEach(star => {
+      star.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const icon = star.querySelector('.material-symbols-outlined');
+        if (icon) {
+          const isFilled = icon.style.fontVariationSettings.includes("'FILL' 1");
+          icon.style.fontVariationSettings = isFilled ? "'FILL' 0" : "'FILL' 1";
+          star.classList.toggle('text-primary-container');
+          star.classList.toggle('text-on-surface-variant');
+        }
+      });
+    });
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container/95 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,0,0,0.5)]" data-active-classes="text-primary-container font-semibold"><div class="h-16 px-space-xs flex items-center justify-around"><a class="flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="mitmarket--user-dashboard" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-meta text-label-meta mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="mitmarket--explore" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span class="font-label-meta text-label-meta mt-0.5">Explore</span></a><a class="flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="mitmarket--watchlist" href="#"><span class="material-symbols-outlined text-[22px]">candlestick_chart</span><span class="font-label-meta text-label-meta mt-0.5">Markets</span></a><a class="flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="mitmarket--trade-history" href="#"><span class="material-symbols-outlined text-[22px]">pie_chart</span><span class="font-label-meta text-label-meta mt-0.5">Portfolio</span></a><a class="flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="mitmarket--activity-feed" href="#"><span class="material-symbols-outlined text-[22px]">dynamic_feed</span><span class="font-label-meta text-label-meta mt-0.5">Activity</span></a></div></nav></body></html>

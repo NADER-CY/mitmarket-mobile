@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#071420;color:#d7e4f5;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-surface": "#d7e4f5", "on-secondary-fixed": "#002110", "surface-container-lowest": "#030f1b", "primary-fixed": "#dbe1ff", "surface-dim": "#071420", "surface-tint": "#b4c5ff", "inverse-on-surface": "#25323e", "secondary-fixed-dim": "#4cdf95", "tertiary-container": "#d72747", "surface": "#071420", "tertiary-fixed-dim": "#ffb3b5", "inverse-primary": "#0052dd", "tertiary-fixed": "#ffdada", "on-tertiary-container": "#fff3f3", "surface-variant": "#293643", "on-primary-container": "#f5f5ff", "error-container": "#93000a", "on-secondary": "#003920", "secondary-fixed": "#6dfdaf", "on-tertiary-fixed": "#40000c", "secondary": "#4cdf95", "on-surface-variant": "#c3c5d8", "surface-container-highest": "#293643", "outline": "#8d90a2", "primary": "#b4c5ff", "background": "#071420", "on-background": "#d7e4f5", "on-secondary-fixed-variant": "#005230", "on-primary": "#002979", "surface-container-low": "#101d29", "on-error-container": "#ffdad6", "on-surface": "#d7e4f5", "surface-container-high": "#1f2b38", "on-secondary-container": "#004025", "surface-bright": "#2e3a48", "on-primary-fixed": "#00174c", "surface-container": "#14212d", "outline-variant": "#424656", "tertiary": "#ffb3b5", "on-tertiary": "#680019", "on-primary-fixed-variant": "#003daa", "secondary-container": "#00b872", "error": "#ffb4ab", "on-tertiary-fixed-variant": "#920027", "primary-fixed-dim": "#b4c5ff", "primary-container": "#1463ff", "on-error": "#690005" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1rem", "space-md": "0.75rem", "gutter": "0.75rem", "margin": "1rem", "space-sm": "0.5rem", "space-xl": "1.5rem", "space-xs": "0.25rem" }, "fontFamily": { "headline-md": ["Inter"], "label-badge": ["JetBrains Mono"], "label-meta": ["Inter"], "display": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"], "mono-price-md": ["JetBrains Mono"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "headline-sm": ["Inter"], "mono-price-lg": ["JetBrains Mono"] }, "fontSize": { "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-badge": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-meta": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }], "display": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "body-sm": ["11px", { "lineHeight": "15px", "letterSpacing": "0em", "fontWeight": "400" }], "mono-price-md": ["14px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "mono-price-lg": ["22px", { "lineHeight": "26px", "letterSpacing": "-0.02em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen antialiased select-none"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.12)]"><div class="h-14 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go back" class="min-w-[44px] min-h-[44px] -ml-space-xs flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-bold uppercase">MITMARKET</span><span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded bg-surface-container-high text-primary tracking-widest font-bold">PRO</span></div></div><div class="flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-surface-container-low shadow-[0_0_8px_rgba(76,223,149,0.1)]"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-label-badge text-label-badge text-secondary font-mono tracking-tight">ENCLAVE 256-BIT</span></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 pb-safe bg-surface px-margin"><div class="flex flex-col w-full pb-8">
+<div class="relative w-full rounded-2xl p-space-md mb-space-md bg-surface-container shadow-xl overflow-hidden">
+<div class="absolute -top-12 -right-12 w-40 h-40 rounded-full bg-primary-container/20 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-8 -left-8 w-32 h-32 rounded-full bg-secondary-container/15 blur-2xl pointer-events-none"></div>
+<div class="relative flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">SOVEREIGN DESK</span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-low shadow-inner">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-badge text-label-badge text-secondary font-mono uppercase tracking-wider">L2 Synced</span>
+</div>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight mb-1">Welcome Back</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-snug mb-space-sm">
+      Sign in to access your institutional prediction order books, live hedging vaults, and derivatives blotter.
+    </p>
+<div class="flex items-center gap-space-xs px-2.5 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-meta text-label-meta">
+<span class="material-symbols-outlined text-[15px] text-secondary">bolt</span>
+<span class="font-mono text-on-surface">Arbitrum L2 Synced</span>
+<span class="text-outline">·</span>
+<span>Sub-second Execution (0.14ms)</span>
+</div>
+</div>
+<div class="w-full mb-space-md rounded-xl p-space-sm bg-surface-container-low flex items-start gap-space-sm shadow-md transition-all duration-300" id="demo-alert">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">verified_user</span>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<p class="font-headline-sm text-[12px] text-on-surface font-medium">Enclave Isolation Active</p>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('demo-alert').remove()" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+        Session encrypted via Ephemeral Curve25519 handshake.
+      </p>
+</div>
+</div>
+<form class="flex flex-col gap-space-md mb-space-lg" onsubmit="event.preventDefault(); document.getElementById('totp-sheet').classList.remove('hidden');">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-meta text-label-meta text-on-surface-variant font-medium flex items-center justify-between">
+<span>ACCOUNT IDENTIFIER</span>
+<span class="font-label-badge text-label-badge text-outline">SECURE ORG</span>
+</label>
+<div class="relative flex items-center rounded-xl bg-surface-container-low shadow-inner focus-within:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px] text-outline ml-space-sm">account_circle</span>
+<input class="w-full bg-transparent px-space-sm py-3 text-on-surface font-body-md text-body-md focus:outline-none placeholder:text-outline" placeholder="trader@domain.com or @username" required="" type="text" value="alex_quant"/>
+<div class="mr-space-sm px-1.5 py-0.5 rounded bg-surface-container text-secondary font-label-badge text-label-badge font-mono">
+          KYC:TIER-3
+        </div>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-meta text-label-meta text-on-surface-variant font-medium">CREDENTIAL ACCESS KEY</label>
+<span class="font-label-badge text-label-badge text-secondary font-mono">HARDENED</span>
+</div>
+<div class="relative flex items-center rounded-xl bg-surface-container-low shadow-inner focus-within:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px] text-outline ml-space-sm">key</span>
+<input class="w-full bg-transparent px-space-sm py-3 text-on-surface font-body-md text-body-md focus:outline-none placeholder:text-outline" id="password-input" placeholder="Enter vault passphrase" required="" type="password" value="quantum-prediction-secret-key"/>
+<button aria-label="Toggle password visibility" class="p-space-sm text-outline hover:text-on-surface transition-colors flex items-center justify-center" id="toggle-password" type="button">
+<span class="material-symbols-outlined text-[18px]" id="eye-icon">visibility</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center gap-space-xs cursor-pointer">
+<input checked="" class="w-4 h-4 rounded bg-surface-container-high accent-primary cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant select-none">Remember device (30d)</span>
+</label>
+<button class="font-body-sm text-body-sm text-primary hover:underline font-medium" type="button">
+        Forgot password?
+      </button>
+</div>
+<button class="w-full mt-1 py-3.5 px-space-lg rounded-xl bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-semibold tracking-wide flex items-center justify-center gap-space-xs shadow-lg hover:shadow-primary-container/25 active:scale-[0.98] transition-all" type="submit">
+<span>Sign In to Terminal</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</form>
+<div class="relative flex items-center justify-center mb-space-lg">
+<div class="w-full h-px bg-surface-container-high"></div>
+<span class="absolute px-space-sm bg-surface font-label-badge text-label-badge text-outline font-mono tracking-widest uppercase">
+      OR CONTINUE WITH
+    </span>
+</div>
+<div class="flex flex-col gap-space-sm mb-space-lg">
+<button class="w-full p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container flex items-center justify-between text-left transition-colors shadow-sm" onclick="document.getElementById('totp-sheet').classList.remove('hidden');" type="button">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">fingerprint</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[13px] text-on-surface font-medium truncate">Sign in with Passkey (FIDO2)</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant truncate">Hardware-attested Touch ID &amp; Secure Enclave</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary/15 text-secondary font-label-badge text-label-badge uppercase font-bold shrink-0">
+        RECOMMENDED
+      </span>
+</button>
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="py-3 px-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container-high flex items-center justify-center gap-space-xs text-on-surface transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span class="font-body-md text-body-md font-medium">Apple ID</span>
+</button>
+<button class="py-3 px-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container-high flex items-center justify-center gap-space-xs text-on-surface transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+<span class="font-body-md text-body-md font-medium">Google Work</span>
+</button>
+</div>
+<p class="font-body-sm text-[11px] text-outline text-center leading-normal px-space-xs mt-1">
+      Biometric and SSO factors are authenticated through zero-knowledge hardware enclaves.
+    </p>
+</div>
+<div class="flex flex-col items-center justify-center gap-space-sm text-center">
+<div class="flex items-center gap-1.5 font-body-md text-body-md">
+<span class="text-on-surface-variant">Don't have an institutional seat?</span>
+<a class="text-primary font-semibold hover:underline" href="#">Create Account</a>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-x-space-sm gap-y-1 font-label-meta text-label-meta text-outline">
+<a class="hover:text-on-surface transition-colors" href="#">Terms of Service</a>
+<span>•</span>
+<a class="hover:text-on-surface transition-colors" href="#">Privacy Policy</a>
+<span>•</span>
+<a class="hover:text-on-surface transition-colors" href="#">Cookie Disclosures</a>
+</div>
+<div class="flex items-center gap-space-xs px-2.5 py-1 rounded bg-surface-container-lowest text-outline font-label-badge text-label-badge font-mono">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>ENCLAVE: 0x98A...F46B</span>
+<span>•</span>
+<span>VERIFIED ZERO-KNOWLEDGE</span>
+</div>
+</div>
+<div class="fixed inset-0 z-50 flex flex-col justify-end bg-surface-dim/80 backdrop-blur-md transition-opacity" id="totp-sheet">
+<div class="w-full max-w-md mx-auto rounded-t-3xl bg-surface-container p-space-lg shadow-2xl flex flex-col gap-space-md">
+<div class="w-10 h-1 rounded-full bg-outline-variant mx-auto mb-1"></div>
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-space-xs text-secondary mb-1">
+<span class="material-symbols-outlined text-[18px]">shield</span>
+<span class="font-label-badge text-label-badge font-mono">STEP 2 OF 2</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Security Verification Required</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+            Enter 6-digit TOTP code generated by Google Authenticator or hardware key.
+          </p>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('totp-sheet').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex justify-between items-center gap-space-xs my-space-xs">
+<div class="w-12 h-14 rounded-xl bg-surface-container-low flex items-center justify-center font-mono-price-lg text-mono-price-lg text-on-surface font-mono shadow-inner">8</div>
+<div class="w-12 h-14 rounded-xl bg-surface-container-low flex items-center justify-center font-mono-price-lg text-mono-price-lg text-on-surface font-mono shadow-inner">4</div>
+<div class="w-12 h-14 rounded-xl bg-surface-container-low flex items-center justify-center font-mono-price-lg text-mono-price-lg text-on-surface font-mono shadow-inner">9</div>
+<div class="w-12 h-14 rounded-xl bg-surface-container-high flex items-center justify-center font-mono-price-lg text-mono-price-lg text-primary font-mono shadow-inner relative">
+<span class="animate-pulse font-light">|</span>
+</div>
+<div class="w-12 h-14 rounded-xl bg-surface-container-low flex items-center justify-center font-mono-price-lg text-mono-price-lg text-outline font-mono shadow-inner">•</div>
+<div class="w-12 h-14 rounded-xl bg-surface-container-low flex items-center justify-center font-mono-price-lg text-mono-price-lg text-outline font-mono shadow-inner">•</div>
+</div>
+<div class="flex items-center justify-between font-label-meta text-label-meta text-on-surface-variant px-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span>Code refreshes in <strong class="text-on-surface font-mono" id="timer">24s</strong></span>
+</div>
+<button class="text-primary hover:underline font-medium" type="button">Use Offline Recovery</button>
+</div>
+<div class="flex flex-col gap-space-xs pt-1">
+<button class="w-full py-3.5 px-space-lg rounded-xl bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-space-xs shadow-lg active:scale-[0.98] transition-transform" onclick="document.getElementById('totp-sheet').classList.add('hidden')" type="button">
+<span>Verify &amp; Launch Terminal</span>
+<span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+</button>
+<button class="w-full py-2.5 text-on-surface-variant hover:text-on-surface font-body-md text-body-md font-medium text-center" onclick="document.getElementById('totp-sheet').classList.add('hidden')" type="button">
+          Cancel Verification
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initLoginPage() {
+    const pwdInput = document.getElementById('password-input');
+    const toggleBtn = document.getElementById('toggle-password');
+    const eyeIcon = document.getElementById('eye-icon');
+    
+    if (toggleBtn && pwdInput && eyeIcon) {
+      toggleBtn.addEventListener('click', () => {
+        const isPassword = pwdInput.type === 'password';
+        pwdInput.type = isPassword ? 'text' : 'password';
+        eyeIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+      });
+    }
+
+    const timerEl = document.getElementById('timer');
+    if (timerEl) {
+      let seconds = 24;
+      setInterval(() => {
+        seconds = seconds <= 1 ? 30 : seconds - 1;
+        timerEl.textContent = `${seconds}s`;
+      }, 1000);
+    }
+  })();
+</script></main></body></html>

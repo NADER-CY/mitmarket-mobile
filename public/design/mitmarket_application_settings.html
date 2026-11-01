@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#071420;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#030f1b", "on-secondary": "#003920", "on-primary-fixed": "#00174c", "secondary": "#4cdf95", "inverse-primary": "#0052dd", "outline": "#8d90a2", "surface-dim": "#071420", "primary-fixed": "#dbe1ff", "outline-variant": "#424656", "error-container": "#93000a", "primary-fixed-dim": "#b4c5ff", "on-primary-container": "#f5f5ff", "on-tertiary-container": "#fff3f3", "error": "#ffb4ab", "surface-container-low": "#101d29", "on-surface": "#d7e4f5", "on-error-container": "#ffdad6", "secondary-container": "#00b872", "on-secondary-container": "#004025", "tertiary-container": "#d72747", "on-secondary-fixed-variant": "#005230", "background": "#071420", "tertiary-fixed": "#ffdada", "surface-bright": "#2e3a48", "surface-container-highest": "#293643", "on-error": "#690005", "on-background": "#d7e4f5", "on-secondary-fixed": "#002110", "on-surface-variant": "#c3c5d8", "on-primary": "#002979", "secondary-fixed-dim": "#4cdf95", "tertiary-fixed-dim": "#ffb3b5", "inverse-on-surface": "#25323e", "surface-variant": "#293643", "on-tertiary-fixed-variant": "#920027", "tertiary": "#ffb3b5", "surface": "#071420", "surface-container-high": "#1f2b38", "surface-container": "#14212d", "on-primary-fixed-variant": "#003daa", "primary": "#b4c5ff", "primary-container": "#1463ff", "on-tertiary-fixed": "#40000c", "on-tertiary": "#680019", "secondary-fixed": "#6dfdaf", "surface-tint": "#b4c5ff", "inverse-surface": "#d7e4f5" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "0.75rem", "space-xs": "0.25rem", "gutter": "0.75rem", "space-lg": "1rem", "space-sm": "0.5rem", "space-xl": "1.5rem", "margin": "1rem" }, "fontFamily": { "body-lg": ["Inter"], "label-badge": ["JetBrains Mono"], "mono-price-md": ["JetBrains Mono"], "headline-md": ["Inter"], "display": ["Inter"], "body-md": ["Inter"], "mono-price-lg": ["JetBrains Mono"], "headline-lg": ["Inter"], "label-meta": ["Inter"], "headline-sm": ["Inter"], "body-sm": ["Inter"] }, "fontSize": { "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-badge": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "600" }], "mono-price-md": ["14px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "mono-price-lg": ["22px", { "lineHeight": "26px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-meta": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["11px", { "lineHeight": "15px", "letterSpacing": "0em", "fontWeight": "400" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.4)] pt-safe"><div class="h-14 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go Back" class="w-11 h-11 -ml-space-xs flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface truncate">Mitmarket — Application Settings</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Context action" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">help_outline</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-14 pb-safe bg-surface flex-1"><div class="flex flex-col w-full px-margin pb-space-xl space-y-space-lg">
+<!-- Interactive Search / Filter Bar for Preferences -->
+<div class="relative w-full mt-space-sm">
+<div class="bg-surface-container-low rounded-xl flex items-center px-space-md py-space-sm gap-space-sm shadow-sm">
+<span class="material-symbols-outlined text-outline text-[20px]">search</span>
+<input class="bg-transparent text-on-surface font-body-md text-body-md focus:outline-none w-full placeholder:text-outline" id="settings-search" placeholder="Search parameters, slippage, display..." type="text"/>
+<span class="material-symbols-outlined text-outline text-[18px] cursor-pointer hover:text-on-surface transition-colors" onclick="document.getElementById('settings-search').value=''">close</span>
+</div>
+</div>
+<!-- SECTION 1: Localization & Display Preferences -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">language</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Localization &amp; Currency</h2>
+</div>
+<span class="font-label-badge text-label-badge text-outline bg-surface-container-high px-space-xs py-0.5 rounded">GLOBAL</span>
+</div>
+<!-- Language Selector Card -->
+<div class="bg-surface-container rounded-xl p-space-md space-y-space-md shadow-md">
+<div class="flex items-center justify-between">
+<div>
+<p class="font-body-md text-body-md font-semibold text-on-surface">Language &amp; Region</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Active vernacular layout</p>
+</div>
+<span class="font-label-meta text-label-meta text-primary bg-primary-container/20 px-space-xs py-0.5 rounded">4 Languages</span>
+</div>
+<!-- Language 4-Pills Grid -->
+<div class="grid grid-cols-2 gap-space-xs" id="lang-group">
+<!-- English -->
+<button class="lang-pill active flex items-center justify-between p-space-sm rounded-lg bg-surface-container-high text-on-surface transition-all group" data-lang="en" type="button">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm">🇬🇧</span>
+<div class="text-left">
+<span class="block font-body-md text-body-md font-medium text-on-surface">English</span>
+<span class="block font-label-badge text-label-badge text-outline">EN · US</span>
+</div>
+</div>
+<span class="check-icon material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</button>
+<!-- Persian (FA) RTL -->
+<button class="lang-pill flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low text-on-surface-variant transition-all hover:bg-surface-container-high" data-lang="fa" type="button">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm">🇮🇷</span>
+<div class="text-left">
+<span class="block font-body-md text-body-md font-medium text-on-surface">فارسی</span>
+<span class="block font-label-badge text-label-badge text-outline">FA · RTL</span>
+</div>
+</div>
+<span class="check-icon hidden material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</button>
+<!-- Turkish (TR) -->
+<button class="lang-pill flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low text-on-surface-variant transition-all hover:bg-surface-container-high" data-lang="tr" type="button">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm">🇹🇷</span>
+<div class="text-left">
+<span class="block font-body-md text-body-md font-medium text-on-surface">Türkçe</span>
+<span class="block font-label-badge text-label-badge text-outline">TR · LATIN</span>
+</div>
+</div>
+<span class="check-icon hidden material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</button>
+<!-- Azerbaijani (AZ) -->
+<button class="lang-pill flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low text-on-surface-variant transition-all hover:bg-surface-container-high" data-lang="az" type="button">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm">🇦🇿</span>
+<div class="text-left">
+<span class="block font-body-md text-body-md font-medium text-on-surface">Azərbaycanca</span>
+<span class="block font-label-badge text-label-badge text-outline">AZ · LATIN</span>
+</div>
+</div>
+<span class="check-icon hidden material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</button>
+</div>
+<!-- Currency Switcher Segment -->
+<div class="pt-space-xs space-y-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-body-md text-body-md font-medium text-on-surface">Presentation Currency</label>
+<span class="font-mono-price-md text-mono-price-md text-secondary">Active: USD ($)</span>
+</div>
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1" id="currency-pills">
+<button class="curr-pill px-space-md py-1.5 rounded-full font-label-badge text-label-badge bg-primary text-on-primary font-semibold shadow transition-all" type="button">USD ($)</button>
+<button class="curr-pill px-space-md py-1.5 rounded-full font-label-badge text-label-badge bg-surface-container-high text-on-surface-variant font-medium hover:text-on-surface transition-all" type="button">EUR (€)</button>
+<button class="curr-pill px-space-md py-1.5 rounded-full font-label-badge text-label-badge bg-surface-container-high text-on-surface-variant font-medium hover:text-on-surface transition-all" type="button">GBP (£)</button>
+<button class="curr-pill px-space-md py-1.5 rounded-full font-label-badge text-label-badge bg-surface-container-high text-on-surface-variant font-medium hover:text-on-surface transition-all" type="button">TRY (₺)</button>
+<button class="curr-pill px-space-md py-1.5 rounded-full font-label-badge text-label-badge bg-surface-container-high text-on-surface-variant font-medium hover:text-on-surface transition-all" type="button">USDT (₮)</button>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-outline text-[16px] mt-0.5 shrink-0">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Display currency is a presentation preference and does not alter your underlying asset denominations or collateral.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: Appearance & Theme -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">palette</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Appearance &amp; Theme</h2>
+</div>
+<span class="font-label-badge text-label-badge text-outline bg-surface-container-high px-space-xs py-0.5 rounded">UI/UX</span>
+</div>
+<div class="bg-surface-container rounded-xl p-space-md space-y-space-md shadow-md">
+<!-- Interface Mode Display -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[20px]">dark_mode</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Interface Mode</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sovereign Dark (#101216 default)</p>
+</div>
+</div>
+<span class="font-label-badge text-label-badge bg-surface-container-high text-secondary px-space-xs py-1 rounded">LOCKED OLED</span>
+</div>
+<!-- Binary Market Scheme Toggle -->
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="space-y-0.5">
+<p class="font-body-md text-body-md font-medium text-on-surface">Market Color Palette</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Green/Red vs. Blue/Amber (Deuteranopia)</p>
+</div>
+<button aria-checked="false" class="toggle-btn w-12 h-6 bg-surface-container-highest rounded-full relative p-0.5 transition-colors duration-200" role="switch" type="button">
+<div class="thumb w-5 h-5 bg-outline rounded-full transition-transform duration-200"></div>
+</button>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-secondary-container inline-block"></span>
+<span class="font-label-badge text-label-badge text-on-surface">YES 74¢</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-tertiary-container inline-block"></span>
+<span class="font-label-badge text-label-badge text-on-surface">NO 26¢</span>
+</div>
+</div>
+</div>
+<!-- Dense Market View Toggle -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px]">density_small</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Dense Market View</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">High-frequency orderbook ticker</p>
+</div>
+</div>
+<!-- Active Toggle -->
+<button aria-checked="true" class="toggle-btn w-12 h-6 bg-primary-container rounded-full relative p-0.5 transition-colors duration-200" role="switch" type="button">
+<div class="thumb w-5 h-5 bg-on-primary translate-x-6 rounded-full transition-transform duration-200"></div>
+</button>
+</div>
+</div>
+</section>
+<!-- SECTION 3: Trading & Execution Preferences -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">candlestick_chart</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Trading &amp; Execution</h2>
+</div>
+<span class="font-label-badge text-label-badge text-secondary bg-surface-container-high px-space-xs py-0.5 rounded">PRO ENGINE</span>
+</div>
+<div class="bg-surface-container rounded-xl p-space-md space-y-space-md shadow-md">
+<!-- Default Order Type -->
+<div class="flex items-center justify-between">
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Default Order Routing</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Default ticket entry mode</p>
+</div>
+<div class="relative">
+<select class="bg-surface-container-high text-on-surface font-label-badge text-label-badge rounded-lg px-space-sm py-1.5 focus:outline-none appearance-none pr-7">
+<option selected="">LIMIT ORDER</option>
+<option>MARKET ORDER</option>
+<option>STOP-LIMIT</option>
+</select>
+<span class="material-symbols-outlined text-outline absolute right-1.5 top-2 text-[16px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Price & Probability Format -->
+<div class="flex items-center justify-between">
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Pricing Display</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dual presentation</p>
+</div>
+<div class="bg-surface-container-low px-space-sm py-1 rounded-lg">
+<span class="font-mono-price-md text-mono-price-md text-primary">68% · 68¢</span>
+</div>
+</div>
+<!-- One-Tap Trading Confirmation (Safe default: OFF) -->
+<div class="flex items-center justify-between">
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">One-Tap Execution</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Require slide confirmation slip</p>
+</div>
+<!-- Inactive Toggle -->
+<button aria-checked="false" class="toggle-btn w-12 h-6 bg-surface-container-highest rounded-full relative p-0.5 transition-colors duration-200" role="switch" type="button">
+<div class="thumb w-5 h-5 bg-outline rounded-full transition-transform duration-200"></div>
+</button>
+</div>
+<!-- Default Slippage Tolerance -->
+<div class="space-y-space-xs pt-1">
+<div class="flex items-center justify-between">
+<label class="font-body-md text-body-md font-medium text-on-surface">Max Slippage Tolerance</label>
+<span class="font-mono-price-md text-mono-price-md text-secondary" id="slippage-val">0.5%</span>
+</div>
+<div class="grid grid-cols-4 gap-space-xs" id="slippage-group">
+<button class="slip-btn py-1 rounded-lg bg-surface-container-low font-label-badge text-label-badge text-on-surface-variant hover:text-on-surface transition-all" type="button">0.1%</button>
+<button class="slip-btn py-1 rounded-lg bg-primary font-label-badge text-label-badge text-on-primary font-semibold shadow transition-all" type="button">0.5%</button>
+<button class="slip-btn py-1 rounded-lg bg-surface-container-low font-label-badge text-label-badge text-on-surface-variant hover:text-on-surface transition-all" type="button">1.0%</button>
+<button class="slip-btn py-1 rounded-lg bg-surface-container-low font-label-badge text-label-badge text-on-surface-variant hover:text-on-surface transition-all" type="button">CUSTOM</button>
+</div>
+</div>
+<!-- Chart Engine -->
+<div class="flex items-center justify-between pt-1">
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Chart Rendering Engine</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">TradingView WebGL acceleration</p>
+</div>
+<div class="relative">
+<select class="bg-surface-container-high text-primary font-label-badge text-label-badge rounded-lg px-space-sm py-1.5 focus:outline-none appearance-none pr-7">
+<option selected="">WEBGL PRO</option>
+<option>CANVAS LITE</option>
+</select>
+<span class="material-symbols-outlined text-outline absolute right-1.5 top-2 text-[16px] pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Notification Preferences -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">notifications</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Notifications &amp; Alerts</h2>
+</div>
+<span class="font-label-badge text-label-badge text-outline bg-surface-container-high px-space-xs py-0.5 rounded">REALTIME</span>
+</div>
+<div class="bg-surface-container rounded-xl p-space-md space-y-space-md shadow-md divide-y divide-transparent">
+<!-- Volatility & Triggers -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[18px]">bolt</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Market Volatility Triggers</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rapid ±10% consensus swings</p>
+</div>
+</div>
+<button aria-checked="true" class="toggle-btn w-12 h-6 bg-primary-container rounded-full relative p-0.5 transition-colors duration-200" role="switch" type="button">
+<div class="thumb w-5 h-5 bg-on-primary translate-x-6 rounded-full transition-transform duration-200"></div>
+</button>
+</div>
+<!-- Trade Fills & Matching -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Order Execution Fills</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sub-second push &amp; email</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-badge text-label-badge bg-surface-container-lowest px-1.5 py-0.5 rounded text-secondary">PUSH+EMAIL</span>
+<button aria-checked="true" class="toggle-btn w-12 h-6 bg-primary-container rounded-full relative p-0.5 transition-colors duration-200" role="switch" type="button">
+<div class="thumb w-5 h-5 bg-on-primary translate-x-6 rounded-full transition-transform duration-200"></div>
+</button>
+</div>
+</div>
+<!-- Wallet Deposits & Withdrawals -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[18px]">account_balance_wallet</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Vault Settlements</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Deposit &amp; withdrawal blocks</p>
+</div>
+</div>
+<button aria-checked="true" class="toggle-btn w-12 h-6 bg-primary-container rounded-full relative p-0.5 transition-colors duration-200" role="switch" type="button">
+<div class="thumb w-5 h-5 bg-on-primary translate-x-6 rounded-full transition-transform duration-200"></div>
+</button>
+</div>
+<!-- Liquidity Rebates -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[18px]">savings</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Protocol Liquidity Rebates</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Weekly maker reward accrual</p>
+</div>
+</div>
+<button aria-checked="true" class="toggle-btn w-12 h-6 bg-primary-container rounded-full relative p-0.5 transition-colors duration-200" role="switch" type="button">
+<div class="thumb w-5 h-5 bg-on-primary translate-x-6 rounded-full transition-transform duration-200"></div>
+</button>
+</div>
+<!-- Editorial Market Digest -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-outline text-[18px]">newspaper</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">MITMARKET Macro Digest</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Weekly analytical intelligence</p>
+</div>
+</div>
+<span class="font-label-badge text-label-badge text-outline bg-surface-container-high px-space-xs py-1 rounded">WEEKLY</span>
+</div>
+</div>
+</section>
+<!-- SECTION 5: Privacy & Data Controls -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">shield</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Privacy &amp; Data Controls</h2>
+</div>
+<span class="font-label-badge text-label-badge text-secondary bg-surface-container-high px-space-xs py-0.5 rounded">STEALTH</span>
+</div>
+<div class="bg-surface-container rounded-xl p-space-md space-y-space-md shadow-md">
+<!-- Balance Obscurity Mode -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-outline text-[20px]">visibility_off</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Privacy Balance Mode</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Auto-blur net worth on launch</p>
+</div>
+</div>
+<button aria-checked="true" class="toggle-btn w-12 h-6 bg-primary-container rounded-full relative p-0.5 transition-colors duration-200" role="switch" type="button">
+<div class="thumb w-5 h-5 bg-on-primary translate-x-6 rounded-full transition-transform duration-200"></div>
+</button>
+</div>
+<!-- Public Profile Pseudonym -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-outline text-[20px]">badge</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Leaderboard Identity</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Display as Trader #8849</p>
+</div>
+</div>
+<span class="font-label-badge text-label-badge bg-surface-container-lowest text-primary px-space-xs py-1 rounded">ANONYMOUS</span>
+</div>
+<!-- Telemetry Opt-out -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-outline text-[20px]">security</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Telemetry &amp; Crash Tracking</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Zero zero-knowledge leakage</p>
+</div>
+</div>
+<!-- Active Opt-Out (ON) -->
+<button aria-checked="true" class="toggle-btn w-12 h-6 bg-primary-container rounded-full relative p-0.5 transition-colors duration-200" role="switch" type="button">
+<div class="thumb w-5 h-5 bg-on-primary translate-x-6 rounded-full transition-transform duration-200"></div>
+</button>
+</div>
+</div>
+</section>
+<!-- SECTION 6: Accessibility & System Feedback -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">accessibility_new</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Accessibility &amp; Feedback</h2>
+</div>
+<span class="font-label-badge text-label-badge text-outline bg-surface-container-high px-space-xs py-0.5 rounded">HAPTICS</span>
+</div>
+<div class="bg-surface-container rounded-xl p-space-md space-y-space-md shadow-md">
+<!-- Text Scaling -->
+<div class="flex items-center justify-between">
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Text Typography Scaling</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Baseline ratio</p>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-lg">
+<span class="font-label-badge text-label-badge text-outline">A-</span>
+<span class="font-label-badge text-label-badge text-on-surface font-bold">100%</span>
+<span class="font-label-badge text-label-badge text-outline">A+</span>
+</div>
+</div>
+<!-- Reduce Motion -->
+<div class="flex items-center justify-between">
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Reduce Motion &amp; Kinetic SFX</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Disable dynamic chart transitions</p>
+</div>
+<button aria-checked="false" class="toggle-btn w-12 h-6 bg-surface-container-highest rounded-full relative p-0.5 transition-colors duration-200" role="switch" type="button">
+<div class="thumb w-5 h-5 bg-outline rounded-full transition-transform duration-200"></div>
+</button>
+</div>
+<!-- Haptic Feedback -->
+<div class="flex items-center justify-between">
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Haptic Confirmation</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Vibrate on fill and order cancellation</p>
+</div>
+<button aria-checked="true" class="toggle-btn w-12 h-6 bg-primary-container rounded-full relative p-0.5 transition-colors duration-200" role="switch" type="button">
+<div class="thumb w-5 h-5 bg-on-primary translate-x-6 rounded-full transition-transform duration-200"></div>
+</button>
+</div>
+<!-- High Contrast Lines -->
+<div class="flex items-center justify-between">
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">High-Contrast Grid Lines</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sharpen depth book surfaces</p>
+</div>
+<button aria-checked="true" class="toggle-btn w-12 h-6 bg-primary-container rounded-full relative p-0.5 transition-colors duration-200" role="switch" type="button">
+<div class="thumb w-5 h-5 bg-on-primary translate-x-6 rounded-full transition-transform duration-200"></div>
+</button>
+</div>
+</div>
+</section>
+<!-- SECTION 7: About, Audits & Legal -->
+<section class="space-y-space-sm pt-space-xs">
+<div class="bg-surface-container rounded-xl p-space-md space-y-space-md shadow-md">
+<!-- Header Badge -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[22px]">terminal</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">MITMARKET Pro Web</h3>
+<p class="font-label-badge text-label-badge text-outline">v3.14.2 · Commit #a91f42e</p>
+</div>
+</div>
+<span class="font-label-badge text-label-badge bg-secondary/15 text-secondary px-space-xs py-1 rounded">HEALTHY</span>
+</div>
+<!-- Nav Links -->
+<div class="space-y-1">
+<a class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-high transition-colors" href="#help">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-outline text-[18px]">support_agent</span>
+<span class="font-body-md text-body-md text-on-surface">Help Center &amp; Live Desk</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-high transition-colors" href="#api">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-outline text-[18px]">code</span>
+<span class="font-body-md text-body-md text-on-surface">Institutional WebSocket &amp; REST API Docs</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-high transition-colors" href="#audits">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
+<span class="font-body-md text-body-md text-on-surface">Audit Reports (CertiK &amp; OpenZeppelin)</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">open_in_new</span>
+</a>
+<a class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-high transition-colors" href="#tos">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-outline text-[18px]">description</span>
+<span class="font-body-md text-body-md text-on-surface">Terms of Protocol Service</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-high transition-colors" href="#privacy">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-outline text-[18px]">policy</span>
+<span class="font-body-md text-body-md text-on-surface">Privacy Policy &amp; Cookie Consent</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</a>
+</div>
+<!-- Quick Reset Button -->
+<div class="pt-space-xs">
+<button class="w-full py-space-sm rounded-lg bg-surface-container-low text-on-surface-variant hover:text-error hover:bg-error-container/20 transition-all font-body-md text-body-md flex items-center justify-center gap-space-xs" id="reset-prefs" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+          Reset All Parameters to Default
+        </button>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Language Selection Micro-interaction
+  const langPills = document.querySelectorAll('.lang-pill');
+  langPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      langPills.forEach(p => {
+        p.classList.remove('bg-surface-container-high', 'text-on-surface');
+        p.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        const icon = p.querySelector('.check-icon');
+        if (icon) icon.classList.add('hidden');
+      });
+      pill.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+      pill.classList.add('bg-surface-container-high', 'text-on-surface');
+      const activeIcon = pill.querySelector('.check-icon');
+      if (activeIcon) activeIcon.classList.remove('hidden');
+    });
+  });
+
+  // Currency Selection
+  const currPills = document.querySelectorAll('.curr-pill');
+  currPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      currPills.forEach(cp => {
+        cp.className = 'curr-pill px-space-md py-1.5 rounded-full font-label-badge text-label-badge bg-surface-container-high text-on-surface-variant font-medium hover:text-on-surface transition-all';
+      });
+      pill.className = 'curr-pill px-space-md py-1.5 rounded-full font-label-badge text-label-badge bg-primary text-on-primary font-semibold shadow transition-all';
+    });
+  });
+
+  // Slippage Selection
+  const slipBtns = document.querySelectorAll('.slip-btn');
+  const slipDisplay = document.getElementById('slippage-val');
+  slipBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      slipBtns.forEach(sb => {
+        sb.className = 'slip-btn py-1 rounded-lg bg-surface-container-low font-label-badge text-label-badge text-on-surface-variant hover:text-on-surface transition-all';
+      });
+      btn.className = 'slip-btn py-1 rounded-lg bg-primary font-label-badge text-label-badge text-on-primary font-semibold shadow transition-all';
+      if (slipDisplay) slipDisplay.textContent = btn.textContent;
+    });
+  });
+
+  // Interactive Switch Toggles
+  const toggles = document.querySelectorAll('.toggle-btn');
+  toggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const isChecked = toggle.getAttribute('aria-checked') === 'true';
+      const thumb = toggle.querySelector('.thumb');
+      if (isChecked) {
+        toggle.setAttribute('aria-checked', 'false');
+        toggle.classList.remove('bg-primary-container');
+        toggle.classList.add('bg-surface-container-highest');
+        thumb.classList.remove('translate-x-6', 'bg-on-primary');
+        thumb.classList.add('bg-outline');
+      } else {
+        toggle.setAttribute('aria-checked', 'true');
+        toggle.classList.remove('bg-surface-container-highest');
+        toggle.classList.add('bg-primary-container');
+        thumb.classList.add('translate-x-6', 'bg-on-primary');
+        thumb.classList.remove('bg-outline');
+      }
+    });
+  });
+
+  // Reset Interaction feedback
+  const resetBtn = document.getElementById('reset-prefs');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      const originalText = resetBtn.innerHTML;
+      resetBtn.innerHTML = '<span class="material-symbols-outlined text-secondary text-[18px]">done</span> Default Preferences Restored';
+      setTimeout(() => {
+        resetBtn.innerHTML = originalText;
+      }, 1800);
+    });
+  }
+</script></main></body></html>

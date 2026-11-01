@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#071420;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#030f1b", "on-secondary": "#003920", "on-primary-fixed": "#00174c", "secondary": "#4cdf95", "inverse-primary": "#0052dd", "outline": "#8d90a2", "surface-dim": "#071420", "primary-fixed": "#dbe1ff", "outline-variant": "#424656", "error-container": "#93000a", "primary-fixed-dim": "#b4c5ff", "on-primary-container": "#f5f5ff", "on-tertiary-container": "#fff3f3", "error": "#ffb4ab", "surface-container-low": "#101d29", "on-surface": "#d7e4f5", "on-error-container": "#ffdad6", "secondary-container": "#00b872", "on-secondary-container": "#004025", "tertiary-container": "#d72747", "on-secondary-fixed-variant": "#005230", "background": "#071420", "tertiary-fixed": "#ffdada", "surface-bright": "#2e3a48", "surface-container-highest": "#293643", "on-error": "#690005", "on-background": "#d7e4f5", "on-secondary-fixed": "#002110", "on-surface-variant": "#c3c5d8", "on-primary": "#002979", "secondary-fixed-dim": "#4cdf95", "tertiary-fixed-dim": "#ffb3b5", "inverse-on-surface": "#25323e", "surface-variant": "#293643", "on-tertiary-fixed-variant": "#920027", "tertiary": "#ffb3b5", "surface": "#071420", "surface-container-high": "#1f2b38", "surface-container": "#14212d", "on-primary-fixed-variant": "#003daa", "primary": "#b4c5ff", "primary-container": "#1463ff", "on-tertiary-fixed": "#40000c", "on-tertiary": "#680019", "secondary-fixed": "#6dfdaf", "surface-tint": "#b4c5ff", "inverse-surface": "#d7e4f5" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "0.75rem", "space-xs": "0.25rem", "gutter": "0.75rem", "space-lg": "1rem", "space-sm": "0.5rem", "space-xl": "1.5rem", "margin": "1rem" }, "fontFamily": { "body-lg": ["Inter"], "label-badge": ["JetBrains Mono"], "mono-price-md": ["JetBrains Mono"], "headline-md": ["Inter"], "display": ["Inter"], "body-md": ["Inter"], "mono-price-lg": ["JetBrains Mono"], "headline-lg": ["Inter"], "label-meta": ["Inter"], "headline-sm": ["Inter"], "body-sm": ["Inter"] }, "fontSize": { "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-badge": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "600" }], "mono-price-md": ["14px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "mono-price-lg": ["22px", { "lineHeight": "26px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-meta": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["11px", { "lineHeight": "15px", "letterSpacing": "0em", "fontWeight": "400" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.4)] pt-safe"><div class="h-14 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary-container text-[20px]">query_stats</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm tracking-tight font-bold text-on-surface">MITMARKET</span><span class="font-label-badge text-label-badge text-secondary bg-on-secondary/30 px-1 py-0.5 rounded">PRO</span></div><span class="font-label-meta text-label-meta text-outline truncate max-w-[120px]">Mitmarket — Trade History</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-14 pb-20 bg-surface flex-1"><div class="flex flex-col w-full pb-10">
+<!-- Top Meta Sub-Header & Controls -->
+<div class="px-margin pt-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">Trade History</h1>
+<span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded bg-surface-container-high text-outline">L2 BLOTTER</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high active:scale-95 transition-all shadow-sm" id="exportBtn">
+<span class="material-symbols-outlined text-[16px] text-primary">download</span>
+<span class="font-label-meta text-label-meta text-primary font-semibold">CSV / PDF</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Quick Search Input -->
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[18px]">search</span>
+</div>
+<input class="w-full h-10 pl-9 pr-9 bg-surface-container-low text-on-surface placeholder:text-outline-variant font-body-md text-body-md rounded-xl outline-none focus:bg-surface-container transition-all" placeholder="Search order ID, contract, prompt or hash..." type="text"/>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-outline">
+<span class="font-label-badge text-[9px] px-1 py-0.5 bg-surface-container rounded text-outline-variant">⌘K</span>
+</div>
+</div>
+</div>
+<!-- Performance Summary Blotter (Hero Analytics Card) -->
+<div class="px-margin mt-space-md">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-md">
+<!-- Background subtle technical grid glow -->
+<div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-primary/10 blur-2xl pointer-events-none"></div>
+<div class="absolute -left-8 -bottom-8 w-32 h-32 rounded-full bg-secondary/10 blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-meta text-label-meta uppercase tracking-wider text-outline">30-Day Aggregated Blotter</span>
+<div class="flex items-center gap-1 font-label-badge text-label-badge text-secondary bg-on-secondary/30 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+          AUDITED MATCH
+        </div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<!-- Metric 1: Realized Net P&L -->
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container/70 backdrop-blur-md">
+<span class="font-label-meta text-label-meta text-outline">Realized Net P&amp;L</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-mono-price-lg text-mono-price-lg font-bold text-secondary">+$14,210.80</span>
+</div>
+<div class="flex items-center gap-1 mt-1 text-secondary">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span class="font-label-badge text-label-badge">+13.1% ROI</span>
+</div>
+</div>
+<!-- Metric 2: Total Volume -->
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container/70 backdrop-blur-md">
+<span class="font-label-meta text-label-meta text-outline">Total Notional Vol</span>
+<span class="font-mono-price-lg text-mono-price-lg font-bold text-on-surface mt-0.5">$1,420,500</span>
+<span class="font-label-meta text-label-meta text-outline mt-1 font-mono-price-md">482 Total Orders</span>
+</div>
+<!-- Metric 3: Trading Fees Paid -->
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container/70 backdrop-blur-md">
+<span class="font-label-meta text-label-meta text-outline">L2 Gas &amp; Protocol Fee</span>
+<span class="font-mono-price-md text-mono-price-md text-on-surface font-semibold mt-0.5">$1,420.50 USDC</span>
+<span class="font-label-badge text-label-badge text-outline mt-1">Eff. Rate 0.10%</span>
+</div>
+<!-- Metric 4: Win Ratio & Efficiency -->
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container/70 backdrop-blur-md">
+<span class="font-label-meta text-label-meta text-outline">Hit Rate (Win/Loss)</span>
+<div class="flex items-center justify-between mt-0.5">
+<span class="font-mono-price-md text-mono-price-md text-secondary font-semibold">68.4%</span>
+<span class="font-label-meta text-label-meta text-outline">330W / 152L</span>
+</div>
+<!-- Tiny visual ratio bar -->
+<div class="w-full h-1.5 bg-tertiary-container/40 rounded-full mt-2 overflow-hidden flex">
+<div class="h-full bg-secondary rounded-full" style="width: 68.4%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Market Segment Tabs (Horizontal Scroll) -->
+<div class="mt-space-md overflow-x-auto no-scrollbar px-margin">
+<div class="flex items-center gap-space-xs min-w-max">
+<button class="px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary-container font-headline-sm text-[13px] font-semibold flex items-center gap-1.5 shadow-sm">
+<span>All Trades</span>
+<span class="font-label-badge text-label-badge bg-on-primary/30 px-1.5 py-0.2 rounded-full">482</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-headline-sm text-[13px] flex items-center gap-1.5">
+<span>Prediction Mkts</span>
+<span class="font-label-badge text-label-badge bg-surface-container px-1.5 py-0.2 rounded-full text-outline">312</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-headline-sm text-[13px] flex items-center gap-1.5">
+<span>Crypto Perps</span>
+<span class="font-label-badge text-label-badge bg-surface-container px-1.5 py-0.2 rounded-full text-outline">145</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-headline-sm text-[13px] flex items-center gap-1.5">
+<span>Multi-Leg Combos</span>
+<span class="font-label-badge text-label-badge bg-surface-container px-1.5 py-0.2 rounded-full text-outline">25</span>
+</button>
+</div>
+</div>
+<!-- Secondary Quick Filter Chips Bar -->
+<div class="mt-space-sm px-margin flex items-center gap-1.5 overflow-x-auto no-scrollbar">
+<div class="flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container text-on-surface font-label-meta text-label-meta cursor-pointer shrink-0">
+<span class="text-outline">Period:</span>
+<span class="font-semibold text-primary">Last 30D</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container text-on-surface font-label-meta text-label-meta cursor-pointer shrink-0">
+<span class="text-outline">Side:</span>
+<span class="font-semibold text-on-surface">All</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container text-on-surface font-label-meta text-label-meta cursor-pointer shrink-0">
+<span class="text-outline">Outcome:</span>
+<span class="font-semibold text-secondary">YES / NO</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container text-on-surface font-label-meta text-label-meta cursor-pointer shrink-0">
+<span class="text-outline">P&amp;L:</span>
+<span class="font-semibold text-on-surface">Profit &amp; Loss</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</div>
+</div>
+<!-- Trade History Item Feed -->
+<div class="px-margin mt-space-md flex flex-col gap-space-md">
+<!-- TRADE CARD 1: Prediction Market Buy YES -->
+<div class="cursor-pointer group rounded-xl bg-surface-container p-space-md shadow-sm active:scale-[0.99] transition-all flex flex-col gap-space-sm" onclick="openReceipt('ORD-98214-US', 'US Fed to cut rates ≥50 bps before Dec 2025 FOMC', 'BUY YES', '58.0¢', '12,000 Shares', '$6,960.00 USDC', '+$1,200.00 (Unrealized Mark 68¢)', 'FILLED', '0x9a8f...3e21', 'Arbitrum Nitro Rollup')">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-primary-container/20 text-primary-fixed-dim font-bold tracking-wider">BUY</span>
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-secondary-container/20 text-secondary font-bold tracking-wider">YES 58.0¢</span>
+<span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded bg-surface-container-high text-secondary flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> FILLED
+          </span>
+</div>
+<span class="font-label-meta text-label-meta text-outline font-mono-price-md shrink-0">Today, 11:42 UTC</span>
+</div>
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col flex-1 min-w-0">
+<p class="font-headline-sm text-headline-sm text-on-surface font-semibold line-clamp-2">US Fed to cut rates ≥50 bps before Dec 2025 FOMC</p>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="font-label-meta text-label-meta text-outline">POLITICS &amp; MACRO</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-badge text-label-badge text-outline">#ORD-98214-US</span>
+</div>
+</div>
+<!-- Card vignette editorial thumbnail -->
+<div class="w-12 h-12 rounded-lg bg-surface-container-high shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover opacity-85" data-alt="US Federal Reserve central bank building exterior at dusk, cinematic low angle, blue and emerald analytical light grading, financial trading terminal aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANVjRS2w9rZl2JfVCBmahoEFtqZ1QlBAPlxqeL79cZ1vzysx3EONtX3g4043IUMdWxeQK6YfaNeJmU4b0PwuHMzc030Yu03r1usPEmB5WTnLYER2G_yyTDGzfjhXbWV5pm3CSYvFhbzWeX5X_mIxSHHzj2Cfcqr0srpK-z2n_JRKOwuYfUn1_qEhxC52OxVbv9_JojBRrTJO2st9zhVNET6ldi7-XRLZFXXjMkn22P"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent"></div>
+</div>
+</div>
+<!-- Execution Metric Bar -->
+<div class="grid grid-cols-3 gap-2 p-2 rounded-lg bg-surface-container-low font-mono-price-md text-mono-price-md">
+<div class="flex flex-col">
+<span class="font-label-meta text-label-meta text-outline">Execution</span>
+<span class="font-semibold text-on-surface text-[13px]">58.0¢</span>
+<span class="font-label-badge text-label-badge text-outline-variant">12,000 Shs</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-meta text-label-meta text-outline">Notional</span>
+<span class="font-semibold text-on-surface text-[13px]">$6,960.00</span>
+<span class="font-label-badge text-label-badge text-outline-variant">Fee $6.96</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-meta text-label-meta text-outline">Current Mark</span>
+<span class="font-semibold text-secondary text-[13px]">68.0¢</span>
+<span class="font-label-badge text-label-badge text-secondary font-bold">+$1,200.00</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-0.5 text-outline">
+<div class="flex items-center gap-1 font-label-meta text-label-meta text-primary">
+<span class="material-symbols-outlined text-[15px]">receipt_long</span>
+<span>View Verified Receipt</span>
+</div>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform text-outline">chevron_right</span>
+</div>
+</div>
+<!-- TRADE CARD 2: Crypto Perpetual Contract (Closed Long) -->
+<div class="cursor-pointer group rounded-xl bg-surface-container p-space-md shadow-sm active:scale-[0.99] transition-all flex flex-col gap-space-sm" onclick="openReceipt('ORD-98102-PP', 'BTC/100K-PERP (10x Long)', 'CLOSE LONG', 'Exit $0.8240 USDC', 'Notional $5,000.00', '$5,000.00 USDC', '+$342.50 (+68.5%)', 'SETTLED', '0x43b2...e190', 'L2 Nitro Match Engine')">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-bold tracking-wider">CLOSE LONG</span>
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-secondary/15 text-secondary font-bold tracking-wider">+$342.50 (+68.5%)</span>
+<span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded bg-surface-container-high text-secondary flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> SETTLED
+          </span>
+</div>
+<span class="font-label-meta text-label-meta text-outline font-mono-price-md shrink-0">Yesterday, 18:20 UTC</span>
+</div>
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">currency_bitcoin</span>
+<p class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">BTC/100K-PERP (10x Margin)</p>
+</div>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="font-label-meta text-label-meta text-outline">DERIVATIVES</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-badge text-label-badge text-outline">#ORD-98102-PP</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover opacity-85" data-alt="Futuristic neon high-frequency algorithmic bitcoin candlestick chart hovering above dark glass surfaces in deep midnight blue terminal room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOH17YfCAcPVTEXkZUB2mLKSU2XelccdtoUEkzRb1f-79l3wZjsuezECMHXwoyqPUX579KyRvS6yrlaBpLySpx-mH6h32RMHmOPe-baTum7x8bIN74d5QZAuIzWL-wM-67kNyPh3OVt6ksudk7u3JpngBpjEuo0bIoA10ApuSzZSzwFydKhKgjqE4S4UbZb3HmztQkHqFAhG0wtGwA7cpw19mb85HxNqUzCTl_blaI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent"></div>
+</div>
+</div>
+<!-- Execution Metric Bar -->
+<div class="grid grid-cols-3 gap-2 p-2 rounded-lg bg-surface-container-low font-mono-price-md text-mono-price-md">
+<div class="flex flex-col">
+<span class="font-label-meta text-label-meta text-outline">Entry → Exit</span>
+<span class="font-semibold text-on-surface text-[12px]">$0.780 → $0.824</span>
+<span class="font-label-badge text-label-badge text-outline-variant">Size $5,000</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-meta text-label-meta text-outline">Taker Fee</span>
+<span class="font-semibold text-on-surface text-[13px]">$2.50 USDC</span>
+<span class="font-label-badge text-label-badge text-outline-variant">Rebate Active</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-meta text-label-meta text-outline">Realized Return</span>
+<span class="font-semibold text-secondary text-[13px]">+$342.50</span>
+<span class="font-label-badge text-label-badge text-secondary font-bold">+68.5% on Collateral</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-0.5 text-outline">
+<div class="flex items-center gap-1 font-label-meta text-label-meta text-primary">
+<span class="material-symbols-outlined text-[15px]">receipt_long</span>
+<span>View Verified Receipt</span>
+</div>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform text-outline">chevron_right</span>
+</div>
+</div>
+<!-- TRADE CARD 3: Prediction Market Sell (Loss Realized) -->
+<div class="cursor-pointer group rounded-xl bg-surface-container p-space-md shadow-sm active:scale-[0.99] transition-all flex flex-col gap-space-sm" onclick="openReceipt('ORD-97881-SL', 'Solana Spot ETF Staking Provision in Q3 2025', 'SELL YES', '48.0¢', '4,000 Shares', '$1,920.00 USDC', '-$160.00 (-7.7%) Realized', 'FILLED', '0x17c0...55ab', 'AMM Vault Pool #04')">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-bold tracking-wider">SELL</span>
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-tertiary-container/20 text-tertiary font-bold tracking-wider">YES 48.0¢</span>
+<span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded bg-surface-container-high text-tertiary flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> FILLED
+          </span>
+</div>
+<span class="font-label-meta text-label-meta text-outline font-mono-price-md shrink-0">Oct 22, 14:15 UTC</span>
+</div>
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col flex-1 min-w-0">
+<p class="font-headline-sm text-headline-sm text-on-surface font-semibold line-clamp-2">Solana Spot ETF Staking Provision approved in Q3 2025</p>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="font-label-meta text-label-meta text-outline">CRYPTO REGULATION</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-badge text-label-badge text-outline">#ORD-97881-SL</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover opacity-85" data-alt="Solana blockchain stylized 3D prism crystal floating in dark high-tech regulatory environment with cyan and magenta ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_NpFEjJ6spCuN27eylA6J6rqs-pAwH1XaOUTdhaEE-k4DWdQPu6UWVO4HqNAmdoi9rYNdSjd6Xsi3fJToiTeYqA30p_yxfzukkzb1fOS48ZtkILypyWcC_m61TrO9Q_KM-0RPkCI8YrJR3EPffsT2KpW_e15GUbNXfBt_uaCEcgO2Und8doA1MUjenG1c_6DJYaYKxttnD58muO-BGuNXYr_zgI-cgFQLbcBh_aeU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent"></div>
+</div>
+</div>
+<!-- Execution Metric Bar -->
+<div class="grid grid-cols-3 gap-2 p-2 rounded-lg bg-surface-container-low font-mono-price-md text-mono-price-md">
+<div class="flex flex-col">
+<span class="font-label-meta text-label-meta text-outline">Exit Price</span>
+<span class="font-semibold text-on-surface text-[13px]">48.0¢</span>
+<span class="font-label-badge text-label-badge text-outline-variant">4,000 Shs</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-meta text-label-meta text-outline">Liquidated Value</span>
+<span class="font-semibold text-on-surface text-[13px]">$1,920.00</span>
+<span class="font-label-badge text-label-badge text-outline-variant">Fee $1.92</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-meta text-label-meta text-outline">Realized Net</span>
+<span class="font-semibold text-tertiary text-[13px]">-$160.00</span>
+<span class="font-label-badge text-label-badge text-tertiary font-bold">-7.7% Loss</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-0.5 text-outline">
+<div class="flex items-center gap-1 font-label-meta text-label-meta text-primary">
+<span class="material-symbols-outlined text-[15px]">receipt_long</span>
+<span>View Verified Receipt</span>
+</div>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform text-outline">chevron_right</span>
+</div>
+</div>
+<!-- TRADE CARD 4: Combo Multi-Leg Treble -->
+<div class="cursor-pointer group rounded-xl bg-surface-container p-space-md shadow-sm active:scale-[0.99] transition-all flex flex-col gap-space-sm" onclick="openReceipt('ORD-97642-CM', 'Silicon Valley AI &amp; Quantum 3-Leg Treble', 'BUY COMBO (3 LEGS)', '5.85x Multiplier', '$100.00 USDC Stake', '$100.00 USDC', 'Potential $585.00 Payout', 'ACTIVE IN-PLAY', '0x00f1...a2bb', 'Atomic State Router')">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-bold tracking-wider">COMBO PARLAY</span>
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-surface-container-high text-primary font-bold tracking-wider">3 LEGS • 5.85x</span>
+<span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded bg-primary-container/20 text-primary-fixed-dim flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span> IN-PLAY
+          </span>
+</div>
+<span class="font-label-meta text-label-meta text-outline font-mono-price-md shrink-0">Oct 20, 09:12 UTC</span>
+</div>
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col flex-1 min-w-0">
+<p class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Silicon Valley AI &amp; Quantum 3-Leg Treble</p>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span>Leg 1: OpenAI GPT-5</span> • <span>Leg 2: PsiQuantum</span> • <span>Leg 3: Apple M5</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover opacity-85" data-alt="Glowing hyper-dimensional quantum processor chip glowing blue and turquoise with complex optical network circuits in dark micro-cleanroom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDms1FF3SAdUnC7swUT0-_QhQD9Cgk8nNwsTVdPAp0biIUFqhR82c-d184ZM_Jl2hAKCy9ehkqbZjEGT2qJTYjJ1leAe7jOYb0ZHCWypObs0oF1-Tq7X0oT-xu7_somQqTh0K6nmhywVymDLhVY4WqeUiNomE5Imrh68Rqs4TCMtEkAlMMXTAcsfFGGJ5BEPwNGbyN1f2zAikKn0Rl17f4TbJFbw2sRbg7XSi9uRsQZ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent"></div>
+</div>
+</div>
+<!-- Execution Metric Bar -->
+<div class="grid grid-cols-3 gap-2 p-2 rounded-lg bg-surface-container-low font-mono-price-md text-mono-price-md">
+<div class="flex flex-col">
+<span class="font-label-meta text-label-meta text-outline">Stake</span>
+<span class="font-semibold text-on-surface text-[13px]">$100.00 USDC</span>
+<span class="font-label-badge text-label-badge text-outline-variant">Fee $0.50</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-meta text-label-meta text-outline">Accum. Odds</span>
+<span class="font-semibold text-primary text-[13px]">5.85x (+485%)</span>
+<span class="font-label-badge text-label-badge text-secondary">2/3 Legs Passing</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-meta text-label-meta text-outline">Max Payout</span>
+<span class="font-semibold text-secondary text-[13px]">$585.00 USDC</span>
+<span class="font-label-badge text-label-badge text-outline font-bold">Expires Nov 15</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-0.5 text-outline">
+<div class="flex items-center gap-1 font-label-meta text-label-meta text-primary">
+<span class="material-symbols-outlined text-[15px]">receipt_long</span>
+<span>View Verified Receipt</span>
+</div>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform text-outline">chevron_right</span>
+</div>
+</div>
+<!-- TRADE CARD 5: TSMC 2nm commercial shipments -->
+<div class="cursor-pointer group rounded-xl bg-surface-container p-space-md shadow-sm active:scale-[0.99] transition-all flex flex-col gap-space-sm" onclick="openReceipt('ORD-97420-SM', 'TSMC 2nm commercial shipments ahead of schedule', 'BUY YES', '44.0¢', '5,000 Shares', '$2,200.00 USDC', 'Mark 44.0¢ (Breakeven)', 'FILLED', '0xbc99...771a', 'Arbitrum Nitro Rollup')">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-primary-container/20 text-primary-fixed-dim font-bold tracking-wider">BUY</span>
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-secondary-container/20 text-secondary font-bold tracking-wider">YES 44.0¢</span>
+<span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded bg-surface-container-high text-secondary flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> FILLED
+          </span>
+</div>
+<span class="font-label-meta text-label-meta text-outline font-mono-price-md shrink-0">Oct 18, 16:05 UTC</span>
+</div>
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col flex-1 min-w-0">
+<p class="font-headline-sm text-headline-sm text-on-surface font-semibold line-clamp-2">TSMC 2nm commercial shipments announced ahead of schedule</p>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="font-label-meta text-label-meta text-outline">SEMICONDUCTORS</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-badge text-label-badge text-outline">#ORD-97420-SM</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover opacity-85" data-alt="Advanced semiconductor wafer fab with orange and cobalt cleanroom lighting and automated robotic delivery vehicles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnEZrUMgFsvCeJ8mF0ovkRdXeTuLhyRTBCJT-dbim19AD92SZiNdxr0ptZjpQr7lOmM_92Rpta1PSlHoJpAfjka52gMlUeyZSFuIp0EVdtOrZR_UPJ5X4ciIeStmeJfz0avO7dkqFEBP9MMBrRx5Ou6h_J9umC4HlkaAWD-EU_iI8kskacV8TEdktbWwV0clWltDqzecYFYSTcKKDISN3ewRgxDmq98JqBBPxOvmK8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent"></div>
+</div>
+</div>
+<!-- Execution Metric Bar -->
+<div class="grid grid-cols-3 gap-2 p-2 rounded-lg bg-surface-container-low font-mono-price-md text-mono-price-md">
+<div class="flex flex-col">
+<span class="font-label-meta text-label-meta text-outline">Fill Price</span>
+<span class="font-semibold text-on-surface text-[13px]">44.0¢</span>
+<span class="font-label-badge text-label-badge text-outline-variant">5,000 Shs</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-meta text-label-meta text-outline">Gross Cost</span>
+<span class="font-semibold text-on-surface text-[13px]">$2,200.00</span>
+<span class="font-label-badge text-label-badge text-outline-variant">Fee $2.20</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-meta text-label-meta text-outline">Open P&amp;L</span>
+<span class="font-semibold text-on-surface text-[13px]">$0.00</span>
+<span class="font-label-badge text-label-badge text-outline font-bold">Breakeven</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-0.5 text-outline">
+<div class="flex items-center gap-1 font-label-meta text-label-meta text-primary">
+<span class="material-symbols-outlined text-[15px]">receipt_long</span>
+<span>View Verified Receipt</span>
+</div>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform text-outline">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Pagination & Auditor Proof Footer -->
+<div class="px-margin mt-space-lg flex flex-col items-center gap-space-sm">
+<div class="flex items-center justify-between w-full text-on-surface-variant font-label-meta text-label-meta">
+<span>Showing 1-5 of 482 Trades</span>
+<div class="flex items-center gap-2">
+<button class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-outline cursor-not-allowed opacity-50">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="px-2 py-1 rounded bg-primary-container text-on-primary-container font-mono-price-md font-bold text-xs">1</span>
+<span class="px-2 py-1 rounded text-outline font-mono-price-md text-xs cursor-pointer">2</span>
+<span class="px-2 py-1 rounded text-outline font-mono-price-md text-xs cursor-pointer">3</span>
+<span class="text-outline">...</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Micro Institutional Security Stamp -->
+<div class="w-full p-space-sm rounded-lg bg-surface-container-lowest flex items-center justify-center gap-space-xs text-outline font-label-badge text-[10px]">
+<span class="material-symbols-outlined text-[13px] text-secondary">encrypted</span>
+<span>ALL TRANSACTIONS COMMITTED TO ARBITRUM ONE BLOCK #281,992,104</span>
+</div>
+</div>
+<!-- Slide-up Order Receipt Drawer Modal (Hidden by default, triggered on click) -->
+<div class="fixed inset-0 z-50 bg-black/70 backdrop-blur-md hidden flex-col justify-end transition-opacity duration-200" id="receiptModal">
+<div class="absolute inset-0" onclick="closeReceipt(event)"></div>
+<div class="relative w-full max-h-[751px] bg-surface-container-low rounded-t-2xl p-margin flex flex-col gap-space-md z-10 overflow-y-auto shadow-[0_-8px_32px_rgba(0,0,0,0.8)]">
+<!-- Drawer grab handle -->
+<div class="w-12 h-1 bg-surface-container-highest rounded-full mx-auto -mt-1 shrink-0"></div>
+<!-- Drawer header -->
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span class="font-mono-price-md text-mono-price-md font-bold text-on-surface" id="modalOrderId">#ORD-98214-US</span>
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-secondary/20 text-secondary font-bold" id="modalStatus">FILLED</span>
+</div>
+<span class="font-label-meta text-label-meta text-outline mt-0.5">Cryptographic Matching Engine Receipt</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" onclick="dismissReceipt()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Contract Title -->
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col gap-1">
+<span class="font-label-meta text-label-meta text-outline">MARKET CONTRACT</span>
+<p class="font-headline-sm text-headline-sm text-on-surface font-semibold" id="modalMarketTitle">US Fed to cut rates ≥50 bps before Dec 2025 FOMC</p>
+</div>
+<!-- Match Audit Specs Grid -->
+<div class="grid grid-cols-2 gap-space-sm font-mono-price-md text-mono-price-md">
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-meta text-label-meta text-outline">Order Type &amp; Side</span>
+<span class="font-bold text-secondary text-[13px] mt-0.5" id="modalDirection">BUY YES</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-meta text-label-meta text-outline">Fill Price</span>
+<span class="font-bold text-on-surface text-[13px] mt-0.5" id="modalPrice">58.0¢</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-meta text-label-meta text-outline">Executed Shares</span>
+<span class="font-bold text-on-surface text-[13px] mt-0.5" id="modalQuantity">12,000 Shares</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-meta text-label-meta text-outline">Settled Volume</span>
+<span class="font-bold text-on-surface text-[13px] mt-0.5" id="modalValue">$6,960.00 USDC</span>
+</div>
+</div>
+<!-- Blockchain & Engine Audit Deep-Dive -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex flex-col gap-space-xs font-mono-price-md text-[11px]">
+<div class="flex items-center justify-between text-outline">
+<span>L2 Match Sequence</span>
+<span class="text-on-surface">#4,019,281.99</span>
+</div>
+<div class="flex items-center justify-between text-outline">
+<span>Settlement Engine</span>
+<span class="text-on-surface" id="modalRollup">Arbitrum Nitro Rollup</span>
+</div>
+<div class="flex items-center justify-between text-outline">
+<span>AMM Counterparty</span>
+<span class="text-on-surface">Vault Liquidity Pool #04</span>
+</div>
+<div class="flex items-center justify-between text-outline">
+<span>Match State Hash</span>
+<span class="text-primary truncate max-w-[160px]" id="modalHash">0x9a8f4c21e...3e21</span>
+</div>
+<div class="flex items-center justify-between text-outline">
+<span>Gas Consumed</span>
+<span class="text-secondary font-bold">0.000041 ETH ($0.11)</span>
+</div>
+</div>
+<!-- Receipt Actions -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<button class="h-11 rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high font-headline-sm text-[13px] font-semibold flex items-center justify-center gap-1.5 active:scale-95 transition-all" onclick="copyHash()">
+<span class="material-symbols-outlined text-[16px] text-primary">content_copy</span>
+<span id="copyBtnText">Copy Hash</span>
+</button>
+<button class="h-11 rounded-xl bg-primary-container text-on-primary-container hover:bg-primary font-headline-sm text-[13px] font-semibold flex items-center justify-center gap-1.5 active:scale-95 transition-all shadow-md" onclick="dismissReceipt()">
+<span class="material-symbols-outlined text-[16px]">done</span>
+<span>Done</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Client-side Interactive Modal Logic -->
+<script>
+    function openReceipt(orderId, title, dir, price, qty, val, pnl, status, hash, rollup) {
+      document.getElementById('modalOrderId').innerText = '#' + orderId;
+      document.getElementById('modalMarketTitle').innerText = title;
+      document.getElementById('modalDirection').innerText = dir;
+      document.getElementById('modalPrice').innerText = price;
+      document.getElementById('modalQuantity').innerText = qty;
+      document.getElementById('modalValue').innerText = val;
+      document.getElementById('modalStatus').innerText = status;
+      document.getElementById('modalHash').innerText = hash;
+      document.getElementById('modalRollup').innerText = rollup;
+      
+      const modal = document.getElementById('receiptModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function dismissReceipt() {
+      const modal = document.getElementById('receiptModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function closeReceipt(e) {
+      if (e.target.id !== 'receiptModal') {
+        dismissReceipt();
+      }
+    }
+
+    function copyHash() {
+      const btn = document.getElementById('copyBtnText');
+      const orig = btn.innerText;
+      btn.innerText = 'Copied!';
+      setTimeout(() => {
+        btn.innerText = orig;
+      }, 1500);
+    }
+
+    document.getElementById('exportBtn').addEventListener('click', function() {
+      const self = this;
+      self.classList.add('scale-95');
+      setTimeout(() => self.classList.remove('scale-95'), 150);
+      alert('Generating signed CSV & cryptographic audit trail PDF for your records...');
+    });
+  </script>
+</div></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-1px_16px_rgba(0,0,0,0.5)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-between items-center h-16 px-space-sm"><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">trending_up</span><span class="font-label-meta text-label-meta">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="explore" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span class="font-label-meta text-label-meta">Explore</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="markets" href="#"><span class="material-symbols-outlined text-[22px]">candlestick_chart</span><span class="font-label-meta text-label-meta">Markets</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="portfolio" href="#"><span class="material-symbols-outlined text-[22px]">account_balance_wallet</span><span class="font-label-meta text-label-meta">Portfolio</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="profile" href="#"><span class="material-symbols-outlined text-[22px]">manage_accounts</span><span class="font-label-meta text-label-meta">Profile</span></a></div></nav></body></html>

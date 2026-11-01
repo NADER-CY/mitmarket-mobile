@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;background-color:#071420;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary-fixed": "#002110", "on-surface-variant": "#c3c5d8", "primary-fixed-dim": "#b4c5ff", "on-tertiary-container": "#fff3f3", "tertiary-fixed": "#ffdada", "surface-container-highest": "#293643", "surface-container-low": "#101d29", "secondary-fixed-dim": "#4cdf95", "surface-dim": "#071420", "primary-container": "#1463ff", "surface": "#071420", "secondary": "#4cdf95", "on-surface": "#d7e4f5", "inverse-on-surface": "#25323e", "on-background": "#d7e4f5", "on-secondary-fixed-variant": "#005230", "outline": "#8d90a2", "surface-variant": "#293643", "on-secondary": "#003920", "on-tertiary": "#680019", "on-error-container": "#ffdad6", "on-primary-fixed": "#00174c", "surface-container": "#14212d", "on-tertiary-fixed": "#40000c", "error": "#ffb4ab", "inverse-primary": "#0052dd", "primary": "#b4c5ff", "error-container": "#93000a", "on-tertiary-fixed-variant": "#920027", "surface-bright": "#2e3a48", "on-secondary-container": "#004025", "surface-tint": "#b4c5ff", "secondary-fixed": "#6dfdaf", "on-primary": "#002979", "tertiary": "#ffb3b5", "secondary-container": "#00b872", "background": "#071420", "on-primary-fixed-variant": "#003daa", "surface-container-lowest": "#030f1b", "primary-fixed": "#dbe1ff", "on-primary-container": "#f5f5ff", "tertiary-container": "#d72747", "on-error": "#690005", "outline-variant": "#424656", "inverse-surface": "#d7e4f5", "tertiary-fixed-dim": "#ffb3b5", "surface-container-high": "#1f2b38" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "space-md": "0.75rem", "space-xs": "0.25rem", "gutter": "0.75rem", "space-lg": "1rem", "space-xl": "1.5rem", "margin": "1rem" }, fontFamily: { "label-meta": ["Inter"], "mono-price-lg": ["JetBrains Mono"], "headline-sm": ["Inter"], "body-sm": ["Inter"], "headline-lg": ["Inter"], "label-badge": ["JetBrains Mono"], "display": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "headline-md": ["Inter"], "mono-price-md": ["JetBrains Mono"] }, fontSize: { "label-meta": ["11px", { lineHeight: "14px", letterSpacing: "0.02em", fontWeight: "500" }], "mono-price-lg": ["22px", { lineHeight: "26px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-sm": ["15px", { lineHeight: "20px", letterSpacing: "-0.01em", fontWeight: "600" }], "body-sm": ["11px", { lineHeight: "15px", letterSpacing: "0em", fontWeight: "400" }], "headline-lg": ["22px", { lineHeight: "28px", letterSpacing: "-0.02em", fontWeight: "600" }], "label-badge": ["10px", { lineHeight: "12px", letterSpacing: "0.04em", fontWeight: "600" }], "display": ["30px", { lineHeight: "36px", letterSpacing: "-0.03em", fontWeight: "700" }], "body-lg": ["15px", { lineHeight: "22px", letterSpacing: "-0.01em", fontWeight: "400" }], "body-md": ["13px", { lineHeight: "18px", letterSpacing: "-0.005em", fontWeight: "400" }], "headline-md": ["18px", { lineHeight: "24px", letterSpacing: "-0.015em", fontWeight: "600" }], "mono-price-md": ["14px", { lineHeight: "18px", letterSpacing: "-0.01em", fontWeight: "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-low/85 backdrop-blur-xl shadow-[0_4px_20px_rgba(3,15,27,0.4)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go Back" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors active:scale-95" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span></button><div class="flex items-center gap-1.5 ml-1"><div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div><span class="font-headline-sm text-headline-sm font-bold tracking-wider text-on-surface uppercase">MITMARKET</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Share Market" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors active:scale-95"><span class="material-symbols-outlined text-[22px]">ios_share</span></button><button aria-label="Bookmark Market" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors active:scale-95"><span class="material-symbols-outlined text-[22px]">bookmark_border</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-28 bg-surface"><div class="flex flex-col w-full px-margin space-y-space-md">
+<!-- Editorial Card Vignette & Core Meta Header -->
+<section class="bg-surface-container-low rounded-xl p-space-md shadow-lg relative overflow-hidden">
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex flex-col gap-1.5 flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-badge text-label-badge text-primary uppercase tracking-wider">Macro Finance • Central Bank</span>
+</div>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant">Active • Closes in 18d 14h</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-lg shrink-0 overflow-hidden relative shadow-inner bg-surface-container-highest">
+<img class="w-full h-full object-cover mix-blend-luminosity opacity-85" data-alt="Close up architectural detail of the United States Federal Reserve Eccles Building facade in Washington DC at dramatic twilight, soft geometric architectural lighting, high contrast cinematic blue and obsidian ambiance, ultra sharp financial report photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE0dzOucXm5sHLxQTkRfSkAf99U6z26jB0B0Oeaz1W5rRLvNw1JiXpEyrUgurB_VMLAKguPsKWyF6dkEbycAoak5u5Zu_6aQQk0-uSB9dBpgYCal1mJNq9aU8wAtO2L78G47_7YT1EP75nPAVK0iNBjXR0SdLrMBYggT1n3K3dzpEWN9bH_OIAg-q9D-9eZZp0bDjRXR5L4A7plHpchgC05398XK_9znwCCXSOPJEr"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+</div>
+</div>
+<h1 class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-snug tracking-tight">
+      US Federal Reserve to cut benchmark interest rates by ≥50 bps before December 2025 FOMC?
+    </h1>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-label-meta text-label-meta">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">equalizer</span>
+<span>$44.8M 24h Vol</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">water_drop</span>
+<span>$8.2M Liquidity</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-outline">group</span>
+<span>18.4k Traders</span>
+</div>
+</div>
+</section>
+<!-- Probability Header & High-Contrast Metrics -->
+<section class="bg-surface-container rounded-xl p-space-md shadow-md space-y-space-sm">
+<div class="flex items-baseline justify-between">
+<div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-secondary uppercase">YES</span>
+<span class="font-display text-display text-secondary tracking-tight font-bold">68¢</span>
+<span class="font-label-badge text-label-badge text-secondary-fixed bg-secondary-container/20 px-1.5 py-0.5 rounded">68%</span>
+</div>
+<div class="flex items-center gap-1 text-secondary text-label-meta font-label-meta mt-0.5">
+<span class="material-symbols-outlined text-[13px]">trending_up</span>
+<span>+14.2% today</span>
+</div>
+</div>
+<div class="text-right">
+<div class="flex items-baseline gap-1.5 justify-end">
+<span class="font-label-badge text-label-badge text-tertiary bg-tertiary-container/20 px-1.5 py-0.5 rounded">32%</span>
+<span class="font-mono-price-lg text-mono-price-lg text-tertiary font-bold">32¢</span>
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary uppercase">NO</span>
+</div>
+<span class="font-label-meta text-label-meta text-on-surface-variant block mt-0.5">H: 71¢ • L: 52¢</span>
+</div>
+</div>
+<!-- Dual Segmented Consensus Bar -->
+<div class="space-y-1">
+<div class="w-full h-2.5 rounded-full bg-surface-container-highest flex overflow-hidden p-0.5 relative">
+<div class="h-full bg-secondary rounded-l-full shadow-[0_0_10px_rgba(76,223,149,0.5)] transition-all duration-500" style="width: 68%;"></div>
+<div class="h-full bg-tertiary-container rounded-r-full shadow-[0_0_10px_rgba(215,39,71,0.4)] transition-all duration-500" style="width: 32%;"></div>
+</div>
+<div class="flex justify-between text-label-badge font-label-badge text-on-surface-variant px-0.5">
+<span>Consensus Skew: Bullish Cut</span>
+<span>Implied Prob: 68.0%</span>
+</div>
+</div>
+</section>
+<!-- Interactive Probability History Chart -->
+<section class="bg-surface-container rounded-xl p-space-md shadow-md space-y-space-sm">
+<!-- Timeframe switchers -->
+<div class="flex items-center justify-between bg-surface-container-low p-1 rounded-lg">
+<button class="px-2.5 py-1 rounded text-label-badge font-label-badge text-on-surface-variant hover:text-on-surface transition-all">1H</button>
+<button class="px-2.5 py-1 rounded text-label-badge font-label-badge text-on-surface-variant hover:text-on-surface transition-all">4H</button>
+<button class="px-3 py-1 rounded text-label-badge font-label-badge bg-primary-container text-on-primary-container font-bold shadow-sm transition-all">1D</button>
+<button class="px-2.5 py-1 rounded text-label-badge font-label-badge text-on-surface-variant hover:text-on-surface transition-all">1W</button>
+<button class="px-2.5 py-1 rounded text-label-badge font-label-badge text-on-surface-variant hover:text-on-surface transition-all">1M</button>
+<button class="px-2.5 py-1 rounded text-label-badge font-label-badge text-on-surface-variant hover:text-on-surface transition-all">ALL</button>
+</div>
+<!-- Chart Canvas / SVG Container -->
+<div class="relative w-full h-44 pt-2">
+<!-- Crosshair HUD Floating Indicator -->
+<div class="absolute top-1 right-2 bg-surface-container-highest/90 px-2 py-0.5 rounded shadow flex items-center gap-1.5 z-10 backdrop-blur-md">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-mono-price-md text-mono-price-md text-secondary font-bold">68¢</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant">14:32 UTC</span>
+</div>
+<svg class="w-full h-32 overflow-visible" preserveaspectratio="none" viewbox="0 0 350 120">
+<defs>
+<lineargradient id="probGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#4cdf95" stop-opacity="0.32"></stop>
+<stop offset="85%" stop-color="#4cdf95" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="volGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#b4c5ff" stop-opacity="0.45"></stop>
+<stop offset="100%" stop-color="#b4c5ff" stop-opacity="0.08"></stop>
+</lineargradient>
+</defs>
+<!-- Subtle horizontal grid lines -->
+<line stroke="#293643" stroke-dasharray="3,3" stroke-width="0.75" x1="0" x2="350" y1="20" y2="20"></line>
+<line stroke="#293643" stroke-dasharray="3,3" stroke-width="0.75" x1="0" x2="350" y1="60" y2="60"></line>
+<line stroke="#293643" stroke-dasharray="3,3" stroke-width="0.75" x1="0" x2="350" y1="100" y2="100"></line>
+<!-- Area Fill -->
+<polygon fill="url(#probGradient)" points="0,110 0,98 25,95 50,102 75,90 100,85 130,88 160,70 190,65 220,72 250,55 285,42 320,38 350,22 350,110"></polygon>
+<!-- Probability Trajectory Curve -->
+<polyline fill="none" points="0,98 25,95 50,102 75,90 100,85 130,88 160,70 190,65 220,72 250,55 285,42 320,38 350,22" stroke="#4cdf95" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<!-- Crosshair Terminal Point -->
+<circle class="animate-pulse" cx="350" cy="22" fill="#4cdf95" r="4.5"></circle>
+<circle cx="350" cy="22" fill="#4cdf95" fill-opacity="0.25" r="8"></circle>
+</svg>
+<!-- Micro Volume Histogram below chart -->
+<div class="h-8 w-full flex items-end justify-between gap-1 pt-1 opacity-70">
+<div class="flex-1 bg-primary/20 h-2 rounded-t-xs"></div>
+<div class="flex-1 bg-primary/25 h-3.5 rounded-t-xs"></div>
+<div class="flex-1 bg-primary/20 h-1.5 rounded-t-xs"></div>
+<div class="flex-1 bg-secondary/35 h-4 rounded-t-xs"></div>
+<div class="flex-1 bg-primary/30 h-3 rounded-t-xs"></div>
+<div class="flex-1 bg-secondary/45 h-5 rounded-t-xs"></div>
+<div class="flex-1 bg-secondary/60 h-7 rounded-t-xs"></div>
+<div class="flex-1 bg-primary/25 h-3 rounded-t-xs"></div>
+<div class="flex-1 bg-secondary/50 h-6 rounded-t-xs"></div>
+<div class="flex-1 bg-secondary/80 h-7.5 rounded-t-xs"></div>
+<div class="flex-1 bg-secondary h-8 rounded-t-xs"></div>
+</div>
+</div>
+</section>
+<!-- Comprehensive YES / NO Mobile Order Slip -->
+<section class="bg-surface-container rounded-xl p-space-md shadow-xl space-y-space-md">
+<!-- Binary Outcome Choice Toggle -->
+<div class="grid grid-cols-2 gap-space-xs p-1 bg-surface-container-low rounded-lg">
+<button class="py-2.5 px-3 rounded-md bg-secondary text-on-secondary font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-1.5 shadow-[0_0_14px_rgba(76,223,149,0.35)] transition-all" id="toggle-yes">
+<span>BUY YES</span>
+<span class="font-mono-price-md text-mono-price-md font-semibold">68¢</span>
+</button>
+<button class="py-2.5 px-3 rounded-md bg-transparent text-tertiary hover:bg-surface-container-highest font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-1.5 transition-all" id="toggle-no">
+<span>BUY NO</span>
+<span class="font-mono-price-md text-mono-price-md opacity-80">32¢</span>
+</button>
+</div>
+<!-- Order Type & Quick Preset Bar -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 bg-surface-container-low p-0.5 rounded-md">
+<button class="px-2.5 py-1 text-label-badge font-label-badge rounded bg-primary-container text-on-primary-container font-semibold">Market</button>
+<button class="px-2.5 py-1 text-label-badge font-label-badge rounded text-on-surface-variant hover:text-on-surface">Limit</button>
+</div>
+<span class="font-label-meta text-label-meta text-on-surface-variant">Available: <span class="text-on-surface font-semibold font-mono-price-md">$4,250.00 USDC</span></span>
+</div>
+<!-- Quick Chips -->
+<div class="grid grid-cols-6 gap-1">
+<button class="py-1 rounded bg-surface-container-high hover:bg-surface-bright text-label-badge font-label-badge text-on-surface text-center active:scale-95 transition-all" onclick="setAmount(25)">$25</button>
+<button class="py-1 rounded bg-surface-container-high hover:bg-surface-bright text-label-badge font-label-badge text-on-surface text-center active:scale-95 transition-all" onclick="setAmount(50)">$50</button>
+<button class="py-1 rounded bg-primary-container/20 text-primary-fixed text-label-badge font-label-badge text-center active:scale-95 transition-all font-bold" onclick="setAmount(100)">$100</button>
+<button class="py-1 rounded bg-surface-container-high hover:bg-surface-bright text-label-badge font-label-badge text-on-surface text-center active:scale-95 transition-all" onclick="setAmount(250)">$250</button>
+<button class="py-1 rounded bg-surface-container-high hover:bg-surface-bright text-label-badge font-label-badge text-on-surface text-center active:scale-95 transition-all" onclick="setAmount(500)">$500</button>
+<button class="py-1 rounded bg-surface-container-high hover:bg-surface-bright text-label-badge font-label-badge text-secondary text-center active:scale-95 transition-all font-bold" onclick="setAmount(4250)">MAX</button>
+</div>
+<!-- Amount Input Container -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between shadow-inner">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-primary-container/25 text-primary flex items-center justify-center font-bold text-headline-sm font-headline-sm">$</span>
+<div class="flex flex-col">
+<span class="font-label-meta text-label-meta text-on-surface-variant">Order Amount</span>
+<input class="bg-transparent text-headline-lg font-headline-lg font-bold text-on-surface focus:outline-none w-32 [appearance:textfield] [&amp;::-webkit-outer-spin-button]:appearance-none [&amp;::-webkit-inner-spin-button]:appearance-none" id="trade-amount-input" type="number" value="100"/>
+</div>
+</div>
+<span class="font-mono-price-md text-mono-price-md text-primary font-bold px-2 py-1 rounded bg-surface-container-highest">USDC</span>
+</div>
+</div>
+<!-- Payout Breakdown Summary -->
+<div class="bg-surface-container-low rounded-lg p-space-sm space-y-1.5 text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex justify-between items-center">
+<span>Estimated Shares</span>
+<span class="text-on-surface font-mono-price-md font-semibold" id="est-shares">147.05 YES</span>
+</div>
+<div class="flex justify-between items-center">
+<span>Max Resolution Payout</span>
+<span class="text-secondary font-mono-price-md font-bold" id="est-payout">$147.05 USDC <span class="text-label-badge font-label-badge">(+47.05%)</span></span>
+</div>
+<div class="flex justify-between items-center">
+<span>Protocol Trading Fee</span>
+<span class="text-on-surface font-mono-price-md">$0.15 USDC (0.15%)</span>
+</div>
+<div class="flex justify-between items-center">
+<span>Avg Price / Slippage</span>
+<span class="text-on-surface font-mono-price-md">68.2¢ (&lt;0.02%)</span>
+</div>
+</div>
+<!-- Main Order Execution CTA Button -->
+<button class="w-full h-12 rounded-lg bg-secondary text-on-secondary font-headline-sm text-headline-sm font-bold tracking-wide uppercase shadow-[0_0_20px_rgba(76,223,149,0.3)] hover:brightness-105 active:scale-[0.98] transition-all flex items-center justify-center gap-2" id="cta-trade-btn">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+<span>Confirm Trade • Buy YES</span>
+</button>
+</section>
+<!-- Market Tabs & Institutional Depth Accordions -->
+<section class="space-y-space-sm">
+<!-- Accordion 1: Market Rules -->
+<details class="group bg-surface-container rounded-xl shadow-md overflow-hidden" open="">
+<summary class="p-space-md flex items-center justify-between cursor-pointer list-none select-none">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">gavel</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Rules &amp; Resolution Source</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform duration-200 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-space-md pb-space-md text-body-md font-body-md text-on-surface-variant space-y-space-sm pt-1">
+<p class="leading-relaxed">
+          Official resolution source is the Federal Reserve Board of Governors statistical release H.15. The market resolves to <strong class="text-secondary">YES</strong> if the upper limit of the target federal funds range is decreased by 50 basis points (0.50%) or more cumulatively prior to the conclusion of the Dec 17, 2025 FOMC meeting.
+        </p>
+<div class="flex flex-wrap gap-2 pt-1">
+<div class="bg-surface-container-high px-2.5 py-1 rounded text-label-meta font-label-meta flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[14px]">link</span>
+<span>federalreserve.gov/releases/h15</span>
+</div>
+<div class="bg-surface-container-high px-2.5 py-1 rounded text-label-meta font-label-meta text-on-surface-variant">
+            Resolution Date: Dec 17, 2025
+          </div>
+</div>
+</div>
+</details>
+<!-- Accordion 2: Live Depth & Micro Orderbook -->
+<details class="group bg-surface-container rounded-xl shadow-md overflow-hidden">
+<summary class="p-space-md flex items-center justify-between cursor-pointer list-none select-none">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">swap_vert</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Order Book &amp; Liquidity Depth</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform duration-200 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-space-md pb-space-md space-y-space-xs">
+<div class="grid grid-cols-2 text-label-badge font-label-badge text-on-surface-variant pb-1">
+<span>BIDS (YES)</span>
+<span class="text-right">ASKS (NO)</span>
+</div>
+<!-- Depth Row 1 -->
+<div class="grid grid-cols-2 gap-2 text-body-sm font-mono-price-md">
+<div class="relative flex justify-between px-1.5 py-0.5 rounded overflow-hidden bg-surface-container-low">
+<div class="absolute left-0 top-0 bottom-0 bg-secondary/15 w-[85%]"></div>
+<span class="relative z-10 text-secondary font-bold">68¢</span>
+<span class="relative z-10 text-on-surface-variant">420,150</span>
+</div>
+<div class="relative flex justify-between px-1.5 py-0.5 rounded overflow-hidden bg-surface-container-low">
+<div class="absolute right-0 top-0 bottom-0 bg-tertiary-container/20 w-[65%]"></div>
+<span class="relative z-10 text-on-surface-variant">185,400</span>
+<span class="relative z-10 text-tertiary font-bold">32¢</span>
+</div>
+</div>
+<!-- Depth Row 2 -->
+<div class="grid grid-cols-2 gap-2 text-body-sm font-mono-price-md">
+<div class="relative flex justify-between px-1.5 py-0.5 rounded overflow-hidden bg-surface-container-low">
+<div class="absolute left-0 top-0 bottom-0 bg-secondary/15 w-[60%]"></div>
+<span class="relative z-10 text-secondary">67¢</span>
+<span class="relative z-10 text-on-surface-variant">290,000</span>
+</div>
+<div class="relative flex justify-between px-1.5 py-0.5 rounded overflow-hidden bg-surface-container-low">
+<div class="absolute right-0 top-0 bottom-0 bg-tertiary-container/20 w-[45%]"></div>
+<span class="relative z-10 text-on-surface-variant">98,200</span>
+<span class="relative z-10 text-tertiary">33¢</span>
+</div>
+</div>
+<!-- Depth Row 3 -->
+<div class="grid grid-cols-2 gap-2 text-body-sm font-mono-price-md">
+<div class="relative flex justify-between px-1.5 py-0.5 rounded overflow-hidden bg-surface-container-low">
+<div class="absolute left-0 top-0 bottom-0 bg-secondary/15 w-[40%]"></div>
+<span class="relative z-10 text-secondary">66¢</span>
+<span class="relative z-10 text-on-surface-variant">145,210</span>
+</div>
+<div class="relative flex justify-between px-1.5 py-0.5 rounded overflow-hidden bg-surface-container-low">
+<div class="absolute right-0 top-0 bottom-0 bg-tertiary-container/20 w-[80%]"></div>
+<span class="relative z-10 text-on-surface-variant">312,800</span>
+<span class="relative z-10 text-tertiary">34¢</span>
+</div>
+</div>
+</div>
+</details>
+<!-- Accordion 3: Recent Activity Stream -->
+<details class="group bg-surface-container rounded-xl shadow-md overflow-hidden" open="">
+<summary class="p-space-md flex items-center justify-between cursor-pointer list-none select-none">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[20px]">history</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Live Trade Tape</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform duration-200 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-space-md pb-space-md space-y-space-xs font-mono-price-md text-body-sm">
+<div class="flex items-center justify-between py-1 bg-surface-container-low/50 px-2 rounded">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="text-on-surface">0x8F9a...b41</span>
+<span class="text-secondary font-bold">bought 2,400 YES</span>
+</div>
+<div class="text-right text-on-surface-variant font-label-meta">@ 68¢ • 2m</div>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container-low/50 px-2 rounded">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="text-on-surface">0x3C12...e09</span>
+<span class="text-tertiary font-bold">bought 1,000 NO</span>
+</div>
+<div class="text-right text-on-surface-variant font-label-meta">@ 32¢ • 4m</div>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-container-low/50 px-2 rounded">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="text-on-surface">0x71Ae...19d</span>
+<span class="text-secondary font-bold">bought 15,000 YES</span>
+</div>
+<div class="text-right text-on-surface-variant font-label-meta">@ 67.5¢ • 9m</div>
+</div>
+</div>
+</details>
+</section>
+<!-- Related Markets Micro-Bento -->
+<section class="space-y-space-xs">
+<div class="flex items-center justify-between px-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Correlated Markets</span>
+<span class="font-label-meta text-label-meta text-primary flex items-center gap-0.5">Explore All <span class="material-symbols-outlined text-[14px]">chevron_right</span></span>
+</div>
+<div class="grid grid-cols-1 gap-space-xs">
+<!-- Related Item 1 -->
+<div class="bg-surface-container rounded-lg p-space-sm flex items-center justify-between gap-space-sm hover:bg-surface-container-high transition-colors">
+<div class="flex-1 min-w-0">
+<div class="font-label-badge text-label-badge text-on-surface-variant uppercase mb-0.5">ECB POLICY</div>
+<div class="font-body-md text-body-md text-on-surface font-medium truncate">ECB to reduce deposit facility rate in July 2025?</div>
+</div>
+<div class="shrink-0 flex items-center gap-1.5">
+<span class="font-mono-price-md text-mono-price-md text-secondary font-bold">35% YES</span>
+<button class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Related Item 2 -->
+<div class="bg-surface-container rounded-lg p-space-sm flex items-center justify-between gap-space-sm hover:bg-surface-container-high transition-colors">
+<div class="flex-1 min-w-0">
+<div class="font-label-badge text-label-badge text-on-surface-variant uppercase mb-0.5">INFLATION GAUGES</div>
+<div class="font-body-md text-body-md text-on-surface font-medium truncate">US Headline CPI YoY exceeds 3.1% in Q3 print?</div>
+</div>
+<div class="shrink-0 flex items-center gap-1.5">
+<span class="font-mono-price-md text-mono-price-md text-tertiary font-bold">22% YES</span>
+<button class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  let activeOutcome = 'YES';
+  const yesPrice = 0.68;
+  const noPrice = 0.32;
+
+  function updateCalculations() {
+    const input = document.getElementById('trade-amount-input');
+    const estShares = document.getElementById('est-shares');
+    const estPayout = document.getElementById('est-payout');
+    const ctaBtn = document.getElementById('cta-trade-btn');
+
+    let amt = parseFloat(input.value) || 0;
+    const price = activeOutcome === 'YES' ? yesPrice : noPrice;
+
+    if (amt <= 0) {
+      estShares.innerText = `0.00 ${activeOutcome}`;
+      estPayout.innerHTML = `$0.00 USDC <span class="text-label-badge font-label-badge">(+0.00%)</span>`;
+      return;
+    }
+
+    const shares = (amt / price).toFixed(2);
+    const payout = (amt / price).toFixed(2);
+    const returnPct = (((1 / price) - 1) * 100).toFixed(2);
+
+    estShares.innerText = `${shares} ${activeOutcome}`;
+    estPayout.innerHTML = `$${payout} USDC <span class="text-label-badge font-label-badge">(+${returnPct}%)</span>`;
+  }
+
+  function setAmount(val) {
+    const input = document.getElementById('trade-amount-input');
+    input.value = val;
+    updateCalculations();
+  }
+
+  const toggleYes = document.getElementById('toggle-yes');
+  const toggleNo = document.getElementById('toggle-no');
+  const ctaBtn = document.getElementById('cta-trade-btn');
+
+  toggleYes.addEventListener('click', () => {
+    activeOutcome = 'YES';
+    toggleYes.className = "py-2.5 px-3 rounded-md bg-secondary text-on-secondary font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-1.5 shadow-[0_0_14px_rgba(76,223,149,0.35)] transition-all";
+    toggleNo.className = "py-2.5 px-3 rounded-md bg-transparent text-tertiary hover:bg-surface-container-highest font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-1.5 transition-all";
+    ctaBtn.className = "w-full h-12 rounded-lg bg-secondary text-on-secondary font-headline-sm text-headline-sm font-bold tracking-wide uppercase shadow-[0_0_20px_rgba(76,223,149,0.3)] hover:brightness-105 active:scale-[0.98] transition-all flex items-center justify-center gap-2";
+    ctaBtn.innerHTML = `<span class="material-symbols-outlined text-[20px]">bolt</span><span>Confirm Trade • Buy YES</span>`;
+    updateCalculations();
+  });
+
+  toggleNo.addEventListener('click', () => {
+    activeOutcome = 'NO';
+    toggleNo.className = "py-2.5 px-3 rounded-md bg-tertiary-container text-on-tertiary-container font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-1.5 shadow-[0_0_14px_rgba(215,39,71,0.4)] transition-all";
+    toggleYes.className = "py-2.5 px-3 rounded-md bg-transparent text-secondary hover:bg-surface-container-highest font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-1.5 transition-all";
+    ctaBtn.className = "w-full h-12 rounded-lg bg-tertiary-container text-on-tertiary-container font-headline-sm text-headline-sm font-bold tracking-wide uppercase shadow-[0_0_20px_rgba(215,39,71,0.3)] hover:brightness-105 active:scale-[0.98] transition-all flex items-center justify-center gap-2";
+    ctaBtn.innerHTML = `<span class="material-symbols-outlined text-[20px]">bolt</span><span>Confirm Trade • Buy NO</span>`;
+    updateCalculations();
+  });
+
+  document.getElementById('trade-amount-input').addEventListener('input', updateCalculations);
+</script></main><aside class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-low/90 backdrop-blur-xl shadow-[0_-8px_32px_rgba(3,15,27,0.7)]"><div class="h-20 px-margin flex items-center gap-gutter"><button class="flex-1 h-12 rounded-lg bg-secondary-container/20 text-secondary-fixed hover:bg-secondary-container/30 active:scale-[0.98] transition-all flex items-center justify-between px-space-md shadow-[0_0_12px_rgba(76,223,149,0.15)]"><span class="font-headline-sm text-headline-sm font-semibold uppercase tracking-wide">Buy YES</span><span class="font-mono-price-md text-mono-price-md font-bold">58¢</span></button><button class="flex-1 h-12 rounded-lg bg-tertiary-container/20 text-tertiary hover:bg-tertiary-container/30 active:scale-[0.98] transition-all flex items-center justify-between px-space-md shadow-[0_0_12px_rgba(215,39,71,0.15)]"><span class="font-headline-sm text-headline-sm font-semibold uppercase tracking-wide">Buy NO</span><span class="font-mono-price-md text-mono-price-md font-bold">42¢</span></button></div></aside></body></html>

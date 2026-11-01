@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#071420;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#030f1b", "on-secondary": "#003920", "on-primary-fixed": "#00174c", "secondary": "#4cdf95", "inverse-primary": "#0052dd", "outline": "#8d90a2", "surface-dim": "#071420", "primary-fixed": "#dbe1ff", "outline-variant": "#424656", "error-container": "#93000a", "primary-fixed-dim": "#b4c5ff", "on-primary-container": "#f5f5ff", "on-tertiary-container": "#fff3f3", "error": "#ffb4ab", "surface-container-low": "#101d29", "on-surface": "#d7e4f5", "on-error-container": "#ffdad6", "secondary-container": "#00b872", "on-secondary-container": "#004025", "tertiary-container": "#d72747", "on-secondary-fixed-variant": "#005230", "background": "#071420", "tertiary-fixed": "#ffdada", "surface-bright": "#2e3a48", "surface-container-highest": "#293643", "on-error": "#690005", "on-background": "#d7e4f5", "on-secondary-fixed": "#002110", "on-surface-variant": "#c3c5d8", "on-primary": "#002979", "secondary-fixed-dim": "#4cdf95", "tertiary-fixed-dim": "#ffb3b5", "inverse-on-surface": "#25323e", "surface-variant": "#293643", "on-tertiary-fixed-variant": "#920027", "tertiary": "#ffb3b5", "surface": "#071420", "surface-container-high": "#1f2b38", "surface-container": "#14212d", "on-primary-fixed-variant": "#003daa", "primary": "#b4c5ff", "primary-container": "#1463ff", "on-tertiary-fixed": "#40000c", "on-tertiary": "#680019", "secondary-fixed": "#6dfdaf", "surface-tint": "#b4c5ff", "inverse-surface": "#d7e4f5" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "0.75rem", "space-xs": "0.25rem", "gutter": "0.75rem", "space-lg": "1rem", "space-sm": "0.5rem", "space-xl": "1.5rem", "margin": "1rem" }, "fontFamily": { "body-lg": ["Inter"], "label-badge": ["JetBrains Mono"], "mono-price-md": ["JetBrains Mono"], "headline-md": ["Inter"], "display": ["Inter"], "body-md": ["Inter"], "mono-price-lg": ["JetBrains Mono"], "headline-lg": ["Inter"], "label-meta": ["Inter"], "headline-sm": ["Inter"], "body-sm": ["Inter"] }, "fontSize": { "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-badge": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "600" }], "mono-price-md": ["14px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "mono-price-lg": ["22px", { "lineHeight": "26px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-meta": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["11px", { "lineHeight": "15px", "letterSpacing": "0em", "fontWeight": "400" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.4)] pt-safe"><div class="h-14 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go Back" class="w-11 h-11 -ml-space-xs flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface truncate">Mitmarket — Crypto Withdrawal</h1></div><div class="flex items-center gap-space-xs"><button aria-label="More Options" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">tune</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-14 pb-safe bg-surface flex-1"><div class="flex flex-col w-full text-on-surface">
+<!-- Interactive & Layout Wrapper restricted to mobile baseline -->
+<div class="w-full max-w-[390px] mx-auto px-margin pb-space-xl flex flex-col gap-space-lg">
+<!-- Sub-header Security Shield & Context Notice -->
+<div class="flex items-center justify-between bg-surface-container-low px-space-md py-space-sm rounded-xl">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
+<span class="font-label-meta text-label-meta text-on-surface">Tier 3 Verified Account</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-badge text-label-badge text-secondary tracking-wider uppercase">Vault Safe</span>
+</div>
+</div>
+<!-- Section 1: Asset Selection & Balance Bar -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-on-surface-variant uppercase tracking-wider">Asset Selection</span>
+<span class="font-label-meta text-label-meta text-primary">Deposit Rules</span>
+</div>
+<!-- Main Asset Card -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center relative">
+<span class="font-headline-md text-headline-md text-secondary font-bold">₮</span>
+<div class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-surface-container flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">USDT</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant">Tether USD</span>
+</div>
+<span class="font-label-badge text-label-badge text-secondary bg-secondary/10 px-1.5 py-0.5 rounded w-fit">STABLECOIN</span>
+</div>
+</div>
+<button class="bg-surface-container-high px-space-sm py-1 rounded-lg flex items-center gap-space-xs text-on-surface hover:text-primary transition-colors">
+<span class="font-label-meta text-label-meta">Change</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+<!-- Balances Bar -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-meta text-label-meta text-on-surface-variant">Available Balance</span>
+<span class="font-mono-price-md text-mono-price-md text-on-surface font-semibold">20,000.00 <span class="text-on-surface-variant text-[11px]">USDT</span></span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-meta text-label-meta text-on-surface-variant">Locked in Orders</span>
+<span class="material-symbols-outlined text-outline text-[13px]">lock</span>
+</div>
+<span class="font-mono-price-md text-mono-price-md text-outline">4,150.00 <span class="text-outline text-[11px]">USDT</span></span>
+</div>
+</div>
+</div>
+<!-- Quick Tokens Strip -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 pt-0.5 no-scrollbar">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-badge text-label-badge">
+<span class="font-bold">₮</span> USDT
+        </button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge">
+<span class="font-bold">$</span> USDC
+        </button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge">
+<span class="font-bold">₿</span> BTC
+        </button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge">
+<span class="font-bold">Ξ</span> ETH
+        </button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge">
+<span class="font-bold">◎</span> SOL
+        </button>
+</div>
+</section>
+<!-- Section 2: Destination Address Input -->
+<section class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-meta text-label-meta text-on-surface-variant uppercase tracking-wider" for="walletAddress">Recipient Wallet Address</label>
+<span class="font-label-meta text-label-meta text-primary flex items-center gap-0.5 cursor-pointer">
+<span class="material-symbols-outlined text-[13px]">history</span> History
+        </span>
+</div>
+<div class="bg-surface-container rounded-xl p-space-sm flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-sm py-space-xs rounded-lg">
+<input class="w-full bg-transparent font-mono-price-md text-mono-price-md text-on-surface focus:outline-none" id="walletAddress" placeholder="Enter or paste address..." type="text" value="TYsN8hJbQ1rL7mZ2wX9oKp4VdCe31mA8vF"/>
+<div class="flex items-center gap-1 shrink-0">
+<button aria-label="Paste from clipboard" class="px-2 py-1 rounded bg-surface-container-high text-primary hover:bg-surface-bright font-label-badge text-label-badge">
+              PASTE
+            </button>
+<button aria-label="Scan QR Code" class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">qr_code_scanner</span>
+</button>
+<button aria-label="Address Book" class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+</button>
+</div>
+</div>
+<!-- Validation Indicator -->
+<div class="flex items-center justify-between px-space-xs py-1">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[15px]">check_circle</span>
+<span class="font-label-badge text-label-badge text-secondary font-medium">Valid TRC20 Address Checksum Verified</span>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Cold Wallet</span>
+</div>
+</div>
+</section>
+<!-- Section 3: Network Selection & Fee Display -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-on-surface-variant uppercase tracking-wider">Transfer Network</span>
+<span class="font-label-meta text-label-meta text-secondary flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span> Tron Congestion: Low
+        </span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Option: Tron TRC20 (Active) -->
+<div class="bg-surface-container-high p-space-sm rounded-xl flex flex-col justify-between relative shadow-sm">
+<div class="flex items-center justify-between mb-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Tron (TRC20)</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-on-surface-variant">Fee</span>
+<span class="font-mono-price-md text-mono-price-md text-on-surface">1.00 USDT</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-on-surface-variant">Arrival</span>
+<span class="font-label-badge text-label-badge text-secondary">~2 min</span>
+</div>
+</div>
+</div>
+<!-- Option: Ethereum ERC20 -->
+<div class="bg-surface-container p-space-sm rounded-xl flex flex-col justify-between opacity-80 hover:opacity-100 transition-opacity">
+<div class="flex items-center justify-between mb-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">Ethereum (ERC20)</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-on-surface-variant">Fee</span>
+<span class="font-mono-price-md text-mono-price-md text-outline">8.50 USDT</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-on-surface-variant">Arrival</span>
+<span class="font-label-badge text-label-badge text-outline">~5 min</span>
+</div>
+</div>
+</div>
+<!-- Option: Solana SPL -->
+<div class="bg-surface-container p-space-sm rounded-xl flex flex-col justify-between opacity-80 hover:opacity-100 transition-opacity">
+<div class="flex items-center justify-between mb-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">Solana (SPL)</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-on-surface-variant">Fee</span>
+<span class="font-mono-price-md text-mono-price-md text-outline">0.50 USDT</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-on-surface-variant">Arrival</span>
+<span class="font-label-badge text-label-badge text-secondary">~30 sec</span>
+</div>
+</div>
+</div>
+<!-- Option: BNB Chain BEP20 -->
+<div class="bg-surface-container p-space-sm rounded-xl flex flex-col justify-between opacity-80 hover:opacity-100 transition-opacity">
+<div class="flex items-center justify-between mb-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">BNB Chain (BEP20)</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-on-surface-variant">Fee</span>
+<span class="font-mono-price-md text-mono-price-md text-outline">0.30 USDT</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-on-surface-variant">Arrival</span>
+<span class="font-label-badge text-label-badge text-outline">~2 min</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Network Warning -->
+<div class="bg-surface-container-low px-space-md py-space-xs rounded-lg flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[18px]">warning</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant">Ensure destination platform strictly supports <strong class="text-on-surface">Tron (TRC20)</strong>. Loss of funds cannot be reversed.</span>
+</div>
+</section>
+<!-- Section 4: Withdrawal Amount Input -->
+<section class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-meta text-label-meta text-on-surface-variant uppercase tracking-wider" for="withdrawAmount">Withdrawal Amount</label>
+<span class="font-label-meta text-label-meta text-on-surface-variant">No gas lock fee applied</span>
+</div>
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-baseline justify-between bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-baseline gap-space-xs w-full">
+<input class="w-full bg-transparent font-mono-price-lg text-mono-price-lg text-on-surface focus:outline-none font-bold" id="withdrawAmount" type="text" value="5,000.00"/>
+<span class="font-mono-price-md text-mono-price-md text-on-surface-variant">USDT</span>
+</div>
+<button class="bg-surface-container-high px-space-sm py-1 rounded text-primary font-label-badge text-label-badge hover:bg-surface-bright transition-colors ml-space-sm">
+            MAX
+          </button>
+</div>
+<!-- Percentage Quick Chips -->
+<div class="grid grid-cols-4 gap-space-xs">
+<button class="py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge text-center">25%</button>
+<button class="py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge text-center">50%</button>
+<button class="py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge text-center">75%</button>
+<button class="py-1.5 rounded-lg bg-primary-container/20 text-primary font-label-badge text-label-badge text-center font-bold">100%</button>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-meta text-label-meta text-on-surface-variant">Min: 20.00 USDT</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant">24h Remaining: <strong class="text-on-surface">$100,000.00</strong></span>
+</div>
+</div>
+</section>
+<!-- Section 5: Receipt / Fee & Deduction Breakdown -->
+<section class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-meta text-label-meta text-on-surface-variant uppercase tracking-wider">Settlement Breakdown</span>
+<span class="font-label-badge text-label-badge text-secondary bg-secondary/10 px-1.5 py-0.5 rounded">0% PLATFORM CUT</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant">Withdrawal Amount</span>
+<span class="font-mono-price-md text-mono-price-md text-on-surface">5,000.00 USDT</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="font-body-md text-body-md text-on-surface-variant">Network Gas Fee</span>
+<span class="font-label-badge text-label-badge text-secondary">(50% MIT Absorbed)</span>
+</div>
+<span class="font-mono-price-md text-mono-price-md text-on-surface">1.00 USDT</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant">Total Deducted</span>
+<span class="font-mono-price-md text-mono-price-md text-outline">5,001.00 USDT</span>
+</div>
+<div class="h-px bg-surface-container-high my-space-xs"></div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Net Payout to Recipient</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant">Destination ledger receipt</span>
+</div>
+<span class="font-mono-price-lg text-mono-price-lg text-secondary font-bold">5,000.00 <span class="text-xs">USDT</span></span>
+</div>
+</div>
+</section>
+<!-- Section 6: Security Verification & Confirmation Action CTA -->
+<section class="flex flex-col gap-space-sm">
+<!-- Direct Dispatch Button -->
+<button class="w-full bg-primary-container text-on-primary-container py-3.5 px-space-md rounded-xl font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-space-sm shadow-lg active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+        Review &amp; Confirm Withdrawal
+      </button>
+<!-- Embedded Security Check Mockup Panel -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md shadow-inner">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">security</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Security Verification</span>
+</div>
+<span class="font-label-badge text-label-badge text-secondary bg-secondary/10 px-2 py-0.5 rounded">2FA ACTIVE</span>
+</div>
+<div class="flex flex-col items-center gap-space-sm text-center">
+<span class="font-label-meta text-label-meta text-on-surface-variant">Enter 6-digit Authenticator PIN</span>
+<!-- 6-digit PIN slot mockup -->
+<div class="flex items-center justify-center gap-space-xs">
+<div class="w-9 h-11 bg-surface-container rounded-lg flex items-center justify-center font-mono-price-lg text-mono-price-lg text-on-surface font-bold">4</div>
+<div class="w-9 h-11 bg-surface-container rounded-lg flex items-center justify-center font-mono-price-lg text-mono-price-lg text-on-surface font-bold">8</div>
+<div class="w-9 h-11 bg-surface-container rounded-lg flex items-center justify-center font-mono-price-lg text-mono-price-lg text-on-surface font-bold">2</div>
+<div class="w-9 h-11 bg-surface-container rounded-lg flex items-center justify-center font-mono-price-lg text-mono-price-lg text-on-surface font-bold">•</div>
+<div class="w-9 h-11 bg-surface-container rounded-lg flex items-center justify-center font-mono-price-lg text-mono-price-lg text-on-surface font-bold">•</div>
+<div class="w-9 h-11 bg-surface-container rounded-lg flex items-center justify-center font-mono-price-lg text-mono-price-lg text-on-surface font-bold">•</div>
+</div>
+</div>
+<button class="w-full bg-surface-container-high hover:bg-surface-bright text-on-surface py-2.5 rounded-lg font-headline-sm text-headline-sm flex items-center justify-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-primary text-[18px]">fingerprint</span>
+          Verify with Face ID / Biometrics
+        </button>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-2 rounded-lg">
+<span class="material-symbols-outlined text-outline text-[16px]">info</span>
+<span class="font-label-meta text-label-meta text-on-surface-variant">MITMARKET staff will never solicit passwords or seed phrases.</span>
+</div>
+</div>
+</section>
+<!-- Section 7: Recent Withdrawal Activity -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-on-surface-variant uppercase tracking-wider">Recent Dispatches</span>
+<button class="font-label-meta text-label-meta text-primary hover:underline">View All Ledger</button>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Item 1: USDT Completed -->
+<div class="bg-surface-container p-space-sm rounded-xl flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">₮</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">5,000.00 USDT</span>
+<span class="font-label-badge text-label-badge text-secondary bg-secondary/10 px-1 py-0.2 rounded">TRC20</span>
+</div>
+<span class="font-label-meta text-label-meta text-on-surface-variant">To: TYsN8...1mA</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-0.5">
+<span class="font-label-badge text-label-badge text-secondary bg-secondary/15 px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="w-1 h-1 rounded-full bg-secondary"></span> Completed
+            </span>
+<span class="font-label-meta text-label-meta text-primary flex items-center gap-0.5">Tronscan <span class="material-symbols-outlined text-[11px]">north_east</span></span>
+</div>
+</div>
+<!-- Item 2: BTC Processing -->
+<div class="bg-surface-container p-space-sm rounded-xl flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container/20 flex items-center justify-center">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">₿</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">0.0500 BTC</span>
+<span class="font-label-badge text-label-badge text-primary bg-primary/10 px-1 py-0.2 rounded">SegWit</span>
+</div>
+<span class="font-label-meta text-label-meta text-on-surface-variant">To: bc1q9...4k2</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-0.5">
+<span class="font-label-badge text-label-badge text-primary bg-primary/15 px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="w-1 h-1 rounded-full bg-primary animate-ping"></span> Processing (1/3)
+            </span>
+<span class="font-label-meta text-label-meta text-primary flex items-center gap-0.5">Mempool <span class="material-symbols-outlined text-[11px]">north_east</span></span>
+</div>
+</div>
+<!-- Item 3: ETH Settled (Past) -->
+<div class="bg-surface-container p-space-sm rounded-xl flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="font-headline-sm text-headline-sm text-on-surface-variant font-bold">Ξ</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">1.2000 ETH</span>
+<span class="font-label-badge text-label-badge text-outline bg-surface-container-low px-1 py-0.2 rounded">ERC20</span>
+</div>
+<span class="font-label-meta text-label-meta text-on-surface-variant">To: 0x71a...99b</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-0.5">
+<span class="font-label-meta text-label-meta text-on-surface-variant">3 days ago</span>
+<span class="font-label-badge text-label-badge text-outline">Settled</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div></main></body></html>

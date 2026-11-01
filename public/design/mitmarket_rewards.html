@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#071420;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#030f1b", "on-secondary": "#003920", "on-primary-fixed": "#00174c", "secondary": "#4cdf95", "inverse-primary": "#0052dd", "outline": "#8d90a2", "surface-dim": "#071420", "primary-fixed": "#dbe1ff", "outline-variant": "#424656", "error-container": "#93000a", "primary-fixed-dim": "#b4c5ff", "on-primary-container": "#f5f5ff", "on-tertiary-container": "#fff3f3", "error": "#ffb4ab", "surface-container-low": "#101d29", "on-surface": "#d7e4f5", "on-error-container": "#ffdad6", "secondary-container": "#00b872", "on-secondary-container": "#004025", "tertiary-container": "#d72747", "on-secondary-fixed-variant": "#005230", "background": "#071420", "tertiary-fixed": "#ffdada", "surface-bright": "#2e3a48", "surface-container-highest": "#293643", "on-error": "#690005", "on-background": "#d7e4f5", "on-secondary-fixed": "#002110", "on-surface-variant": "#c3c5d8", "on-primary": "#002979", "secondary-fixed-dim": "#4cdf95", "tertiary-fixed-dim": "#ffb3b5", "inverse-on-surface": "#25323e", "surface-variant": "#293643", "on-tertiary-fixed-variant": "#920027", "tertiary": "#ffb3b5", "surface": "#071420", "surface-container-high": "#1f2b38", "surface-container": "#14212d", "on-primary-fixed-variant": "#003daa", "primary": "#b4c5ff", "primary-container": "#1463ff", "on-tertiary-fixed": "#40000c", "on-tertiary": "#680019", "secondary-fixed": "#6dfdaf", "surface-tint": "#b4c5ff", "inverse-surface": "#d7e4f5" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "0.75rem", "space-xs": "0.25rem", "gutter": "0.75rem", "space-lg": "1rem", "space-sm": "0.5rem", "space-xl": "1.5rem", "margin": "1rem" }, "fontFamily": { "body-lg": ["Inter"], "label-badge": ["JetBrains Mono"], "mono-price-md": ["JetBrains Mono"], "headline-md": ["Inter"], "display": ["Inter"], "body-md": ["Inter"], "mono-price-lg": ["JetBrains Mono"], "headline-lg": ["Inter"], "label-meta": ["Inter"], "headline-sm": ["Inter"], "body-sm": ["Inter"] }, "fontSize": { "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-badge": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "600" }], "mono-price-md": ["14px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "mono-price-lg": ["22px", { "lineHeight": "26px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-meta": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["11px", { "lineHeight": "15px", "letterSpacing": "0em", "fontWeight": "400" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.4)] pt-safe"><div class="h-14 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary-container text-[20px]">query_stats</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm tracking-tight font-bold text-on-surface">MITMARKET</span><span class="font-label-badge text-label-badge text-secondary bg-on-secondary/30 px-1 py-0.5 rounded">PRO</span></div><span class="font-label-meta text-label-meta text-outline truncate max-w-[120px]">Mitmarket — Rewards</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-14 pb-20 bg-surface flex-1"><div class="flex flex-col w-full">
+<!-- Top Ambient Glow Accent -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-16 left-1/2 -translate-x-1/2 w-80 h-32 bg-primary-container/20 blur-[64px] pointer-events-none rounded-full"></div>
+<!-- Header & VIP Status -->
+<div class="px-margin pt-space-md pb-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">military_tech</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">MITMARKET Rewards Hub</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary/10 shadow-[0_0_12px_rgba(76,223,149,0.18)]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-badge text-label-badge text-secondary font-semibold">VIP 3 • 2x MULTIPLIER</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Institutional incentives, high-roller vaults &amp; audited liquidity drops</p>
+</div>
+<!-- Season Pool Card -->
+<div class="px-margin mb-space-md">
+<div class="p-space-md rounded-xl bg-surface-container relative overflow-hidden shadow-lg">
+<div class="absolute top-0 right-0 w-36 h-28 bg-gradient-to-bl from-primary-container/25 via-transparent to-transparent pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-badge text-label-badge text-primary uppercase tracking-wider">TOTAL CLAIMABLE POOL</span>
+<div class="flex items-center gap-1 text-tertiary-container bg-surface-container-lowest px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[13px] text-tertiary">timer</span>
+<span class="font-label-badge text-label-badge text-tertiary">Ends in: 14d 08h 42m</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between mb-space-sm">
+<span class="font-mono-price-lg text-display text-on-surface font-extrabold tracking-tight">$500,000</span>
+<span class="font-label-meta text-label-meta text-secondary font-medium">SEASON 4 GRAND FINALE</span>
+</div>
+<!-- Micro status pills -->
+<div class="grid grid-cols-3 gap-space-xs pt-space-xs">
+<div class="bg-surface-container-low px-2 py-1.5 rounded flex flex-col items-center">
+<span class="font-label-badge text-label-badge text-outline">POOL ALLOCATED</span>
+<span class="font-mono-price-md text-mono-price-md text-on-surface font-semibold">68.4%</span>
+</div>
+<div class="bg-surface-container-low px-2 py-1.5 rounded flex flex-col items-center">
+<span class="font-label-badge text-label-badge text-outline">QUALIFIED TIERS</span>
+<span class="font-mono-price-md text-mono-price-md text-secondary font-semibold">1,248</span>
+</div>
+<div class="bg-surface-container-low px-2 py-1.5 rounded flex flex-col items-center">
+<span class="font-label-badge text-label-badge text-outline">YOUR DRAW TICKETS</span>
+<span class="font-mono-price-md text-mono-price-md text-primary font-semibold">14 TKTS</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Filter Nav Pills -->
+<div class="px-margin mb-space-md overflow-x-auto scrollbar-none flex items-center gap-space-xs">
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-badge text-label-badge tracking-wider font-semibold shadow-[0_0_12px_rgba(20,99,255,0.3)]">FEATURED PRIZES</button>
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge tracking-wider font-semibold transition-colors">MONTHLY MILESTONES</button>
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge tracking-wider font-semibold transition-colors flex items-center gap-1">
+<span>MY REWARDS</span>
+<span class="w-4 h-4 rounded-full bg-secondary-container text-on-secondary font-label-badge text-[9px] flex items-center justify-center font-bold">3</span>
+</button>
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-badge text-label-badge tracking-wider font-semibold transition-colors">PAST WINNERS</button>
+</div>
+</div>
+<!-- Featured Luxury Grand Prizes Carousel Section -->
+<div class="flex flex-col mb-space-xl">
+<div class="px-margin flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">workspace_premium</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Featured Grand Prizes</span>
+</div>
+<span class="font-label-meta text-label-meta text-outline">Swipe for tiers (3)</span>
+</div>
+<!-- Horizontal Cards Scroll -->
+<div class="flex gap-space-md overflow-x-auto px-margin scrollbar-none snap-x snap-mandatory pt-1 pb-2">
+<!-- Slide 1: Porsche 911 GT3 RS -->
+<div class="shrink-0 w-[310px] snap-center rounded-xl bg-surface-container flex flex-col overflow-hidden shadow-xl">
+<div class="relative w-full h-44 bg-surface-container-lowest overflow-hidden">
+<img alt="Porsche 911 GT3 RS Grand Prize" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1HQdxaLe-orOgf6KrXZNF5ljAdcMkJzqikefBY8QwDV3YYXdBr-ZPG7bLl3JshmJi15PpcsBZb5UH7rog0uFZg91XK1VaXVbaxRZ_s3qbSpkJ2kL_Y-0i0Wr-Krkx_031HhN00wgqw13Kc8uTCeLeZ93bG8Wua8EYd0knPSPLvIl214fbB_t0yFmuUrycudxnhtNFx6w1B-j98S0-hWjamHiHUuMJDctyy3YTxe2U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-black/40 pointer-events-none"></div>
+<div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-label-badge text-label-badge font-bold tracking-wider shadow">
+            GRAND SEASON TROPHY
+          </div>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-sm text-tertiary font-label-badge text-label-badge flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+            14d 08h 42m
+          </div>
+<div class="absolute bottom-2 left-3 right-3 flex items-baseline justify-between">
+<span class="font-mono-price-lg text-mono-price-lg text-secondary font-bold">$250,000.00 USDC</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">EST. RETAIL CASH VALUE</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface block mb-0.5">Porsche 911 GT3 RS (or $250k USDT)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Q4 High-Roller Volume Tournament &amp; Global Raffle</span>
+</div>
+<!-- Progress -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-secondary font-semibold">QUALIFIED • TOP 0.5% VOLUME</span>
+<span class="font-mono-price-md text-[12px] text-on-surface font-semibold">1.42M / 2.0M USDC</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded-full w-[71%] shadow-[0_0_8px_rgba(76,223,149,0.5)]"></div>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-primary-container hover:bg-inverse-primary active:scale-[0.98] transition-all text-on-primary-container font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-1.5 shadow-md">
+<span>View Challenge Details &amp; Terms</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Slide 2: Swiss Gold Bullion -->
+<div class="shrink-0 w-[310px] snap-center rounded-xl bg-surface-container flex flex-col overflow-hidden shadow-xl">
+<div class="relative w-full h-44 bg-surface-container-lowest overflow-hidden">
+<img alt="1 Kilogram Swiss Gold Bullion Bar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiRW8SLbOtfN-PP9uqCjoHG9b0cN7jxkxIBztZX0TToNynZI6owpLx9sjP1DpElUW4KqmQYkD4u8YqDnQGcDYviue-qvHvp2M8q54qv3X5FqRR_KJ1TfM5nG8RWdiZ7QC9ZnccNgjkhR-oUgzqGhbHQ2zVcEwL6gEKb0gkRQSAP0i2oxspSqzbB8DhSYsMWbbibCod_oq1YJtkiGYjF0PFxpvXy1pevzPmY9-5o2ZF"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-black/40 pointer-events-none"></div>
+<div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-badge text-label-badge font-bold tracking-wider shadow">
+            MONTHLY ALPHA STAKE
+          </div>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface font-label-badge text-label-badge">
+            Closes in 6d 12h
+          </div>
+<div class="absolute bottom-2 left-3 right-3 flex items-baseline justify-between">
+<span class="font-mono-price-lg text-mono-price-lg text-secondary font-bold">$88,500.00 Spot</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">999.9 SWISS REFINED</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface block mb-0.5">1 Kilogram 999.9 Swiss Gold</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Physical vault custody or insured courier delivery</span>
+</div>
+<!-- Progress -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-primary font-semibold">TICKET ACCRUAL ACTIVE</span>
+<span class="font-mono-price-md text-[12px] text-on-surface font-semibold">14 Tickets Earned</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[90%] shadow-[0_0_8px_rgba(180,197,255,0.4)]"></div>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-bright active:scale-[0.98] transition-all text-on-surface font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-1.5">
+<span>View Gold Vault Rules</span>
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</button>
+</div>
+</div>
+<!-- Slide 3: Tether USDT Rewards Stacks -->
+<div class="shrink-0 w-[310px] snap-center rounded-xl bg-surface-container flex flex-col overflow-hidden shadow-xl">
+<div class="relative w-full h-44 bg-surface-container-lowest overflow-hidden">
+<img alt="50,000 USDT Liquidity Sprint" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfr_wi1vZ3U6jVf6DCZWDCJWnaN1LrLHi3gL0RZf_Nto66_hF-9kuFywvwV1te_S23ulh7N54Ajdshn7xRQuPrsgEm3ZEZEbwyqT3Evo9wIpjF0MgiiqHfc-sOTvNfNDxfAq1fTWpgg8ezXjV5zjfh_oaGhzuLFx8zMRSlwUs9rQK5_BP75FyxFIonXkWG_ue6MJhgmOwFPQbyznpv9ihUTxIUXB1aq0NAJcZO0nap"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-black/40 pointer-events-none"></div>
+<div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-badge text-label-badge font-bold tracking-wider shadow">
+            WEEKLY YIELD SPRINT
+          </div>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface font-label-badge text-label-badge">
+            Resets Every Sunday
+          </div>
+<div class="absolute bottom-2 left-3 right-3 flex items-baseline justify-between">
+<span class="font-mono-price-lg text-mono-price-lg text-secondary font-bold">$50,000.00 USDT</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">DIRECT VAULT CREDIT</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface block mb-0.5">50,000 USDT Margin Pool</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Shared by top liquidity makers &amp; prediction leaders</span>
+</div>
+<!-- Progress -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-secondary font-semibold">ELIGIBLE TIER</span>
+<span class="font-mono-price-md text-[12px] text-on-surface font-semibold">850 / 1,000 Maker Pts</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded-full w-[85%] shadow-[0_0_8px_rgba(76,223,149,0.4)]"></div>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-bright active:scale-[0.98] transition-all text-on-surface font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-1.5">
+<span>View Sprint Board</span>
+<span class="material-symbols-outlined text-[18px]">leaderboard</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: My Rewards & Claim Station -->
+<div class="px-margin mb-space-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">account_balance_wallet</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Claim Station &amp; Balances</span>
+</div>
+<span class="font-label-badge text-label-badge text-secondary bg-surface-container-low px-2 py-0.5 rounded">3 READY TO HARVEST</span>
+</div>
+<!-- 4 Segmented Metrics Grid -->
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col justify-between">
+<span class="font-label-badge text-label-badge text-outline uppercase">AVAILABLE NOW</span>
+<span class="font-mono-price-lg text-mono-price-lg text-secondary font-extrabold my-1">$184.50</span>
+<button class="w-full py-1.5 rounded bg-secondary hover:bg-secondary-container active:scale-95 text-on-secondary font-label-badge text-label-badge font-bold flex items-center justify-center gap-1 transition-all shadow-[0_0_12px_rgba(76,223,149,0.3)]" id="claim-all-btn">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>CLAIM ALL (USDC)</span>
+</button>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col justify-between">
+<span class="font-label-badge text-label-badge text-outline uppercase">PENDING MATURITY</span>
+<span class="font-mono-price-lg text-mono-price-lg text-primary font-bold my-1">$340.00</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-outline">schedule</span>
+          Settles in 48-72h
+        </span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col justify-between">
+<span class="font-label-badge text-label-badge text-outline uppercase">CLAIMED (30D)</span>
+<span class="font-mono-price-md text-headline-sm text-on-surface font-semibold my-1">$1,250.00</span>
+<span class="font-label-meta text-label-meta text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">trending_up</span>
+          +34.2% vs last mo.
+        </span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col justify-between">
+<span class="font-label-badge text-label-badge text-outline uppercase">TOTAL LIFETIME</span>
+<span class="font-mono-price-md text-headline-sm text-on-surface font-semibold my-1">$4,820.00</span>
+<span class="font-label-meta text-label-meta text-outline truncate">Auto-swept to margin</span>
+</div>
+</div>
+<!-- Active Claimable Tiles -->
+<div class="flex flex-col gap-space-xs">
+<!-- Item 1 -->
+<div class="p-space-sm rounded-xl bg-surface-container flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">swap_horiz</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Maker Liquidity Rebate</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">30-day continuous orderbook depth</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="font-mono-price-md text-mono-price-md font-bold text-secondary">+$184.50</span>
+<button class="px-2.5 py-1 rounded bg-secondary hover:bg-secondary-container active:scale-95 text-on-secondary font-label-badge text-label-badge font-bold transition-transform">
+            Claim
+          </button>
+</div>
+</div>
+<!-- Item 2 (Locked / Unlocks in 2d) -->
+<div class="p-space-sm rounded-xl bg-surface-container flex items-center justify-between shadow-sm opacity-90">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">shield_person</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">VIP Tier 3 Fee Cashback</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Monthly automated 35% commission rebate</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="font-mono-price-md text-mono-price-md font-bold text-on-surface">$85.00</span>
+<span class="font-label-badge text-[9px] text-tertiary bg-surface-container-low px-2 py-0.5 rounded">Unlocks in 2d</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-space-sm rounded-xl bg-surface-container flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">local_fire_department</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Prediction Streak Bonus</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">5 consecutive profitable binary exits</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="font-mono-price-md text-mono-price-md font-bold text-secondary">+$100.00</span>
+<button class="px-2.5 py-1 rounded bg-secondary hover:bg-secondary-container active:scale-95 text-on-secondary font-label-badge text-label-badge font-bold transition-transform">
+            Claim
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4: Monthly Volume Milestones & Progress -->
+<div class="px-margin mb-space-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">stairs</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Volume Milestones Ladder</span>
+</div>
+<span class="font-label-badge text-label-badge text-primary font-mono">OCTOBER CYCLE</span>
+</div>
+<!-- Tiered ladder container -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-md shadow-md">
+<!-- Step 1: Completed -->
+<div class="flex items-start gap-space-sm relative">
+<div class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary shrink-0 z-10 shadow-[0_0_8px_rgba(76,223,149,0.4)]">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="flex-1 flex items-center justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">$100K Volume</span>
+<span class="font-label-badge text-label-badge text-secondary bg-surface-container-low px-1.5 py-0.5 rounded">CLAIMED</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">100 USDC Instant Direct Drop</span>
+</div>
+<span class="font-mono-price-md text-mono-price-md text-secondary font-bold">+100 USDC</span>
+</div>
+</div>
+<!-- Connector Line 1 -->
+<div class="w-0.5 h-6 bg-secondary ml-3.5 -my-2.5"></div>
+<!-- Step 2: Completed -->
+<div class="flex items-start gap-space-sm relative">
+<div class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary shrink-0 z-10 shadow-[0_0_8px_rgba(76,223,149,0.4)]">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="flex-1 flex items-center justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">$500K Volume</span>
+<span class="font-label-badge text-label-badge text-secondary bg-surface-container-low px-1.5 py-0.5 rounded">CLAIMED</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">500 USDC + 1 Swiss Gold Ticket</span>
+</div>
+<span class="font-mono-price-md text-mono-price-md text-secondary font-bold">+500 USDC</span>
+</div>
+</div>
+<!-- Connector Line 2 -->
+<div class="w-0.5 h-6 bg-secondary ml-3.5 -my-2.5"></div>
+<!-- Step 3: Current in progress -->
+<div class="flex items-start gap-space-sm relative p-2.5 rounded-lg bg-surface-container-high/60">
+<div class="w-7 h-7 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container shrink-0 z-10 animate-pulse shadow-[0_0_10px_rgba(20,99,255,0.6)]">
+<span class="font-label-badge text-[11px] font-bold">3</span>
+</div>
+<div class="flex-1 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">$1.0M Volume</span>
+<span class="font-label-badge text-label-badge text-primary bg-primary-container/20 px-1.5 py-0.5 rounded font-bold">IN PROGRESS (82%)</span>
+</div>
+<span class="font-mono-price-md text-mono-price-md text-primary font-bold">1,200 USDC</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1,200 USDC + 5 Gold Draw Tickets</span>
+<!-- Dynamic progress line -->
+<div class="w-full h-1.5 rounded-full bg-surface-container-lowest overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[82%] shadow-[0_0_8px_rgba(180,197,255,0.5)]"></div>
+</div>
+<div class="flex justify-between items-center pt-0.5">
+<span class="font-label-meta text-label-meta text-outline">$820,400 USDC traded</span>
+<span class="font-label-meta text-label-meta text-primary font-semibold">$179,600 to trigger</span>
+</div>
+</div>
+</div>
+<!-- Connector Line 3 (locked) -->
+<div class="w-0.5 h-6 bg-surface-container-highest ml-3.5 -my-2.5"></div>
+<!-- Step 4: Locked -->
+<div class="flex items-start gap-space-sm relative opacity-60">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center text-outline shrink-0 z-10">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+</div>
+<div class="flex-1 flex items-center justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">$5.0M Volume</span>
+<span class="font-label-badge text-label-badge text-outline bg-surface-container-low px-1.5 py-0.5 rounded">LOCKED</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">VIP Concierge Desk + Porsche Draw Entry</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">card_membership</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 5: Verified Winners & Transparency Ledger -->
+<div class="px-margin mb-space-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">gavel</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Verified Winners &amp; Ledger</span>
+</div>
+<span class="font-label-badge text-label-badge text-secondary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+        CHAIN VERIFIED
+      </span>
+</div>
+<!-- Transparency ledger list -->
+<div class="flex flex-col gap-space-xs">
+<!-- Winner 1 -->
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col gap-1.5 shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-mono-price-md text-mono-price-md font-bold text-on-surface">USER-****4821</span>
+<span class="font-label-badge text-[9px] text-outline bg-surface-container-low px-1.5 py-0.5 rounded">SWITZERLAND</span>
+</div>
+<span class="font-label-badge text-label-badge text-secondary font-bold">1kg Swiss Gold Bullion</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant pt-1">
+<span class="truncate max-w-[190px]">September High-Roller Draw</span>
+<span class="text-secondary font-mono text-[11px] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span>
+            Dispatched #88921
+          </span>
+</div>
+</div>
+<!-- Winner 2 -->
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col gap-1.5 shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-mono-price-md text-mono-price-md font-bold text-on-surface">USER-****9014</span>
+<span class="font-label-badge text-[9px] text-outline bg-surface-container-low px-1.5 py-0.5 rounded">SINGAPORE</span>
+</div>
+<span class="font-label-badge text-label-badge text-primary font-bold">$25,000 USDT Vault Credit</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant pt-1">
+<span>Week 42 Sprint Leaderboard</span>
+<span class="text-primary font-mono text-[11px] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+            Settled (Arbitrum L2)
+          </span>
+</div>
+</div>
+<!-- Winner 3 -->
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col gap-1.5 shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-mono-price-md text-mono-price-md font-bold text-on-surface">USER-****3177</span>
+<span class="font-label-badge text-[9px] text-outline bg-surface-container-low px-1.5 py-0.5 rounded">UNITED KINGDOM</span>
+</div>
+<span class="font-label-badge text-label-badge text-secondary font-bold">Rolex Daytona Chronograph</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant pt-1">
+<span>Q3 Invitational Grand Trophy</span>
+<span class="text-secondary font-mono text-[11px] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+            Delivered &amp; Inspected
+          </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 6: Legal & Institutional Compliance Disclaimer -->
+<div class="px-margin pb-space-xl">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center gap-1.5 text-outline">
+<span class="material-symbols-outlined text-[16px]">policy</span>
+<span class="font-label-badge text-label-badge uppercase tracking-wider font-semibold">LEGAL &amp; INSTITUTIONAL NOTICE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Rewards program rules, qualification criteria, and prize settlements are subject to MITMARKET Terms of Service. Rewards shown in previews are illustrative. Non-transferable, terms apply. Volume-based allocations calculate taker and maker turnover on audited prediction pairs. Void where prohibited by jurisdictional regulatory decrees.
+      </p>
+<div class="flex items-center gap-space-md pt-1">
+<a class="font-label-meta text-label-meta text-primary hover:underline" href="#">Official Contest Rules</a>
+<span class="text-outline-variant">•</span>
+<a class="font-label-meta text-label-meta text-primary hover:underline" href="#">Provably Fair Draw Hash</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Client Micro-Interactions -->
+<script>
+  (function() {
+    const claimBtn = document.getElementById('claim-all-btn');
+    if (claimBtn) {
+      claimBtn.addEventListener('click', function() {
+        this.innerHTML = '<span class="material-symbols-outlined text-[14px] animate-spin">refresh</span><span>HARVESTING...</span>';
+        setTimeout(() => {
+          this.innerHTML = '<span class="material-symbols-outlined text-[14px]">check</span><span>ALL HARVESTED</span>';
+          this.classList.remove('bg-secondary');
+          this.classList.add('bg-surface-container-highest', 'text-secondary');
+        }, 800);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-1px_16px_rgba(0,0,0,0.5)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-between items-center h-16 px-space-sm"><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="mitmarket---user-dashboard" href="#"><span class="material-symbols-outlined text-[22px]">trending_up</span><span class="font-label-meta text-label-meta">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="mitmarket---leaderboard" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span class="font-label-meta text-label-meta">Explore</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="mitmarket---rewards" href="#"><span class="material-symbols-outlined text-[22px]">candlestick_chart</span><span class="font-label-meta text-label-meta">Markets</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="mitmarket---referrals" href="#"><span class="material-symbols-outlined text-[22px]">account_balance_wallet</span><span class="font-label-meta text-label-meta">Wallet</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-11 text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="mitmarket---user-profile" href="#"><span class="material-symbols-outlined text-[22px]">manage_accounts</span><span class="font-label-meta text-label-meta">Profile</span></a></div></nav></body></html>
