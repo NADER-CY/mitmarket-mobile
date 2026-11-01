@@ -75,3 +75,28 @@
 .end-cap-footer{border-top:1px solid #ffffff20;padding-top:17px;display:flex;align-items:center;justify-content:space-between;font-size:10px;color:#8b9bb5}
 .end-cap-footer b{color:#f4f6fa;font-size:12px}
 @media(max-width:350px){.showcase-prices{align-items:flex-start;flex-direction:column}.showcase-card{padding:9px}.category-feature-copy strong{font-size:17px}}
+/* Dense editorial layout: never strand an odd market card beside empty space. */
+.showcase-layout.has-odd>.showcase-card:last-child{grid-column:span 2;min-height:148px}
+.showcase-layout.has-odd>.showcase-card:last-child h3{max-width:92%;min-height:0;margin:11px 0 13px}
+.showcase-layout.single-market>.showcase-card{grid-column:span 2;min-height:175px}
+.showcase-layout.single-market>.showcase-card h3{margin:9px 0 13px;min-height:0}
+.showcase-layout>.showcase-card:only-child{grid-column:span 2}
+.layout-spotlight>.showcase-card:nth-child(2){grid-row:auto;min-height:185px}
+.showcase-card{min-height:172px}
+.showcase-card.lead{min-height:195px}
+.showcase-card h3{margin-bottom:11px}
+.showcase-section{margin:18px 0 25px}
+.showcase-empty{min-height:50px;padding:11px 14px;flex-direction:row}
+.mini-history{border:1px solid #293d57;background:#131d2b;border-radius:9px;padding:8px 9px;margin:0 0 12px;min-height:108px}
+.mini-history>span{display:block;color:#8daace;font-size:9px;font-weight:700;letter-spacing:.6px;margin-bottom:6px}
+.mini-history svg{width:100%;height:72px;display:block}
+.mini-history.pending{display:flex;align-items:center;justify-content:center;gap:8px;color:#8daace;font-size:10px;min-height:72px}
+.mini-history.pending .material-symbols-outlined{font-size:19px}
+/* Only one promotional interlude, with a more dimensional market-terminal composition. */
+.feature-banner.feature-1{min-height:235px;background:radial-gradient(circle at 105% -5%,#1aa98466,transparent 45%),linear-gradient(145deg,#143c38,#102b32 66%,#111d2a)}
+.feature-1 .feature-watermark{font-size:145px!important;right:4px;bottom:0;transform:rotate(-22deg);color:#a3ffe518}
+.feature-1 .banner-orbit{border-style:dashed;border-color:#45dcb82b}
+.feature-1 .feature-banner-content>a{background:#0bba74;color:#06271b}
+.end-cap{padding-top:25px;background:radial-gradient(ellipse at 50% 5%,#4678d866,transparent 58%),repeating-linear-gradient(90deg,transparent 0 38px,#ffffff05 39px 40px),linear-gradient(180deg,#152c51,#111824)}
+.end-cap:before,.end-cap:after{content:'';position:absolute;left:17%;right:17%;height:1px;transform:rotate(-14deg);background:linear-gradient(90deg,transparent,#4293ffbb,transparent);top:29%;opacity:.7}
+.end-cap:after{transform:rotate(14deg);top:40%;opacity:.4}
