@@ -1,0 +1,18 @@
+{
+  "id": "/",
+  "name": "MITMARKET",
+  "short_name": "MITMARKET",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#101216",
+  "theme_color": "#101216",
+  "icons": [
+    {
+      "src": "/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
