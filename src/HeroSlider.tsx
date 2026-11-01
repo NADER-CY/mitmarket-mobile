@@ -37,7 +37,8 @@ export function MiniHistory({token}:{token:string}){
   if(points.length<2)return <div className="mini-history pending"><span className="material-symbols-outlined">show_chart</span>{status==='loading'?'Loading history…':'Historical data unavailable'}</div>;
   const sample=points.filter((_,i)=>i%Math.max(1,Math.floor(points.length/42))===0).slice(-48);
   const first=sample[0].t,last=sample[sample.length-1].t;
-  const coords=sample.map(p=>`${((p.t-first)/Math.max(1,last-first)*300).toFixed(1)},${((1-p.p)*65+5).toFixed(1)}`).join(' ');
+  const low=Math.min(...sample.map(p=>p.p)),high=Math.max(...sample.map(p=>p.p));const padding=Math.max(.005,(high-low)*.12);const min=Math.max(0,low-padding),max=Math.min(1,high+padding);
+  const coords=sample.map(p=>`${((p.t-first)/Math.max(1,last-first)*300).toFixed(1)},${((1-(p.p-min)/Math.max(.001,max-min))*65+5).toFixed(1)}`).join(' ');
   return <div className="mini-history"><span>24H PRICE HISTORY</span><svg viewBox="0 0 300 75" preserveAspectRatio="none" role="img" aria-label="Real 24-hour YES market price trend"><line x1="0" y1="37" x2="300" y2="37" stroke="#607083" strokeOpacity=".27" strokeDasharray="4 6"/><polyline points={coords} fill="none" stroke="#247bff" strokeWidth="2.6" vectorEffect="non-scaling-stroke" strokeLinecap="round" strokeLinejoin="round"/></svg></div>;
 }
 export function HeroSlider({markets}:{markets:Market[]}){
