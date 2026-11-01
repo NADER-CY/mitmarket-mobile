@@ -32,6 +32,14 @@ function HistoryChart({token}:{token:string}){
   },[points]);
   return <div className="slider-chart"><div className="slider-chart-header"><span>HISTORICAL ODDS</span><span className="slider-live"><i/> LIVE PRICE</span></div>{paths?<svg viewBox="0 0 325 155" preserveAspectRatio="none" role="img" aria-label="Historical yes and no price chart from Polymarket"><g stroke="#70829a" opacity=".23" strokeDasharray="3 6"><line x1="0" y1="8" x2="300" y2="8"/><line x1="0" y1="40" x2="300" y2="40"/><line x1="0" y1="73" x2="300" y2="73"/><line x1="0" y1="105" x2="300" y2="105"/><line x1="0" y1="138" x2="300" y2="138"/></g><polyline points={paths.yes} stroke="#247bff" fill="none" strokeWidth="2.8" strokeLinejoin="round" strokeLinecap="round" vectorEffect="non-scaling-stroke"/><polyline points={paths.no} stroke="#ff4761" fill="none" strokeWidth="2.8" strokeLinejoin="round" strokeLinecap="round" vectorEffect="non-scaling-stroke"/><g fill="#a9b7c9" fontSize="10" textAnchor="end"><text x="324" y="12">100%</text><text x="324" y="45">75%</text><text x="324" y="77">50%</text><text x="324" y="110">25%</text><text x="324" y="141">0%</text></g></svg>:<div className="slider-chart-pending"><span className="material-symbols-outlined">show_chart</span><p>{status==='loading'?'Loading real price history…':'Historical chart is not available for this market.'}</p></div>}<div className="slider-chart-key"><span><i/> YES</span><span><i/> NO</span></div></div>;
 }
+export function MiniHistory({token}:{token:string}){
+  const {points,status}=useHistory(token);
+  if(points.length<2)return <div className="mini-history pending"><span className="material-symbols-outlined">show_chart</span>{status==='loading'?'Loading history…':'Historical data unavailable'}</div>;
+  const sample=points.filter((_,i)=>i%Math.max(1,Math.floor(points.length/42))===0).slice(-48);
+  const first=sample[0].t,last=sample[sample.length-1].t;
+  const coords=sample.map(p=>`${((p.t-first)/Math.max(1,last-first)*300).toFixed(1)},${((1-p.p)*65+5).toFixed(1)}`).join(' ');
+  return <div className="mini-history"><span>24H PRICE HISTORY</span><svg viewBox="0 0 300 75" preserveAspectRatio="none" role="img" aria-label="Real 24-hour YES market price trend"><line x1="0" y1="37" x2="300" y2="37" stroke="#607083" strokeOpacity=".27" strokeDasharray="4 6"/><polyline points={coords} fill="none" stroke="#247bff" strokeWidth="2.6" vectorEffect="non-scaling-stroke" strokeLinecap="round" strokeLinejoin="round"/></svg></div>;
+}
 export function HeroSlider({markets}:{markets:Market[]}){
   const slides=markets.slice(0,8);const [index,setIndex]=useState(0);
   useEffect(()=>{if(slides.length<2)return;const id=window.setInterval(()=>setIndex(i=>(i+1)%slides.length),9500);return()=>window.clearInterval(id);},[slides.length]);
