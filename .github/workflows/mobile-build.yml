@@ -38,3 +38,33 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release create "mobile-${GITHUB_RUN_NUMBER}" mitmarket-mobile.tar.gz mitmarket-mobile.tar.gz.sha256 --target "$GITHUB_SHA" --title "Mobile build ${GITHUB_RUN_NUMBER}" --notes "Server package built from ${GITHUB_SHA}" --latest
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    concurrency:
+      group: mobile-production
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: mitmarket-mobile-server
+      - name: Deploy mobile to server
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          SSHPASS: ${{ secrets.DEPLOY_PASSWORD }}
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          for key in DEPLOY_HOST DEPLOY_USER SSHPASS DEPLOY_KNOWN_HOSTS; do
+            test -n "${!key}" || { echo "Missing secret: $key"; exit 1; }
+          done
+          sudo apt-get update -qq
+          sudo apt-get install -y sshpass
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+          sshpass -e scp -o StrictHostKeyChecking=yes mitmarket-mobile.tar.gz "$DEPLOY_USER@$DEPLOY_HOST:/tmp/mitmarket-mobile-${GITHUB_SHA}.tar.gz"
+          sshpass -e ssh -o StrictHostKeyChecking=yes "$DEPLOY_USER@$DEPLOY_HOST" bash -s -- "$GITHUB_SHA" "$(sha256sum mitmarket-mobile.tar.gz | cut -d ' ' -f 1)" < server/deploy-release.sh
