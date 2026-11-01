@@ -1,0 +1,39 @@
+.slider-wrap{border:1px solid #2c3c50;background:linear-gradient(150deg,#172333,#151b25 67%);border-radius:18px;padding:14px 13px 13px;overflow:hidden;position:relative}
+.slider-nav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:15px}
+.slider-eyebrow{color:#9bbaff;display:flex;align-items:center;gap:5px;font-size:9px;letter-spacing:.7px;font-weight:850}
+.slider-eyebrow>.material-symbols-outlined{font-size:16px}
+.slider-nav>div{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.slider-nav button{display:grid;place-items:center;border:0;background:#263448;color:#f4f6fa;border-radius:7px;width:28px;height:28px;cursor:pointer}
+.slider-nav button>.material-symbols-outlined{font-size:18px}
+.slider-nav b{font-size:11px;color:#cbd7e6;font-variant-numeric:tabular-nums}
+.slider-content{min-width:0}
+.slider-market-top{display:flex;align-items:center;gap:7px;color:#9db5d8;font-size:9px;letter-spacing:.4px}
+.slider-market-top img{width:28px;height:28px;object-fit:cover;border-radius:50%}
+.slider-market-top .material-symbols-outlined{font-size:24px;color:#a1baf9}
+.slider-title{font-size:19px;font-weight:800;line-height:1.25;letter-spacing:-.35px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;min-height:48px;margin:12px 0 16px}
+.slider-stats{display:flex;align-items:center;gap:8px;min-height:64px}
+.slider-stats>strong{font-size:39px;color:#0bba74;letter-spacing:-1.6px;line-height:1;font-variant-numeric:tabular-nums}
+.slider-stats>span:not(.slider-dot-live){font-size:18px;color:#0bba74}
+.slider-dot-live{font-size:9px;color:#0bba74;white-space:nowrap}
+.slider-donut{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;position:relative;margin-left:auto;flex-shrink:0}
+.slider-donut:before{content:'';position:absolute;inset:8px;border-radius:50%;background:#1a2634}
+.slider-donut b{position:relative;z-index:1;font-size:12px;color:#f4f6fa}
+.slider-trade{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 0}
+.slider-trade>a{display:flex;justify-content:space-between;align-items:center;gap:6px;color:#38d69a;border:1px solid #0bba74;background:#0bba741b;border-radius:9px;padding:13px 10px;font-weight:750;font-size:12px}
+.slider-trade>a:nth-child(2){color:#ff6880;border-color:#ff4761;background:#ff476111}
+.slider-trade strong{font-variant-numeric:tabular-nums}
+.slider-meta{display:flex;justify-content:space-between;gap:6px;font-size:9px;color:#8fa3bd;margin:13px 0 15px}
+.slider-chart{border-radius:12px;background:#101926;padding:12px 9px 8px;border:1px solid #29384d}
+.slider-chart-header{display:flex;align-items:center;justify-content:space-between;gap:5px;font-size:9px;color:#99b1d1;font-weight:700;margin-bottom:10px}
+.slider-live{font-size:8px;color:#0bba74;white-space:nowrap}.slider-live i{width:6px;height:6px;background:#0bba74;border-radius:50%;display:inline-block;margin-right:4px}
+.slider-chart svg{width:100%;height:140px;display:block;overflow:visible}
+.slider-chart-pending{height:140px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:3px;color:#8698ad;font-size:10px;text-align:center}
+.slider-chart-pending .material-symbols-outlined{font-size:30px;color:#3f67a8}
+.slider-chart-key{display:flex;justify-content:center;gap:18px;font-size:10px;color:#a6b4c7;margin:10px 0 2px}
+.slider-chart-key>span{display:flex;align-items:center;gap:5px}
+.slider-chart-key i{width:7px;height:7px;border-radius:50%;background:#247bff;display:inline-block}
+.slider-chart-key span:last-child i{background:#ff4761}
+.slider-dots{display:flex;justify-content:center;align-items:center;gap:6px;margin-top:16px}
+.slider-dots button{width:7px;height:7px;background:#4c5a6d;border:0;border-radius:99px;padding:0;cursor:pointer;transition:width .2s,background .2s}
+.slider-dots button.selected{width:25px;background:#1463ff}
+@media(max-width:360px){.slider-stats>strong{font-size:32px}.slider-stats>span:not(.slider-dot-live){font-size:15px}.slider-donut{width:48px;height:48px}.slider-chart svg{height:110px}}
